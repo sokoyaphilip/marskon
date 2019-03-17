@@ -8,19 +8,19 @@
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet"
           href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/icon-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendor/hs-admin-icons/hs-admin-icons.css">
-    <link rel="stylesheet" href="assets/vendor/animate.css">
-    <link rel="stylesheet" href="assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="assets/vendor/flatpickr/dist/css/flatpickr.min.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap-select/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="assets/vendor/chartist-js/chartist.min.css">
-    <link rel="stylesheet" href="assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.css">
-    <link rel="stylesheet" href="assets/vendor/fancybox/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" href="assets/css/unify-admin.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/bootstrap/bootstrap.min.css');?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/icon-awesome/css/font-awesome.min.css')?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/hs-admin-icons/hs-admin-icons.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/animate.css');?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/flatpickr/dist/css/flatpickr.min.css');?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/bootstrap-select/css/bootstrap-select.min.css');?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/chartist-js/chartist.min.css')?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.css')?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/fancybox/jquery.fancybox.min.css')?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/hamburgers/hamburgers.min.css')?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/unify-admin.css');?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/custom.css'); ?>">
 </head>
 <body>
 <header id="js-header" class="u-header u-header--sticky-top">
@@ -29,7 +29,7 @@
             <div class="col-auto d-flex flex-nowrap u-header-logo-toggler g-py-12">
                 <a href="index.php"
                    class="navbar-brand d-flex align-self-center g-hidden-xs-down g-line-height-1 py-0 g-mt-5">
-                    <img src="assets/img/logo/logo-1.png" style="width:100%"/>
+                    <img src="<?= base_url('assets/img/logo/logo-1.png');?>" style="width:100%"/>
                 </a>
                 <a class="js-side-nav u-header__nav-toggler d-flex align-self-center ml-auto" href="#"
                    data-hssm-class="u-side-nav--mini u-sidebar-navigation-v1--mini"
@@ -49,7 +49,7 @@
                 <span class="g-pos-rel">
         <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-secondary g-mr-5"></span>
                 <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
-                     src="assets/img-temp/130x130/img1.jpg" alt="Image description">
+                     src="<?= base_url('assets/img-temp/130x130/img1.jpg');?>" alt="Image description">
                 </span>
                             <span class="g-pos-rel g-top-2">
         <span class="g-hidden-sm-down">MArs User</span>

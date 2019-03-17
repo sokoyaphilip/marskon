@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/vendor/slick-carousel/slick/slick.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/vendor/typedjs/typed.css')?>">
     <link rel="stylesheet" href="<?= base_url('assets/vendor/hs-megamenu/src/hs.megamenu.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url(assets/vendor/hamburgers/hamburgers.min.css); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/vendor/hamburgers/hamburgers.min.css'); ?>">
 
     <!-- CSS Unify -->
     <link rel="stylesheet" href="<?= base_url('assets/css/unify-core.css')?>">
@@ -51,14 +51,14 @@
               </span>
               </span>
                     </button>
-                    <a href="index.php" class="navbar-brand d-flex">
+                    <a href="<?= base_url(); ?>" class="navbar-brand d-flex">
                         <img src="<?= base_url('assets/img/logo/logo-1.png'); ?>" class="img-responsive"/>
                     </a>
                     <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
                          id="navBar">
                         <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
                             <li class="nav-item active g-mx-10--lg g-mx-15--xl">
-                                <a href="index.php" class="nav-link g-py-7 g-px-0" href="index.php">Home</a>
+                                <a class="nav-link g-py-7 g-px-0" href="<?= base_url(); ?>">Home</a>
                             </li>
                             <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn"
                                 data-animation-out="fadeOut">
@@ -148,17 +148,17 @@
                                 <a href="#" class="nav-link g-py-7 g-px-0">FAQ</a>
                             </li>
                             <li class="nav-item  g-mx-10--lg g-mx-15--xl">
-                                <a href="contact.php" class="nav-link g-py-7 g-px-0">Contact</a>
+                                <a href="<?= base_url('page/contact/');?>" class="nav-link g-py-7 g-px-0">Contact</a>
                             </li>
                         </ul>
                         <div class="text-center">
                             <div class="d-inline-block g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
-                                <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="auth.php">LOG
+                                <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="<?= base_url('auth/'); ?>">LOG
                                     IN</a>
                             </div>
                             <div class="d-inline-block" style="width:10px;"></div>
                             <div class="d-inline-block g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
-                                <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="auth.php">SIGN
+                                <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="<?= base_url('auth/create/');?>">SIGN
                                     UP</a>
                             </div>
                         </div>

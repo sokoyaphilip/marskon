@@ -1,5 +1,5 @@
 
-<section class="g-bg-primary g-pa-30" style="background-image: url(assets/img/bg/pattern5.png);">
+<section class="g-bg-primary g-pa-30" style="background-image: url(<?= base_url('assets/img/bg/pattern5.png');?>);">
     <div class="d-md-flex justify-content-md-center text-center">
         <div class="align-self-md-center">
             <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-color-white g-mb-0--md">We offer best in class service for your
@@ -21,47 +21,47 @@
              }]'>
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/mtn.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/mtn.png')?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/airtel.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/airtel.png'); ?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/STTV.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/STTV.png'); ?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/DStv.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/DStv.png');?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/etisalat.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/etisalat.png'); ?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/spectranet.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/spectranet.png');?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/glo.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/glo.png')?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/smile.png" alt="Image description">
+                 src="<?= base_url('assets/img/partners/smile.png'); ?>" alt="Image description">
         </div>
 
         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-pt-20">
             <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer"
-                 src="assets/img/partners/ikjedc.jpg" alt="Image description">
+                 src="<?= base_url('assets/img/partners/ikjedc.jpg');?>" alt="Image description">
         </div>
     </div>
 </section>
@@ -116,7 +116,7 @@
                 </div>
 
                 <address class="g-bg-no-repeat g-font-size-12 mb-0"
-                         style="background-image: url(assets/img/maps/map2.png);">
+                         style="background-image: url(<?= base_url('assets/img/maps/map2.png'); ?>);">
                     <div class="d-flex g-mb-20">
                         <div class="g-mr-10">
               <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
@@ -239,33 +239,33 @@
 
 
 <!-- JS Global Compulsory -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-<script src="assets/vendor/popper.js/popper.min.js"></script>
-<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-migrate/jquery-migrate.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/popper.js/popper.min.js')?>"></script>
+<script src="<?= base_url('assets/vendor/bootstrap/bootstrap.min.js');?>"></script>
 
 
 <!-- JS Implementing Plugins -->
-<script src="assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-<script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
-<script src="assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
-<script src="assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-<script src="assets/vendor/fancybox/jquery.fancybox.min.js"></script>
-<script src="assets/vendor/slick-carousel/slick/slick.js"></script>
-<script src="assets/vendor/typedjs/typed.min.js"></script>
+<script src="<?= base_url('assets/vendor/hs-megamenu/src/hs.megamenu.js');?>"></script>
+<script src="<?= base_url('assets/vendor/dzsparallaxer/dzsparallaxer.js');?>"></script>
+<script src="<?= base_url('assets/vendor/dzsparallaxer/dzsscroller/scroller.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/dzsparallaxer/advancedscroller/plugin.js');?>"></script>
+<script src="<?= base_url('assets/vendor/fancybox/jquery.fancybox.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/slick-carousel/slick/slick.js');?>"></script>
+<script src="<?= base_url('assets/vendor/typedjs/typed.min.js');?>"></script>
 
 <!-- JS Unify -->
-<script src="assets/js/hs.core.js"></script>
-<script src="assets/js/components/hs.header.js"></script>
-<script src="assets/js/helpers/hs.hamburgers.js"></script>
-<script src="assets/js/components/hs.tabs.js"></script>
-<script src="assets/js/components/hs.popup.js"></script>
-<script src="assets/js/components/hs.carousel.js"></script>
-<script src="assets/js/components/text-animation/hs.text-slideshow.js"></script>
-<script src="assets/js/components/hs.go-to.js"></script>
-
+<script src="<?= base_url('assets/js/hs.core.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.header.js');?>"></script>
+<script src="<?= base_url('assets/js/helpers/hs.hamburgers.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.tabs.js')?>"></script>
+<script src="<?= base_url('assets/js/components/hs.popup.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.carousel.js');?>"></script>
+<script src="<?= base_url('assets/js/components/text-animation/hs.text-slideshow.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.go-to.js');?>"></script>
+<script src="<?= base_url('assets/js/function.js');?>"></script>
 <!-- JS Customization -->
-<script src="assets/js/custom.js"></script>
+<script src="<?= base_url('assets/js/custom.js');?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>

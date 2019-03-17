@@ -64,62 +64,62 @@
 </main>
 
 <!-- JS Global Compulsory -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+<script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-migrate/jquery-migrate.min.js'); ?>"></script>
 
-<script src="assets/vendor/popper.js/popper.min.js"></script>
-<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/vendor/popper.js/popper.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/bootstrap/bootstrap.min.js')?>"></script>
 
-<script src="assets/vendor/cookiejs/jquery.cookie.js"></script>
+<script src="<?= base_url('assets/vendor/cookiejs/jquery.cookie.js'); ?>"></script>
 
 
 <!-- jQuery UI Core -->
-<script src="assets/vendor/jquery-ui/ui/widget.js"></script>
-<script src="assets/vendor/jquery-ui/ui/version.js"></script>
-<script src="assets/vendor/jquery-ui/ui/keycode.js"></script>
-<script src="assets/vendor/jquery-ui/ui/position.js"></script>
-<script src="assets/vendor/jquery-ui/ui/unique-id.js"></script>
-<script src="assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/widget.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/version.js');?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/keycode.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/position.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/unique-id.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/safe-active-element.js')?>"></script>
 
 <!-- jQuery UI Helpers -->
-<script src="assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-<script src="assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/widgets/menu.js')?>"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/widgets/mouse.js'); ?>"></script>
 
 <!-- jQuery UI Widgets -->
-<script src="assets/vendor/jquery-ui/ui/widgets/datepicker.js"></script>
+<script src="<?= base_url('assets/vendor/jquery-ui/ui/widgets/datepicker.js'); ?>"></script>
 
 <!-- JS Plugins Init. -->
-<script src="assets/vendor/appear.js"></script>
-<script src="assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-<script src="assets/vendor/flatpickr/dist/js/flatpickr.min.js"></script>
-<script src="assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/vendor/chartist-js/chartist.min.js"></script>
-<script src="assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.js"></script>
-<script src="assets/vendor/fancybox/jquery.fancybox.min.js"></script>
-<script src="assets/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
-<script src="assets/vendor/datatables/media/js/dataTables.select.js"></script>
-<script src="assets/vendor/jquery.filer/js/jquery.filer.min.js"></script>
+<script src="<?= base_url('assets/vendor/appear.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/bootstrap-select/js/bootstrap-select.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/flatpickr/dist/js/flatpickr.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/chartist-js/chartist.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.js')?>"></script>
+<script src="<?= base_url('assets/vendor/fancybox/jquery.fancybox.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/datatables/media/js/jquery.dataTables.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/datatables/media/js/dataTables.select.js')?>"></script>
+<script src="<?= base_url('assets/vendor/jquery.filer/js/jquery.filer.min.js')?>"></script>
 
 <!-- JS Unify -->
-<script src="assets/js/hs.core.js"></script>
-<script src="assets/js/helpers/hs.hamburgers.js"></script>
-<script src="assets/js/components/hs.datepicker.js"></script>
-<script src="assets/js/components/hs.dropdown.js"></script>
-<script src="assets/js/components/hs.scrollbar.js"></script>
-<script src="assets/js/helpers/hs.focus-state.js"></script>
-<script src="assets/js/components/hs.dropdown.js"></script>
-<script src="assets/js/components/hs.side-nav.js"></script>
-<script src="assets/js/components/hs.range-datepicker.js"></script>
-<script src="assets/js/components/hs.area-chart.js"></script>
-<script src="assets/js/components/hs.donut-chart.js"></script>
-<script src="assets/js/components/hs.bar-chart.js"></script>
-<script src="assets/js/components/hs.popup.js"></script>
-<script src="assets/js/components/hs.datatables.js"></script>
-<script src="assets/js/helpers/hs.file-attachments.js"></script>
-<script src="assets/js/components/hs.file-attachement.js"></script>
+<script src="<?= base_url('assets/js/hs.core.js')?>"></script>
+<script src="<?= base_url('assets/js/helpers/hs.hamburgers.js')?>"></script>
+<script src="<?= base_url('assets/js/components/hs.datepicker.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.dropdown.js'); ?>"></script>
+<script src="<?= base_url('assets/js/components/hs.scrollbar.js')?>"></script>
+<script src="<?= base_url('assets/js/helpers/hs.focus-state.js')?>"></script>
+<script src="<?= base_url('assets/js/components/hs.dropdown.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.side-nav.js'); ?>"></script>
+<script src="<?= base_url('assets/js/components/hs.range-datepicker.js'); ?>"></script>
+<script src="<?= base_url('assets/js/components/hs.area-chart.js')?>"></script>
+<script src="<?= base_url('assets/js/components/hs.donut-chart.js'); ?>"></script>
+<script src="<?= base_url('assets/js/components/hs.bar-chart.js');?>"></script>
+<script src="<?= base_url('assets/js/components/hs.popup.js')?>"></script>
+<script src="<?= base_url('assets/js/components/hs.datatables.js'); ?>"></script>
+<script src="<?= base_url('assets/js/helpers/hs.file-attachments.js')?>"></script>
+<script src="<?= base_url('assets/js/components/hs.file-attachement.js')?>"></script>
 
 <!-- JS Custom -->
-<script src="assets/js/custom.js"></script>
+<script src="<?= base_url('assets/js/custom.js'); ?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>
