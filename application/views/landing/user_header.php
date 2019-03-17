@@ -52,7 +52,7 @@
                      src="<?= base_url('assets/img-temp/130x130/img1.jpg');?>" alt="Image description">
                 </span>
                             <span class="g-pos-rel g-top-2">
-        <span class="g-hidden-sm-down">MArs User</span>
+        <span class="g-hidden-sm-down">User name</span>
                 <i class="fa fa-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                 </span>
                         </a>
@@ -70,7 +70,7 @@
                                 </a>
                             </li>
                             <li class="g-mb-10">
-                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="user.php">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="app/users/dashboard.php">
                     <span class="d-flex align-self-center g-mr-12">
           <i class="fa fa-credit-card"></i>
         </span>
@@ -103,7 +103,7 @@
                     class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item has-active">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="user.php">
+                           href="app/users/dashboard.php">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="fa fa-dashboard"></i>
     </span>
@@ -114,7 +114,7 @@
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="buy_airtime.php">
+                           href="<?= base_url('dashboard/airtime/')?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="fa fa-signal"></i>
     </span>
@@ -123,7 +123,7 @@
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="buy_data.php">
+                           href="<?= base_url('dashboard/data/'); ?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="fa fa-wifi"></i>
     </span>
@@ -177,10 +177,10 @@
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="javascript:;">
-              <span class="d-flex align-self-center g-font-size-18 g-mr-18">
-      <i class="fa fa-sign-out" style="font-size:24px;"></i>
-    </span>
+                           href="<?= base_url('logout/');?>">
+                            <span class="d-flex align-self-center g-font-size-18 g-mr-18">
+                              <i class="fa fa-sign-out" style="font-size:24px;"></i>
+                            </span>
                             <span class="media-body align-self-center">Sign Out</span>
                         </a>
                     </li>

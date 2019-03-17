@@ -8,7 +8,7 @@ class Auth extends CI_Controller {
 
         if( $this->session->userdata('logged_in')){
             if( $this->session->userdata('is_admin') == 0 ){
-                redirect('account/');
+                redirect('dashboard/');
             }else{
                 redirect('admin/');
             }

@@ -73,8 +73,7 @@
                     <h2 class="u-heading-v2__title h6 text-uppercase mb-0">About Us</h2>
                 </div>
 
-                <p>About MARS-KONNECT.com dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt
-                    sodales.</p>
+                <p>About Marskonnet content here.........</p>
             </div>
             <div class="col-md-4 g-mb-40 g-mb-0--lg">
                 <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
@@ -123,7 +122,7 @@
                 <i class="fa fa-map-marker"></i>
               </span>
                         </div>
-                        <p class="mb-0">795 Folsom Ave, Suite 600, <br> San Francisco, CA 94107 795</p>
+                        <p class="mb-0">795 Street Address <br> Nigeria.</p>
                     </div>
                     <div class="d-flex g-mb-20">
                         <div class="g-mr-10">
@@ -131,7 +130,7 @@
                 <i class="fa fa-phone"></i>
               </span>
                         </div>
-                        <p class="mb-0">(+123) 456 7890 <br> (+123) 456 7891</p>
+                        <p class="mb-0">080 1111 2222 333 <br> 080 1111 2222 444</p>
                     </div>
                     <div class="d-flex g-mb-20">
                         <div class="g-mr-10">
@@ -141,10 +140,10 @@
                         </div>
                         <p class="mb-0">
                             <a class="g-color-white-opacity-0_8 g-color-white--hover"
-                               href="mailto:info@htmlstream.com">info@htmlstream.com</a>
+                               href="mailto:info@htmlstream.com">info@marskonnetcom</a>
                             <br>
                             <a class="g-color-white-opacity-0_8 g-color-white--hover"
-                               href="#">www.htmlstream.com</a>
+                               href="#">www.marskonnet.com</a>
                         </p>
                     </div>
                 </address>
@@ -157,7 +156,7 @@
         <div class="row">
             <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
                 <div class="d-lg-flex">
-                    <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2019 &copy; MARS-KONNECT.com All Rights
+                    <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2019 &copy; marskonnet.com. All Rights
                         Reserved.
                     </small>
                     <ul class="u-list-inline">
@@ -237,7 +236,7 @@
 
 <div class="u-outer-spaces-helper"></div>
 
-
+<script> let base_url = "<?= base_url(); ?>"; </script>
 <!-- JS Global Compulsory -->
 <script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
 <script src="<?= base_url('assets/vendor/jquery-migrate/jquery-migrate.min.js'); ?>"></script>
@@ -263,9 +262,8 @@
 <script src="<?= base_url('assets/js/components/hs.carousel.js');?>"></script>
 <script src="<?= base_url('assets/js/components/text-animation/hs.text-slideshow.js');?>"></script>
 <script src="<?= base_url('assets/js/components/hs.go-to.js');?>"></script>
-<script src="<?= base_url('assets/js/function.js');?>"></script>
-<!-- JS Customization -->
-<script src="<?= base_url('assets/js/custom.js');?>"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="<?= base_url('assets/js/functions.js');?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>

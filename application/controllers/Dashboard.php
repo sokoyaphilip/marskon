@@ -13,6 +13,7 @@ class Dashboard extends CI_Controller {
 
 
     public function index(){
+
         $page_data['page'] = 'home';
         $page_data['title'] = 'Welcome to your dashboard';
         $id = $this->session->userdata('logged_id');
@@ -43,12 +44,7 @@ class Dashboard extends CI_Controller {
                 $query .= " AND product_id = '{$transaction}' ORDER BY id DESC";
             }
         }
-
-//        var_dump($_POST);
-
         $page_data['transactions'] = $this->site->run_sql( $query )->result();
-
-//        var_dump( $page_data['transactions'] ); exit;
 		$this->load->view('app/users/dashboard', $page_data);
 	}
 
@@ -59,7 +55,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Data Subscription, works for all smartphones...';
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' ")->result();
-        $this->load->view('app/users/data', $page_data);
+        $this->load->view('app/users/buy_data', $page_data);
     }
 
     // Airtime
@@ -69,7 +65,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Airtime';
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
-        $this->load->view('app/users/airtime', $page_data);
+        $this->load->view('app/users/buy_airtime', $page_data);
 
     }
 

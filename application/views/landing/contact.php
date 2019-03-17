@@ -25,7 +25,7 @@
                 <i class="fa fa-map-marker"></i>
               </span>
                 <h4 class="h5 g-font-weight-600 g-mb-5">Address</h4>
-                <span class="d-block">61 Oxford str., London, 3DG</span>
+                <span class="d-block">Marskonnet Address</span>
             </div>
             <!-- End Icon Blocks -->
         </div>
@@ -37,7 +37,7 @@
                 <i class="fa fa-phone"></i>
               </span>
                 <h4 class="h5 g-font-weight-600 g-mb-5">Phone Number</h4>
-                <span class="d-block">1-800-643-4500</span>
+                <span class="d-block">081 6925 4598</span>
             </div>
             <!-- End Icon Blocks -->
         </div>
@@ -49,7 +49,7 @@
                 <i class="fa fa-envelope"></i>
               </span>
                 <h4 class="h5 g-font-weight-600 g-mb-5">Email</h4>
-                <span class="d-block">mail@htmlstream.com</span>
+                <span class="d-block">info@marskonnet.com</span>
             </div>
             <!-- End Icon Blocks -->
         </div>
@@ -64,12 +64,12 @@
                     <div class="row">
                         <div class="col-md-6 form-group g-mb-20">
                             <label class="g-color-gray-dark-v2 g-font-size-13">Name</label>
-                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="John Doe">
+                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="Marskonnet">
                         </div>
 
                         <div class="col-md-6 form-group g-mb-20">
                             <label class="g-color-gray-dark-v2 g-font-size-13">Email</label>
-                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="email" placeholder="johndoe@gmail.com">
+                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="email" placeholder="info@marskonnet.com">
                         </div>
 
                         <div class="col-md-6 form-group g-mb-20">
@@ -79,7 +79,7 @@
 
                         <div class="col-md-6 form-group g-mb-20">
                             <label class="g-color-gray-dark-v2 g-font-size-13">Phone</label>
-                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="tel" placeholder="+ (01) 222 33 44">
+                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="tel" placeholder="0816 9988 999">
                         </div>
 
                         <div class="col-md-12 form-group g-mb-40">

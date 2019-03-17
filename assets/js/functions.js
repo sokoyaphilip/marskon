@@ -29,7 +29,7 @@ $(document).ready(function() {
 
         if( login_password == '' ){
             _btn.prop('disabled', false);
-            sweet_alert('Error', 'Email field can not be empty', 'error');
+            sweet_alert('Error', 'Password field can not be empty', 'error');
             return false;
         }
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
             success: function (response) {
                 if (response.status === 'success') {
                     setTimeout(function(){  window.location.href = window.location.href; }, 2000);
-                    sweet_alert('Success!', 'You are now logged in', 'success');
+                    sweet_alert('Success!', 'Welcome! You are now logged in', 'success');
                 } else {
                     sweet_alert('Error!', response.message, response.status);
                 }
@@ -56,10 +56,18 @@ $(document).ready(function() {
 
     $('.sign-up').on('click', function () {
         let _btn = $(this);
+        let signup_name = $('#signup-name').val();
         let signup_email = $('#signup-email').val();
         let signup_phone = $('#signup-phone').val();
         let password = $('#signup-password').val();
         let confirm_password = $('#confirm-password').val();
+
+        if( signup_name === '' ){
+            _btn.prop('disabled', false);
+            sweet_alert('Error', 'Full name field can not be empty', 'error');
+            return false;
+        }
+
         if( signup_email === '' ){
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Email field can not be empty', 'error');
@@ -79,7 +87,7 @@ $(document).ready(function() {
         $.ajax({
             url: base_url + 'ajax/signup/',
             method: 'POST',
-            data: {'signup_email': signup_email, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
+            data: {'signup_name': signup_name, 'signup_email': signup_email, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
             success: function (response) {
                 if (response.status === 'success') {
                     setTimeout(function(){  window.location.href = window.location.href; }, 2000);

@@ -50,6 +50,7 @@ class Ajax extends CI_Controller {
         $this->form_validation->set_rules('signup_email', 'Email Address', 'trim|required|xss_clean|valid_email|is_unique[users.email]', array('is_unique' => 'This %s has already been registered!'));
         $this->form_validation->set_rules('signup_phone', 'Phone number','trim|required|xss_clean|is_unique[users.phone]', array('is_unique' => 'This %s has already been registered!'));
         $this->form_validation->set_rules('password', 'Password','trim|required|xss_clean|min_length[6]|max_length[15]');
+        $this->form_validation->set_rules('signup_name', 'Full name','trim|required|xss_clean|min_length[3]|max_length[55]');
         $this->form_validation->set_rules('confirm_password', 'Confirm Password','trim|required|xss_clean|min_length[6]|max_length[15]|matches[password]');
 
         if( $this->form_validation->run() == false ){
@@ -62,6 +63,7 @@ class Ajax extends CI_Controller {
             $code = $this->user->generate_user_code();
             $data = array(
                 'email' => $this->input->post('signup_email', true),
+                'name' => $this->input->post('signup_name', true),
                 'phone' => $this->input->post('signup_phone', true),
                 'salt' => $salt,
                 'password' => shaPassword($this->input->post('password'), $salt),
@@ -73,7 +75,7 @@ class Ajax extends CI_Controller {
 
             $user = $this->user->create_account($data);
             if( !is_numeric($user) ) {
-                $response['message'] = 'Sorry! There was an error creating the account. Try again later.';
+                $response['message'] = 'Sorry! There was an error creating the account. Try again later, or contact support.';
                 $this->return_response( $response );
             }else{
                 $login_data = array(
@@ -97,7 +99,7 @@ class Ajax extends CI_Controller {
 
     /*
      *
-     * Delete servide for admin
+     * Delete service for admin
      * */
 
     public function delete_service(){
@@ -147,7 +149,6 @@ class Ajax extends CI_Controller {
     }
 
     public function fetch_plans(){
-        $discount = 100;
         $response = array('status' => 'error');
         $id = $this->input->post_get('service_id', true);
 
@@ -162,7 +163,7 @@ class Ajax extends CI_Controller {
                 $res['id'] = $plan->id;
                 $res['name'] = $plan->name;
 //                $res['amount'] = $plan->amount;
-//                CAlculate the discount price , @TODO : this should be calculated from the admin end before inserting the plans
+//                Calculate the discount price
                 $res['amount'] = $plan->amount ;
                 array_push( $plans_array, $res );
             }
@@ -225,6 +226,7 @@ class Ajax extends CI_Controller {
         $message = $description_number =  $invalid_numbers = '';
         $valid_numbers = array();
         $numbers = explode( ',', $recipents);
+
         foreach( $numbers as $key => $msisdn ){
             $msisdn = preg_replace('/\D/', '', $msisdn);
             $strlen = strlen( $msisdn );
@@ -275,10 +277,26 @@ class Ajax extends CI_Controller {
                     'user_id'        => $user_id,
                     'status'        => 'success'
                 );
+                $error = false; $api_ret = 'ORDER_COMPLETED';
+                foreach( $valid_numbers as $number ){
+                    // fire the API
 
-//                foreach( $valid_numbers as $number ){
-//                    // fire the API
-//                }
+                    $ret = data_plan_code( $network_name, $plan_detail->name, $number);
+                    if( $ret !== false ){
+                        $sms_array = array( '08070994845' => $ret );
+                        $this->load->library('AfricaSMS', $sms_array);
+                        $this->africasms->sendsms();
+                    }else{
+                        $error = true;
+                    }
+                }
+
+                if( $error ){
+                    $response['message'] = "There was an error processing your order, {$api_ret['status']} please try again or contact us. Thanks";
+                    $this->site->update('transactions', array('status' => 'fail'), "(trans_id = {$transaction_id})");
+                    $this->return_response( $response );
+                }
+
                 if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
                     $this->site->insert_data('transactions', $insert_data);
                     $response['status'] = 'success';
@@ -373,7 +391,7 @@ class Ajax extends CI_Controller {
                     'payment_method' => 2,
                     'date_initiated'    => get_now(),
                     'user_id'        => $user_id
-                    );
+                );
 
                 // Call the API
                 foreach( $valid_numbers as $number ){
@@ -489,7 +507,7 @@ class Ajax extends CI_Controller {
                 $total_amount = $total_amount - ( $discount/100 * $total_amount );
             }
 
-            if( $total_amount > $discount ){
+            if( $total_amount > $wallet ){
                 $response['message'] = "You don't have enough fund to process this, please fund your wallet first.";
                 $this->return_response($response);
             }
@@ -845,6 +863,22 @@ class Ajax extends CI_Controller {
                 'MobileNetwork' => $network_code,
                 'Amount' => $data['amount'],
                 'MobileNumber' => $data['number'],
+            )
+        );
+        return json_decode($getResponse, true);
+    }
+
+    // For Data purchase
+    public function callSMSAPI( $data ){
+        $getResponse = $this->_submitGet(
+            array(
+                'url'   => "https://www.nellobytesystems.com/APIBuyBulkSMS.asp",
+                'UserID' => CK_USER_ID,
+                'APIKey' => CK_KEY,
+                'Sender' => 'GecharlData',
+                'Recipient' => '08151148607',
+                'Message' => $data['message']
+//                08151148607
             )
         );
         return json_decode($getResponse, true);

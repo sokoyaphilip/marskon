@@ -21,7 +21,7 @@
                                                     class="icon-finance-128 u-line-icon-pro"></i></span>
                                     </div>
                                     <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
-                                           type="text" name="name" placeholder="Full name">
+                                           type="text" name="name" id="signup-name" placeholder="Full name">
                                 </div>
                             </div>
 
@@ -32,7 +32,7 @@
                                                     class="icon-finance-067 u-line-icon-pro"></i></span>
                                     </div>
                                     <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
-                                           type="text" name="phone" placeholder="Phone number">
+                                           type="text" name="phone" id="signup-phone" placeholder="Phone number">
                                 </div>
                             </div>
 
@@ -43,7 +43,7 @@
                                                     class="icon-communication-062 u-line-icon-pro"></i></span>
                                     </div>
                                     <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
-                                           type="email" name="email" placeholder="Your email">
+                                           type="email" name="email" id="signup-email" placeholder="Your email">
                                 </div>
                             </div>
 
@@ -54,7 +54,7 @@
                                                     class="icon-media-094 u-line-icon-pro"></i></span>
                                     </div>
                                     <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
-                                           type="password" name="password" placeholder="Password">
+                                           type="password" name="password" id="signup-password" placeholder="Password">
                                 </div>
                             </div>
 
@@ -65,10 +65,10 @@
                                                     class="icon-media-094 u-line-icon-pro"></i></span>
                                     </div>
                                     <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
-                                           type="password" name="confirm_password" placeholder="Password">
+                                           type="password" id="confirm-password" name="confirm_password" placeholder="Password">
                                 </div>
                             </div>
-                            <button class="btn btn-md btn-block u-btn-primary rounded text-uppercase g-py-13"
+                            <button class="btn btn-md btn-block u-btn-primary rounded text-uppercase g-py-13 sign-up"
                                     type="button">Sign Up
                             </button>
 
