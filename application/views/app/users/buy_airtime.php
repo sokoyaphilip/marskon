@@ -5,72 +5,57 @@ $this->load->view('landing/user_header');
         <div class="row">
             <div class="col-md-4">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select Network To Buy Airtime</h4>
-                        <div class="btn-group justified-content">
-                            <label class="u-check">
-                                <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radGroupBtn1_1" checked=""
-                                       type="radio">
-                                <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-mtn--checked rounded-0">MTN</span>
-                            </label>
-                            <label class="u-check">
-                                <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radGroupBtn1_1" type="radio">
-                                <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-red--checked g-brd-left-none--md rounded-0">Airtel</span>
-                            </label>
-                            <label class="u-check">
-                                <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radGroupBtn1_1" type="radio">
-                                <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-glo--checked g-brd-left-none--md rounded-0">GLO</span>
-                            </label>
-                            <label class="u-check">
-                                <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" name="radGroupBtn1_1" type="radio">
-                                <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-etisalat--checked g-brd-left-none--md rounded-0">9-Mobile</span>
-                            </label>
+
+                    <form>
+
+                        <div class="col-sm-12">
+                            <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select Network To Buy Airtime</h4>
+                            <div class="btn-group justified-content">
+
+
+                                <?php foreach ($networks as $network ): ?>
+                                    <label class="u-check">
+                                        <input data-discount="<?= $network->discount; ?>" data-network-name="<?= $network->network_name; ?>"
+                                               value="<?= $network->id; ?>"
+                                               class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" name="network"
+                                               type="radio">
+                                        <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-mtn--checked rounded-0 airtime_network"><?= ucwords($network->title); ?></span>
+                                    </label>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 g-mt-10">
-                        <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
-                            <div class="dropdown bootstrap-select js-select u-select--v3-select u-sibling w-100 dropup">
-                                <select
-                                        class="js-select u-select--v3-select u-sibling w-100" required="required"
-                                        title="Select Price Plan" style="display: none;" tabindex="-98">
-                                    <option class="bs-title-option" value=""></option>
-                                    <option value="selectListItem1"
-                                            data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-rocket g-font-size-18 g-mr-15&quot;></i><span>Select List Item 1</span></span>">
-                                        Select List Item 1
-                                    </option>
-                                    <option value="selectListItem2"
-                                            data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-headphone-alt g-font-size-18 g-mr-15&quot;></i><span>Select List Item 2</span></span>">
-                                        Select List Item 2
-                                    </option>
-                                    <option value="selectListItem3"
-                                            data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-shift-right g-font-size-18 g-mr-15&quot;></i><span>Select List Item 3</span></span>">
-                                        Select List Item 3
-                                    </option>
-                                    <option value="selectListItem4"
-                                            data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-import g-font-size-18 g-mr-15&quot;></i><span>Additional List Item 4</span></span>">
-                                        Additional List Item 4
-                                    </option>
-                                </select>
-                                <div class="d-flex align-items-center justify-content-center g-absolute-centered--y g-right-0 h-100 g-width-40 g-bg-primary g-color-gray-light-v6 g-color-lightblue-v9--sibling-opened g-rounded-right-25">
-                                    <i class="fa fa-money"></i>
+
+                        <div class="col-sm-12 g-mt-10">
+                            <div class="form-group">
+                                <div class="g-pos-rel">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                            <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
+                            </span>
+                                    <input id="inputGroup-3_1"
+                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10 number"
+                                           type="text" name="amount" placeholder="Enter Price To Recharge">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12 g-mt-10">
-                <textarea id="inputGroup-3_3"
-                          class="form-control form-control-md u-textarea-expandable g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-resize-none g-overflow-hidden"
-                          rows="3"
-                          placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
-                    </div>
-                    <div class="col-md-12 g-mt-10 text-right">
-                        <a class="js-fancybox btn btn-xl u-btn-primary g-rounded-20 g-width-160--md g-font-size-default g-ml-10" href="#">Recharge Airtime
-                        </a>
-                    </div>
+
+                        <div class="col-md-12 g-mt-10">
+                        <textarea id="inputGroup-3_3"
+                                  class="form-control form-control-md u-textarea-expandable g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-resize-none g-overflow-hidden"
+                                  rows="3"
+                                  name="recipents"
+                                  placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
+                            </div>
+
+                        <div class="col-md-12 g-mt-5 py-3">
+                            <button class="js-fancybox btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
+
             <div class="g-pa-20 col-md-8">
-                <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">Transaction History</h1>
+                <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">Transaction History For Airtime</h1>
 
                 <div class="media-md align-items-center g-mb-30">
                     <div class="d-flex g-mb-15 g-mb-0--md">

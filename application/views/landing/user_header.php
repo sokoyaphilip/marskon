@@ -101,80 +101,84 @@
             <div class="js-custom-scroll u-sidebar-navigation-v1-inner">
                 <ul id="sideNavMenu"
                     class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item has-active">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'home') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="app/users/dashboard.php">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-      <i class="fa fa-dashboard"></i>
-    </span>
+                           href="<?= base_url('dashboard/'); ?>">
+                            <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                                <i class="fa fa-dashboard"></i>
+                            </span>
                             <span class="media-body align-self-center">Dashboard</span>
-                            <span class="d-flex align-self-center u-side-nav--control-icon">
-    </span>
+                            <span class="d-flex align-self-center u-side-nav--control-icon"></span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'airtime') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('dashboard/airtime/')?>">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-      <i class="fa fa-signal"></i>
-    </span>
+                            <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-signal"></i>
+                            </span>
                             <span class="media-body align-self-center">Buy Airtime</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'data') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('dashboard/data/'); ?>">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-      <i class="fa fa-wifi"></i>
-    </span>
+                              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                                <i class="fa fa-wifi"></i>
+                              </span>
                             <span class="media-body align-self-center">Buy Data</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'subscription') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="tv_sub.php">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-              <i class="fa fa-desktop"></i>
-              </span>
+                           href="<?= base_url('dashboard/subscription/')?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                          <i class="fa fa-desktop"></i>
+                          </span>
                             <span class="media-body align-self-center">TV Subscription</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'electricity') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="electric_bill.php">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-              <i class="fa fa-bolt" style="font-size:28px;"></i>
-              </span>
-                            <span class="media-body align-self-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electric Bills</span>
+                           href="<?= base_url('dashboard/electricity/')?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                          <i class="fa fa-bolt" style="font-size:28px;"></i>
+                          </span>
+                            <span class="media-body align-self-center">Electric Bills</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'coins') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="txn_coin.php">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-              <i class="fa fa-bitcoin" style="font-size:24px;"></i>
-              </span>
+                           href="<?= base_url('dashboard/coin/');?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                          <i class="fa fa-bitcoin" style="font-size:24px;"></i>
+                          </span>
                             <span class="media-body align-self-center">Transact Coins</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'cards') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="redeem_card.php">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-              <i class="fa fa-gift" style="font-size:22px;"></i>
-              </span>
+                           href="<?= base_url('dashboard/redeem_cards/'); ?>">
+                            <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                            <i class="fa fa-gift" style="font-size:22px;"></i>
+                            </span>
                             <span class="media-body align-self-center">Redeem Gift Cards</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'wallet') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="my_wallet.php">
-              <span class="d-flex align-self-center g-font-size-18 g-mr-18">
-      <i class="fa fa-credit-card-alt"></i>
-    </span>
+                           href="<?= base_url('dashboard/wallet/'); ?>">
+                            <span class="d-flex align-self-center g-font-size-18 g-mr-18">
+                              <i class="fa fa-credit-card-alt"></i>
+                            </span>
                             <span class="media-body align-self-center">My Wallet</span>
                         </a>
                     </li>
+
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('logout/');?>">
@@ -188,6 +192,4 @@
             </div>
         </div>
         <!-- End Sidebar Nav -->
-
-
         <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">

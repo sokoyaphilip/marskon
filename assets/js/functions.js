@@ -17,17 +17,18 @@
 
 $(document).ready(function() {
     // Login
-    $('.log-in').on('click', function () {
+    $('.log-in').on('click', function (e) {
+        e.preventDefault();
         let login_username = $('#login-username').val();
         let login_password = $('#login-password').val();
 
-        if( login_username == '' ){
+        if( login_username === '' ){
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Username field can not be empty', 'error');
             return false;
         }
 
-        if( login_password == '' ){
+        if( login_password === '' ){
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Password field can not be empty', 'error');
             return false;
@@ -39,35 +40,37 @@ $(document).ready(function() {
             data: {'login_username': login_username, 'password': login_password},
             success: function (response) {
                 if (response.status === 'success') {
-                    setTimeout(function(){  window.location.href = window.location.href; }, 2000);
-                    sweet_alert('Success!', 'Welcome! You are now logged in', 'success');
+                    sweet_alert('Success!', 'You are now logged in', 'success');
+                    $('.swal-button--confirm').on('click', function () {
+                        window.location = window.location.href;
+                    });
                 } else {
                     sweet_alert('Error!', response.message, response.status);
                 }
             },
             error: function (response) {
                 console.log(response);
+            },
+            statusCode: {
+                303 : function(){
+                    alert("Page Not FOund");
+                }
             }
         });
+
+        return false;
     });
 
 
     // Sign up
 
-    $('.sign-up').on('click', function () {
+    $('.sign-up').on('click', function (e) {
+        e.preventDefault();
         let _btn = $(this);
-        let signup_name = $('#signup-name').val();
         let signup_email = $('#signup-email').val();
         let signup_phone = $('#signup-phone').val();
         let password = $('#signup-password').val();
         let confirm_password = $('#confirm-password').val();
-
-        if( signup_name === '' ){
-            _btn.prop('disabled', false);
-            sweet_alert('Error', 'Full name field can not be empty', 'error');
-            return false;
-        }
-
         if( signup_email === '' ){
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Email field can not be empty', 'error');
@@ -87,11 +90,15 @@ $(document).ready(function() {
         $.ajax({
             url: base_url + 'ajax/signup/',
             method: 'POST',
-            data: {'signup_name': signup_name, 'signup_email': signup_email, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
+            data: {'signup_email': signup_email, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
             success: function (response) {
                 if (response.status === 'success') {
-                    setTimeout(function(){  window.location.href = window.location.href; }, 2000);
+
                     sweet_alert('Success!', "Registration successfull. Buy Airtime - Data - Subscribe your TV Decoder...", 'success');
+                    $('.swal-button--confirm').on('click', function () {
+                        window.location = window.location.href;
+                    });
+
                 } else {
                     sweet_alert('Error!', response.message, response.status);
                 }
@@ -100,6 +107,8 @@ $(document).ready(function() {
                 console.log(response);
             }
         });
+        return false;
+
     });
 
 
@@ -123,7 +132,7 @@ $(document).ready(function() {
 
     ///^[0-9]+\.?[0-9]*$/;
     // $(".numberAndComma").inputFilter(function (value) {
-        // return /^-?\d*$/..test(value);
+    // return /^-?\d*$/..test(value);
     // });
 
     // Thousand separator
@@ -187,7 +196,7 @@ $(document).ready(function() {
         });
 
     });
-    
+
     // Data Purchase
     $('.data-purchase').on('click', function (e) {
 
@@ -224,6 +233,7 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/data_purchase/',
             method: "POST",
+            cache: false,
             data: {'product_id' : product_id, 'plan_id' : plan_id, 'recipents' : recipents, 'network' : network, 'network_name' : network_name },
             success : function(response){
                 if( response.status === 'success' ){
@@ -309,6 +319,7 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/buy_airtime/',
             method: "POST",
+            cache : false,
             data: {'product_id' : product_id, 'amount' : amount, 'discount' : discount, 'network' : network, 'recipents' : recipents, 'network_name' : network_name},
             success : function(response){
                 if( response.status === 'success' ){
@@ -333,6 +344,7 @@ $(document).ready(function() {
 
         e.preventDefault();
         let _btn = $(this);
+        _btn.text("Processing...");
         $(this).prop('disabled', true);
         let product_id = $('#product_id').val();
         let amount = $('#amount').val();
@@ -345,16 +357,19 @@ $(document).ready(function() {
         if( amount === '' || amount < 100 ){
             sweet_alert('Error', 'Sorry amount can not be less than N100', 'error');
             _btn.prop('disabled', false);
+            _btn.text("Buy Now");
             return false;
         }
         if( recipents === '' ){
             sweet_alert('Error', 'Please fill in the right number', 'error');
             _btn.prop('disabled', false);
+            _btn.text("Buy Now");
             return false;
         }
         if( network === '' ){
             sweet_alert('Error', 'You need to select a network', 'error');
             _btn.prop('disabled', false);
+            _btn.text("Buy Now");
             return false;
         }
         // payment method
@@ -362,6 +377,7 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/quick_airtime/',
             method: "POST",
+            cache:false,
             data: {'product_id' : product_id, 'discount' : discount, 'amount' : amount, 'network' : network, 'payment' : payment, 'recipents' : recipents, 'network_name' : network_name},
             success : function(response){
                 if( response.status === 'success' ){
@@ -371,11 +387,14 @@ $(document).ready(function() {
                             'info', false);
 
                         $('.swal-button--confirm').on('click', function () {
-                            setTimeout( sweet_alert('info','Transaction successful, thanks for using Gecharl, please check your balance.', 'info'),3000);
+                            setTimeout( sweet_alert('Info','Transaction successful, thanks for using Gecharl. You wil be credited immediately payment is confirmed.', 'info'),3000);
                         });
                     }else if( payment === 2 ){
                         sweet_alert('success','Transaction successful. Check your dashboard for transaction details..', 'info')
                     }else{
+                        let amount = response.amount * 100;
+                        let data = {'amount' : amount, 'ref' : response.message};
+                        payWithPaystack( data );
                         // paystack
                     }
 
@@ -431,10 +450,10 @@ $(document).ready(function() {
             url : base_url + 'ajax/tv_cable/',
             method: "POST",
             data: {'product_id' : product_id,
-                    'plan_id' : plan_id, 'smart_card_number' : smart_card_number,
-                    'registered_name' : registered_name,
-                    'registered_number' : registered_number,
-                    'network' : network, 'network_name' : network_name },
+                'plan_id' : plan_id, 'smart_card_number' : smart_card_number,
+                'registered_name' : registered_name,
+                'registered_number' : registered_number,
+                'network' : network, 'network_name' : network_name },
             success : function(response){
                 if( response.status === 'success' ){
                     sweet_alert('Success', response.message, 'success', false);
@@ -575,8 +594,10 @@ $(document).ready(function() {
     }
 
     $('#airtime_network').on('change', function () {
-        let discount = $(this).find(':selected').data('discount');
-        $('.you-pay').text('You get '+ discount +'% discount');
+        if( $(this).val() ){
+            let discount = $(this).find(':selected').data('discount');
+            $('.you-pay').text('You get '+ discount +'% discount');
+        }
     });
 
     $('#network').on('change', function(e){
@@ -634,6 +655,7 @@ $(document).ready(function() {
                 $.ajax({
                     url : base_url + 'ajax/delete_service/',
                     method: 'POST',
+                    cache: false,
                     data : {'service_id' : id },
                     success : function(response){
                         if( response.status === 'success' ){
@@ -671,6 +693,7 @@ $(document).ready(function() {
                 $.ajax({
                     url : base_url + 'ajax/delete_plan/',
                     method: 'POST',
+                    cache: false,
                     data : {'plan_id' : id },
                     success : function(response){
                         if( response.status === 'success' ){
@@ -701,6 +724,7 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/fetch_plans/',
             method: 'POST',
+            cache: false,
             data : {'service_id' : sid },
             success : function(response){
 
@@ -727,7 +751,7 @@ $(document).ready(function() {
         $('#edit_plan_id').val(id);
 
     });
-    
+
     $('.update-plan').on('click', function () {
         let plan_name = $('#plan_name').val();
         let plan_amount = $('#plan_value').val();
@@ -736,6 +760,7 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/update_plan/',
             method: 'POST',
+            cache: false,
             data : {'id' : id, 'plan_name' : plan_name, 'plan_amount' : plan_amount },
             success : function(response){
                 if( response.status === 'success' ){
@@ -868,6 +893,7 @@ function verifyPaystack( pref, ref){
     $.ajax({
         url : base_url + 'ajax/verifyPaystack/',
         method : "POST",
+        cache: false,
         data : {'reference' : pref, 'ref' : ref },
         success: function (response) {
             if( response.status === 'success' ){

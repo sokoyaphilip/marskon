@@ -65,6 +65,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Airtime';
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
+
         $this->load->view('app/users/buy_airtime', $page_data);
 
     }
@@ -76,7 +77,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Subscribe your GoTV, DSTV, Startimes ... decoder';
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.slug ='tv-subscription' ")->result();
-        $this->load->view('app/users/subscription', $page_data);
+        $this->load->view('app/users/tv_sub', $page_data);
 
     }
 
@@ -90,7 +91,32 @@ class Dashboard extends CI_Controller {
         LEFT JOIN services s ON (p.id = s.product_id) 
         JOIN plans pl ON (pl.sid = s.id)
         WHERE p.slug ='electricity-bill' ")->result();
-        $this->load->view('app/users/electricity', $page_data);
+        $this->load->view('app/users/electric_bill', $page_data);
+    }
+
+    // electricity
+    public function coin(){
+        $id = $this->session->userdata('logged_id');
+        $page_data['page'] = 'coin';
+        $page_data['title'] = 'Buy and Sell Bitcoin, Paxful coin';
+        $page_data['user'] = $this->get_profile($id);
+        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) 
+        JOIN plans pl ON (pl.sid = s.id)
+        WHERE p.slug ='electricity-bill' ")->result();
+        $this->load->view('app/users/coin', $page_data);
+    }
+
+        public function redeem_cards(){
+        $id = $this->session->userdata('logged_id');
+        $page_data['page'] = 'cards';
+        $page_data['title'] = 'Pay your electricity bill';
+        $page_data['user'] = $this->get_profile($id);
+        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) 
+        JOIN plans pl ON (pl.sid = s.id)
+        WHERE p.slug ='electricity-bill' ")->result();
+        $this->load->view('app/users/redeem_card', $page_data);
     }
 
     // fund wallet
@@ -100,7 +126,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'My Wallet';
         $page_data['user'] = $this->get_profile( $id );
         $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
-        $this->load->view('app/users/wallet', $page_data);
+        $this->load->view('app/users/my_wallet', $page_data);
 
     }
 

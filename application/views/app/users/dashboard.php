@@ -1,7 +1,4 @@
-<?php
-
-    $this->load->view('landing/user_header');
-?>
+<?php $this->load->view('landing/user_header'); ?>
 <style>
     .col{
         flex-basis:unset !important;
