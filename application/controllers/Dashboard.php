@@ -79,6 +79,8 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'subscription';
         $page_data['title'] = 'Subscribe your GoTV, DSTV, Startimes ... decoder';
         $page_data['user'] = $this->get_profile($id);
+        $page_data['product_id'] = 3;
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 3 AND user_id = {$id}")->result();
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.slug ='tv-subscription' ")->result();
         $this->load->view('app/users/tv_sub', $page_data);
 
@@ -90,10 +92,12 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'electricity';
         $page_data['title'] = 'Pay your electricity bill';
         $page_data['user'] = $this->get_profile($id);
+        $page_data['product_id'] = 4;
         $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) 
         JOIN plans pl ON (pl.sid = s.id)
         WHERE p.slug ='electricity-bill' ")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 4 AND user_id = {$id}")->result();
         $this->load->view('app/users/electric_bill', $page_data);
     }
 
@@ -110,7 +114,7 @@ class Dashboard extends CI_Controller {
         $this->load->view('app/users/coin', $page_data);
     }
 
-        public function redeem_cards(){
+    public function redeem_cards(){
         $id = $this->session->userdata('logged_id');
         $page_data['page'] = 'cards';
         $page_data['title'] = 'Pay your electricity bill';

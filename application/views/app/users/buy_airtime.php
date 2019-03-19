@@ -5,7 +5,6 @@ $this->load->view('landing/user_header');
         <div class="row">
             <div class="col-md-4">
                 <div class="row">
-                    <form>
 
                         <div class="col-sm-12">
                             <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select (Click) Network To Buy Airtime</h4>
@@ -47,11 +46,9 @@ $this->load->view('landing/user_header');
                             </div>
                         <input type="hidden" name="product_id" id="product_id" value="<?= $product_id; ?>">
                         <div class="col-md-12 g-mt-5 py-3">
-                            <button type="button" data-pid="6" class="js-fancybox btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
-                            <button type="reset" class="js-fancybox btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
+                            <button type="button" data-pid="6" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
                         </div>
 
-                    </form>
                 </div>
             </div>
 
