@@ -5,10 +5,9 @@ $this->load->view('landing/user_header');
         <div class="row">
             <div class="col-md-4">
                 <div class="row">
-                    <form>
                         <div class="col-sm-12">
                             <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select Network To Buy Data</h4>
-                            <div class="btn-group justified-content">
+                            <div class="justified-content">
                                 <div class="form-group g-brd-gray-light-v7 g-rounded-25 mb-0">
                                     <select class="form-control w-100" id="network" required
                                             name="network">
@@ -23,14 +22,13 @@ $this->load->view('landing/user_header');
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-sm-12 g-mt-10">
-                            <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
-                                <select id="network_data_plan"
-                                    class="js-select u-select--v3-select u-sibling w-100" required="required"
-                                    title="Select Data Plan" tabindex="-98">
-                                    <option value="">--Select a data plan--</option>
-                                </select>
-                            </div>
+                            <select id="network_plan"
+                                class="js-select u-select--v3-select u-sibling w-100" required="required"
+                                title="Select Data Plan">
+                                <option value="">--Select a data plan--</option>
+                            </select>
                         </div>
 
                         <div class="col-md-12 g-mt-10">
@@ -39,12 +37,12 @@ $this->load->view('landing/user_header');
                               rows="3"
                               placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
                         </div>
+
+
                         <div class="col-md-12 g-mt-5 py-3">
                             <input type="hidden" name="product_id" value="<?= $product_id?>" />
-                            <button type="button" class="js-fancybox btn btn-md u-btn-primary g-width-160--md g-font-size-2 data-purchase">Buy Data</button>
-                            <button type="reset" class="js-fancybox btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
+                            <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 data-purchase" data-wallet="<?= $user->wallet;?>">Buy Data</button>
                         </div>
-                    </form>
                 </div>
             </div>
 

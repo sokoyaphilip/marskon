@@ -199,7 +199,6 @@ $(document).ready(function() {
 
     // Data Purchase
     $('.data-purchase').on('click', function (e) {
-
         e.preventDefault();
         let _btn = $(this);
         _btn.prop('disabled', true);
@@ -214,24 +213,26 @@ $(document).ready(function() {
         let plan_id = $('#network_data_plan').val();
         let wallet = _btn.data('wallet');
 
-        if( recipents === '') {
-            _btn.prop('disabled', false);
-            sweet_alert('Error', 'Number field can not be empty', 'error');
-            _btn.text("Recharge Now");
-            return false;
-        }
-
         if( selected.val() === '') {
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Please select a network', 'error');
-            _btn.text("Rech Now");
+            _btn.text("Buy Data");
             return false;
         }
+
+
+        if( recipents === '') {
+            _btn.prop('disabled', false);
+            sweet_alert('Error', 'Number field can not be empty', 'error');
+            _btn.text("Buy Data");
+            return false;
+        }
+
 
         if( plan_id === ''){
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Please select a plan', 'error');
-            _btn.text("Buy Now");
+            _btn.text("Buy Data");
             return false;
         }
 
@@ -626,7 +627,7 @@ $(document).ready(function() {
         //
         // $('.you-pay').html('You get '+ discount +' % discount');
 
-        $('#network_data_plan')
+        $('#network_plan')
             .find('option')
             .remove()
             .end()
@@ -641,7 +642,7 @@ $(document).ready(function() {
                 if( response.status === 'success' ){
                     let count = response.message.length;
                     for( let i = 0; i < count; i++ ){
-                        $('#network_data_plan').append(`<option value="${response.message[i].id}">${response.message[i].name} - ${format_currency(response.message[i].amount)}</option>`);
+                        $('#network_plan').append(`<option value="${response.message[i].id}">${response.message[i].name} - ${format_currency(response.message[i].amount)}</option>`);
                     }
                 }else{
                     console.log(response.message);
@@ -649,11 +650,6 @@ $(document).ready(function() {
             }
         })
     });
-
-    $('#network_plan').on('change', function(){
-        alert('Great');
-    });
-
     ///////////////////////////////////////////////
     //////////// ADMIN ////////////////////////////
     ///////////////////////////////////////////////
