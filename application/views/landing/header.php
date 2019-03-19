@@ -171,13 +171,13 @@
                                 <div class="d-inline-block" style="width:10px;"></div>
                                 <?php if( $this->session->userdata('is_admin') == 1 ): ?>
                                     <div class="d-inline-block g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
-                                        <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="<?= base_url('auth/admin/');?>">
+                                        <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="<?= base_url('admin/');?>">
                                             admin dashboard
                                         </a>
                                     </div>
                                 <?php else: ?>
                                     <div class="d-inline-block g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg">
-                                        <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="<?= base_url('auth/dashboard/');?>">
+                                        <a class="btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15" href="<?= base_url('dashboard/');?>">
                                             My Account
                                         </a>
                                     </div>

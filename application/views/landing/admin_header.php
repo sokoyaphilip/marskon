@@ -52,7 +52,7 @@
                      src="assets/img-temp/130x130/img1.jpg" alt="Image description">
                 </span>
                             <span class="g-pos-rel g-top-2">
-        <span class="g-hidden-sm-down">MArs User</span>
+        <span class="g-hidden-sm-down">MArs Administrator</span>
                 <i class="fa fa-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                 </span>
                         </a>
@@ -64,19 +64,19 @@
                             <li class="g-mb-10">
                                 <a class="media g-color-primary--hover g-py-5 g-px-20" href="my_wallet.php">
                     <span class="d-flex align-self-center g-mr-12">
-          <i class="fa fa-user"></i>
+          <i class="fa fa-users"></i>
         </span>
-                                    <span class="media-body align-self-center">My Wallet</span>
+                                    <span class="media-body align-self-center">Manage Users</span>
                                 </a>
                             </li>
-                            <li class="g-mb-10">
-                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="user.php">
-                    <span class="d-flex align-self-center g-mr-12">
-          <i class="fa fa-credit-card"></i>
-        </span>
-                                    <span class="media-body align-self-center">Account History</span>
-                                </a>
-                            </li>
+<!--                            <li class="g-mb-10">-->
+<!--                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="user.php">-->
+<!--                    <span class="d-flex align-self-center g-mr-12">-->
+<!--          <i class="fa fa-credit-card"></i>-->
+<!--        </span>-->
+<!--                                    <span class="media-body align-self-center">Account History</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
                             <li class="mb-0">
                                 <a class="media g-color-primary--hover g-py-5 g-px-20" href="#">
                     <span class="d-flex align-self-center g-mr-12">
@@ -103,7 +103,7 @@
                     class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item has-active">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="dashboard.php">
+                           href="admin.php">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="fa fa-dashboard"></i>
     </span>
@@ -112,42 +112,42 @@
     </span>
                         </a>
                     </li>
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="buy_airtime.php">-->
-<!--              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
-<!--      <i class="fa fa-signal"></i>-->
-<!--    </span>-->
-<!--                            <span class="media-body align-self-center">Buy Airtime</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="buy_data.php">-->
-<!--              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
-<!--      <i class="fa fa-wifi"></i>-->
-<!--    </span>-->
-<!--                            <span class="media-body align-self-center">Buy Data</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="tv_sub.php">-->
-<!--              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
-<!--              <i class="fa fa-desktop"></i>-->
-<!--              </span>-->
-<!--                            <span class="media-body align-self-center">TV Subscription</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="electric_bill.php">-->
-<!--              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
-<!--              <i class="fa fa-bolt" style="font-size:28px;"></i>-->
-<!--              </span>-->
-<!--                            <span class="media-body align-self-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electric Bills</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="manage_users.php">
+              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+      <i class="fa fa-users"></i>
+    </span>
+                            <span class="media-body align-self-center">Manage Users</span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="buy_data.php">
+              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+      <i class="fa fa-credit-card-alt"></i>
+    </span>
+                            <span class="media-body align-self-center">Wallet Funding</span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="tv_sub.php">
+              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+              <i class="fa fa-bell-o"></i>
+              </span>
+                            <span class="media-body align-self-center">Services</span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="electric_bill.php">
+              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+              <i class="fa fa-wifi"></i>
+              </span>
+                            <span class="media-body align-self-center">Plans</span>
+                        </a>
+                    </li>
 <!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
 <!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
 <!--                           href="txn_coin.php">-->
@@ -157,37 +157,35 @@
 <!--                            <span class="media-body align-self-center">Transact Coins</span>-->
 <!--                        </a>-->
 <!--                    </li>-->
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="redeem_card.php">-->
-<!--              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
-<!--              <i class="fa fa-gift" style="font-size:22px;"></i>-->
-<!--              </span>-->
-<!--                            <span class="media-body align-self-center">Redeem Gift Cards</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="my_wallet.php">-->
-<!--              <span class="d-flex align-self-center g-font-size-18 g-mr-18">-->
-<!--      <i class="fa fa-credit-card-alt"></i>-->
-<!--    </span>-->
-<!--                            <span class="media-body align-self-center">My Wallet</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">-->
-<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
-<!--                           href="javascript:;">-->
-<!--              <span class="d-flex align-self-center g-font-size-18 g-mr-18">-->
-<!--      <i class="fa fa-sign-out" style="font-size:24px;"></i>-->
-<!--    </span>-->
-<!--                            <span class="media-body align-self-center">Sign Out</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="redeem_card.php">
+              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+              <i class="fa fa-gift" style="font-size:22px;"></i>
+              </span>
+                            <span class="media-body align-self-center">Gift Card Request</span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="bitcoin_request.php">
+              <span class="d-flex align-self-center g-font-size-18 g-mr-18">
+      <i class="fa fa-bitcoin" style="font-size:24px;"></i>
+    </span>
+                            <span class="media-body align-self-center">E-Coin Request</span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="javascript:;">
+              <span class="d-flex align-self-center g-font-size-18 g-mr-18">
+      <i class="fa fa-sign-out" style="font-size:24px;"></i>
+    </span>
+                            <span class="media-body align-self-center">Sign Out</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <!-- End Sidebar Nav -->
-
 
         <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
