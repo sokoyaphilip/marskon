@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/app/admin/manage_services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/app/admin/e_coins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/app/admin/gift_cards.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/admin_footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/admin_header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/manage_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/manage_users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/admin_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/admin_footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/landing/admin_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/admin_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,28 +21,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-              <folding>
-                <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="236" column="48" selection-start-line="236" selection-start-column="48" selection-end-line="236" selection-end-column="48" />
+            <state relative-caret-position="298">
+              <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
               <folding>
                 <element signature="n#index#0;n#Admin#0;n#!!top" />
                 <element signature="n#services#0;n#Admin#0;n#!!top" />
-                <element signature="n#approval#0;n#Admin#0;n#!!top" />
-                <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-                <element signature="n#users#0;n#Admin#0;n#!!top" />
+                <element signature="n#plans#0;n#Admin#0;n#!!top" />
                 <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
               </folding>
             </state>
@@ -55,29 +36,150 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_services.php">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="89" column="34" lean-forward="true" selection-end-line="327" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="92" selection-end-line="232" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/gift_cards.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="193" column="33" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_plans.php">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="28" column="116" selection-start-line="28" selection-start-column="116" selection-end-line="28" selection-end-column="116" />
+            <state relative-caret-position="183">
+              <caret line="230" column="84" selection-start-line="230" selection-start-column="84" selection-end-line="230" selection-end-column="84" />
               <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15783#16770#0#HTML" />
+                <element signature="e#15816#16740#0#HTML" />
+                <element signature="e#15960#16705#0#HTML" />
+                <element signature="e#16035#16666#0#HTML" />
+                <element signature="e#16135#16368#0#HTML" />
+                <element signature="e#16397#16632#0#HTML" />
+                <element signature="e#16795#17779#0#HTML" />
+                <element signature="e#16828#17749#0#HTML" />
+                <element signature="e#16969#17714#0#HTML" />
+                <element signature="e#17044#17675#0#HTML" />
+                <element signature="e#17144#17377#0#HTML" />
+                <element signature="e#17406#17641#0#HTML" />
+                <element signature="e#17804#18781#0#HTML" />
+                <element signature="e#17837#18751#0#HTML" />
+                <element signature="e#17971#18716#0#HTML" />
+                <element signature="e#18046#18677#0#HTML" />
+                <element signature="e#18146#18379#0#HTML" />
+                <element signature="e#18408#18643#0#HTML" />
+                <element signature="e#18806#19783#0#HTML" />
+                <element signature="e#18839#19753#0#HTML" />
+                <element signature="e#18973#19718#0#HTML" />
+                <element signature="e#19048#19679#0#HTML" />
+                <element signature="e#19148#19381#0#HTML" />
+                <element signature="e#19410#19645#0#HTML" />
+                <element signature="e#19808#20792#0#HTML" />
+                <element signature="e#19841#20762#0#HTML" />
+                <element signature="e#19982#20727#0#HTML" />
+                <element signature="e#20057#20688#0#HTML" />
+                <element signature="e#20157#20390#0#HTML" />
+                <element signature="e#20419#20654#0#HTML" />
+                <element signature="e#20817#21796#0#HTML" />
+                <element signature="e#20850#21766#0#HTML" />
+                <element signature="e#20986#21731#0#HTML" />
+                <element signature="e#21061#21692#0#HTML" />
+                <element signature="e#21161#21394#0#HTML" />
+                <element signature="e#21423#21658#0#HTML" />
+                <element signature="e#21999#22744#0#HTML" />
+                <element signature="e#22074#22705#0#HTML" />
+                <element signature="e#22174#22407#0#HTML" />
+                <element signature="e#22436#22671#0#HTML" />
+                <element signature="e#23067#23606#0#HTML" />
+                <element signature="e#23100#23576#0#HTML" />
+                <element signature="e#23155#23541#0#HTML" />
+                <element signature="e#23695#23702#0#HTML" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="390" selection-end-column="14" />
+              <folding>
+                <element signature="n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="e#20696#20703#0#HTML" />
+                <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="243" column="4" lean-forward="true" selection-end-line="260" />
             </state>
           </provider>
         </entry>
@@ -92,31 +194,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_airtime.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="37" column="34" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="37" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="400" />
-              <folding>
-                <element signature="n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/landing/admin_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="143" column="58" selection-start-line="143" selection-start-column="58" selection-end-line="143" selection-end-column="58" />
+            <state relative-caret-position="284">
+              <caret line="161" column="60" selection-start-line="161" selection-start-column="60" selection-end-line="161" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="103" column="143" lean-forward="true" selection-start-line="103" selection-start-column="96" selection-end-line="103" selection-end-column="143" />
             </state>
           </provider>
         </entry>
@@ -190,9 +280,12 @@
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_users.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_services.php" />
         <option value="$PROJECT_DIR$/application/views/landing/user_header.php" />
-        <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/gift_cards.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/e_coins.php" />
       </list>
     </option>
   </component>
@@ -313,18 +406,18 @@
       <workItem from="1552890834351" duration="2198000" />
       <workItem from="1552906855231" duration="5476000" />
       <workItem from="1552921376483" duration="16423000" />
-      <workItem from="1552995628034" duration="7671000" />
+      <workItem from="1552995628034" duration="11240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48491000" />
+    <option name="totallyTimeSpent" value="52060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.4065934" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2219697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -551,16 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="400" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_airtime.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -568,49 +651,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="259" column="43" selection-start-line="259" selection-start-column="43" selection-end-line="259" selection-end-column="43" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="80" column="119" selection-start-line="80" selection-start-column="119" selection-end-line="80" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="143" column="58" selection-start-line="143" selection-start-column="58" selection-end-line="143" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="236" column="48" selection-start-line="236" selection-start-column="48" selection-end-line="236" selection-end-column="48" />
-          <folding>
-            <element signature="n#index#0;n#Admin#0;n#!!top" />
-            <element signature="n#services#0;n#Admin#0;n#!!top" />
-            <element signature="n#approval#0;n#Admin#0;n#!!top" />
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-            <element signature="n#users#0;n#Admin#0;n#!!top" />
-            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,6 +685,172 @@
           <caret line="28" column="116" selection-start-line="28" selection-start-column="116" selection-end-line="28" selection-end-column="116" />
           <folding>
             <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="103" column="143" lean-forward="true" selection-start-line="103" selection-start-column="96" selection-end-line="103" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="243" column="4" lean-forward="true" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="161" column="60" selection-start-line="161" selection-start-column="60" selection-end-line="161" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="92" selection-end-line="232" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
+          <folding>
+            <element signature="n#index#0;n#Admin#0;n#!!top" />
+            <element signature="n#services#0;n#Admin#0;n#!!top" />
+            <element signature="n#plans#0;n#Admin#0;n#!!top" />
+            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="390" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#0;n#span#0;n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#a#1;n#span#0;n#div#1;n#div#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="e#20696#20703#0#HTML" />
+            <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/gift_cards.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="193" column="33" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="230" column="84" selection-start-line="230" selection-start-column="84" selection-end-line="230" selection-end-column="84" />
+          <folding>
+            <element signature="e#15783#16770#0#HTML" />
+            <element signature="e#15816#16740#0#HTML" />
+            <element signature="e#15960#16705#0#HTML" />
+            <element signature="e#16035#16666#0#HTML" />
+            <element signature="e#16135#16368#0#HTML" />
+            <element signature="e#16397#16632#0#HTML" />
+            <element signature="e#16795#17779#0#HTML" />
+            <element signature="e#16828#17749#0#HTML" />
+            <element signature="e#16969#17714#0#HTML" />
+            <element signature="e#17044#17675#0#HTML" />
+            <element signature="e#17144#17377#0#HTML" />
+            <element signature="e#17406#17641#0#HTML" />
+            <element signature="e#17804#18781#0#HTML" />
+            <element signature="e#17837#18751#0#HTML" />
+            <element signature="e#17971#18716#0#HTML" />
+            <element signature="e#18046#18677#0#HTML" />
+            <element signature="e#18146#18379#0#HTML" />
+            <element signature="e#18408#18643#0#HTML" />
+            <element signature="e#18806#19783#0#HTML" />
+            <element signature="e#18839#19753#0#HTML" />
+            <element signature="e#18973#19718#0#HTML" />
+            <element signature="e#19048#19679#0#HTML" />
+            <element signature="e#19148#19381#0#HTML" />
+            <element signature="e#19410#19645#0#HTML" />
+            <element signature="e#19808#20792#0#HTML" />
+            <element signature="e#19841#20762#0#HTML" />
+            <element signature="e#19982#20727#0#HTML" />
+            <element signature="e#20057#20688#0#HTML" />
+            <element signature="e#20157#20390#0#HTML" />
+            <element signature="e#20419#20654#0#HTML" />
+            <element signature="e#20817#21796#0#HTML" />
+            <element signature="e#20850#21766#0#HTML" />
+            <element signature="e#20986#21731#0#HTML" />
+            <element signature="e#21061#21692#0#HTML" />
+            <element signature="e#21161#21394#0#HTML" />
+            <element signature="e#21423#21658#0#HTML" />
+            <element signature="e#21999#22744#0#HTML" />
+            <element signature="e#22074#22705#0#HTML" />
+            <element signature="e#22174#22407#0#HTML" />
+            <element signature="e#22436#22671#0#HTML" />
+            <element signature="e#23067#23606#0#HTML" />
+            <element signature="e#23100#23576#0#HTML" />
+            <element signature="e#23155#23541#0#HTML" />
+            <element signature="e#23695#23702#0#HTML" />
           </folding>
         </state>
       </provider>

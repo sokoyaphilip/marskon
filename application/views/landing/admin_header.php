@@ -101,7 +101,7 @@
             <div class="js-custom-scroll u-sidebar-navigation-v1-inner">
                 <ul id="sideNavMenu"
                     class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item has-active">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item  <?php if($page == 'home') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?=base_url("admin/")?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
@@ -112,7 +112,7 @@
     </span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'users') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?=base_url("admin/users")?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
@@ -121,16 +121,16 @@
                             <span class="media-body align-self-center">Manage Users</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'approval') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="buy_data.php">
+                           href="<?=base_url("admin/approval")?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="fa fa-credit-card-alt"></i>
     </span>
                             <span class="media-body align-self-center">Wallet Funding</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'services') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?=base_url("admin/services")?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
@@ -139,7 +139,7 @@
                             <span class="media-body align-self-center">Services</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'plans') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('admin/plans');?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
@@ -148,18 +148,18 @@
                             <span class="media-body align-self-center">Plans</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'gift_card') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="redeem_card.php">
+                           href="<?= base_url('admin/gift_cards');?>">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
               <i class="fa fa-gift" style="font-size:22px;"></i>
               </span>
                             <span class="media-body align-self-center">Gift Card Request</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'e_coins') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="bitcoin_request.php">
+                           href="<?= base_url('admin/e_coins');?>">
               <span class="d-flex align-self-center g-font-size-18 g-mr-18">
       <i class="fa fa-bitcoin" style="font-size:24px;"></i>
     </span>
