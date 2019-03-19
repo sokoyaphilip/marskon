@@ -1,4 +1,12 @@
 <?php $this->load->view('landing/admin_header'); ?>
+<style>
+    .dashboard_links:hover{
+        text-decoration: none !important;
+    }
+    .dashboard_links:hover div.card{
+        border: 1px solid #e20f43 !important;
+    }
+</style>
 <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
     <div class="row">
         <div class="col-md-3 col-xs-6 g-mb-30">
@@ -69,100 +77,112 @@
     <div class="row">
         <div class="col-md-4 col-xs-6 g-mb-30">
             <!-- Panel -->
-            <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                <div class="card-block g-pa-20">
-                    <header class="media g-mb-40">
-                        <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Manage Services</h4>
-                    </header>
+            <a class="dashboard_links" href="<?= base_url('admin/services');?>">
+                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                    <div class="card-block g-pa-20">
+                        <header class="media g-mb-40">
+                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                Manage Services</h4>
+                        </header>
 
-                    <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Services Offered On Website</span>
+                        <div class="d-flex align-items-center g-mb-25">
+                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Services Offered On Website</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- End Panel -->
         </div>
         <div class="col-md-4 col-xs-6 g-mb-30">
             <!-- Panel -->
-            <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                <div class="card-block g-pa-20">
-                    <header class="media g-mb-40">
-                        <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Manage Plans</h4>
-                    </header>
+            <a class="dashboard_links" href="<?= base_url('admin/plans');?>">
+                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                    <div class="card-block g-pa-20">
+                        <header class="media g-mb-40">
+                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                Manage Plans</h4>
+                        </header>
 
-                    <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Plans and Associated Services</span>
+                        <div class="d-flex align-items-center g-mb-25">
+                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Plans and Associated Services</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- End Panel -->
         </div>
         <div class="col-md-4 col-xs-6 g-mb-30">
             <!-- Panel -->
-            <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                <div class="card-block g-pa-20">
-                    <header class="media g-mb-40">
-                        <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Manage Wallet Funding</h4>
-                    </header>
+            <a class="dashboard_links" href="<?= base_url('admin/approval');?>">
+                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                    <div class="card-block g-pa-20">
+                        <header class="media g-mb-40">
+                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                Manage Wallet Funding</h4>
+                        </header>
 
-                    <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All User Funding Requests</span>
+                        <div class="d-flex align-items-center g-mb-25">
+                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All User Funding Requests</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- End Panel -->
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 col-xs-6 g-mb-30">
             <!-- Panel -->
-            <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                <div class="card-block g-pa-20">
-                    <header class="media g-mb-40">
-                        <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Gift Card Request</h4>
-                    </header>
+            <a class="dashboard_links" href="<?= base_url('admin/gift_cards');?>">
+                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                    <div class="card-block g-pa-20">
+                        <header class="media g-mb-40">
+                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                Gift Card Request</h4>
+                        </header>
 
-                    <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage Gift Card Sale Requests </span>
+                        <div class="d-flex align-items-center g-mb-25">
+                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage Gift Card Sale Requests </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- End Panel -->
         </div>
         <div class="col-md-4 col-xs-6 g-mb-30">
             <!-- Panel -->
-            <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                <div class="card-block g-pa-20">
-                    <header class="media g-mb-40">
-                        <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Manage Users</h4>
-                    </header>
+            <a class="dashboard_links" href="<?= base_url('admin/users');?>">
+                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                    <div class="card-block g-pa-20">
+                        <header class="media g-mb-40">
+                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                Manage Users</h4>
+                        </header>
 
-                    <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Users on the platform</span>
+                        <div class="d-flex align-items-center g-mb-25">
+                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Users on the platform</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- End Panel -->
         </div>
         <div class="col-md-4 col-xs-6 g-mb-30">
             <!-- Panel -->
-            <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                <div class="card-block g-pa-20">
-                    <header class="media g-mb-40">
-                        <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            E-Coin Requests</h4>
-                    </header>
+            <a class="dashboard_links" href="<?= base_url('admin/e_coins');?>">
+                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                    <div class="card-block g-pa-20">
+                        <header class="media g-mb-40">
+                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                E-Coin Requests</h4>
+                        </header>
 
-                    <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Coin Requests from Users</span>
+                        <div class="d-flex align-items-center g-mb-25">
+                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Manage All Coin Requests from Users</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- End Panel -->
         </div>
     </div>
@@ -204,7 +224,7 @@
                     <div class="input-group g-pos-rel g-width-320--md">
                         <input id="datatableSearch1"
                                class="form-control g-font-size-default g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-rounded-20 g-pl-20 g-pr-50 g-py-10"
-                               type="text" placeholder="Search for name, position">
+                               type="text" placeholder="Search Transactions">
                         <button class="btn g-pos-abs g-top-0 g-right-0 g-z-index-2 g-width-60 h-100 g-bg-transparent g-font-size-16 g-color-primary g-color-secondary--hover rounded-0"
                                 type="submit">
                             <i class="fa fa-search g-absolute-centered"></i>

@@ -39,7 +39,7 @@
                         <div class="input-group g-pos-rel g-width-320--md">
                             <input id="datatableSearch1"
                                    class="form-control g-font-size-default g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-rounded-20 g-pl-20 g-pr-50 g-py-10"
-                                   type="text" placeholder="Search for user">
+                                   type="text" placeholder="Search Users">
                             <button class="btn g-pos-abs g-top-0 g-right-0 g-z-index-2 g-width-60 h-100 g-bg-transparent g-font-size-16 g-color-primary g-color-secondary--hover rounded-0"
                                     type="submit">
                                 <i class="fa fa-search g-absolute-centered"></i>
