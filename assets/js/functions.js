@@ -201,25 +201,30 @@ $(document).ready(function() {
     $('.data-purchase').on('click', function (e) {
 
         e.preventDefault();
-        $(this).prop('disabled');
         let _btn = $(this);
+        _btn.prop('disabled', true);
         _btn.text("Processing...");
+
+        let selected = $('#network');
         let product_id = $('#product_id').val();
-        let plan_id = $('#network_plan').val();
-        let recipents = $('#data-recipents').val();
-        let network = $('#network').val();
-        let network_name = $('#network').find(':selected').data('network-name');
+        let recipents = $('#recipents').val();
+        let network_name = selected.data('network-name');
+        let network_id = selected.data('network-id');
+        let discount =  selected.data('discount');
+        let plan_id = $('#network_data_plan').val();
+        let wallet = _btn.data('wallet');
 
         if( recipents === '') {
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Number field can not be empty', 'error');
-            _btn.text("Buy Now");
+            _btn.text("Recharge Now");
             return false;
         }
-        if( network === '') {
+
+        if( selected.val() === '') {
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Please select a network', 'error');
-            _btn.text("Buy Now");
+            _btn.text("Rech Now");
             return false;
         }
 
@@ -234,7 +239,13 @@ $(document).ready(function() {
             url : base_url + 'ajax/data_purchase/',
             method: "POST",
             cache: false,
-            data: {'product_id' : product_id, 'plan_id' : plan_id, 'recipents' : recipents, 'network' : network, 'network_name' : network_name },
+            data: {'product_id' : product_id,
+                'plan_id' : plan_id, 'recipents' : recipents,
+                'network' : network_id,
+                'network_name' : network_name,
+                'discount' : discount,
+                'wallet'   : wallet
+            },
             success : function(response){
                 if( response.status === 'success' ){
                     sweet_alert('Success', response.message, 'success', false);
@@ -285,34 +296,30 @@ $(document).ready(function() {
 
     // Airtime Purchase
     $('.airtime-purchase').on('click', function(e){
+        let _btn = $(this);
         e.preventDefault();
-        $(this).prop('disabled', true);
-        $(this).text("Processing...");
+        _btn.prop('disabled', true);
+        _btn.text("Processing...");
 
+        let checked = $("input[name='network']:checked");
         let product_id = $('#product_id').val();
         let amount = $('#amount').val();
-        let network = $('#airtime_network').val();
         let recipents = $('#recipents').val();
-        let network_name = $('#airtime_network').find(':selected').data('network-name');
-        let discount = $('#airtime_network').find(':selected').data('discount');
+        let network_name = checked.data('network-name');
+        // let network_id = checked.data('network-id');
+        let discount =  checked.data('discount');
 
         if( amount === '' || amount < 100 ){
             sweet_alert('Error', 'Sorry amount can not be less than N100', 'error');
             _btn.prop('disabled', false);
-            $(this).text("Buy Now");
+            $(this).text("Recharge Airtime");
             return false;
         }
 
         if( recipents === '' ){
             sweet_alert('Error', 'Please fill in the phone number', 'error');
             _btn.prop('disabled', false);
-            $(this).text("Buy Now");
-            return false;
-        }
-        if( network === '' ){
-            sweet_alert('Error', 'You need to select a network', 'error');
-            _btn.prop('disabled', false);
-            $(this).text("Buy Now");
+            $(this).text("Recharge Airtime");
             return false;
         }
 
@@ -320,7 +327,12 @@ $(document).ready(function() {
             url : base_url + 'ajax/buy_airtime/',
             method: "POST",
             cache : false,
-            data: {'product_id' : product_id, 'amount' : amount, 'discount' : discount, 'network' : network, 'recipents' : recipents, 'network_name' : network_name},
+            data: {
+                'product_id' : product_id,
+                'amount' : amount,
+                'discount' : discount,
+                'recipents' : recipents,
+                'network_name' : network_name},
             success : function(response){
                 if( response.status === 'success' ){
                     sweet_alert('Success', response.message, 'success', false);
@@ -329,12 +341,14 @@ $(document).ready(function() {
                     })
                 }else{
                     sweet_alert('Error', response.message, 'error', false);
-                    $(this).text("Buy Now");
+                    $(this).text("Recharge Airtime");
                     _btn.prop('disabled', false);
                 }
             },
             error : function(response){
                 sweet_alert('Error', 'There was an error with the transaction, please contact us if debited', 'error');
+                $(this).text("Recharge Airtime");
+                _btn.prop('disabled', false);
                 console.log( response );
             }
         });
@@ -600,39 +614,44 @@ $(document).ready(function() {
         }
     });
 
+    // input[name='network']:checked
+
     $('#network').on('change', function(e){
         e.preventDefault();
         let service_id = $(this).val();
-        $('#smart-card-info').html('');
-        $('#smart_card_number').val('');
-        let discount = $(this).data('discount');
-        if( discount === undefined) discount = $(this).find(':selected').data('discount');
+        // $('#smart-card-info').html('');
+        // $('#smart_card_number').val('');
+        // let discount = $(this).data('discount');
+        // if( discount === undefined) discount = $(this).find(':selected').data('discount');
+        //
+        // $('.you-pay').html('You get '+ discount +' % discount');
 
-        $('.you-pay').html('You get '+ discount +' % discount');
-
-        $('#network_plan')
+        $('#network_data_plan')
             .find('option')
             .remove()
             .end()
             .append('<option value="" selected>--Select Plan --</option>');
+
 
         $.ajax({
             url : base_url + 'ajax/fetch_plans/',
             method: "POST",
             data: {'service_id' : service_id },
             success : function(response){
-
                 if( response.status === 'success' ){
-
                     let count = response.message.length;
                     for( let i = 0; i < count; i++ ){
-                        $('#network_plan').append(`<option value="${response.message[i].id}">${response.message[i].name} - ${format_currency(response.message[i].amount)}</option>`);
+                        $('#network_data_plan').append(`<option value="${response.message[i].id}">${response.message[i].name} - ${format_currency(response.message[i].amount)}</option>`);
                     }
                 }else{
                     console.log(response.message);
                 }
             }
         })
+    });
+
+    $('#network_plan').on('change', function(){
+        alert('Great');
     });
 
     ///////////////////////////////////////////////

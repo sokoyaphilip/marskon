@@ -5,21 +5,20 @@ $this->load->view('landing/user_header');
         <div class="row">
             <div class="col-md-4">
                 <div class="row">
-
                     <form>
 
                         <div class="col-sm-12">
-                            <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select Network To Buy Airtime</h4>
+                            <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select (Click) Network To Buy Airtime</h4>
                             <div class="btn-group justified-content">
-
-
                                 <?php foreach ($networks as $network ): ?>
                                     <label class="u-check">
-                                        <input data-discount="<?= $network->discount; ?>" data-network-name="<?= $network->network_name; ?>"
+                                        <input data-discount="<?= $network->discount; ?>"
+                                               data-network-name="<?= $network->network_name; ?>"
+                                               data-network-id="<?= $network->id; ?>"
                                                value="<?= $network->id; ?>"
-                                               class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" name="network"
+                                               class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 airtime_network" name="network"
                                                type="radio">
-                                        <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-mtn--checked rounded-0 airtime_network"><?= ucwords($network->title); ?></span>
+                                        <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-<?= $network->network_name; ?>--checked rounded-0"><?= ucwords($network->title); ?></span>
                                     </label>
                                 <?php endforeach; ?>
                             </div>
@@ -28,26 +27,28 @@ $this->load->view('landing/user_header');
                         <div class="col-sm-12 g-mt-10">
                             <div class="form-group">
                                 <div class="g-pos-rel">
-                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-                            <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-                            </span>
-                                    <input id="inputGroup-3_1"
-                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10 number"
-                                           type="text" name="amount" placeholder="Enter Price To Recharge">
+                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                                <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
+                                </span>
+                                    <input class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10 number"
+                                           type="text"
+                                           id="amount"
+                                           name="amount" placeholder="Enter Price To Recharge">
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-12 g-mt-10">
-                        <textarea id="inputGroup-3_3"
-                                  class="form-control form-control-md u-textarea-expandable g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-resize-none g-overflow-hidden"
+                        <textarea id="recipents"
+                                  class="number form-control form-control-md u-textarea-expandable g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-resize-none g-overflow-hidden"
                                   rows="3"
                                   name="recipents"
                                   placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
                             </div>
-
+                        <input type="hidden" name="product_id" id="product_id" value="<?= $product_id; ?>">
                         <div class="col-md-12 g-mt-5 py-3">
-                            <button class="js-fancybox btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
+                            <button type="button" data-pid="6" class="js-fancybox btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
+                            <button type="reset" class="js-fancybox btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                         </div>
 
                     </form>
@@ -92,7 +93,7 @@ $this->load->view('landing/user_header');
                             <div class="input-group g-pos-rel g-width-320--md">
                                 <input id="datatableSearch1"
                                        class="form-control g-font-size-default g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-rounded-20 g-pl-20 g-pr-50 g-py-10"
-                                       type="text" placeholder="Search for name, position">
+                                       type="text" placeholder="Search for Airtime Type, Status">
                                 <button class="btn g-pos-abs g-top-0 g-right-0 g-z-index-2 g-width-60 h-100 g-bg-transparent g-font-size-16 g-color-primary g-color-secondary--hover rounded-0"
                                         type="submit">
                                     <i class="fa fa-search g-absolute-centered"></i>
@@ -141,120 +142,84 @@ $this->load->view('landing/user_header');
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">Date & Time</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="media">
-                                        <div class="d-flex align-self-center">Type</div>
-
-                                        <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">Description</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">Amount</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center g-nowrap">Status</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
-                                <th></th>
                             </tr>
                             </thead>
 
                             <tbody>
-                                <tr>
-                                <td>25</td>
-                                <td>Sokoya Philip</td>
-                                <td>
-                                    <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          MTN
-                          </span>
-                                    </div>
-                                </td>
-                                <td>200 MTN Purchase</td>
-                                <td>N200</td>
-                                <td>
-                                    <div class="progress g-height-6 g-rounded-3">
-                                        <div class="progress-bar g-bg-lightblue-v3 g-rounded-3" role="progressbar"
-                                             style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                                             aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-
-                            </tr>
+                                <?php foreach( $transactions as $transaction ) :?>
+                                    <tr>
+                                        <td><?= $transaction->trans_id; ?></td>
+                                        <td><?= neatDate($transaction->date_initiated); ?></td>
+                                        <td><?= payment_id_replacer($transaction->description); ?></td>
+                                        <td><?= ngn($transaction->amount); ?></td>
+                                        <td><?= statusLabel( $transaction->status);?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>

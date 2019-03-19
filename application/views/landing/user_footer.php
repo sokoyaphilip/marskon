@@ -117,15 +117,25 @@
 <script src="<?= base_url('assets/js/components/hs.datatables.js'); ?>"></script>
 <script src="<?= base_url('assets/js/helpers/hs.file-attachments.js')?>"></script>
 <script src="<?= base_url('assets/js/components/hs.file-attachement.js')?>"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- JS Custom -->
+<script>
+    <?php
+    $email = ($this->session->userdata('logged_in') ) ? $this->session->userdata('email') : 'hello@marskonnect.com';
+    $user = ($this->session->userdata('logged_in')) ? $this->session->userdata('login_username') : 'Marskonnect';
+    ?>
+    let user = { 'email' : "<?= $email; ?>", 'user' : "<?= $user; ?>"};
+    let base_url = "<?= base_url(); ?>"
+</script>
 <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
+<script src="<?= base_url('assets/js/functions.js'); ?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>
     $(document).on('ready', function () {
         // initialization of custom select
-        $('.js-select').selectpicker();
+        // $('.js-select').selectpicker();
 
         // initialization of hamburger
         $.HSCore.helpers.HSHamburgers.init('.hamburger');

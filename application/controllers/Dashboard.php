@@ -54,7 +54,9 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'data';
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Data Subscription, works for all smartphones...';
         $page_data['user'] = $this->get_profile($id);
+        $page_data['product_id'] = 1;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' ")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 1 AND user_id = {$id}")->result();
         $this->load->view('app/users/buy_data', $page_data);
     }
 
@@ -64,8 +66,9 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'airtime';
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Airtime';
         $page_data['user'] = $this->get_profile($id);
+        $page_data['product_id'] = 2;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
-
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id}")->result();
         $this->load->view('app/users/buy_airtime', $page_data);
 
     }

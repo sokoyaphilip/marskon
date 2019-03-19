@@ -10449,10 +10449,10 @@ input[type="radio"]:checked + * .g-bg-transparent--checked {
 }
 
 /* Color Red */
-input[type="checkbox"]:checked + .g-bg-red--checked,
-input[type="radio"]:checked + .g-bg-red--checked,
-input[type="checkbox"]:checked + * .g-bg-red--checked,
-input[type="radio"]:checked + * .g-bg-red--checked {
+input[type="checkbox"]:checked + .g-bg-airtel--checked,
+input[type="radio"]:checked + .g-bg-airtel--checked,
+input[type="checkbox"]:checked + * .g-bg-airtel--checked,
+input[type="radio"]:checked + * .g-bg-airtel--checked {
     background-color: #f00 !important;
 }
 /* Color mtn */
@@ -10463,10 +10463,10 @@ input[type="radio"]:checked + * .g-bg-mtn--checked {
     background-color: #ffbd36 !important;
 }
 /* Color eti */
-input[type="checkbox"]:checked + .g-bg-etisalat--checked,
-input[type="radio"]:checked + .g-bg-etisalat--checked,
-input[type="checkbox"]:checked + * .g-bg-etisalat--checked,
-input[type="radio"]:checked + * .g-bg-etisalat--checked {
+input[type="checkbox"]:checked + .g-bg-9mobile-checked,
+input[type="radio"]:checked + .g-bg-9mobile-checked,
+input[type="checkbox"]:checked + * .g-bg-9mobile-checked,
+input[type="radio"]:checked + * .g-bg-9mobile-checked {
     background-color: #5c872c !important;
 }
 /* Color glo */
@@ -10477,8 +10477,8 @@ input[type="radio"]:checked + * .g-bg-glo--checked {
     background-color: #1dbf62 !important;
 }
 
-.g-bg-red--checked.g-checked,
-.g-checked .g-bg-red--checked {
+.g-bg-9mobile--checked.g-checked,
+.g-checked .g-bg-9mobile--checked {
   background-color: #f00 !important;
 }
 

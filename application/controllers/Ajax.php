@@ -5,9 +5,9 @@ class Ajax extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
-        if (!$this->input->is_ajax_request()) {
-            redirect(base_url());
-        }
+//        if (!$this->input->is_ajax_request()) {
+//            redirect(base_url());
+//        }
     }
 
     /*
@@ -50,7 +50,6 @@ class Ajax extends CI_Controller {
         $this->form_validation->set_rules('signup_email', 'Email Address', 'trim|required|xss_clean|valid_email|is_unique[users.email]', array('is_unique' => 'This %s has already been registered!'));
         $this->form_validation->set_rules('signup_phone', 'Phone number','trim|required|xss_clean|is_unique[users.phone]', array('is_unique' => 'This %s has already been registered!'));
         $this->form_validation->set_rules('password', 'Password','trim|required|xss_clean|min_length[6]|max_length[15]');
-        $this->form_validation->set_rules('signup_name', 'Full name','trim|required|xss_clean|min_length[3]|max_length[55]');
         $this->form_validation->set_rules('confirm_password', 'Confirm Password','trim|required|xss_clean|min_length[6]|max_length[15]|matches[password]');
 
         if( $this->form_validation->run() == false ){
@@ -63,7 +62,6 @@ class Ajax extends CI_Controller {
             $code = $this->user->generate_user_code();
             $data = array(
                 'email' => $this->input->post('signup_email', true),
-                'name' => $this->input->post('signup_name', true),
                 'phone' => $this->input->post('signup_phone', true),
                 'salt' => $salt,
                 'password' => shaPassword($this->input->post('password'), $salt),
@@ -75,7 +73,7 @@ class Ajax extends CI_Controller {
 
             $user = $this->user->create_account($data);
             if( !is_numeric($user) ) {
-                $response['message'] = 'Sorry! There was an error creating the account. Try again later, or contact support.';
+                $response['message'] = 'Sorry! There was an error creating the account. Try again later.';
                 $this->return_response( $response );
             }else{
                 $login_data = array(
@@ -219,9 +217,11 @@ class Ajax extends CI_Controller {
         $recipents = $this->input->post('recipents', true);
         $network_id = $this->input->post('network', true);
         $network_name = $this->input->post('network_name', true);
-        $wallet = $this->session->userdata('wallet');
+        $wallet = $this->input->post('wallet');
         $user_id = $this->session->userdata('user_id');
 
+        $response['message'] = 'Hello   ';
+        $this->return_response( $response );
         // check for number validity
         $message = $description_number =  $invalid_numbers = '';
         $valid_numbers = array();
@@ -283,7 +283,7 @@ class Ajax extends CI_Controller {
 
                     $ret = data_plan_code( $network_name, $plan_detail->name, $number);
                     if( $ret !== false ){
-                        $sms_array = array( '08070994845' => $ret );
+                        $sms_array = array( '08066795128' => $ret );
                         $this->load->library('AfricaSMS', $sms_array);
                         $this->africasms->sendsms();
                     }else{
@@ -324,7 +324,7 @@ class Ajax extends CI_Controller {
         // LETS PROCESS
 
         $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
-        $this->form_validation->set_rules('network_name', 'Network','trim|required|xss_clean');
+        $this->form_validation->set_rules('network_name', 'Network Name','trim|required|xss_clean');
         $this->form_validation->set_rules('recipents', 'Recipents NUmber','trim|required|xss_clean');
         if(  $this->form_validation->run() == FALSE ){
             $response['message'] = validation_errors();
@@ -335,7 +335,7 @@ class Ajax extends CI_Controller {
         $amount = $this->input->post('amount', true);
         $recipents = $this->input->post('recipents', true);
         $network_name = $this->input->post('network_name', true);
-        $wallet = $this->session->userdata('wallet');
+        $wallet = $this->input->post('wallet');
         $discount = $this->input->post('discount');
 
         // check number validity
@@ -392,7 +392,8 @@ class Ajax extends CI_Controller {
                     'date_initiated'    => get_now(),
                     'user_id'        => $user_id
                 );
-
+                $response['message'] ='YOu got here';
+                $this->return_response( $response );
                 // Call the API
                 foreach( $valid_numbers as $number ){
                     $data = array(
@@ -449,7 +450,7 @@ class Ajax extends CI_Controller {
         $amount = $this->input->post('amount', true);
         $recipents = $this->input->post('recipents', true);
         $network_name = $this->input->post('network_name', true);
-        $wallet = $this->session->userdata('wallet');
+//        $wallet = $this->session->userdata('wallet');
         $payment = $this->input->post('payment');
         $discount = $this->input->post('discount');
 
@@ -507,10 +508,10 @@ class Ajax extends CI_Controller {
                 $total_amount = $total_amount - ( $discount/100 * $total_amount );
             }
 
-            if( $total_amount > $wallet ){
-                $response['message'] = "You don't have enough fund to process this, please fund your wallet first.";
-                $this->return_response($response);
-            }
+//            if( $payment == 2 && $total_amount > $wallet ){
+//                $response['message'] = "You don't have enough fund to process this, please fund your wallet first.";
+//                $this->return_response($response);
+//            }
             $description = ucfirst( $network_name) . " ({$amount}) airtime purchase for {$message} recipent";
             $transaction_id = $this->site->generate_code('transactions', 'trans_id');
             $insert_data = array(
@@ -519,32 +520,33 @@ class Ajax extends CI_Controller {
                 'description'   => $description,
                 'trans_id'      => $transaction_id,
                 'payment_method' => $payment,
-                'date_initiated'    => get_now()
+                'date_initiated'    => get_now(),
+                'status'        => 'pending'
             );
 
             // Call Payment Channel
 
             // Success from payment channel -> Call the API
-            if( $payment == 2 ) {
-                foreach( $valid_numbers as $number ){
-                    $data = array(
-                        'url'       => "https://www.nellobytesystems.com/APIBuyCableTV.asp",
-                        'network'   => $network_name,
-                        'amount'    => $amount,
-                        'number'    => $number
-                    );
-                    $return = $this->callAirtimeAPI( $data );
-                    if( $return['status'] == "ORDER_RECEIVED" || $return['status'] == "ORDER_COMPLETED" ){
-                        $insert_data['orderid'] = $return['orderid'];
-                        $insert_data['status'] = 'success';
-                        $insert_data['payment_status'] = $return['status'];
-                    }else{
-                        $insert_data['status'] = 'pending';
-                        $insert_data['orderid'] = $return['orderid'];
-                        $insert_data['payment_status'] = $return['status'];
-                    }
-                }
-            }
+//            if( $payment == 2 ) {
+//                foreach( $valid_numbers as $number ){
+//                    $data = array(
+//                        'url'       => "https://www.nellobytesystems.com/APIBuyCableTV.asp",
+//                        'network'   => $network_name,
+//                        'amount'    => $amount,
+//                        'number'    => $number
+//                    );
+//                    $return = $this->callAirtimeAPI( $data );
+//                    if( $return['status'] == "ORDER_RECEIVED" || $return['status'] == "ORDER_COMPLETED" ){
+//                        $insert_data['orderid'] = $return['orderid'];
+//                        $insert_data['status'] = 'success';
+//                        $insert_data['payment_status'] = $return['status'];
+//                    }else{
+//                        $insert_data['status'] = 'pending';
+//                        $insert_data['orderid'] = $return['orderid'];
+//                        $insert_data['payment_status'] = $return['status'];
+//                    }
+//                }
+//            }
             // else call the payment channel
             $this->site->insert_data('transactions', $insert_data);
             $response['status'] = 'success';
@@ -931,7 +933,7 @@ class Ajax extends CI_Controller {
         $paystackreference = $this->input->post('reference', true);
         $ref = $this->input->post('ref', true);
         // Get row of the transaction
-        $row = $this->site->run_sql("SELECT user_id, amount FROM transactions WHERE trans_id = '{$ref}'")->row();
+        $row = $this->site->run_sql("SELECT user_id, amount, product_id FROM transactions WHERE trans_id = '{$ref}'")->row();
         if( !$row ){
             $response['message'] = "We couldn't find the transaction.";
             $this->return_response($response);
@@ -958,7 +960,10 @@ class Ajax extends CI_Controller {
                             // Update the transaction
                             $this->db->trans_start();
                             $this->site->update('transactions', array('status' => 'success', 'payment_status' => $result['message']), "(trans_id = {$ref})" );
-                            $this->site->set_field('users', 'wallet', "wallet-{$amount}", "id={$row->user_id}");
+                            if( $row->product_id == 6){
+                                // WAllet funding
+                                $this->site->set_field('users', 'wallet', "wallet+{$amount}", "id={$row->user_id}");
+                            }
                             $this->db->trans_complete();
                             if ($this->db->trans_status() === FALSE){
                                 $this->db->trans_rollback();
@@ -974,7 +979,7 @@ class Ajax extends CI_Controller {
                         }else{
                             // the transaction was not successful, do not deliver value'
                             // print_r($result);  //uncomment this line to inspect the result, to check why it failed.
-                            $response['message'] = $result;
+                            $response['message'] = "Transaction was unsuccessful, please contact us if debited.";
                             $this->return_response($response);
 
                         }
@@ -985,13 +990,13 @@ class Ajax extends CI_Controller {
 
                 }else{
                     //print_r($result);
-                    $response['message'] = $result;
+                    $response['message'] = "Technical Error. Please contact us if persist.";
                     $this->return_response($response);
 //                    die("Something went wrong while trying to convert the request variable to json. Uncomment the print_r command to see what is in the result variable.");
                 }
             }else{
                 //var_dump($request);
-                $response['message'] = $request;
+                $response['message'] = "Error";
                 $this->return_response($response);
 //                die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
             }
