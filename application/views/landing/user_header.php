@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="<?=base_url("assets/favicon.png")?>">
     <link rel="stylesheet"
           href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
     <link rel="stylesheet" href="<?= base_url('assets/vendor/bootstrap/bootstrap.min.css');?>">
@@ -27,7 +27,7 @@
     <div class="u-header__section u-header__section--admin-dark g-min-height-65">
         <nav class="navbar no-gutters g-pa-0">
             <div class="col-auto d-flex flex-nowrap u-header-logo-toggler g-py-12">
-                <a href="index.php"
+                <a href="<?=base_url()?>"
                    class="navbar-brand d-flex align-self-center g-hidden-xs-down g-line-height-1 py-0 g-mt-5">
                     <img src="<?= base_url('assets/img/logo/logo-1.png');?>" style="width:100%"/>
                 </a>
@@ -78,7 +78,7 @@
                                 </a>
                             </li>
                             <li class="mb-0">
-                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="#">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('logout/');?>">
                     <span class="d-flex align-self-center g-mr-12">
           <i class="fa fa-sign-out"></i>
         </span>

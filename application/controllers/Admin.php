@@ -105,7 +105,7 @@ class Admin extends CI_Controller {
             $page_data['page'] = 'services';
             $page_data['products'] = $this->site->get_result('products', 'id, title', 'user_end = 1');
             $page_data['services'] = $this->site->run_sql('SELECT s.*, p.title product_name, p.slug FROM services s LEFT JOIN products p ON (p.id = s.product_id)')->result();
-            $this->load->view('app/admin/services', $page_data);
+            $this->load->view('app/admin/manage_services', $page_data);
         }
     }
 
@@ -179,7 +179,7 @@ class Admin extends CI_Controller {
     public function users(){
         $page_data['page'] = 'users';
         $page_data['users'] = $this->site->get_result('users');
-        $this->load->view('app/admin/users', $page_data);
+        $this->load->view('app/admin/manage_users', $page_data);
     }
 
 
@@ -234,7 +234,7 @@ class Admin extends CI_Controller {
             $page_data['services'] = $this->site->get_result('services', 'id, title, discount_type');
             $page_data['plans'] = $this->site->run_sql($query)->result();
 //            var_dump( $page_data['plans']);
-            $this->load->view('app/admin/plans', $page_data);
+            $this->load->view('app/admin/manage_plans', $page_data);
         }
     }
 

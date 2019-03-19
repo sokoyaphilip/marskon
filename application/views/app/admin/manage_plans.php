@@ -1,11 +1,50 @@
 <?php $this->load->view('landing/admin_header'); ?>
 <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h3 class="h3 text-center g-mb-20">Create Plan</h3>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Select A Service</label>
+                            <select id="network_data_plan"
+                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
+                                    title="Select Data Plan" tabindex="-98">
+                                <option value="">--Select a category--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Plan Amount(&#8358;)</label>
+                            <div class="g-pos-rel">
+                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                                <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
+                                </span>
+                                <textarea id="plans"
+                                          class="form-control form-control-md u-textarea-expandable g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-resize-none g-overflow-hidden"
+                                          rows="3"
+                                          placeholder="E.g: 1GiB - 1000, Separate Numbers wth (,) for multiple plans."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn btn-primary btn-block btn-lg g-rounded-20">Create Plan</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="g-pa-20 col-md-12">
-        <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">All Users</h1>
+        <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">All Plans</h1>
 
         <div class="media-md align-items-center g-mb-30">
             <div class="d-flex g-mb-15 g-mb-0--md">
-                <h3 class="g-font-weight-400 g-font-size-16 g-color-black mb-0">Manage all users in the system</h3>
+                <h3 class="g-font-weight-400 g-font-size-16 g-color-black mb-0">Filter Plans</h3>
             </div>
 
             <div class="media d-md-flex align-items-center ml-auto">
@@ -38,7 +77,7 @@
                     <div class="input-group g-pos-rel g-width-320--md">
                         <input id="datatableSearch1"
                                class="form-control g-font-size-default g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-rounded-20 g-pl-20 g-pr-50 g-py-10"
-                               type="text" placeholder="Search for name, position">
+                               type="text" placeholder="Search Plans">
                         <button class="btn g-pos-abs g-top-0 g-right-0 g-z-index-2 g-width-60 h-100 g-bg-transparent g-font-size-16 g-color-primary g-color-secondary--hover rounded-0"
                                 type="submit">
                             <i class="fa fa-search g-absolute-centered"></i>
@@ -68,7 +107,7 @@
                     <tr>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Full Name</div>
+                                <div class="d-flex align-self-center">S/N</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -86,7 +125,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Username</div>
+                                <div class="d-flex align-self-center">Service Name</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -104,7 +143,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Email</div>
+                                <div class="d-flex align-self-center">Plan Starts From</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -122,7 +161,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Phone Number</div>
+                                <div class="d-flex align-self-center">Pricing From</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -140,25 +179,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Wallet Balance</div>
-
-                                <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                </div>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="media">
-                                <div class="d-flex align-self-center g-nowrap">Action</div>
+                                <div class="d-flex align-self-center">Action</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -179,69 +200,27 @@
 
                     <tbody>
                     <tr>
-                        <td>John Doe</td>
-                        <td>Johnnydoe</td>
-                        <td>John.doe@gmail.com</td>
+                        <td>1</td>
+                        <td>Airtel Data(Reseller)</td>
                         <td>
                             <div class="d-inline-block">
                           <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          09076756632
+                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
+                          1.5GiB
                           </span>
                             </div>
                         </td>
-                        <td>&#8358; 24,500</td>
-                        <td class="text-center">
-                            <div class="g-pos-rel g-top-3 d-inline-block">
-                                <a id="dropDown1Invoker"
-                                   class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
-                                   href="javascript:;" aria-controls="dropDown1" aria-haspopup="true"
-                                   aria-expanded="false" data-dropdown-event="click"
-                                   data-dropdown-target="#dropDown1">
-                                    <i class="fa fa-stack-overflow"></i>
-                                </a>
-
-                                <div id="dropDown1"
-                                     class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
-                                     aria-labelledby="dropDown1Invoker">
-                                    <ul class="list-unstyled g-nowrap mb-0">
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Block
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Unblock
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-check g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Approve
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-plus g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Decline
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Delete
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <td>
+                            <div class="d-inline-block">
+                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
+                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
+                          &#8358; 850
+                          </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-info">View All</button>
                             </div>
                         </td>
                     </tr>

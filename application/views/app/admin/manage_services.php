@@ -1,11 +1,126 @@
 <?php $this->load->view('landing/admin_header'); ?>
 <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h3 class="h3 text-center g-mb-20">Create Service</h3>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Select Service Category</label>
+                            <select id="network_data_plan"
+                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
+                                    title="Select Data Plan" tabindex="-98">
+                                <option value="">--Select a category--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Enter Service Title</label>
+                            <div class="g-pos-rel">
+                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                                <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
+                                </span>
+                                <input class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10 number"
+                                       type="text"
+                                       id="amount"
+                                       name="amount" placeholder="Enter Service Title">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Select Service Discount</label>
+                            <select id="network_data_plan"
+                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
+                                    title="Select Data Plan" tabindex="-98">
+                                <option value="">--Select Discount--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Discount For</label>
+                            <select id="network_data_plan"
+                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
+                                    title="Select Data Plan" tabindex="-98">
+                                <option value="">All Buyers</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Select Service Network</label>
+                            <select id="network_data_plan"
+                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
+                                    title="Select Data Plan" tabindex="-98">
+                                <option value="">--Select a Network--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Select Service Availability</label>
+                            <select id="network_data_plan"
+                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
+                                    title="Select Data Plan" tabindex="-98">
+                                <option value="0">Not Available</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Enter Service Details</label>
+                            <div class="g-pos-rel">
+                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                                <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
+                                </span>
+                                <textarea class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10 number"
+                                       type="text" rows="3"
+                                       id="dert"
+                                          name="amount" placeholder="Give a detailed information about this service, if available"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="h6 g-font-weight-600 g-color-black">Enter Service SEO Keywords</label>
+                            <div class="g-pos-rel">
+                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                                <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
+                                </span>
+                                <textarea class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10 number"
+                                          type="text" rows="3"
+                                          id="amount"
+                                          name="amount" placeholder="The keywords you'll like the user to search for in getting this item"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn btn-primary btn-block btn-lg g-rounded-20">Create Services</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="g-pa-20 col-md-12">
-        <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">All Users</h1>
+        <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">All Services</h1>
 
         <div class="media-md align-items-center g-mb-30">
             <div class="d-flex g-mb-15 g-mb-0--md">
-                <h3 class="g-font-weight-400 g-font-size-16 g-color-black mb-0">Manage all users in the system</h3>
+                <h3 class="g-font-weight-400 g-font-size-16 g-color-black mb-0">Filter Services</h3>
             </div>
 
             <div class="media d-md-flex align-items-center ml-auto">
@@ -68,7 +183,7 @@
                     <tr>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Full Name</div>
+                                <div class="d-flex align-self-center">Service ID</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -86,7 +201,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Username</div>
+                                <div class="d-flex align-self-center">Title</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -104,7 +219,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Email</div>
+                                <div class="d-flex align-self-center">Category</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -122,7 +237,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Phone Number</div>
+                                <div class="d-flex align-self-center">Discount</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -140,7 +255,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Wallet Balance</div>
+                                <div class="d-flex align-self-center">Availability</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -158,7 +273,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center g-nowrap">Action</div>
+                                <div class="d-flex align-self-center">Action</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -179,69 +294,21 @@
 
                     <tbody>
                     <tr>
-                        <td>John Doe</td>
-                        <td>Johnnydoe</td>
-                        <td>John.doe@gmail.com</td>
+                        <td>1</td>
+                        <td>Airtel Data</td>
+                        <td>Data</td>
                         <td>
                             <div class="d-inline-block">
                           <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          09076756632
+                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
+                          4% / for all buyers
                           </span>
                             </div>
                         </td>
-                        <td>&#8358; 24,500</td>
-                        <td class="text-center">
-                            <div class="g-pos-rel g-top-3 d-inline-block">
-                                <a id="dropDown1Invoker"
-                                   class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
-                                   href="javascript:;" aria-controls="dropDown1" aria-haspopup="true"
-                                   aria-expanded="false" data-dropdown-event="click"
-                                   data-dropdown-target="#dropDown1">
-                                    <i class="fa fa-stack-overflow"></i>
-                                </a>
-
-                                <div id="dropDown1"
-                                     class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
-                                     aria-labelledby="dropDown1Invoker">
-                                    <ul class="list-unstyled g-nowrap mb-0">
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Block
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Unblock
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-check g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Approve
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-plus g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Decline
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Delete
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <td>Not Available</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-info">View</button><button class="btn btn-danger">Delete</button>
                             </div>
                         </td>
                     </tr>
