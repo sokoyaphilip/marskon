@@ -6,22 +6,23 @@ $this->load->view('landing/user_header');
             <div class="col-md-4">
                 <div class="row">
 
-                        <div class="col-sm-12">
-                            <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select (Click) Network To Buy Airtime</h4>
-                            <div class="btn-group justified-content">
-                                <?php foreach ($networks as $network ): ?>
-                                    <label class="u-check">
-                                        <input data-discount="<?= $network->discount; ?>"
-                                               data-network-name="<?= $network->network_name; ?>"
-                                               data-network-id="<?= $network->id; ?>"
-                                               value="<?= $network->id; ?>"
-                                               class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 airtime_network" name="network"
-                                               type="radio">
-                                        <span class="btn btn-md btn-block u-btn-outline-lightgray g-color-white--checked g-bg-<?= $network->network_name; ?>--checked rounded-0"><?= ucwords($network->title); ?></span>
-                                    </label>
-                                <?php endforeach; ?>
+                    <div class="col-sm-12">
+                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Select Network To Buy Airtime</h4>
+                        <div class="justified-content">
+                            <div class="form-group g-brd-gray-light-v7 g-rounded-25 mb-0">
+                                <select class="form-control w-100 airtime_network" id="network" required
+                                        name="network">
+                                    <option value="" selected>-- Select Network --</option>
+                                    <?php foreach ($networks as $network ): ?>
+                                        <option data-discount="<?= $network->discount; ?>"
+                                                value="<?= $network->id; ?>">
+                                            <?= ucwords($network->title); ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
+                    </div>
 
                         <div class="col-sm-12 g-mt-10">
                             <div class="form-group">
@@ -44,9 +45,11 @@ $this->load->view('landing/user_header');
                                   name="recipents"
                                   placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
                             </div>
-                        <input type="hidden" name="product_id" id="product_id" value="<?= $product_id; ?>">
                         <div class="col-md-12 g-mt-5 py-3">
-                            <button type="button" data-pid="6" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
+                            <span class="text text-success discount-notif"></span>
+                        </div>
+                        <div class="col-md-12 g-mt-5 py-3">
+                            <button type="button" data-balance="<?= $user->wallet;?>" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
                         </div>
 
                 </div>

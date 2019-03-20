@@ -60,8 +60,18 @@
                         <div class="col-md-12 g-mt-5 py-3">
                             <input type="hidden" name="product_id" value="<?= $product_id?>" />
                             <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 tv-cable" data-wallet="<?= $user->wallet;?>">Pay Now</button>
-                            <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                         </div>
+                    <div id="processing"
+                         style="display:none;position: center;top: 0;left: 0;width: auto;height: auto%;background: #f4f4f4;z-index: 99;">
+                        <div class="text"
+                             style="position: absolute;top: 35%;left: 0;height: 100%;width: 100%;font-size: 18px;text-align: center;">
+                            <img src="<?= base_url('assets/img/load.gif'); ?>"
+                                 alt="Processing...">
+                            Checking your IUC/Smart card number! <br><b
+                                    style="color: rgba(2.399780888618386%,61.74193548387097%,46.81068368248487%,0.843);">Please wait...</b>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -225,7 +235,7 @@
                             <?php foreach( $transactions as $transaction ) :?>
                                 <tr>
                                     <td><?= $transaction->trans_id; ?></td>
-                                    <td><?= neatDate($transaction->date_initiated); ?></td>
+                                    <td><?= neatDate($transaction->date_initiated) . ' '.neatTime($transaction->date_initiated); ?></td>
                                     <td><?= payment_id_replacer($transaction->description); ?></td>
                                     <td><?= ngn($transaction->amount); ?></td>
                                     <td><?= statusLabel( $transaction->status);?></td>

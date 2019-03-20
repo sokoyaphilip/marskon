@@ -200,26 +200,22 @@ $(document).ready(function() {
     // Data Purchase
     $('.data-purchase').on('click', function (e) {
         e.preventDefault();
+
         let _btn = $(this);
         _btn.prop('disabled', true);
         _btn.text("Processing...");
 
-        let selected = $('#network');
-        let product_id = $('#product_id').val();
         let recipents = $('#recipents').val();
-        let network_name = selected.data('network-name');
-        let network_id = selected.data('network-id');
-        let discount =  selected.data('discount');
-        let plan_id = $('#network_data_plan').val();
+        let network_id = $('#network').val();
+        let plan_id = $('#network_plan').val();
         let wallet = _btn.data('wallet');
 
-        if( selected.val() === '') {
+        if( network_id === '') {
             _btn.prop('disabled', false);
             sweet_alert('Error', 'Please select a network', 'error');
             _btn.text("Buy Data");
             return false;
         }
-
 
         if( recipents === '') {
             _btn.prop('disabled', false);
@@ -227,7 +223,6 @@ $(document).ready(function() {
             _btn.text("Buy Data");
             return false;
         }
-
 
         if( plan_id === ''){
             _btn.prop('disabled', false);
@@ -240,11 +235,10 @@ $(document).ready(function() {
             url : base_url + 'ajax/data_purchase/',
             method: "POST",
             cache: false,
-            data: {'product_id' : product_id,
-                'plan_id' : plan_id, 'recipents' : recipents,
-                'network' : network_id,
-                'network_name' : network_name,
-                'discount' : discount,
+            data: {
+                'plan_id' : plan_id,
+                'recipents' : recipents,
+                'network_id' : network_id,
                 'wallet'   : wallet
             },
             success : function(response){
@@ -301,17 +295,20 @@ $(document).ready(function() {
         e.preventDefault();
         _btn.prop('disabled', true);
         _btn.text("Processing...");
-
-        let checked = $("input[name='network']:checked");
-        let product_id = $('#product_id').val();
         let amount = $('#amount').val();
+        let network_id = $('#network').val();
         let recipents = $('#recipents').val();
-        let network_name = checked.data('network-name');
-        // let network_id = checked.data('network-id');
-        let discount =  checked.data('discount');
+        let wallet = $(this).data('balance');
 
-        if( amount === '' || amount < 100 ){
-            sweet_alert('Error', 'Sorry amount can not be less than N100', 'error');
+        if( network_id  === '' ){
+            sweet_alert('Error', 'Please select a network you will like to recharge.', 'error');
+            _btn.prop('disabled', false);
+            $(this).text("Recharge Airtime");
+            return false;
+        }
+
+        if( amount === '' || amount < 100 || amount > 2000 ){
+            sweet_alert('Error', 'Amount can not be empty, less than N100, and greater than N2000', 'error');
             _btn.prop('disabled', false);
             $(this).text("Recharge Airtime");
             return false;
@@ -329,11 +326,11 @@ $(document).ready(function() {
             method: "POST",
             cache : false,
             data: {
-                'product_id' : product_id,
                 'amount' : amount,
-                'discount' : discount,
-                'recipents' : recipents,
-                'network_name' : network_name},
+                'network_id' : network_id,
+                'wallet' : wallet,
+                'recipents' : recipents
+            },
             success : function(response){
                 if( response.status === 'success' ){
                     sweet_alert('Success', response.message, 'success', false);
@@ -432,13 +429,11 @@ $(document).ready(function() {
 
         let _btn = $(this);
         _btn.text('Processing...');
-        let product_id = $('#product_id').val();
-        let network = $('#network').val();
+        let network_id = $('#network').val();
         let plan_id = $('#network_plan').val();
         let smart_card_number = $('#smart_card_number').val();
         let registered_name = $('#registered_name').val();
         let registered_number = $('#registered_number').val();
-        let network_name = $('#network').find(':selected').data('network-name');
 
         if( smart_card_number === '') {
             _btn.prop('disabled', false);
@@ -464,11 +459,11 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/tv_cable/',
             method: "POST",
-            data: {'product_id' : product_id,
+            data: {
                 'plan_id' : plan_id, 'smart_card_number' : smart_card_number,
                 'registered_name' : registered_name,
                 'registered_number' : registered_number,
-                'network' : network, 'network_name' : network_name },
+                'network_id' : network_id },
             success : function(response){
                 if( response.status === 'success' ){
                     sweet_alert('Success', response.message, 'success', false);
@@ -622,10 +617,10 @@ $(document).ready(function() {
         let service_id = $(this).val();
         // $('#smart-card-info').html('');
         // $('#smart_card_number').val('');
-        // let discount = $(this).data('discount');
-        // if( discount === undefined) discount = $(this).find(':selected').data('discount');
+        let discount = $(this).data('discount');
+        if( discount === undefined) discount = $(this).find(':selected').data('discount');
         //
-        // $('.you-pay').html('You get '+ discount +' % discount');
+        $('.discount-notif').html('You will be receiving '+ discount +'% discount for this transaction.');
 
         $('#network_plan')
             .find('option')
@@ -794,8 +789,35 @@ $(document).ready(function() {
 
     });
 
+    // vaidate meter number
+    $('#meter_number').on('blur', function () {
+        $('#processing').show();
+        let meter_number = $(this).val();
+        let service = $('#plan').find(':selected').data('variation-name');
+        if( meter_number !== '' ){
+            $.ajax({
+                url : base_url + 'ajax/verifyMeter/',
+                method: "POST",
+                data: { 'service' : service ,'code' : meter_number},
+                dataType: 'JSON',
+                success: function( response ){
+                    // console.log(response);
+                    $('#processing').hide();
+                    if( response.data.Customer_Name ){
+                        $('.electricity-bill').prop('disabled', false);
+                        $('#meter-info').text(response.data.Customer_Name);
+                    }else{
+                        $('#meter-info').text("Your meter number is invalid, and can't proceed.");
+                        $('.electricity-bill').prop('disabled', false);
+                    }
+                }
+            });
+        }
+    });
+
     // validate the smart card number
     $('#smart_card_number').on('blur', function(){
+        $('#processing').show();
         let number = $(this).val();
         let network_name = $('#network').find(':selected').data('network-name');
         if( $('#network').val() !== '' && number !== '' ){
@@ -804,9 +826,11 @@ $(document).ready(function() {
                 method: "POST",
                 data: { 'iuc' : number ,'network' : network_name},
                 success: function( response ){
+                    $('#processing').hide();
                     if( response['message'] === 'invalid_smartcardno' ){
                         $('.tv-cable').prop('disabled', true);
-                        $('#smart-card-info').text('Invalid Smart card number.')
+                        $('#smart-card-info').text('Invalid Smart card number.');
+
                     }else{
                         $('#smart-card-info').text(`Customer Name: ${response['message']}`);
                         $('#registered_name').val(response['message']);
@@ -816,7 +840,6 @@ $(document).ready(function() {
             });
         }
     });
-
     // Pin transfer
     // $('#pin_amount').on('change', function () {
     //     let _val = $(this).val();

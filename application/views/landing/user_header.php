@@ -62,7 +62,7 @@
                             class="g-pos-abs g-left-0 g-width-100x--lg g-nowrap g-font-size-14 g-py-20 g-mt-17 rounded"
                             aria-labelledby="profileMenuInvoker">
                             <li class="g-mb-10">
-                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="my_wallet.php">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard/wallet/');?>">
                     <span class="d-flex align-self-center g-mr-12">
           <i class="fa fa-user"></i>
         </span>
@@ -70,7 +70,7 @@
                                 </a>
                             </li>
                             <li class="g-mb-10">
-                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="app/users/dashboard.php">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard/')?>">
                     <span class="d-flex align-self-center g-mr-12">
           <i class="fa fa-credit-card"></i>
         </span>
@@ -176,6 +176,16 @@
                               <i class="fa fa-credit-card-alt"></i>
                             </span>
                             <span class="media-body align-self-center">My Wallet</span>
+                        </a>
+                    </li>
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'profile') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?= base_url('dashboard/profile/'); ?>">
+                            <span class="d-flex align-self-center g-font-size-18 g-mr-18">
+                              <i class="fa fa-user-circle-o"></i>
+                            </span>
+                            <span class="media-body align-self-center">My Profile</span>
                         </a>
                     </li>
 

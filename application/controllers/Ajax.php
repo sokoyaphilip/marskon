@@ -212,11 +212,9 @@ class Ajax extends CI_Controller {
 
         $response = array('status' => 'error');
 
-        $product_id = $this->input->post('product_id', true);
         $plan_id = $this->input->post('plan_id', true);
         $recipents = $this->input->post('recipents', true);
-        $network_id = $this->input->post('network', true);
-        $network_name = $this->input->post('network_name', true);
+        $network_id = $this->input->post('network_id', true);
         $wallet = $this->input->post('wallet');
         $user_id = $this->session->userdata('user_id');
 
@@ -224,6 +222,7 @@ class Ajax extends CI_Controller {
         $message = $description_number =  $invalid_numbers = '';
         $valid_numbers = array();
         $numbers = explode( ',', $recipents);
+        $network_row = $this->get_network( $network_id );
 
         foreach( $numbers as $key => $msisdn ){
             $msisdn = preg_replace('/\D/', '', $msisdn);
@@ -231,7 +230,7 @@ class Ajax extends CI_Controller {
             switch ($strlen) {
                 case 11:
                     $local_prefix = substr($msisdn, 0 , 4);
-                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_name])){
+                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_row->network_name])){
                         array_push($valid_numbers, $msisdn);
                         $message .= $msisdn. ',';
                     }else{
@@ -240,7 +239,7 @@ class Ajax extends CI_Controller {
                     break;
                 case 13:
                     $local_prefix = substr($msisdn, 0 , 6);
-                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_name])){
+                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_row->network_name])){
                         array_push($valid_numbers, $msisdn);
                         $message .= $msisdn. ',';
                     }else{
@@ -263,11 +262,11 @@ class Ajax extends CI_Controller {
                 $this->return_response($response);
             }else{
                 $user_id = $this->session->userdata('logged_id');
-                $description = ucfirst( $network_name) . " data purchase for {$count} recipent";
+                $description = ucfirst( $network_row->network_name) . " data purchase for {$count} recipent";
                 $transaction_id = $this->site->generate_code('transactions', 'trans_id');
                 $insert_data = array(
                     'amount'        => $total_amount,
-                    'product_id'    => $product_id,
+                    'product_id'    => $network_row->product_id,
                     'description'   => $description,
                     'trans_id'      => $transaction_id,
                     'payment_method' => 2,
@@ -275,32 +274,34 @@ class Ajax extends CI_Controller {
                     'user_id'        => $user_id,
                     'status'        => 'success'
                 );
-                $error = false; $api_ret = 'ORDER_COMPLETED';
+                $error = false; $ret = 'ORDER_COMPLETED';
                 foreach( $valid_numbers as $number ){
                     // fire the API
 
-                    $ret = data_plan_code( $network_name, $plan_detail->name, $number);
+                    $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
                     if( $ret !== false ){
-                        $sms_array = array( '08066795128' => $ret );
-                        $this->load->library('AfricaSMS', $sms_array);
-                        $this->africasms->sendsms();
+//                        $sms_array = array( '08066795128' => $ret );
+//                        $this->load->library('AfricaSMS', $sms_array);
+//                        $this->africasms->sendsms();
+                        $array['message'] = $ret;
+                        $this->callSMSAPI($array);
                     }else{
                         $error = true;
+                        $ret = $ret;
                     }
                 }
 
                 if( $error ){
-                    $response['message'] = "There was an error processing your order, {$api_ret['status']} please try again or contact us. Thanks";
-                    $this->site->update('transactions', array('status' => 'fail'), "(trans_id = {$transaction_id})");
+                    $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks";
                     $this->return_response( $response );
                 }
 
                 if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
                     $this->site->insert_data('transactions', $insert_data);
                     $response['status'] = 'success';
-                    $response['message'] = "Thanks for using Gecharl. Your {$plan_detail->name} data plan order for {$message} has been processed and should be received in less than 2 minutes. <br />";
+                    $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed. <br />";
                     if( $invalid_numbers != '' ){
-                        $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_name} number";
+                        $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_row->network_name} number";
                     }
                     $response['message'] .= "<br />Your transaction ID: <b>{$transaction_id}</b><br/> Process more!";
                     $this->return_response($response);
@@ -310,7 +311,7 @@ class Ajax extends CI_Controller {
                 }
             }
         }else{
-            $response['message'] = "We couldn't process your order because the number(s) {$invalid_numbers} is not ". ucfirst($network_name). " number(s) ";
+            $response['message'] = "We couldn't process your order because the number(s) {$invalid_numbers} is not ". ucfirst($network_row->network_name). " number(s) ";
             $this->return_response($response);
         }
 
@@ -319,22 +320,23 @@ class Ajax extends CI_Controller {
     // Airtime purchase
     public function buy_airtime(){
         $response = array('status' => 'error');
-        // LETS PROCESS
-
         $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
-        $this->form_validation->set_rules('network_name', 'Network Name','trim|required|xss_clean');
+        $this->form_validation->set_rules('network_id', 'You need to select a network.','trim|required|xss_clean');
         $this->form_validation->set_rules('recipents', 'Recipents NUmber','trim|required|xss_clean');
         if(  $this->form_validation->run() == FALSE ){
             $response['message'] = validation_errors();
             $this->return_response( $response );
         }
 
-        $product_id = $this->input->post('product_id', true);
+        // get the network stuff
+        $network_id = $this->input->post('network_id', true);
+        $network_row = $this->get_network( $network_id );
+        $network_name = $network_row->network_name;
+        $discount = $network_row->discount;
+
         $amount = $this->input->post('amount', true);
         $recipents = $this->input->post('recipents', true);
-        $network_name = $this->input->post('network_name', true);
         $wallet = $this->input->post('wallet');
-        $discount = $this->input->post('discount');
 
         // check number validity
         $message = $description_number =  $invalid_numbers = '';
@@ -383,15 +385,13 @@ class Ajax extends CI_Controller {
                 $transaction_id = $this->site->generate_code('transactions', 'trans_id');
                 $insert_data = array(
                     'amount'        => $total_amount,
-                    'product_id'    => $product_id,
+                    'product_id'    => $network_row->product_id,
                     'description'   => $description,
                     'trans_id'      => $transaction_id,
                     'payment_method' => 2,
                     'date_initiated'    => get_now(),
                     'user_id'        => $user_id
                 );
-                $response['message'] ='YOu got here';
-                $this->return_response( $response );
                 // Call the API
                 foreach( $valid_numbers as $number ){
                     $data = array(
@@ -407,7 +407,6 @@ class Ajax extends CI_Controller {
                     }else{
                         $insert_data['status'] = 'pending';
                         if( $return['orderid'] ) $insert_data['orderid'] = $return['orderid'];
-
                         $insert_data['payment_status'] = $return['status'];
                     }
                 }
@@ -415,9 +414,9 @@ class Ajax extends CI_Controller {
                 if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
                     $this->site->insert_data('transactions', $insert_data);
                     $response['status'] = 'success';
-                    $response['message'] = "Thanks for using Gecharl. Your order {$message} has been processed and should be received in less than 2 minutes. <br />";
+                    $response['message'] = "Thanks for using " . lang('app_name') .". Your order {$message} has been processed.<br />";
                     if( $invalid_numbers != '' ){
-                        $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_name} number";
+                        $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or not {$network_name} number";
                     }
                     $response['message'] .= "<br />Your transaction ID: <b>{$transaction_id}</b><br/> Process more!";
                     $this->return_response($response);
@@ -427,7 +426,7 @@ class Ajax extends CI_Controller {
                 }
             }
         }else{
-            $response['message'] = "We couldn't process your order because the number(s) {$invalid_numbers} is/are not ". ucfirst($network_name). " numbers ";
+            $response['message'] = "We couldn't process your order because the number(s) {$invalid_numbers} is not ". ucfirst($network_name). " numbers ";
             $this->return_response($response);
         }
 
@@ -564,7 +563,7 @@ class Ajax extends CI_Controller {
         $this->form_validation->set_rules('smart_card_number', 'Smart Card Number','trim|required|xss_clean');
         $this->form_validation->set_rules('registered_name', 'Registered Name','trim|required|xss_clean');
         $this->form_validation->set_rules('registered_number', 'Registered Number','trim|required|xss_clean');
-        $this->form_validation->set_rules('network', 'Network','trim|required|xss_clean');
+        $this->form_validation->set_rules('network_id', 'TV Cable','trim|required|xss_clean');
         $this->form_validation->set_rules('plan_id', 'Plan','trim|required|xss_clean');
 
         if( $this->form_validation->run() == FALSE ){
@@ -572,25 +571,22 @@ class Ajax extends CI_Controller {
             $this->return_response( $response );
         }
 
-
-        $product_id = $this->input->post('product_id', true);
-        $network_id = $this->input->post('network', true);
         $plan_id = $this->input->post('plan_id', true);
         $smart_card_number = $this->input->post('smart_card_number', true);
         $registered_name = $this->input->post('registered_name', true);
         $registered_number = $this->input->post('registered_number', true);
-        $network_name = $this->input->post('network_name', true ); // gotv, dstv, startimes
         $wallet = $this->session->userdata('wallet');
         $user_id = $this->session->userdata('logged_id');
 
+        $network_id = $this->input->post('network_id');
+
+        $network_row = $this->get_network( $network_id );
+        $product_id = $network_row->product_id;
+        $network_name = $network_row->network_name; // gotv, dstv, startimes
 
         // verify...
         $plan_detail = $this->site->run_sql("SELECT name, amount FROM plans WHERE id = {$plan_id}")->row();
-
         $variation_detail = $this->site->run_sql("SELECT variation_name, variation_amount, api_source FROM api_variation WHERE plan_id = {$plan_id}")->row();
-
-
-
         $description = ucwords( $network_name) . " subscription plan for {$plan_detail->name} at N{$plan_detail->amount}.";
         $transaction_id = $this->site->generate_code('transactions', 'trans_id');
 
@@ -875,8 +871,8 @@ class Ajax extends CI_Controller {
                 'url'   => "https://www.nellobytesystems.com/APIBuyBulkSMS.asp",
                 'UserID' => CK_USER_ID,
                 'APIKey' => CK_KEY,
-                'Sender' => 'GecharlData',
-                'Recipient' => '08151148607',
+                'Sender' => 'MarsData',
+                'Recipient' => '08070994845',
                 'Message' => $data['message']
 //                08151148607
             )
@@ -923,6 +919,42 @@ class Ajax extends CI_Controller {
         $response = json_decode($response, TRUE);
         curl_close($curl);
         return $response;
+    }
+
+
+    function verifyMeter(){
+        $post_url = "http://www.vtpass.com/ajax/merchant-verify";
+        $data = array(
+            'service' => $_POST['service'],
+            'code'      => $_POST['code']
+        );
+        $ponmo = http_build_query($data);
+        $url = $post_url .'?'. $ponmo; // json
+        $headers = array(
+            "GET /HTTP/1.1",
+            "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.1) Gecko/2008070208 Firefox/3.0.1",
+            "Accept: */* ",
+            "Accept-Language: en-us,en;q=0.5",
+            "Keep-Alive: 300",
+            "Connection: keep-alive"
+        );
+        if( ini_get('allow_url_fopen') ) {
+            $response = file_get_contents($url);
+        } else {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+            curl_setopt($ch, CURLOPT_POST, false);
+            $response = curl_exec($ch);
+            $response = json_decode($response);
+            curl_close($ch);
+        }
+        echo $response;
+        exit;
     }
 
 
@@ -1001,6 +1033,9 @@ class Ajax extends CI_Controller {
         }
     }
 
+    function get_network( $network_id ){
+        return $this->site->run_sql("SELECT title,network_name,discount, product_id FROM services WHERE id = {$network_id}")->row();
+    }
 
     /* General FUnction
      * Help us to return the response

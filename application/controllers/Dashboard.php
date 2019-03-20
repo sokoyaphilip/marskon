@@ -93,9 +93,11 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Pay your electricity bill';
         $page_data['user'] = $this->get_profile($id);
         $page_data['product_id'] = 4;
-        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name FROM products p 
+        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name , api.variation_name variation_name
+        FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) 
         JOIN plans pl ON (pl.sid = s.id)
+        LEFT JOIN api_variation api ON( api.plan_id = pl.id)
         WHERE p.slug ='electricity-bill' ")->result();
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 4 AND user_id = {$id}")->result();
         $this->load->view('app/users/electric_bill', $page_data);
@@ -240,7 +242,7 @@ class Dashboard extends CI_Controller {
     public function profile(){
         $id = $this->session->userdata('logged_id');
         $page_data['page'] = 'profile';
-        $page_data['title'] = "Proile Setting";
+        $page_data['title'] = "Profile Setting";
         $page_data['user'] = $this->site->run_sql("SELECT name, phone, email,user_code,wallet, account_name, account_type, bank_name FROM users WHERE id = {$id}")->row();
         $this->load->view('app/users/profile', $page_data);
     }

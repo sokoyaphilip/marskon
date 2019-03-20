@@ -5,6 +5,7 @@
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
                     <h1 class="g-color-white text-uppercase mb-4">Login</h1>
+                    <?php $this->load->view('msg_view'); ?>
                     <div class="d-inline-block g-width-35 g-height-2 g-bg-white mb-4"></div>
                 </div>
             </div>

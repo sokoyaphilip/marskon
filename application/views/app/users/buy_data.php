@@ -13,7 +13,8 @@ $this->load->view('landing/user_header');
                                             name="network">
                                         <option value="" selected>-- Select Network --</option>
                                         <?php foreach ($networks as $network ): ?>
-                                            <option data-discount="<?= $network->discount; ?>" data-network-name="<?= $network->network_name; ?>"
+                                            <option data-discount="<?= $network->discount; ?>"
+                                                    data-network-name="<?= $network->network_name; ?>"
                                                     value="<?= $network->id; ?>">
                                                 <?= ucwords($network->title); ?>
                                             </option>
@@ -38,9 +39,7 @@ $this->load->view('landing/user_header');
                               placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
                         </div>
 
-
                         <div class="col-md-12 g-mt-5 py-3">
-                            <input type="hidden" name="product_id" value="<?= $product_id?>" />
                             <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 data-purchase" data-wallet="<?= $user->wallet;?>">Buy Data</button>
                         </div>
                 </div>

@@ -6,25 +6,39 @@ $this->load->view('landing/user_header');
             <div class="col-sm-4">
                 <div class="row">
                     <div class="col-sm-12 g-mt-10 mb-4">
-                            <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Pay Electric Bill Complete The Form
-                                Below</h4>
-                            <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
-                                <div class="dropdown bootstrap-select js-select u-select--v3-select u-sibling w-100 dropup">
-                                    <div class="form-group g-brd-gray-light-v7 g-rounded-25 mb-0">
-                                        <select class="form-control" id="plan" name="plan">
-                                            <option value="" selected>-- Select --</option>
-                                            <?php foreach ( $plans as $plan ): ?>
-                                                <option
-                                                        data-network-name="<?= $plan->network_name; ?>"
-                                                        data-service-id="<?= $plan->service_id; ?>"
-                                                        data-service-discount="<?= $plan->discount; ?>"
-                                                        value="<?= $plan->id?>">
-                                                    <?= ucwords($plan->name); ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
+                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Pay Electric Bill Complete The Form
+                            Below</h4>
+                        <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
+                            <div class="dropdown bootstrap-select js-select u-select--v3-select u-sibling w-100 dropup">
+                                <div class="form-group g-brd-gray-light-v7 g-rounded-25 mb-0">
+                                    <select class="form-control" id="plan" name="plan">
+                                        <option value="" selected>-- Select --</option>
+                                        <?php foreach ( $plans as $plan ): ?>
+                                            <option
+                                                    data-network-name="<?= $plan->network_name; ?>"
+                                                    data-variation-name="<?= $plan->variation_name;?>"
+                                                    data-service-id="<?= $plan->service_id; ?>"
+                                                    data-service-discount="<?= $plan->discount; ?>"
+                                                    value="<?= $plan->id?>">
+                                                <?= ucwords($plan->name); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="iuc-number">Meter Type</label>
+                            <div class="form-group g-brd-gray-light-v7 g-rounded-25 mb-0">
+                                <select class="form-control" id="meter_type" name="meter_type">
+                                    <option value="" selected>-- Select Meter Type --</option>
+                                    <option value="prepaid">Prepaid</option>
+                                    <option value="postpaid">Postpaid</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-sm-12">
@@ -51,9 +65,21 @@ $this->load->view('landing/user_header');
 
                     <input type="hidden" name="product_id" id="product_id" value="<?= $product_id; ?>">
                     <div class="col-md-12 g-mt-5 py-3">
-                    <button type="button" data-pid="6" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 airtime-purchase">Recharge Airtime</button>
-                    <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
-                </div>
+                        <button type="button" data-pid="6" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 electricity-bill">Pay Now</button>
+                    </div>
+
+                    <div id="processing"
+                         style="display:none;position: center;top: 0;left: 0;width: auto;height: auto%;background: #f4f4f4;z-index: 99;">
+                        <div class="text"
+                             style="position: absolute;top: 35%;left: 0;height: 100%;width: 100%;font-size: 18px;text-align: center;">
+                            <img src="<?= base_url('assets/img/load.gif'); ?>"
+                                 alt="Processing...">
+                            Checking your meter number! <br><b
+                                    style="color: rgba(2.399780888618386%,61.74193548387097%,46.81068368248487%,0.843);">Please wait...</b>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 

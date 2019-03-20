@@ -98,8 +98,8 @@ defined('NIGERIA_TELCOS') OR define('NIGERIA_TELCOS', $nigeria_telcos);
 
 
 // API
-defined('CK_USER_ID')      OR define('CK_USER_ID', "CK10073078"); //Clubkonnect User ID
-defined('CK_KEY')      OR define('CK_KEY', "57E90LT10E07S132AUM7JV10B6HT4Y4IVDCT50U8L8TQP3R458S14G9AWO679XO3"); //Clubkonnect User Key
+defined('CK_USER_ID')      OR define('CK_USER_ID', "CK10102408"); //Clubkonnect User ID
+defined('CK_KEY')      OR define('CK_KEY', "B5M7T7SGQ943MVI56VI25CJ6U4767YW59646C76Z7WVR5Q2UZ9A9P9N11INAV0R9"); //Clubkonnect User Key
 defined('CK_AIRTIME_URL')      OR define('CK_AIRTIME_URL', "https://www.nellobytesystems.com/APIBuyAirTime.asp"); //Clubkonnect Airtime
 
 
