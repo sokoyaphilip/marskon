@@ -136,7 +136,7 @@ class Admin extends CI_Controller {
         WHERE t.status = 'pending' AND t.product_id = 6")->result();
             $page_data['airtime_to_cash_pin'] = $this->site->get_result('airtime_to_cash', 'id,tid,uid,incoming,outgoing,details,datetime,status,type', "(status = 'pending')");
             $page_data['title'] = "Funding Approval";
-            $this->load->view('app/admin/approval', $page_data);
+            $this->load->view('app/admin/wallet_funding', $page_data);
         }
     }
 
@@ -182,7 +182,25 @@ class Admin extends CI_Controller {
         $this->load->view('app/admin/manage_users', $page_data);
     }
 
+    /*
+     * Gift Cards
+     * */
 
+    public function gift_cards(){
+        $page_data['page'] = 'gift_card';
+        $page_data['users'] = $this->site->get_result('users');
+        $this->load->view('app/admin/gift_cards', $page_data);
+    }
+
+    /*
+     * E-coins
+     * */
+
+    public function e_coins(){
+        $page_data['page'] = 'e_coins';
+        $page_data['users'] = $this->site->get_result('users');
+        $this->load->view('app/admin/e_coins', $page_data);
+    }
     /*
      * Plans
      * */

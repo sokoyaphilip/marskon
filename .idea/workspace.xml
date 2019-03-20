@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/app/users/profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/landing/forgot.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/load.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/development/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/development/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/production/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/helpers/site_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/site_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/english_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/english_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Site_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Site_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/buy_airtime.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/buy_airtime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/buy_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/buy_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/electric_bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/electric_bill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/tv_sub.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/tv_sub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/functions.js" afterDir="false" />
-    </list>
+    <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8310">
-              <caret line="957" column="5" selection-start-line="957" selection-start-column="5" selection-end-line="957" selection-end-column="5" />
+            <state relative-caret-position="62">
+              <caret line="902" column="5" lean-forward="true" selection-start-line="902" selection-start-column="5" selection-end-line="902" selection-end-column="5" />
               <folding>
                 <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
                 <element signature="n#quick_airtime#0;n#Ajax#0;n#!!top" />
@@ -81,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/users/electric_bill.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="120">
+              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
               <folding>
                 <element signature="e#4883#4967#0#HTML" expanded="true" />
               </folding>
@@ -160,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
-              <caret line="42" column="112" lean-forward="true" selection-start-line="42" selection-start-column="112" selection-end-line="42" selection-end-column="125" />
+              <caret line="42" column="112" selection-start-line="42" selection-start-column="112" selection-end-line="42" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -260,28 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -335,18 +294,18 @@
       <workItem from="1553052528060" duration="7428000" />
       <workItem from="1553073232276" duration="599000" />
       <workItem from="1553092433554" duration="3405000" />
-      <workItem from="1553114559705" duration="1391000" />
+      <workItem from="1553114559705" duration="3094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68721000" />
+    <option name="totallyTimeSpent" value="70424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21685971" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21685971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -359,7 +318,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32918397" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32827586" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -565,21 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8310">
-          <caret line="957" column="5" selection-start-line="957" selection-start-column="5" selection-end-line="957" selection-end-column="5" />
-          <folding>
-            <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
-            <element signature="n#quick_airtime#0;n#Ajax#0;n#!!top" />
-            <element signature="n#electricity_bill#0;n#Ajax#0;n#!!top" />
-            <element signature="n#verify_iuc_number#0;n#Ajax#0;n#!!top" />
-            <element signature="n#verifyMeter#0;n#Ajax#0;n#!!top" />
-            <element signature="n#verifyPaystack#0;n#Ajax#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_airtime.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -636,7 +580,7 @@
     <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
-          <caret line="42" column="112" lean-forward="true" selection-start-line="42" selection-start-column="112" selection-end-line="42" selection-end-column="125" />
+          <caret line="42" column="112" selection-start-line="42" selection-start-column="112" selection-end-line="42" selection-end-column="125" />
         </state>
       </provider>
     </entry>
@@ -669,10 +613,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/electric_bill.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="120">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
           <folding>
             <element signature="e#4883#4967#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="902" column="5" lean-forward="true" selection-start-line="902" selection-start-column="5" selection-end-line="902" selection-end-column="5" />
+          <folding>
+            <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
+            <element signature="n#quick_airtime#0;n#Ajax#0;n#!!top" />
+            <element signature="n#electricity_bill#0;n#Ajax#0;n#!!top" />
+            <element signature="n#verify_iuc_number#0;n#Ajax#0;n#!!top" />
+            <element signature="n#verifyMeter#0;n#Ajax#0;n#!!top" />
+            <element signature="n#verifyPaystack#0;n#Ajax#0;n#!!top" />
           </folding>
         </state>
       </provider>
