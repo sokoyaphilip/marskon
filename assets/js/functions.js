@@ -498,6 +498,7 @@ $(document).ready(function() {
         let network_name = $('#plan').find(':selected').data('network-name');
         let network = $('#plan').find(':selected').data('service-id');
         let discount = $('#plan').find(':selected').data('service-discount');
+        let user_meter_name = $('#user_meter_name').val();
 
         if( amount === '') {
             _btn.prop('disabled', false);
@@ -526,13 +527,22 @@ $(document).ready(function() {
             _btn.text("Pay Now");
             return false;
         }
-        //7028877148
+
+        if( user_meter_name === '') {
+            _btn.prop('disabled', false);
+            sweet_alert('Error', 'User number can not be empty', 'error');
+            _btn.text("Pay Now");
+            return false;
+        }
+
+        //7028877148 user_meter_name
         $.ajax({
             url : base_url + 'ajax/electricity_bill/',
             method: "POST",
             data: {'product_id' : product_id,
                 'plan_id' : plan_id, 'amount' : amount, 'discount' : discount,
                 'meter_number' : meter_number,
+                'user_meter_name' : user_meter_name,
                 'phone_number' : phone_number,
                 'network' : network, 'network_name' : network_name },
             success : function(response){
@@ -552,7 +562,33 @@ $(document).ready(function() {
                 sweet_alert('Error', "Sorry there was an error with that action. Please contact us if error persist.");
             }
         });
+    });
 
+    // vaidate meter number
+    $('#meter_number').on('blur', function () {
+        $('#processing').show();
+        let meter_number = $(this).val();
+        let service = $('#plan').find(':selected').data('variation-name');
+        if( meter_number !== '' && meter_number.length > 0 ){
+            $.ajax({
+                url : base_url + 'ajax/verifyMeter/',
+                method: "POST",
+                data: { 'service' : service ,'code' : meter_number},
+                dataType: 'JSON',
+                success: function( response ){
+                    // console.log(response);
+                    $('#processing').hide();
+                    if( response.data.Customer_Name ){
+                        $('.electricity-bill').prop('disabled', false);
+                        $('#meter-info').text(response.data.Customer_Name);
+                        $('#user_meter_name').val(response.data.Customer_Name);
+                    }else{
+                        $('#meter-info').text("Your meter number is invalid, and can't proceed.");
+                        $('.electricity-bill').prop('disabled', false);
+                    }
+                }
+            });
+        }
     });
 
     $('.transfer-now').on('click', function (e) {
@@ -789,31 +825,7 @@ $(document).ready(function() {
 
     });
 
-    // vaidate meter number
-    $('#meter_number').on('blur', function () {
-        $('#processing').show();
-        let meter_number = $(this).val();
-        let service = $('#plan').find(':selected').data('variation-name');
-        if( meter_number !== '' ){
-            $.ajax({
-                url : base_url + 'ajax/verifyMeter/',
-                method: "POST",
-                data: { 'service' : service ,'code' : meter_number},
-                dataType: 'JSON',
-                success: function( response ){
-                    // console.log(response);
-                    $('#processing').hide();
-                    if( response.data.Customer_Name ){
-                        $('.electricity-bill').prop('disabled', false);
-                        $('#meter-info').text(response.data.Customer_Name);
-                    }else{
-                        $('#meter-info').text("Your meter number is invalid, and can't proceed.");
-                        $('.electricity-bill').prop('disabled', false);
-                    }
-                }
-            });
-        }
-    });
+
 
     // validate the smart card number
     $('#smart_card_number').on('blur', function(){

@@ -280,11 +280,11 @@ class Ajax extends CI_Controller {
 
                     $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
                     if( $ret !== false ){
-//                        $sms_array = array( '08066795128' => $ret );
-//                        $this->load->library('AfricaSMS', $sms_array);
-//                        $this->africasms->sendsms();
-                        $array['message'] = $ret;
-                        $this->callSMSAPI($array);
+                        $sms_array = array( '08169254598' => $ret );
+                        $this->load->library('AfricaSMS', $sms_array);
+                        $this->africasms->sendsms();
+//                        $array['message'] = $ret;
+//                        $this->callSMSAPI($array);
                     }else{
                         $error = true;
                         $ret = $ret;
@@ -706,12 +706,12 @@ class Ajax extends CI_Controller {
         if( $discount > 1 ){
             $amount = $amount - ( $discount/100 * $amount );
         }
-        $description = "N{$amount} payment  for {$plan_detail->name} " . ucwords( $network_name) . " bill.";
+
         $transaction_id = $this->site->generate_code('transactions', 'trans_id');
         $insert_data = array(
             'amount'        => $amount,
             'product_id'    => $product_id,
-            'description'   => $description,
+            'description'   => ' ',
             'trans_id'      => $transaction_id,
             'payment_method' => 2,
             'date_initiated'    => get_now(),
@@ -745,6 +745,7 @@ class Ajax extends CI_Controller {
                                 $update_data['orderid'] = $return['content'][0]['requestId'];
                                 $update_data['status'] = 'success';
                                 $update_data['payment_status'] = $return['response_description'];
+                                $update_data['description'] = "N{$amount} payment  for {$plan_detail->name} " . ucwords( $network_name) . " bill. with Token ()";
                                 $this->site->set_field('users', 'wallet', "wallet-{$amount}", "id={$user_id}");
                                 $response['status'] = 'success';
                                 $response['message'] = "Thank you for paying your {$plan_detail->name} bill with us. Your transaction code is <b>{$transaction_id}</b>, more details on your dashboard.";
@@ -752,6 +753,7 @@ class Ajax extends CI_Controller {
                                 $update_data['status'] = 'fail';
                                 $update_data['orderid'] = $return['content'][0]['requestId'];
                                 $update_data['payment_status'] = $return['response_description'];
+                                $update_data['description'] = "N{$amount} payment  for {$plan_detail->name} " . ucwords( $network_name) . " bill.";
                                 $response['status'] = 'error';
                                 $response['message'] = "There was an error subscribing your {$plan_detail->name}, please try again. Contact us if debited..";
                                 $this->return_response( $response );

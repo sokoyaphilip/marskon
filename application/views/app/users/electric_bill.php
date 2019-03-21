@@ -62,8 +62,9 @@ $this->load->view('landing/user_header');
                             <input type="text" name="amount" id="amount" class="form-control number" required placeholder="How much will you like to pay?">
                         </div>
                     </div>
-
+                    <span class="text text-success discount-notif"></span>
                     <input type="hidden" name="product_id" id="product_id" value="<?= $product_id; ?>">
+                    <input type="hidden" id="user_meter_name" value="" />
                     <div class="col-md-12 g-mt-5 py-3">
                         <button type="button" data-pid="6" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 electricity-bill">Pay Now</button>
                     </div>

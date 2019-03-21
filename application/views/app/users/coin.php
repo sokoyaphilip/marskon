@@ -25,6 +25,13 @@ $this->load->view('landing/user_header');
                             </div>
                         </div>
 
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="wallet address">Wallet Address</label>
+                                <input type="text" name="wallet_address" id="wallet_address" class="form-control" required placeholder="Paste in your wallet address">
+                            </div>
+                        </div>
+
                         <div class="col-sm-12 g-mt-10">
                             <div class="form-group mb-0">
                                 <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Upload proof(Screenshot that you sent e-coins)</h4>
@@ -157,25 +164,41 @@ $this->load->view('landing/user_header');
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Date & Time</div>
-
+                                    <div class="d-flex align-self-center">Proof</div>
                                     <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                        <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                        <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                           href="javascript:;">
+                                          <i class="fa fa-angle-up"></i>
+                                        </a>
+                                        <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                           href="javascript:;">
+                                          <i class="fa fa-angle-down"></i>
+                                        </a>
+                                      </span>
                                     </div>
                                 </div>
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Type</div>
+                                    <div class="d-flex align-self-center">Date & Time</div>
+                                    <div class="d-flex align-self-center ml-auto">
+                                        <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                        <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                           href="javascript:;">
+                                          <i class="fa fa-angle-up"></i>
+                                        </a>
+                                        <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                           href="javascript:;">
+                                          <i class="fa fa-angle-down"></i>
+                                        </a>
+                                      </span>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="media">
+                                    <div class="d-flex align-self-center">Wallet</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -245,84 +268,31 @@ $this->load->view('landing/user_header');
                                     </div>
                                 </div>
                             </th>
-                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <td>5</td>
-                            <td>Jesus Park</td>
-                            <td>
-                                <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          Employees
-                          </span>
-                                </div>
-                            </td>
-                            <td>Product Manager</td>
-                            <td>myah_mcdet@dna.com</td>
-                            <td>
-                                <div class="progress g-height-6 g-rounded-3">
-                                    <div class="progress-bar g-bg-lightblue-v3 g-rounded-3" role="progressbar"
-                                         style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                                         aria-valuemax="100"></div>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <div class="g-pos-rel g-top-3 d-inline-block">
-                                    <a id="dropDown5Invoker"
-                                       class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
-                                       href="javascript:;" aria-controls="dropDown5" aria-haspopup="true"
-                                       aria-expanded="false" data-dropdown-event="click"
-                                       data-dropdown-target="#dropDown5">
-                                        <i class="hs-admin-more-alt"></i>
-                                    </a>
-
-                                    <div id="dropDown5"
-                                         class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
-                                         aria-labelledby="dropDown5Invoker">
-                                        <ul class="list-unstyled g-nowrap mb-0">
-                                            <li>
-                                                <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                   href="javascript:;">
-                                                    <i class="hs-admin-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                    Edit
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                   href="javascript:;">
-                                                    <i class="hs-admin-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                    Archive
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                   href="javascript:;">
-                                                    <i class="hs-admin-check g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                    Mark as Done
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                   href="javascript:;">
-                                                    <i class="hs-admin-plus g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                    New Task
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                   href="javascript:;">
-                                                    <i class="hs-admin-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                    Delete
-                                                </a>
-                                            </li>
-                                        </ul>
+                                <td>5</td>
+                                <td><img style="width: 70px;" src="<?= base_url('assets/img/partners/airtel.png')?>"></td>
+                                <td>Jan 25, 8:02am</td>
+                                <td>
+                                    <div class="d-inline-block">
+                                        <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
+                                        <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
+                                        Blockchain
+                                        </span>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                                <td>$340 paxful coin</td>
+                                <td>N7,800</td>
+                                <td>
+                                    <div class="progress g-height-6 g-rounded-3">
+                                        <div class="progress-bar g-bg-lightblue-v3 g-rounded-3" role="progressbar"
+                                             style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

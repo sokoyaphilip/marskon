@@ -59,126 +59,126 @@ $this->load->view('landing/user_header');
             <div class="col-xs-12 ">
                 <nav>
                     <div class="nav nav-tabs nav-fill text-center" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-fund"
-                           role="tab" aria-controls="nav-home" aria-selected="true">Fund Wallet</a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-transfer"
-                           role="tab" aria-controls="nav-profile" aria-selected="false">Fund Transfer</a>
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#profile-settings"
+                           role="tab" aria-controls="nav-home" aria-selected="true">Profile Settings</a>
+                        <a class="nav-item nav-link" id="nav-change-password-tab" data-toggle="tab" href="#change-password"
+                           role="tab" aria-controls="nav-profile" aria-selected="false">Change Password</a>
                     </div>
                 </nav>
                 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-fund" role="tabpanel"
+                    <div class="tab-pane fade show active" id="profile-settings" role="tabpanel"
                          aria-labelledby="nav-home-tab">
                         <div class="container">
-                            <div class="alert-secondary g-px-50 g-py-20">
-                                <h4 class="h4">Please Note:</h4>
-                                <ul>
-                                    <li>
-                                        A transaction ID will be generated for you, which should be used as reference.
-                                    </li>
-                                    <li>
-                                        If you will be paying via Bank Transfer / Deposit, account details will be shown.
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="row">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-6">
                                     <div class="row g-mt-10">
-                                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Fund Your Wallet
-                                            Complete The Form
-                                            Below</h4>
-                                        <div class="col-sm-12 g-mt-10">
+                                        <?= form_open(); ?>
+                                        <div class="row">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <div class="g-pos-rel">
-                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-	                  	<i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-	                	</span>
-                                                    <input id="inputGroup-3_1"
-                                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                                           type="text" placeholder="Enter Amount to Fund">
-                                                </div>
+                                                <label class="label" for="Network">Full Name</label>
+                                                <input type="text" name="name" class="form-control" autofocus autocomplete="" value="<?= $user->name; ?>">
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 g-mt-10">
-                                            <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
-                                                <div class="dropdown bootstrap-select js-select u-select--v3-select u-sibling w-100 dropup">
-                                                    <select
-                                                            class="js-select u-select--v3-select u-sibling w-100"
-                                                            required="required"
-                                                            title="Select Payment Method" style="display: none;"
-                                                            tabindex="-98">
-                                                        <option class="bs-title-option" value=""></option>
-                                                        <option value="selectListItem1"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-rocket g-font-size-18 g-mr-15&quot;></i><span>Select List Item 1</span></span>">
-                                                            Select List Item 1
-                                                        </option>
-                                                        <option value="selectListItem2"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-headphone-alt g-font-size-18 g-mr-15&quot;></i><span>Select List Item 2</span></span>">
-                                                            Select List Item 2
-                                                        </option>
-                                                        <option value="selectListItem3"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-shift-right g-font-size-18 g-mr-15&quot;></i><span>Select List Item 3</span></span>">
-                                                            Select List Item 3
-                                                        </option>
-                                                        <option value="selectListItem4"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-import g-font-size-18 g-mr-15&quot;></i><span>Additional List Item 4</span></span>">
-                                                            Additional List Item 4
-                                                        </option>
-                                                    </select>
-                                                    <div class="d-flex align-items-center justify-content-center g-absolute-centered--y g-right-0 h-100 g-width-40 g-bg-primary g-color-gray-light-v6 g-color-lightblue-v9--sibling-opened g-rounded-right-25">
-                                                        <i class="fa fa-credit-card-alt"></i>
-                                                    </div>
-                                                </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="text" name="phone" id="phone" class="form-control" readonly value="<?= $user->phone;?>" required autocomplete="off" placeholder="Phone Number">
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 g-mt-10 text-right">
-                                            <a class="js-fancybox btn btn-xl u-btn-primary g-rounded-20 g-width-160--md g-font-size-default g-ml-10"
-                                               href="#">Fund Wallet
-                                            </a>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" name="email" id="email" class="form-control" readonly value="<?= $user->email; ?>" required placeholder="Email Address">
+                                            </div>
                                         </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="account_name">Account name</label>
+                                                <input type="text" name="account_name" id="account_name" value="<?= $user->account_name; ?>" class="form-control" autocomplete="off" required placeholder="Account Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="account_type">Account Type</label>
+                                                <select class="form-control" name="account_type">
+                                                    <option value="current" <?php if($user->account_type == 'current') echo 'selected'; ?>>Current Account</option>
+                                                    <option value="savings" <?php if($user->account_type == 'savings') echo 'selected'; ?>>Savings Account</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="bank_name">Bank Name</label>
+                                                <select name="bank_name" class="form-control">
+                                                    <?php
+                                                    $banks = explode(',', lang('banks'));
+                                                    foreach ( $banks as $bank ) : ?>
+                                                        <option value="<?= trim($bank); ?>" <?php if( $user->bank_name == trim($bank) ) echo 'selected'; ?> ><?= trim($bank); ?></option>
+                                                    <?php endforeach;
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="password">Confirm Password</label>
+                                                <input type="password" name="confirm_password" id="confirm_password" class="form-control" required placeholder="Please enter your password for confirmation">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="post_type" value="account">
+                                    <div class="col-md-12 g-mt-5 py-3">
+                                        <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
+                                        <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
+                                    </div>
+                                    <?= form_close(); ?>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-transfer" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="tab-pane fade" id="change-password" role="tabpanel" aria-labelledby="nav-change-password-tab">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-6">
                                     <div class="row g-mt-10">
-                                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Transfer Funds From Your Wallet
-                                            Complete The Form
-                                            Below</h4>
-                                        <div class="col-sm-12 g-mt-10">
-                                            <div class="form-group">
-                                                <div class="g-pos-rel">
-                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-	                  	<i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-	                	</span>
-                                                    <input id="inputGroup-3_1"
-                                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                                           type="text" placeholder="Enter Amount to Fund">
+                                        <?= form_open(); ?>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="current_password">Current Password</label>
+                                                        <input type="password" class="form-control" name="current_password" id="current_password" required placeholder="Enter your current password">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="new_password">New Password</label>
+                                                        <input type="password" name="new_password" id="new_password" class="form-control" required placeholder="New Password">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="confirm_password">Confirm Password</label>
+                                                        <input type="password" name="confirm_password" id="confirm_password" class="form-control" required placeholder="Confirm Password">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="post_type" value="password_change">
+                                                <div class="col-md-12 g-mt-5 py-3">
+                                                    <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
+                                                    <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-12 g-mt-10">
-                                            <div class="form-group">
-                                                <div class="g-pos-rel">
-                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-	                  	<i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-	                	</span>
-                                                    <input id="inputGroup-3_1"
-                                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                                           type="text" placeholder="Enter Receiver Phone Number">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 g-mt-10 text-right">
-                                            <a class="js-fancybox btn btn-xl u-btn-primary g-rounded-20 g-width-160--md g-font-size-default g-ml-10"
-                                               href="#">Transfer Fund
-                                            </a>
-                                        </div>
+                                        <?php form_close(); ?>
                                     </div>
                                 </div>
                             </div>

@@ -52,7 +52,7 @@
                      src="<?= base_url('assets/img-temp/130x130/img1.jpg');?>" alt="Image description">
                 </span>
                             <span class="g-pos-rel g-top-2">
-        <span class="g-hidden-sm-down">User name</span>
+        <span class="g-hidden-sm-down"><?= ucwords($user->name); ?></span>
                 <i class="fa fa-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                 </span>
                         </a>
@@ -150,7 +150,7 @@
                         </a>
                     </li>
 
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'coins') echo 'has-active';?>">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'coin') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('dashboard/coin/');?>">
                           <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">

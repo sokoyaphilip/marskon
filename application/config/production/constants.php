@@ -109,3 +109,7 @@ defined('VTPASS_PASSWORD') OR define('VTPASS_PASSWORD', "sandbox");
 //Paystack
 defined('S_KEY') OR define('S_KEY', 'sk_live_e150018086f7c76c64b5f0b8d2d788dd7036bd20');
 defined('P_KEY') OR define('P_KEY', 'pk_live_967589308a3f8bd1b565c5955f9f5ef857d39b3f');
+
+//SMS
+defined('SMS_USERNAME') OR define('SMS_USERNAME', 'ArtisansUsers');
+defined('SMS_API') OR define('SMS_API', '2825a7e7a5988803c97852627500f5fc658964550c8cfe5616305acb352f127a');

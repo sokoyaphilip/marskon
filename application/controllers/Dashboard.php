@@ -103,7 +103,7 @@ class Dashboard extends CI_Controller {
         $this->load->view('app/users/electric_bill', $page_data);
     }
 
-    // electricity
+    // Coin
     public function coin(){
         $id = $this->session->userdata('logged_id');
         $page_data['page'] = 'coin';
