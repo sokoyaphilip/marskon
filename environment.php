@@ -11,7 +11,7 @@ if(! defined('ENVIRONMENT') )
             define('ENVIRONMENT', 'production');
             break;
 
-        case 'dev.marskonnet.com' :
+        case 'dev.marskonnect.com' :
             //our staging server
             define('ENVIRONMENT', 'staging');
             break;
@@ -20,6 +20,6 @@ if(! defined('ENVIRONMENT') )
             define('ENVIRONMENT', 'development');
             break;
     }
-    die(ENVIRONMENT);
+//    die(ENVIRONMENT);
 }
 
