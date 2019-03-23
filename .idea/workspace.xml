@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/landing/faq.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/upgrade_plan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/development/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/development/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/production/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/buy_airtime.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/buy_airtime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/buy_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/buy_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/coin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/coin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/electric_bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/electric_bill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/my_wallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/my_wallet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/redeem_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/redeem_card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/tv_sub.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/tv_sub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/production/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.php" beforeDir="false" afterPath="$PROJECT_DIR$/environment.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,25 +27,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="385" column="57" selection-start-line="385" selection-start-column="57" selection-end-line="385" selection-end-column="57" />
-              <folding>
-                <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#redeem_cards#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/users/coin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="749">
               <caret line="285" column="53" selection-start-line="285" selection-start-column="53" selection-end-line="285" selection-end-column="53" />
               <folding>
                 <element signature="e#9533#10544#0#HTML" />
@@ -73,6 +39,15 @@
                 <element signature="e#14948#15951#0#HTML" />
                 <element signature="e#15980#16992#0#HTML" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/environment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -139,18 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="34" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-              <folding>
-                <element signature="n#contact#0;n#Page#0;n#!!top" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -250,6 +213,8 @@
         <option value="$PROJECT_DIR$/application/views/app/users/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/coin.php" />
+        <option value="$PROJECT_DIR$/application/config/production/database.php" />
+        <option value="$PROJECT_DIR$/environment.php" />
       </list>
     </option>
   </component>
@@ -346,6 +311,24 @@
               <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
               <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -406,15 +389,16 @@
       <workItem from="1553134131650" duration="17911000" />
       <workItem from="1553242032102" duration="6421000" />
       <workItem from="1553257753910" duration="1922000" />
-      <workItem from="1553260933222" duration="20521000" />
+      <workItem from="1553260933222" duration="22024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118024000" />
+    <option name="totallyTimeSpent" value="119527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22908624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -442,9 +426,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -545,9 +526,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/environment.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
@@ -824,9 +802,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/coin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="749">
           <caret line="285" column="53" selection-start-line="285" selection-start-column="53" selection-end-line="285" selection-end-column="53" />
           <folding>
             <element signature="e#9533#10544#0#HTML" />
@@ -836,6 +821,13 @@
             <element signature="e#14948#15951#0#HTML" />
             <element signature="e#15980#16992#0#HTML" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -20,5 +20,6 @@ if(! defined('ENVIRONMENT') )
             define('ENVIRONMENT', 'development');
             break;
     }
+    die(ENVIRONMENT);
 }
 
