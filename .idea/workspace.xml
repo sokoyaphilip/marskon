@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/landing/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/landing/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="45">
+              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -73,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/landing/create.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -107,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/landing/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-345">
-              <caret line="4" column="114" selection-start-line="4" selection-start-column="114" selection-end-line="4" selection-end-column="114" />
+            <state relative-caret-position="60">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -210,12 +211,12 @@
         <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/views/landing/footer.php" />
         <option value="$PROJECT_DIR$/application/controllers/Page.php" />
-        <option value="$PROJECT_DIR$/application/views/landing/header.php" />
         <option value="$PROJECT_DIR$/application/views/landing/contact.php" />
-        <option value="$PROJECT_DIR$/application/views/landing/user_header.php" />
         <option value="$PROJECT_DIR$/application/views/landing/user_footer.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/views/landing/create.php" />
+        <option value="$PROJECT_DIR$/application/views/landing/user_header.php" />
+        <option value="$PROJECT_DIR$/application/views/landing/header.php" />
       </list>
     </option>
   </component>
@@ -391,12 +392,12 @@
       <workItem from="1553242032102" duration="6421000" />
       <workItem from="1553257753910" duration="1922000" />
       <workItem from="1553260933222" duration="22865000" />
-      <workItem from="1553338560511" duration="6948000" />
+      <workItem from="1553338560511" duration="7033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127316000" />
+    <option name="totallyTimeSpent" value="127401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -734,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="4" column="114" selection-start-line="4" selection-start-column="114" selection-end-line="4" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -759,13 +753,6 @@
             <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
             <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -807,6 +794,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>

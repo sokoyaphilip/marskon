@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>subscribe gotv,dstv, startimes, data plan for Glo,MTN, Airtel, MTN network in nigeria - Marskonnect.com</title>
+    <title>Subscribe gotv,dstv, startimes, data plan for Glo,MTN, Airtel, MTN network in nigeria - Marskonnect.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Marskonnect focuses in offering subsidised Internet subscription and Airtime on all Telecommunication Networks. With Marskonnect you are sure of saving on your Data/Airtime purchase.. Your one stop shop on bills payment, airtime/VTU and Mobile Data">
