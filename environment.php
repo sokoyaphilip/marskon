@@ -5,9 +5,9 @@ if(! defined('ENVIRONMENT') )
     $domain = strtolower($_SERVER['HTTP_HOST']);
 
     switch($domain) {
-        case 'marskonnet.com' :
-        case 'https://www.marskonnet.com':
-        case 'www.marskonnet.com':
+        case 'marskonnect.com' :
+        case 'https://www.marskonnect.com':
+        case 'www.marskonnect.com':
             define('ENVIRONMENT', 'production');
             break;
 
@@ -20,6 +20,6 @@ if(! defined('ENVIRONMENT') )
             define('ENVIRONMENT', 'development');
             break;
     }
-    die(ENVIRONMENT);
+//    die(ENVIRONMENT);
 }
 
