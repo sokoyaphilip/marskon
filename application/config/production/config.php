@@ -25,7 +25,7 @@ date_default_timezone_set('Africa/Lagos');
 |
 */
 
-$config['base_url'] = "https://www.gecharl.com";
+$config['base_url'] = "https://www.marskonnect.com";
 
 /*
 |--------------------------------------------------------------------------
