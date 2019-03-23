@@ -69,6 +69,7 @@ $this->load->view('landing/user_header');
                            role="tab" aria-controls="nav-profile" aria-selected="false">Fund Transfer</a>
                     </div>
                 </nav>
+                <?php $this->load->view('msg_view'); ?>
                 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-fund" role="tabpanel"
                          aria-labelledby="nav-home-tab">
@@ -105,10 +106,26 @@ $this->load->view('landing/user_header');
                                                 <select class="form-control" name="payment_method" id="payment_method" required>
                                                     <option value=""> -- How will you like to pay? --</option>
                                                     <option value="1">Bank Transfer / Deposit</option>
-                                                    <option value="3">Pay Online Via Paystack</option>
+                                                    <option value="3">ATM - Pay Online Via Paystack ( 1.5% fee )</option>
                                                 </select>
                                             </div>
                                         </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group"  style="display: none;" id="bank_col">
+                                                <label class="label" for="Bank">Bank</label>
+                                                <select class="form-control" name="bank" id="bank" required>
+                                                    <option value=""> -- Select the bank you're paying to --</option>
+                                                    <?php
+                                                        $banks = explode(',', lang('company_banks'));
+                                                        foreach( $banks as $bank ):
+                                                    ?>
+                                                            <option value="<?= trim( $bank ); ?>"> <?= trim($bank); ?> </option>
+                                                        <?php endforeach;?>
+                                                </select>
+                                            </div>
+                                        </div>
+
                                         <input type="hidden" name="product_id" id="product_id" value="6" />
                                         <input type="hidden" name="post_type" value="wallet_funding" />
                                         <div class="col-md-12 g-mt-5 py-3">
@@ -333,7 +350,12 @@ $this->load->view('landing/user_header');
                             <tbody>
                                 <?php foreach( $transactions as $transaction ) :?>
                                     <tr>
-                                        <td><?= $transaction->trans_id; ?></td>
+                                        <td>
+                                            <?= $transaction->trans_id; ?>
+                                            <?php if( $transaction->payment_method == 1 && $transaction->status == 'pending') : ?>
+                                                <span><a href="<?= base_url('dashboard/payment_made/?tid=' . $transaction->trans_id)?>">Confirm Payment</a></span>
+                                            <?php endif;?>
+                                        </td>
                                         <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
                                         <td><?= ($transaction->product_id == 6 ) ? 'Wallet Funding' : 'Fund Transfer'; ?></td>
                                         <td><?= ($transaction->payment_method == 1) ? 'Bank Transfer/Deposit': 'Payment Via Card' ; ?></td>

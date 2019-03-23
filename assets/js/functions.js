@@ -153,6 +153,7 @@ $(document).ready(function() {
         let payment_method = $('#payment_method').val();
         let amount = $('#pay_amount').val();
         let product_id = $('#product_id').val();
+        let bank = $('#bank').val();
 
         if( amount < 500 || amount > 100000){
             sweet_alert('error', 'Amount field can not be empty, less than N500 and above N100,000', 'error');
@@ -168,13 +169,13 @@ $(document).ready(function() {
         $.ajax({
             url : base_url + 'ajax/fund_wallet/',
             method : "POST",
-            data : {'payment_method' : payment_method, 'amount' : amount, 'product_id' : product_id },
+            data : {'payment_method' : payment_method, 'amount' : amount, 'product_id' : product_id , 'bank' : bank},
             success: function (response) {
                 if( response.status === 'success' ){
                     console.log(payment_method);
                     if( payment_method === '1' ){ // Payment via Bank Transfer
                         sweet_alert('Info',
-                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}.<b>IKEDINOBI STEPHEN C</b><br />Zenith bank:2116208648- Access bank:0048525565 - First bank :3127180068 - GT bank :0461695792 - Uba bank  :2122638127.`,
+                            `Confirm that you have paid by clicking on "Confirm Payment" on the transaction below.`,
                             'info', false);
                         $('.swal-button--confirm').on('click', function () {
                             window.location = window.location.href;
@@ -202,6 +203,14 @@ $(document).ready(function() {
             }
         });
 
+    });
+
+    $('#payment_method').on('change', function () {
+        $('#bank_col').css({'display' :'none'});
+        let _value = $(this).val();
+        if( _value === '1' ) {
+            $('#bank_col').css({'display' :'block'});
+        }
     });
 
     // Data Purchase

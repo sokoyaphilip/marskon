@@ -13,4 +13,4 @@ $lang['banks'] = 'Access Bank Plc, Citibank Nigeria Limited, Diamond Bank Plc, E
 //[19:45, 3/13/2019] Mrs Oge Gecharl: AIRTEL 75%
 //[19:46, 3/13/2019] Mrs Oge Gecharl: Etisalat 80%
 
-
+$lang['company_banks'] = "IKEDINOBI STEPHEN C - Zenith Bank (2116208648), IKEDINOBI STEPHEN C - Access Bank (0048525565), IKEDINOBI STEPHEN C - First Bank (3127180068), IKEDINOBI STEPHEN C - GTBank (0461695792), IKEDINOBI STEPHEN C - UBA Bank (2122638127)";
