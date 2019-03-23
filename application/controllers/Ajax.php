@@ -262,7 +262,7 @@ class Ajax extends CI_Controller {
                 $this->return_response($response);
             }else{
                 $user_id = $this->session->userdata('logged_id');
-                $description = ucfirst( $network_row->network_name) . " data purchase for {$count} recipent";
+                $description = ucfirst( $network_row->network_name) . " data purchase for {$count} recipent ({$message})";
                 $transaction_id = $this->site->generate_code('transactions', 'trans_id');
                 $insert_data = array(
                     'amount'        => $total_amount,
@@ -272,7 +272,8 @@ class Ajax extends CI_Controller {
                     'payment_method' => 2,
                     'date_initiated'    => get_now(),
                     'user_id'        => $user_id,
-                    'status'        => 'success'
+                    'status'        => 'success',
+                    'membership_type' => 'user'
                 );
                 $error = false; $ret = 'ORDER_COMPLETED';
                 foreach( $valid_numbers as $number ){
@@ -1037,6 +1038,28 @@ class Ajax extends CI_Controller {
 
     function get_network( $network_id ){
         return $this->site->run_sql("SELECT title,network_name,discount, product_id FROM services WHERE id = {$network_id}")->row();
+    }
+
+    function upgrade_account(){
+        $response['status'] = 'error';
+        $uid = $this->session->userdata('logged_id');
+        $transaction_id = $this->site->generate_code('transactions', 'trans_id');
+        $insert_data = array(
+            'amount'        => 1000,
+            'product_id'    => 10,
+            'description'   => "Membership upgrade to Reseller account",
+            'trans_id'      => $transaction_id,
+            'payment_method' => 2,
+            'date_initiated'    => get_now(),
+            'user_id'        => $uid,
+            'status'        => 'pending'
+        );
+        if( $this->site->insert_data('transactions', $insert_data)){
+            $response['status'] = 'success';
+            $this->return_response( $response );
+        }else{
+            $this->return_response( $response );
+        }
     }
 
     /* General FUnction

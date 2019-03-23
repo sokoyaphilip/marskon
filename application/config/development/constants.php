@@ -114,5 +114,5 @@ defined('S_KEY') OR define('S_KEY', 'sk_test_7f9e0d2c426861d566a1abf1bffee4839a1
 defined('P_KEY') OR define('P_KEY', 'pk_test_89ca6e3e4316cc4ec8f983eea76a5c3ba32631e4');
 //SMS
 defined('SMS_USERNAME') OR define('SMS_USERNAME', 'ArtisansUsers');
-defined('SMS_API') OR define('SMS_API', '2825a7e7a5988803c97852627500f5fc658964550c8cfe5616305acb352f127a');
+defined('SMS_API') OR define('SMS_API', '1a637c87827932027523e71fb340a393b5ec941e051031b86be539143ffe890f');
 

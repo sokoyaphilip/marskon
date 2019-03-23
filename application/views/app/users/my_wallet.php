@@ -56,6 +56,9 @@ $this->load->view('landing/user_header');
     </style>
     <div style="min-height: calc(92vh - 67px);">
         <div class="g-pa-20">
+            <?php if( $user->membership_type == 'user' ) : ?>
+                <?php $this->load->view('upgrade_plan')?>
+            <?php endif; ?>
             <h3 class="h3">Wallet Balance: <span class="g-color-red">&#8358; 0.00</span></h3>
             <div class="col-xs-12 ">
                 <nav>
@@ -88,55 +91,31 @@ $this->load->view('landing/user_header');
                                         <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Fund Your Wallet
                                             Complete The Form
                                             Below</h4>
-                                        <div class="col-sm-12 g-mt-10">
+
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <div class="g-pos-rel">
-                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-	                  	<i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-	                	</span>
-                                                    <input id="inputGroup-3_1"
-                                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                                           type="text" placeholder="Enter Amount to Fund">
-                                                </div>
+                                                <label for="amount">Amount</label>
+                                                <input type="text" name="amount" id="pay_amount" class="form-control number" required autocomplete="off" placeholder="Enter an amount">
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 g-mt-10">
-                                            <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
-                                                <div class="dropdown bootstrap-select js-select u-select--v3-select u-sibling w-100 dropup">
-                                                    <select
-                                                            class="js-select u-select--v3-select u-sibling w-100"
-                                                            required="required"
-                                                            title="Select Payment Method" style="display: none;"
-                                                            tabindex="-98">
-                                                        <option class="bs-title-option" value=""></option>
-                                                        <option value="selectListItem1"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-rocket g-font-size-18 g-mr-15&quot;></i><span>Select List Item 1</span></span>">
-                                                            Select List Item 1
-                                                        </option>
-                                                        <option value="selectListItem2"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-headphone-alt g-font-size-18 g-mr-15&quot;></i><span>Select List Item 2</span></span>">
-                                                            Select List Item 2
-                                                        </option>
-                                                        <option value="selectListItem3"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-shift-right g-font-size-18 g-mr-15&quot;></i><span>Select List Item 3</span></span>">
-                                                            Select List Item 3
-                                                        </option>
-                                                        <option value="selectListItem4"
-                                                                data-content="<span class=&quot;d-flex align-items-center w-100&quot;><i class=&quot;fa fa-import g-font-size-18 g-mr-15&quot;></i><span>Additional List Item 4</span></span>">
-                                                            Additional List Item 4
-                                                        </option>
-                                                    </select>
-                                                    <div class="d-flex align-items-center justify-content-center g-absolute-centered--y g-right-0 h-100 g-width-40 g-bg-primary g-color-gray-light-v6 g-color-lightblue-v9--sibling-opened g-rounded-right-25">
-                                                        <i class="fa fa-credit-card-alt"></i>
-                                                    </div>
-                                                </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="label" for="Payment method">Payment Method</label>
+                                                <select class="form-control" name="payment_method" id="payment_method" required>
+                                                    <option value=""> -- How will you like to pay? --</option>
+                                                    <option value="1">Bank Transfer / Deposit</option>
+                                                    <option value="3">Pay Online Via Paystack</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 g-mt-10 text-right">
-                                            <a class="js-fancybox btn btn-xl u-btn-primary g-rounded-20 g-width-160--md g-font-size-default g-ml-10"
-                                               href="#">Fund Wallet
-                                            </a>
+                                        <input type="hidden" name="product_id" id="product_id" value="6" />
+                                        <input type="hidden" name="post_type" value="wallet_funding" />
+                                        <div class="col-md-12 g-mt-5 py-3">
+                                            <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 pay-now">Submit</button>
+                                            <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -153,32 +132,21 @@ $this->load->view('landing/user_header');
                                             Below</h4>
                                         <div class="col-sm-12 g-mt-10">
                                             <div class="form-group">
-                                                <div class="g-pos-rel">
-                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-	                  	<i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-	                	</span>
-                                                    <input id="inputGroup-3_1"
-                                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                                           type="text" placeholder="Enter Amount to Fund">
-                                                </div>
+                                                <label class="label" for="Amount">Amount</label>
+                                                <input type="text" class="form-control number" name="amount" id="transfer_amount" required placeholder="Enter Amount you want to send">
                                             </div>
                                         </div>
                                         <div class="col-sm-12 g-mt-10">
                                             <div class="form-group">
                                                 <div class="g-pos-rel">
-                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-	                  	<i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-	                	</span>
-                                                    <input id="inputGroup-3_1"
-                                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                                           type="text" placeholder="Enter Receiver Phone Number">
+                                                    <label class="label" for="Payment method">Receiver Username</label>
+                                                    <input type="text" name="receiver" id="receiver" class="form-control" required placeholder="Receiver phone number">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 g-mt-10 text-right">
-                                            <a class="js-fancybox btn btn-xl u-btn-primary g-rounded-20 g-width-160--md g-font-size-default g-ml-10"
-                                               href="#">Transfer Fund
-                                            </a>
+                                        <div class="col-md-12 g-mt-5 py-3">
+                                            <button type="button" disabled class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Coming Soon...</button>
+                                            <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                                         </div>
                                     </div>
                                 </div>
@@ -260,190 +228,119 @@ $this->load->view('landing/user_header');
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">Transaction ID</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">Date & Time</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
-                                        <div class="d-flex align-self-center">Type</div>
-
+                                        <div class="d-flex align-self-center">Transaction Type</div>
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="media">
+                                        <div class="d-flex align-self-center">Payment Method</div>
+                                        <div class="d-flex align-self-center ml-auto">
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">Description</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="media">
-                                        <div class="d-flex align-self-center">Amount</div>
-
-                                        <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center g-nowrap">Status</div>
-
                                         <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
                                         </div>
                                     </div>
                                 </th>
-                                <th></th>
                             </tr>
                             </thead>
 
                             <tbody>
-                                <tr>
-                                <td>1</td>
-                                <td>John Doe</td>
-                                <td>
-                                    <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          Employees
-                          </span>
-                                    </div>
-                                </td>
-                                <td>Product Manager</td>
-                                <td>John.doe@gmail.com</td>
-                                <td>
-                                    <div class="progress g-height-6 g-rounded-3">
-                                        <div class="progress-bar g-bg-lightbrown g-rounded-3" role="progressbar"
-                                             style="width: 35%" aria-valuenow="35" aria-valuemin="0"
-                                             aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td class="text-right">
-                                    <div class="g-pos-rel g-top-3 d-inline-block">
-                                        <a id="dropDown1Invoker"
-                                           class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
-                                           href="javascript:;" aria-controls="dropDown1" aria-haspopup="true"
-                                           aria-expanded="false" data-dropdown-event="click"
-                                           data-dropdown-target="#dropDown1">
-                                            <i class="hs-admin-more-alt"></i>
-                                        </a>
-
-                                        <div id="dropDown1"
-                                             class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
-                                             aria-labelledby="dropDown1Invoker">
-                                            <ul class="list-unstyled g-nowrap mb-0">
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="javascript:;">
-                                                        <i class="hs-admin-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Edit
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="javascript:;">
-                                                        <i class="hs-admin-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Archive
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="javascript:;">
-                                                        <i class="hs-admin-check g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Mark as Done
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="javascript:;">
-                                                        <i class="hs-admin-plus g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        New Task
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="javascript:;">
-                                                        <i class="hs-admin-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                <?php foreach( $transactions as $transaction ) :?>
+                                    <tr>
+                                        <td><?= $transaction->trans_id; ?></td>
+                                        <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
+                                        <td><?= ($transaction->product_id == 6 ) ? 'Wallet Funding' : 'Fund Transfer'; ?></td>
+                                        <td><?= ($transaction->payment_method == 1) ? 'Bank Transfer/Deposit': 'Payment Via Card' ; ?></td>
+                                        <td><?= payment_id_replacer($transaction->description); ?></td>
+                                        <td><?= statusLabel( $transaction->status);?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>

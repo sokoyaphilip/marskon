@@ -63,6 +63,22 @@
                             aria-labelledby="profileMenuInvoker">
                             <li class="g-mb-10">
                                 <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard/wallet/');?>">
+                                    <span class="d-flex align-self-center g-mr-12">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                    <span class="media-body align-self-center"><?= ucwords($user->membership_type) . ' Account'; ?></span>
+                                </a>
+                            </li>
+                            <li class="g-mb-10">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard/wallet/');?>">
+                                    <span class="d-flex align-self-center g-mr-12">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                    <span class="media-body align-self-center">My Wallet</span>
+                                </a>
+                            </li>
+                            <li class="g-mb-10">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard/wallet/');?>">
                     <span class="d-flex align-self-center g-mr-12">
           <i class="fa fa-user"></i>
         </span>
@@ -101,6 +117,13 @@
             <div class="js-custom-scroll u-sidebar-navigation-v1-inner">
                 <ul id="sideNavMenu"
                     class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'home') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="#">
+                            <span class="media-body align-self-center text-danger"><b><?= ucwords($user->membership_type) . ' Account : '. ngn($user->wallet); ?></b></span>
+                            <span class="d-flex align-self-center u-side-nav--control-icon"></span>
+                        </a>
+                    </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'home') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('dashboard/'); ?>">

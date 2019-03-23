@@ -56,6 +56,9 @@ $this->load->view('landing/user_header');
     </style>
     <div style="min-height: calc(92vh - 67px);">
         <div class="g-pa-20">
+            <?php if( $user->membership_type == 'user' ) : ?>
+                <?php $this->load->view('upgrade_plan')?>
+            <?php endif; ?>
             <div class="col-xs-12 ">
                 <nav>
                     <div class="nav nav-tabs nav-fill text-center" id="nav-tab" role="tablist">
@@ -69,11 +72,12 @@ $this->load->view('landing/user_header');
                     <div class="tab-pane fade show active" id="profile-settings" role="tabpanel"
                          aria-labelledby="nav-home-tab">
                         <div class="container">
+                            <?php $this->load->view('msg_view'); ?>
                             <div class="row">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-6">
                                     <div class="row g-mt-10">
-                                        <?= form_open(); ?>
+                                        <?= form_open('dashboard/profile_setting'); ?>
                                         <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
@@ -135,11 +139,10 @@ $this->load->view('landing/user_header');
                                     </div>
                                     <input type="hidden" name="post_type" value="account">
                                     <div class="col-md-12 g-mt-5 py-3">
-                                        <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
+                                        <button type="submit" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
                                         <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                                     </div>
                                     <?= form_close(); ?>
-
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +154,7 @@ $this->load->view('landing/user_header');
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-6">
                                     <div class="row g-mt-10">
-                                        <?= form_open(); ?>
+                                        <?= form_open('dashboard/profile_setting'); ?>
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
@@ -174,7 +177,7 @@ $this->load->view('landing/user_header');
                                                 </div>
                                                 <input type="hidden" name="post_type" value="password_change">
                                                 <div class="col-md-12 g-mt-5 py-3">
-                                                    <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
+                                                    <button type="submit" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
                                                     <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                                                 </div>
                                             </div>

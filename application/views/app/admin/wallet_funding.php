@@ -1,5 +1,6 @@
 <?php $this->load->view('landing/admin_header'); ?>
     <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
+
         <div class="g-pa-20 col-md-12">
             <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">All Wallet Funding Requests</h1>
 

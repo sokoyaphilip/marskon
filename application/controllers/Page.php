@@ -55,6 +55,12 @@ class Page extends CI_Controller {
     }
 
 
+    public function faq(){
+        $page_data['page'] = 'faq';
+        $this->load->view('landing/faq', $page_data);
+    }
+
+
     /*
      * Data pricing page for reseller
      * */

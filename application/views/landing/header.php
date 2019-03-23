@@ -63,7 +63,7 @@
                             <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn"
                                 data-animation-out="fadeOut">
                                 <a id="nav-link--features" class="nav-link g-py-7 g-px-0" href="#" aria-haspopup="true"
-                                   aria-expanded="false" aria-controls="nav-submenu--pricing">Quick Response</a>
+                                   aria-expanded="false" aria-controls="nav-submenu--pricing">What We Offer</a>
 
                                 <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling"
                                     id="nav-submenu--pricing" aria-labelledby="nav-link--features">
@@ -145,7 +145,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item  g-mx-10--lg g-mx-15--xl">
-                                <a href="#" class="nav-link g-py-7 g-px-0">FAQ</a>
+                                <a href="<?= base_url('page/faq/')?>" class="nav-link g-py-7 g-px-0">FAQ</a>
                             </li>
                             <li class="nav-item  g-mx-10--lg g-mx-15--xl">
                                 <a href="<?= base_url('page/contact/');?>" class="nav-link g-py-7 g-px-0">Contact</a>

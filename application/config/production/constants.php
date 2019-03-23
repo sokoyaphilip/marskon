@@ -112,4 +112,4 @@ defined('P_KEY') OR define('P_KEY', 'pk_live_967589308a3f8bd1b565c5955f9f5ef857d
 
 //SMS
 defined('SMS_USERNAME') OR define('SMS_USERNAME', 'ArtisansUsers');
-defined('SMS_API') OR define('SMS_API', '2825a7e7a5988803c97852627500f5fc658964550c8cfe5616305acb352f127a');
+defined('SMS_API') OR define('SMS_API', '1a637c87827932027523e71fb340a393b5ec941e051031b86be539143ffe890f');

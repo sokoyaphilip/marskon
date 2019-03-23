@@ -2,10 +2,24 @@
 $this->load->view('landing/user_header');
 ?>
     <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
+        <?php if( $user->membership_type == 'user' ) : ?>
+            <?php $this->load->view('upgrade_plan')?>
+        <?php endif; ?>
         <div class="row">
             <div class="col-sm-6">
                 <div class="row g-mt-10">
-                    <form>
+                    <?php $this->load->view('msg_view'); ?>
+                    <div class="alert alert-dismissible fade show g-bg-gray-dark-v2 g-color-white rounded-0" role="alert">
+                        <div class="media">
+                            <span class="d-flex g-mr-10 g-mt-5">
+                                <i class="icon-question g-font-size-25"></i>
+                            </span>
+                            <span class="media-body align-self-center">
+                                <strong>Just you know!</strong> We pay the naira equivalent into your account bank details.
+                            </span>
+                        </div>
+                    </div>
+                    <?= form_open_multipart('dashboard/coin_process/')?>
                         <div class="col-sm-12 g-mt-10">
                             <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Sell E-Coins
                                 Complete The Form
@@ -14,8 +28,8 @@ $this->load->view('landing/user_header');
                             <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-25 mb-0">
                                 <div class="dropdown bootstrap-select js-select u-select--v3-select u-sibling w-100 dropup">
                                     <div class="form-group g-brd-gray-light-v7 g-rounded-25 mb-0">
-                                        <select class="form-control w-100" id="network" required
-                                                name="network">
+                                        <select class="form-control w-100" id="wallet" required
+                                                name="wallet">
                                             <option value="" selected>-- Which wallet are you sending it from? --</option>
                                             <option value="blockchain">Blockchain</option>
                                             <option value="paxful">Paxful</option>
@@ -35,26 +49,20 @@ $this->load->view('landing/user_header');
                         <div class="col-sm-12 g-mt-10">
                             <div class="form-group mb-0">
                                 <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Upload proof(Screenshot that you sent e-coins)</h4>
-                                <input class="js-file-attachment" name="proof" type="file">
+                                <input class="form-control" name="pop" type="file">
                             </div>
                         </div>
-                        <div class="col-sm-12 g-mt-10">
+                        <div class="col-sm-12">
                             <div class="form-group">
-                                <div class="g-pos-rel">
-                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-                            <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-                            </span>
-                                    <input id="inputGroup-3_1"
-                                           class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-px-14 g-py-10"
-                                           type="text" placeholder="Amount in USD ($)">
-                                </div>
+                                <label for="wallet address">Amount</label>
+                                <input type="text" name="amount" id="amount" class="form-control number" required placeholder="Amount sent in dollar($)">
                             </div>
                         </div>
                         <div class="col-md-12 g-mt-5 py-3">
-                            <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
+                            <button type="submit" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>
                             <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
                         </div>
-                    </form>
+                    <?= form_close(); ?>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -149,16 +157,16 @@ $this->load->view('landing/user_header');
                                     <div class="d-flex align-self-center">Transaction ID</div>
 
                                     <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
+                                        <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                        <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                           href="javascript:;">
+                                          <i class="fa fa-angle-up"></i>
+                                        </a>
+                                        <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                           href="javascript:;">
+                                          <i class="fa fa-angle-down"></i>
+                                        </a>
+                                      </span>
                                     </div>
                                 </div>
                             </th>
@@ -271,28 +279,21 @@ $this->load->view('landing/user_header');
                         </tr>
                         </thead>
                         <tbody>
+                        <?php foreach( $transactions as $transaction ) :?>
                             <tr>
-                                <td>5</td>
-                                <td><img style="width: 70px;" src="<?= base_url('assets/img/partners/airtel.png')?>"></td>
-                                <td>Jan 25, 8:02am</td>
+                                <td><?= $transaction->trans_id; ?></td>
                                 <td>
-                                    <div class="d-inline-block">
-                                        <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                                        <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                                        Blockchain
-                                        </span>
-                                    </div>
+                                    <a target="_blank" href="<?= base_url('pop/' . $transaction->pop); ?>">
+                                        <img src="<?= base_url('pop/' . $transaction->pop); ?>" width="90">
+                                    </a>
                                 </td>
-                                <td>$340 paxful coin</td>
-                                <td>N7,800</td>
-                                <td>
-                                    <div class="progress g-height-6 g-rounded-3">
-                                        <div class="progress-bar g-bg-lightblue-v3 g-rounded-3" role="progressbar"
-                                             style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                                             aria-valuemax="100"></div>
-                                    </div>
-                                </td>
+                                <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
+                                <td><?= $transaction->wallet .' (' . $transaction->wallet_address.')';?></td>
+                                <td><?= payment_id_replacer($transaction->description); ?></td>
+                                <td><?= '$'. $transaction->amount; ?></td>
+                                <td><?= statusLabel( $transaction->status);?></td>
                             </tr>
+                        <?php endforeach;?>
                         </tbody>
                     </table>
                 </div>
@@ -305,4 +306,5 @@ $this->load->view('landing/user_header');
             </div>
         </div>
     </div>
+
 <?php $this->load->view("landing/user_footer"); ?>

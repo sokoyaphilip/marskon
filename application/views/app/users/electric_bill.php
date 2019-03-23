@@ -2,6 +2,10 @@
 $this->load->view('landing/user_header');
 ?>
     <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
+        <?php if( $user->membership_type == 'user' ) : ?>
+            <?php $this->load->view('upgrade_plan')?>
+        <?php endif; ?>
+
         <div class="row">
             <div class="col-sm-4">
                 <div class="row">
@@ -243,7 +247,7 @@ $this->load->view('landing/user_header');
                             <?php foreach( $transactions as $transaction ) :?>
                                 <tr>
                                     <td><?= $transaction->trans_id; ?></td>
-                                    <td><?= neatDate($transaction->date_initiated); ?></td>
+                                    <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
                                     <td><?= payment_id_replacer($transaction->description); ?></td>
                                     <td><?= ngn($transaction->amount); ?></td>
                                     <td><?= statusLabel( $transaction->status);?></td>

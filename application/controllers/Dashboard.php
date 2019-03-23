@@ -54,8 +54,10 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'data';
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Data Subscription, works for all smartphones...';
         $page_data['user'] = $this->get_profile($id);
+        $membership_type = $page_data['user']->membership_type;
         $page_data['product_id'] = 1;
-        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' ")->result();
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' AND s.discount_type = '{$membership_type}'")->result();
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 1 AND user_id = {$id}")->result();
         $this->load->view('app/users/buy_data', $page_data);
     }
@@ -67,7 +69,9 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Airtime';
         $page_data['user'] = $this->get_profile($id);
         $page_data['product_id'] = 2;
-        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
+        $membership_type = $page_data['user']->membership_type;
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND s.discount_type = '{$membership_type}' ")->result();
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id}")->result();
         $this->load->view('app/users/buy_airtime', $page_data);
 
@@ -79,9 +83,11 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'subscription';
         $page_data['title'] = 'Subscribe your GoTV, DSTV, Startimes ... decoder';
         $page_data['user'] = $this->get_profile($id);
+        $membership_type = $page_data['user']->membership_type;
         $page_data['product_id'] = 3;
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 3 AND user_id = {$id}")->result();
-        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.slug ='tv-subscription' ")->result();
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.slug ='tv-subscription' AND s.discount_type = '{$membership_type}' ")->result();
         $this->load->view('app/users/tv_sub', $page_data);
 
     }
@@ -92,13 +98,14 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'electricity';
         $page_data['title'] = 'Pay your electricity bill';
         $page_data['user'] = $this->get_profile($id);
+        $membership_type = $page_data['user']->membership_type;
         $page_data['product_id'] = 4;
         $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name , api.variation_name variation_name
         FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) 
         JOIN plans pl ON (pl.sid = s.id)
         LEFT JOIN api_variation api ON( api.plan_id = pl.id)
-        WHERE p.slug ='electricity-bill' ")->result();
+        WHERE p.slug ='electricity-bill'  AND s.discount_type = '{$membership_type}' ")->result();
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 4 AND user_id = {$id}")->result();
         $this->load->view('app/users/electric_bill', $page_data);
     }
@@ -109,11 +116,81 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'coin';
         $page_data['title'] = 'Buy and Sell Bitcoin, Paxful coin';
         $page_data['user'] = $this->get_profile($id);
-        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name FROM products p 
-        LEFT JOIN services s ON (p.id = s.product_id) 
-        JOIN plans pl ON (pl.sid = s.id)
-        WHERE p.slug ='electricity-bill' ")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT t.id, t.trans_id, t.amount, t.description, t.date_initiated, t.status, b.wallet, b.wallet_address, b.pop FROM transactions t
+        LEFT JOIN bitcoin b ON (b.tid = t.id) WHERE t.product_id = 9 AND t.user_id = {$id}")->result();
         $this->load->view('app/users/coin', $page_data);
+    }
+
+    function coin_process(){
+        if( $this->input->post() ){
+            $this->form_validation->set_rules('wallet', 'Please select wallet address you are sending from.','trim|required|xss_clean');
+            $this->form_validation->set_rules('wallet_address', 'Enter your wallet address','trim|required|xss_clean|min_length[6]|max_length[50]');
+            $this->form_validation->set_rules('amount', 'Enter the amount you sent,','trim|required|xss_clean');
+            if( $this->form_validation->run() == false ){
+                // error
+                $this->session->set_flashdata('error_msg',validation_errors());
+                redirect( $_SERVER['HTTP_REFERER']);
+            }
+            $data = array(
+                'wallet' => cleanit($this->input->post('wallet')),
+                'wallet_address' => cleanit( $this->input->post('wallet_address')),
+            );
+
+            if( $_FILES['pop'] ){
+                $config = array(
+                    'upload_path' => "./pop/",
+                    'allowed_types' => "gif|jpg|png|jpeg",
+                    'overwrite' => TRUE,
+                    'max_size' => "2048000",
+                    'max_height' => "768",
+                    'max_width' => "1024",
+                    'encrypt'   => true
+                );
+                $this->load->library('upload', $config);
+                if( $this->upload->do_upload('pop') ){
+                    $user_id = $this->session->userdata('logged_id');
+                    $filename = $this->upload->data('file_name');
+                    $data['pop'] = $filename;
+                    $data['user_id'] = $user_id;
+                    $amount = $this->input->post('amount');
+                    $wallet_address = $this->input->post('wallet_address');
+                    $description = "${$amount} bitcoin from {$wallet_address}";
+
+                    $this->db->trans_start();
+                    $transaction_id = $this->site->generate_code('transactions', 'trans_id');
+                    $transaction_table = array(
+                        'product_id' => 9,
+                        'trans_id'      => $transaction_id,
+                        'user_id'       => $user_id,
+                        'amount'        => $amount,
+                        'payment_method' => 4,
+                        'description'   => $description,
+                        'date_initiated'    => get_now(),
+                        'status'            => 'pending'
+                    );
+
+                    $data['tid'] = $this->site->insert_data('transactions', $transaction_table);
+                    $this->site->insert_data('bitcoin',  $data);
+                    $this->db->trans_complete();
+                    if ($this->db->trans_status() === FALSE){
+                        $this->session->set_flashdata('error_msg', 'There was an error processing your request.');
+                        $this->db->trans_rollback();
+                    }else{
+                        // Send a message to the admin??
+                        $this->db->trans_commit();
+                        $this->session->set_flashdata('success_msg', 'Your request has been received and its under processed.');
+                    }
+                    redirect( $_SERVER['HTTP_REFERER']);
+                }else{
+                    echo 'Not uploaded';
+                }
+            }else{
+                echo 'POP not found'; exit;
+            }
+
+        }else{
+            redirect($_SERVER['HTTP_REFERER']);
+        }
     }
 
     public function redeem_cards(){
@@ -135,6 +212,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'My Wallet';
         $page_data['user'] = $this->get_profile( $id );
         $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE (product_id = 6 or product_id = 7) AND user_id = {$id}")->result();
         $this->load->view('app/users/my_wallet', $page_data);
 
     }
@@ -144,7 +222,9 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'airtime2cash';
         $page_data['title'] = "Airtime to Cash";
         $page_data['user'] = $this->get_profile( $id );
-        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
+        $membership_type = $page_data['user']->membership_type;
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND s.discount_type = '{$membership_type}' ")->result();
         $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
         $this->load->view('app/users/airtime_to_cash', $page_data);
     }
@@ -243,7 +323,7 @@ class Dashboard extends CI_Controller {
         $id = $this->session->userdata('logged_id');
         $page_data['page'] = 'profile';
         $page_data['title'] = "Profile Setting";
-        $page_data['user'] = $this->site->run_sql("SELECT name, phone, email,user_code,wallet, account_name, account_type, bank_name FROM users WHERE id = {$id}")->row();
+        $page_data['user'] = $this->site->run_sql("SELECT name, membership_type,phone, email,user_code,wallet, account_name, account_type, bank_name FROM users WHERE id = {$id}")->row();
         $this->load->view('app/users/profile', $page_data);
     }
 
@@ -280,14 +360,15 @@ class Dashboard extends CI_Controller {
                     redirect($_SERVER['HTTP_REFERER']);
                 }
                 break;
-            default:
-                $this->form_validation->set_rules('password', 'Password','trim|required|xss_clean');
-                $this->form_validation->set_rules('new_password', 'New Password','trim|required|xss_clean');
-                $this->form_validation->set_rules('confirm_password', 'Confirm Password','trim|required|xss_clean|min_length[6]|max_length[15]|matches[password]');
+            case 'password_change':
 
-                $password = cleanit($_POST['password']);
+                $this->form_validation->set_rules('current_password', 'Password','trim|required|xss_clean');
+                $this->form_validation->set_rules('new_password', 'New Password','trim|required|xss_clean');
+                $this->form_validation->set_rules('confirm_password', 'Confirm Password','trim|required|xss_clean|min_length[6]|max_length[15]|matches[new_password]');
+
+                $password = cleanit($_POST['current_password']);
                 if(!$this->user->cur_pass_match($password, $uid, 'users')){
-                    $this->session->set_flashdata('error_msg', "Oops! The password does not match your current password.");
+                    $this->session->set_flashdata('error_msg', "Oops! The password does not match your current password. ");
                     redirect($_SERVER['HTTP_REFERER']);
                 }
                 $new_password = cleanit( $_POST['new_password'] );
@@ -302,6 +383,6 @@ class Dashboard extends CI_Controller {
     }
 
 	function get_profile($id){
-	    return $this->site->run_sql("SELECT phone, email, name, user_code, wallet, account_type FROM users where id = {$id}")->row();
+	    return $this->site->run_sql("SELECT phone, email, membership_type, name, user_code, wallet, account_type FROM users where id = {$id}")->row();
     }
 }

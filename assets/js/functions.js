@@ -154,8 +154,8 @@ $(document).ready(function() {
         let amount = $('#pay_amount').val();
         let product_id = $('#product_id').val();
 
-        if( amount < 500 ){
-            sweet_alert('error', 'You can only pay N500 and above', 'error');
+        if( amount < 500 || amount > 100000){
+            sweet_alert('error', 'Amount field can not be empty, less than N500 and above N100,000', 'error');
             _this.prop('disabled', false);
             return false;
         }
@@ -174,7 +174,7 @@ $(document).ready(function() {
                     console.log(payment_method);
                     if( payment_method === '1' ){ // Payment via Bank Transfer
                         sweet_alert('Info',
-                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}. <b>Ogechi Charles-Mbaeto</b><br />GTB: 0216290799 or Fidelity: 6070020271 or Keystone: 6021461466.`,
+                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}. <b>Business Account Details</b><br />GTB: 828282828.`,
                             'info', false);
                         $('.swal-button--confirm').on('click', function () {
                             window.location = window.location.href;
@@ -697,7 +697,6 @@ $(document).ready(function() {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-
                 $.ajax({
                     url : base_url + 'ajax/delete_service/',
                     method: 'POST',
@@ -852,6 +851,29 @@ $(document).ready(function() {
             });
         }
     });
+
+    $('.upgrade').on('click', function(e){
+        e.preventDefault();
+        sweet_alert('Info',
+            `Please pay to any of our account details, and use the transaction ID as reference <b>Business Account Details</b><br />GTB: 828282828.`,
+            'info', false);
+        $('.swal-button--confirm').on('click', function () {
+            $.get( base_url + "ajax/upgrade_account/" )
+                .done(function (data) {
+                    if(data['status'] === 'success' ){
+                        sweet_alert('Thanks', 'Your account will be upgraded once your payment has been verified.', 'success');
+                    }else{
+                        sweet_alert('Error', 'There was an error upgrading your account.', 'Error');
+                    }
+                    $('.swal-button--confirm').on('click', function () {
+                        window.location = window.location.href;
+                    });
+                });
+        });
+
+
+    });
+
     // Pin transfer
     // $('#pin_amount').on('change', function () {
     //     let _val = $(this).val();
