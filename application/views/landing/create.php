@@ -4,7 +4,7 @@
         <div class="container u-bg-overlay__inner">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h1 class="g-color-white text-uppercase mb-4">Create an account</h1>
+                    <h1 class="g-color-white text-uppercase mb-2">Create an account</h1>
                     <div class="d-inline-block g-width-35 g-height-2 g-bg-white mb-1"></div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                                                     class="icon-media-094 u-line-icon-pro"></i></span>
                                     </div>
                                     <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
-                                           type="password" id="confirm-password" name="confirm_password" placeholder="Password">
+                                           type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password">
                                 </div>
                             </div>
                             <button class="btn btn-md btn-block u-btn-primary rounded text-uppercase g-py-13 sign-up"
