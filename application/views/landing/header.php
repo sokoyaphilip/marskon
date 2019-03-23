@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>MARS-KONNECT.com | Designed for unlimited pleasure</title>
+    <title>subscribe gotv,dstv, startimes, data plan for Glo,MTN, Airtel, MTN network in nigeria - Marskonnect.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Marskonnect focuses in offering subsidised Internet subscription and Airtime on all Telecommunication Networks. With Marskonnect you are sure of saving on your Data/Airtime purchase.. Your one stop shop on bills payment, airtime/VTU and Mobile Data">
+    <meta name="author" content="github.com/sokoyaphilip">
+    <meta name="keywords" content="subscribe gotv,dstv, startimes, data plan in nigeria, recharge card, mtn, glo, 9mobile, airtile, vtu,sme, data plan, cheap data, browsing cheat, browsing plan">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png">
+    <meta
     <!-- Google Fonts -->
     <link rel="stylesheet"
           href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">

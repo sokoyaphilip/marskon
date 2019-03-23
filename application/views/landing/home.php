@@ -78,7 +78,7 @@
                 <div class="col-lg-6 g-bg-img-hero g-pos-rel" style="background-image: url(<?= base_url('assets/img/maps/map3.png'); ?>);">
                     <div class="g-absolute-centered text-center w-100 g-px-40">
                         <h2 class="h1 g-color-gray-light-v2 g-font-weight-600 g-letter-spacing-0_5">
-                            MARS-KONNECT.com<br/>
+                            marskonnect.com<br/>
                             <span class="u-text-animation u-text-animation--typing"></span></h2>
                     </div>
                 </div>

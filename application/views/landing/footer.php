@@ -1,16 +1,3 @@
-
-<section class="g-bg-primary g-pa-30" style="background-image: url(<?= base_url('assets/img/bg/pattern5.png');?>);">
-    <div class="d-md-flex justify-content-md-center text-center">
-        <div class="align-self-md-center">
-            <p class="lead g-font-weight-400 g-mr-20--md g-mb-15 g-color-white g-mb-0--md">We offer best in class service for your
-                needs</p>
-        </div>
-        <div class="align-self-md-center">
-            <a class="btn btn-lg u-btn-white text-uppercase g-font-weight-600 g-font-size-12">Recharge
-                Now</a>
-        </div>
-    </div>
-</section>
 <section>
     <div class="js-carousel g-brd-top g-brd-bottom g-brd-gray-light-v4" data-autoplay="true" data-slides-show="6"
          data-responsive='[{
@@ -90,19 +77,13 @@
                         </li>
                         <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
                             <h4 class="h6 g-pr-20 mb-0">
-                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Recharge Now</a>
-                                <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                            </h4>
-                        </li>
-                        <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                            <h4 class="h6 g-pr-20 mb-0">
-                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">FAQ</a>
+                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="<?= base_url('page/faq/'); ?>">FAQ</a>
                                 <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
                             </h4>
                         </li>
                         <li class="g-pos-rel g-py-10">
                             <h4 class="h6 g-pr-20 mb-0">
-                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Contact Us</a>
+                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="<?= base_url('page/contact/'); ?>">Contact Us</a>
                                 <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
                             </h4>
                         </li>
@@ -140,10 +121,10 @@
                         </div>
                         <p class="mb-0">
                             <a class="g-color-white-opacity-0_8 g-color-white--hover"
-                               href="mailto:info@htmlstream.com">info@marskonnetcom</a>
+                               href="mailto:<?= lang('app_email'); ?>"><?= lang('app_email')?></a>
                             <br>
                             <a class="g-color-white-opacity-0_8 g-color-white--hover"
-                               href="#">www.marskonnet.com</a>
+                               href="#">www.marskonnect.com</a>
                         </p>
                     </div>
                 </address>
@@ -156,7 +137,7 @@
         <div class="row">
             <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
                 <div class="d-lg-flex">
-                    <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2019 &copy; marskonnet.com. All Rights
+                    <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2019 &copy; <?= lang('app_name'); ?>. All Rights
                         Reserved.
                     </small>
                     <ul class="u-list-inline">
@@ -173,7 +154,7 @@
                             <span>|</span>
                         </li>
                         <li class="list-inline-item">
-                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Contact</a>
+                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="<?= base_url('page/contact/'); ?>">Contact</a>
                         </li>
                         <li class="list-inline-item">
                             <span>|</span>

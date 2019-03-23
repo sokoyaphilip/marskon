@@ -37,7 +37,7 @@
                 <i class="fa fa-phone"></i>
               </span>
                 <h4 class="h5 g-font-weight-600 g-mb-5">Phone Number</h4>
-                <span class="d-block">081 6925 4598</span>
+                <span class="d-block"><?= lang('contact_no'); ?></span>
             </div>
             <!-- End Icon Blocks -->
         </div>
@@ -49,7 +49,7 @@
                 <i class="fa fa-envelope"></i>
               </span>
                 <h4 class="h5 g-font-weight-600 g-mb-5">Email</h4>
-                <span class="d-block">info@marskonnet.com</span>
+                <span class="d-block"><?= lang('contact_email');?></span>
             </div>
             <!-- End Icon Blocks -->
         </div>
@@ -64,12 +64,12 @@
                     <div class="row">
                         <div class="col-md-6 form-group g-mb-20">
                             <label class="g-color-gray-dark-v2 g-font-size-13">Name</label>
-                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="Marskonnet">
+                            <input name="name" required class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="Marskonnect">
                         </div>
 
                         <div class="col-md-6 form-group g-mb-20">
                             <label class="g-color-gray-dark-v2 g-font-size-13">Email</label>
-                            <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="email" placeholder="info@marskonnet.com">
+                            <input name="email" required class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="email" placeholder="info@marskonnect.com">
                         </div>
 
                         <div class="col-md-6 form-group g-mb-20">

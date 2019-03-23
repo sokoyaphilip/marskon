@@ -1,7 +1,7 @@
 <?php
 // General Site Settings
 $lang['site_state'] = 'development';
-$lang['app_name'] = 'Marskonnect.com';
+$lang['app_name'] = 'marskonnect.com';
 $lang['app_email'] = 'support@marskonnect.com';
 $lang['contact_no'] = '08130316830';
 $lang['contact_email'] = 'marskonnect1@gmail.com';
