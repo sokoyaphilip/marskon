@@ -77,10 +77,10 @@ $this->load->view('landing/user_header');
                                 <h4 class="h4">Please Note:</h4>
                                 <ul>
                                     <li>
-                                        A transaction ID will be generated for you, which should be used as reference.
+                                        After clicking on 'submit' a transaction ID will be generated for you, which should be used as reference.
                                     </li>
                                     <li>
-                                        If you will be paying via Bank Transfer / Deposit, account details will be shown.
+                                        If you will be paying via Bank Transfer / Deposit.
                                     </li>
                                 </ul>
                             </div>

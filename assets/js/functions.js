@@ -174,12 +174,19 @@ $(document).ready(function() {
                     console.log(payment_method);
                     if( payment_method === '1' ){ // Payment via Bank Transfer
                         sweet_alert('Info',
-                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}. <b>Business Account Details</b><br />GTB: 828282828.`,
+                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}.<b>IKEDINOBI STEPHEN C</b><br />Zenith bank:2116208648- Access bank:0048525565 - First bank :3127180068 - GT bank :0461695792 - Uba bank  :2122638127.`,
                             'info', false);
                         $('.swal-button--confirm').on('click', function () {
                             window.location = window.location.href;
                         });
                     }else{ // 3
+                        let charge = 0;
+                        if( amount < 2500 ){
+                            charge = (1.5 / 100 ) * amount;
+                        }else if( amount >=  2500 ){
+                            charge = ((1.5 / 100) * amount ) + 100;
+                        }
+                        amount += charge;
                         let data = {'amount' : amount * 100, 'ref' : response.message};
                         payWithPaystack( data );
                     }

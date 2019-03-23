@@ -186,9 +186,9 @@ class Ajax extends CI_Controller {
         $charge = 0;
         if( $payment_method == 3 ){
             if( $amount < 2500 ){
-                $charge = (1.5 * $amount ) / $amount;
+                $charge = (1.5 / 100 ) * $amount;
             }elseif( $amount > 2500 ){
-                $charge = (1.5 * $amount ) / $amount + 100;
+                $charge = (1.5 / 100 ) * $amount + 100;
             }
         }
         $insert_data = array(
@@ -291,14 +291,13 @@ class Ajax extends CI_Controller {
 
                     $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
                     if( $ret !== false ){
-                        $sms_array = array( '08169254598' => $ret );
+                        $sms_array = array( '08130316830' => $ret );
                         $this->load->library('AfricaSMS', $sms_array);
                         $this->africasms->sendsms();
 //                        $array['message'] = $ret;
 //                        $this->callSMSAPI($array);
                     }else{
                         $error = true;
-                        $ret = $ret;
                     }
                 }
 
