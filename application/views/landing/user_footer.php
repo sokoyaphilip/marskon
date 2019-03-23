@@ -130,6 +130,7 @@
 </script>
 <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
 <script src="<?= base_url('assets/js/functions.js'); ?>"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 
 <!-- JS Plugins Init. -->
 <script>
