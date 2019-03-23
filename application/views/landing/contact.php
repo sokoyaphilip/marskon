@@ -60,6 +60,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <h3 class="g-color-black g-font-weight-600 text-center mb-5">Who are you, and how can we help?</h3>
+                <?php $this->load->view('msg_view'); ?>
                 <form>
                     <div class="row">
                         <div class="col-md-6 form-group g-mb-20">
