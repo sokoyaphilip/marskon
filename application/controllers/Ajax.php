@@ -182,8 +182,18 @@ class Ajax extends CI_Controller {
         $product_id = $this->input->post('product_id', true);
         $transaction_id = $this->site->generate_code('transactions', 'trans_id');
         $description = "Wallet funding via {{$payment_method}}";
+        // paystack charge
+        $charge = 0;
+        if( $payment_method == 3 ){
+            if( $amount < 2500 ){
+                $charge = (1.5 * $amount ) / $amount;
+            }elseif( $amount > 2500 ){
+                $charge = (1.5 * $amount ) / $amount + 100;
+            }
+        }
         $insert_data = array(
             'amount'        => $amount,
+            'charge'        => $charge,
             'product_id'    => $product_id,
             'description'   => $description,
             'trans_id'      => $transaction_id,

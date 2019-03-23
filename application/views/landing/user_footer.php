@@ -53,7 +53,7 @@
 
         <!-- Footer Copyrights -->
         <div class="col-md-4 text-center text-md-right">
-            <small class="d-block g-font-size-default">&copy; 2019 MARS-KONNECT.com. All Rights Reserved.</small>
+            <small class="d-block g-font-size-default">&copy; <?= date('Y'); ?> <?= lang('app_name'); ?> All Rights Reserved.</small>
         </div>
         <!-- End Footer Copyrights -->
     </div>
@@ -122,7 +122,7 @@
 <!-- JS Custom -->
 <script>
     <?php
-    $email = ($this->session->userdata('logged_in') ) ? $this->session->userdata('email') : 'hello@marskonnect.com';
+    $email = ($this->session->userdata('logged_in') ) ? $this->session->userdata('email') : 'support@marskonnect.com';
     $user = ($this->session->userdata('logged_in')) ? $this->session->userdata('login_username') : 'Marskonnect';
     ?>
     let user = { 'email' : "<?= $email; ?>", 'user' : "<?= $user; ?>"};
