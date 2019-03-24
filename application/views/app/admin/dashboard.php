@@ -19,7 +19,7 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">&#8358; 0.00</span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black"><?= ngn($today); ?></span>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">&#8358; 0.00</span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black"><?= ngn($week); ?></span>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">&#8358; 0.00</span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black"><?= ngn($month); ?></span>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black">&#8358; 0.00</span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black"><?= ngn($year); ?></span>
                     </div>
                 </div>
             </div>

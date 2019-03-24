@@ -86,24 +86,6 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Username</div>
-
-                                <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                </div>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="media">
                                 <div class="d-flex align-self-center">Email</div>
 
                                 <div class="d-flex align-self-center ml-auto">
@@ -158,6 +140,42 @@
                         </th>
                         <th>
                             <div class="media">
+                                <div class="d-flex align-self-center">Last Logged In</div>
+
+                                <div class="d-flex align-self-center ml-auto">
+                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                          </span>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="media">
+                                <div class="d-flex align-self-center g-nowrap">Status</div>
+
+                                <div class="d-flex align-self-center ml-auto">
+                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                          </span>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="media">
                                 <div class="d-flex align-self-center g-nowrap">Action</div>
 
                                 <div class="d-flex align-self-center ml-auto">
@@ -178,73 +196,56 @@
                     </thead>
 
                     <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td>Johnnydoe</td>
-                        <td>John.doe@gmail.com</td>
-                        <td>
-                            <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          09076756632
-                          </span>
-                            </div>
-                        </td>
-                        <td>&#8358; 24,500</td>
-                        <td class="text-center">
-                            <div class="g-pos-rel g-top-3 d-inline-block">
-                                <a id="dropDown1Invoker"
-                                   class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
-                                   href="javascript:;" aria-controls="dropDown1" aria-haspopup="true"
-                                   aria-expanded="false" data-dropdown-event="click"
-                                   data-dropdown-target="#dropDown1">
-                                    <i class="fa fa-stack-overflow"></i>
-                                </a>
-
-                                <div id="dropDown1"
-                                     class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
-                                     aria-labelledby="dropDown1Invoker">
-                                    <ul class="list-unstyled g-nowrap mb-0">
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Block
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Unblock
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-check g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Approve
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-plus g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Decline
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                               href="javascript:;">
-                                                <i class="fa fa-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                Delete
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                        <?php foreach( $users as $user ): ?>
+                            <tr>
+                                <td>
+                                    <?= ucwords($user->name); ?>
+                                </td>
+                                <td><?= $user->email;?></td>
+                                <td><?= $user->phone; ?></td>
+                                <td><?= ngn($user->wallet); ?></td>
+                                <td><?= neatDate($user->last_login) . ' ' . neatTime($user->last_login); ?></td>
+                                <td><?= $user->status ; ?></td>
+                                <td class="text-center">
+                                    <div class="g-pos-rel g-top-3 d-inline-block">
+                                        <a id="dropDown1Invoker"
+                                           class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
+                                           href="javascript:;" aria-controls="dropDown1" aria-haspopup="true"
+                                           aria-expanded="false" data-dropdown-event="click"
+                                           data-dropdown-target="#dropDown1">
+                                            <i class="fa fa-pencil-square"></i>
+                                        </a>
+                                        <div id="dropDown1"
+                                             class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
+                                             aria-labelledby="dropDown1Invoker">
+                                            <ul class="list-unstyled g-nowrap mb-0">
+                                                <li>
+                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
+                                                       href="<?= base_url('admin/user_action/block/' . $user->id); ?>">
+                                                        <i class="fa fa-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
+                                                        Block
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
+                                                       href="<?= base_url('admin/user_action/active/' . $user->id); ?>">
+                                                        <i class="fa fa-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
+                                                        Unblock
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
+                                                       href="<?= base_url('admin/user_action/delete/' . $user->id); ?>">
+                                                        <i class="fa fa-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
+                                                        Delete
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

@@ -47,18 +47,18 @@ class Admin extends CI_Controller {
         $first_day = date('Y-m-d', strtotime('first day of the week'));
         $last_day = date('Y-m-d', strtotime('last day of the week'));
         $page_data['week'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions 
-        WHERE date_initiated BETWEEN('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approve' )  ")->row()->amount;
+        WHERE date_initiated BETWEEN('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approved' )  ")->row()->amount;
 
         $first_day = date('Y-m-d', strtotime('first day of the month'));
         $last_day = date('Y-m-d', strtotime('last day of the month'));
         $page_data['month'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions 
-        WHERE date_initiated BETWEEN('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approve' ) ")->row()->amount;
+        WHERE date_initiated BETWEEN('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approved' ) ")->row()->amount;
 
 
         $first_day = date('Y-m-d', strtotime('first day of the year'));
         $last_day = date('Y-m-d', strtotime('last day of the year'));
         $page_data['year'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions 
-        WHERE date_initiated BETWEEN ('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approve' )")->row()->amount;
+        WHERE date_initiated BETWEEN ('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approved' )")->row()->amount;
 
         $page_data['transactions'] = $this->site->run_sql( $query )->result();
 		$this->load->view('app/admin/dashboard', $page_data);
@@ -180,6 +180,23 @@ class Admin extends CI_Controller {
         $page_data['page'] = 'users';
         $page_data['users'] = $this->site->get_result('users');
         $this->load->view('app/admin/manage_users', $page_data);
+    }
+
+    function user_action(){
+        $action = $this->uri->segment(3);
+        $user_id = $this->uri->segment(4);
+        if( !$action || ! $user_id ){
+            $this->session->set_flashdata('error_msg', 'Something is wrong somewhere...');
+            redirect( $_SERVER['HTTP_REFERER']);
+        }
+        if( $action == 'delete' ){
+            $this->site->delete("(user_id = {$user_id})", 'transactions');
+            $this->site->delete("(id = {$user_id})", 'users');
+        }else{
+            $this->site->update('users', array('status' => $action), "(id = {$user_id})");
+        }
+        $this->session->set_flashdata('success_msg', "Action successful");
+        redirect( $_SERVER['HTTP_REFERER']);
     }
 
     /*
