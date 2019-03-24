@@ -187,8 +187,8 @@ $(document).ready(function() {
                         }else if( amount >=  2500 ){
                             charge = ((1.5 / 100) * amount ) + 100;
                         }
-                        amount = (amount + charge) * 100;
-                        let data = {'amount' : amount, 'ref' : response.message};
+                        amount = (parseInt(amount) + parseInt(charge)) ;
+                        let data = {'amount' : amount * 100, 'ref' : response.message};
                         payWithPaystack( data );
                     }
 
@@ -969,9 +969,10 @@ function payWithPaystack( data ){
         callback: function(response){
             // alert('success. transaction ref is ' + response.reference);
             verifyPaystack( response.reference, data.ref );
+
         },
         onClose: function(){
-            sweet_alert('Info', "You closed the window, and for this reason we couldn'nt validate your payment", 'info');
+            sweet_alert('Info', "You closed the window, and for this reason we couldn't validate your payment", 'info');
         }
     });
     handler.openIframe();
@@ -987,10 +988,14 @@ function verifyPaystack( pref, ref){
             if( response.status === 'success' ){
                 sweet_alert('Success!', response.message, response.status );
                 console.log(response.message);
+
             }else{
                 sweet_alert('Error!', response.message, response.status );
                 console.log(response.message);
             }
+            $('.swal-button--confirm').on('click', function () {
+                window.location = window.location.href;
+            });
         },
         error : function (response) {
             console.log(response.responseText);

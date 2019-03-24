@@ -200,7 +200,9 @@ function product_name($id)
 function payment_id_replacer($in){
     $out = preg_replace_callback("(\{[0-9]+\})",
         function ($matches) {
+
             switch ((int)$matches) {
+
                 case 1:
                     return 'Bank Deposit / Transfer';
                     break;

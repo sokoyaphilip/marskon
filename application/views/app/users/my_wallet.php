@@ -59,7 +59,7 @@ $this->load->view('landing/user_header');
             <?php if( $user->membership_type == 'user' ) : ?>
                 <?php $this->load->view('upgrade_plan')?>
             <?php endif; ?>
-            <h3 class="h3">Wallet Balance: <span class="g-color-red">&#8358; 0.00</span></h3>
+            <h3 class="h3">Wallet Balance: <span class="g-color-red"><?= ngn($user->wallet); ?></span></h3>
             <div class="col-xs-12 ">
                 <nav>
                     <div class="nav nav-tabs nav-fill text-center" id="nav-tab" role="tablist">
@@ -278,6 +278,23 @@ $this->load->view('landing/user_header');
                                 </th>
                                 <th>
                                     <div class="media">
+                                        <div class="d-flex align-self-center">Amount</div>
+                                        <div class="d-flex align-self-center ml-auto">
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="media">
                                         <div class="d-flex align-self-center">Transaction Type</div>
                                         <div class="d-flex align-self-center ml-auto">
                                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -357,6 +374,7 @@ $this->load->view('landing/user_header');
                                             <?php endif;?>
                                         </td>
                                         <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
+                                        <td><?= ngn($transaction->amount); ?></td>
                                         <td><?= ($transaction->product_id == 6 ) ? 'Wallet Funding' : 'Fund Transfer'; ?></td>
                                         <td><?= ($transaction->payment_method == 1) ? 'Bank Transfer/Deposit': 'Payment Via Card' ; ?></td>
                                         <td><?= payment_id_replacer($transaction->description); ?></td>

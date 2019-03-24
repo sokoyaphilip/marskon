@@ -53,3 +53,4 @@ ERROR - 2019-03-23 18:43:03 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2019-03-23 19:04:10 --> Severity: Notice --> Undefined property: stdClass::$tid /home/phillip/www/marskonnet/application/views/app/users/payment_made.php 38
 ERROR - 2019-03-23 19:24:08 --> Query error: Unknown column 'user_id' in 'field list' - Invalid query: INSERT INTO `transaction_status` (`user_id`, `bank_name`, `amount_paid`, `deposit_type`, `remark`, `date_paid`) VALUES ('1', 'FIRST BANK NIGERIA LIMITED', '', 'Cash Deposit', 'Remark', '2019/03/13')
 ERROR - 2019-03-23 19:28:23 --> Severity: error --> Exception: Call to undefined method Dashboard::_submitGet() /home/phillip/www/marskonnet/application/controllers/Dashboard.php 437
+ERROR - 2019-03-23 21:20:23 --> Severity: Notice --> Array to string conversion /home/phillip/www/marskonnet/application/helpers/site_helper.php 203
