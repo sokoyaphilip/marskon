@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/views/app/admin/confirm_payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2019-03-24.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2019-03-24.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/admin/manage_services.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/manage_services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/app/admin/manage_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/manage_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/landing/admin_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/admin_footer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,34 +24,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="329" column="4" selection-start-line="329" selection-start-column="4" selection-end-line="374" selection-end-column="5" />
+            <state relative-caret-position="419">
+              <caret line="287" column="48" selection-start-line="287" selection-start-column="48" selection-end-line="287" selection-end-column="48" />
               <folding>
-                <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#redeem_cards#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#payment_made#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
+                <element signature="n#index#0;n#Admin#0;n#!!top" />
+                <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="184" column="4" lean-forward="true" selection-start-line="184" selection-start-column="4" selection-end-line="199" selection-end-column="5" />
+            <state relative-caret-position="256">
+              <caret line="305" column="59" selection-start-line="305" selection-start-column="59" selection-end-line="305" selection-end-column="59" />
               <folding>
-                <element signature="n#index#0;n#Admin#0;n#!!top" />
-                <element signature="n#services#0;n#Admin#0;n#!!top" />
-                <element signature="n#approval#0;n#Admin#0;n#!!top" />
-                <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+                <element signature="e#576#3275#0#HTML" />
+                <element signature="e#3308#13931#0#HTML" />
+                <element signature="e#12541#13860#0#HTML" />
+                <element signature="e#20937#21936#0#HTML" />
+                <element signature="e#28806#30656#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -60,11 +61,65 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="230" column="61" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="118" />
+            <state relative-caret-position="205">
+              <caret line="207" column="62" selection-start-line="207" selection-start-column="62" selection-end-line="207" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_services.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2191">
+              <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_plans.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-556">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding>
+                <element signature="e#5293#13839#0#HTML" />
+                <element signature="e#14119#15433#0#HTML" />
+                <element signature="e#15443#17087#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="122" selection-start-line="122" selection-end-line="132" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/confirm_payment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="55" selection-end-column="23" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,13 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coin</find>
-      <find>subm</find>
-      <find>faq</find>
-      <find>section class=&quot;container&quot;</find>
-      <find>quicj</find>
-      <find>PAGES</find>
-      <find>proof</find>
       <find>session</find>
       <find>we offer</find>
       <find>thresh</find>
@@ -112,6 +160,13 @@
       <find>payment_mad</find>
       <find>delete</find>
       <find>updat</find>
+      <find>approva</find>
+      <find>user has</find>
+      <find>approve</find>
+      <find>approval</find>
+      <find>user</find>
+      <find>block</find>
+      <find>manage_pla</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,10 +178,7 @@
         <option value="$PROJECT_DIR$/application/views/landing/auth.php" />
         <option value="$PROJECT_DIR$/application/config/development/database.php" />
         <option value="$PROJECT_DIR$/assets/css/unify-admin.css" />
-        <option value="$PROJECT_DIR$/application/views/landing/admin_footer.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/manage_services.php" />
         <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" />
         <option value="$PROJECT_DIR$/application/views/landing/login.php" />
         <option value="$PROJECT_DIR$/application/views/landing/forgot.php" />
         <option value="$PROJECT_DIR$/application/models/Site_model.php" />
@@ -137,7 +189,6 @@
         <option value="$PROJECT_DIR$/application/views/app/users/tv_sub.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/electric_bill.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/redeem_card.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/profile.php" />
         <option value="$PROJECT_DIR$/application/views/upgrade_plan.php" />
         <option value="$PROJECT_DIR$/application/views/landing/faq.php" />
@@ -168,8 +219,13 @@
         <option value="$PROJECT_DIR$/application/views/app/users/my_wallet.php" />
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/application/views/app/admin/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/confirm_payment.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_users.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/manage_services.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/landing/admin_footer.php" />
       </list>
     </option>
   </component>
@@ -238,12 +294,6 @@
               <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
               <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -259,7 +309,7 @@
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,11 +363,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/views/app/admin" />
       <recent name="$PROJECT_DIR$/application/views/app/users" />
       <recent name="$PROJECT_DIR$/application/views/landing" />
       <recent name="$PROJECT_DIR$/application/views" />
       <recent name="$PROJECT_DIR$/application/libraries" />
-      <recent name="$PROJECT_DIR$/assets/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/application/views/landing/app/users" />
@@ -359,18 +409,18 @@
       <workItem from="1553242032102" duration="6421000" />
       <workItem from="1553257753910" duration="1922000" />
       <workItem from="1553260933222" duration="22865000" />
-      <workItem from="1553338560511" duration="28979000" />
+      <workItem from="1553338560511" duration="38159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149347000" />
+    <option name="totallyTimeSpent" value="158527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23230374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23230374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -396,33 +446,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/landing/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-          <folding>
-            <element signature="n#forgot#0;n#Auth#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/forgot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -607,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/coin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -698,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -743,23 +752,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/confirm_payment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="184" column="4" lean-forward="true" selection-start-line="184" selection-start-column="4" selection-end-line="199" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="55" selection-end-column="23" />
           <folding>
-            <element signature="n#index#0;n#Admin#0;n#!!top" />
-            <element signature="n#services#0;n#Admin#0;n#!!top" />
-            <element signature="n#approval#0;n#Admin#0;n#!!top" />
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="305" column="59" selection-start-line="305" selection-start-column="59" selection-end-line="305" selection-end-column="59" />
+          <folding>
+            <element signature="e#576#3275#0#HTML" />
+            <element signature="e#3308#13931#0#HTML" />
+            <element signature="e#12541#13860#0#HTML" />
+            <element signature="e#20937#21936#0#HTML" />
+            <element signature="e#28806#30656#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="230" column="61" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="118" />
+        <state relative-caret-position="205">
+          <caret line="207" column="62" selection-start-line="207" selection-start-column="62" selection-end-line="207" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2191">
+          <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="287" column="48" selection-start-line="287" selection-start-column="48" selection-end-line="287" selection-end-column="48" />
+          <folding>
+            <element signature="n#index#0;n#Admin#0;n#!!top" />
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_plans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-556">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="e#5293#13839#0#HTML" />
+            <element signature="e#14119#15433#0#HTML" />
+            <element signature="e#15443#17087#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="122" selection-start-line="122" selection-end-line="132" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
         </state>
       </provider>
     </entry>

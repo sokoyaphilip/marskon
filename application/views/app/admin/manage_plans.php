@@ -4,33 +4,30 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <h3 class="h3 text-center g-mb-20">Create Plan</h3>
-            <form>
+
+            <?php $this->load->view('msg_view');?>
+            <form method="POST" action="<?= base_url('admin/plans/')?>">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <div class="form-group">
-                            <label class="h6 g-font-weight-600 g-color-black">Select A Service</label>
-                            <select id="network_data_plan"
-                                    class="js-select u-select--v3-select u-sibling g-rounded-25 w-100 g-px-10" style="height:40px;" required="required"
-                                    title="Select Data Plan" tabindex="-98">
-                                <option value="">--Select a category--</option>
+                            <label class="label" for="Service Type">Service A Service</label>
+                            <select class="form-control" name="service" id="service" required>
+                                <option value="">-- Select a service --</option>
+                                <?php foreach( $services as $service ) : ?>
+                                    <option value="<?= $service->id; ?>"><?= ucwords($service->title. '('. ucwords($service->product_name).') - Discount for ' . $service->discount_type);?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <div class="form-group">
-                            <label class="h6 g-font-weight-600 g-color-black">Plan Amount(&#8358;)</label>
-                            <div class="g-pos-rel">
-                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
-                                <i class="fa fa-check g-absolute-centered g-font-size-default g-color-secondary"></i>
-                                </span>
-                                <textarea id="plans"
-                                          class="form-control form-control-md u-textarea-expandable g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-20 g-resize-none g-overflow-hidden"
-                                          rows="3"
-                                          placeholder="E.g: 1GiB - 1000, Separate Numbers wth (,) for multiple plans."></textarea>
-                            </div>
+                            <label class="label" for="Starting From">Plan - Amount</label>
+                            <input type="text" class="form-control" required name="plans" required placeholder="Eg : 1GB - 3000, 2GB - 2500 e.t.c.">
                         </div>
+                        <span class="text-danger"><b>The format should be plan - amount separated with comma(,) if many</b></span>
                     </div>
                 </div>
+                <br />
                 <div class="row">
                     <div class="col-sm-12">
                         <button class="btn btn-primary btn-block btn-lg g-rounded-20">Create Plan</button>
@@ -199,31 +196,30 @@
                     </thead>
 
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Airtel Data(Reseller)</td>
-                        <td>
-                            <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
-                          1.5GiB
-                          </span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
-                          &#8358; 850
-                          </span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="btn-group">
-                                <button class="btn btn-info">View All</button>
-                            </div>
-                        </td>
-                    </tr>
+                        <?php $x = 1; foreach( $plans as $plan) : ?>
+                        <tr id="<?= $plan->id; ?>">
+                            <td><?= $x; ?></td>
+                            <td class="text-center">
+                                <?= ucwords($plan->service_name) ?><?= ($plan->discount_type =='all') ? '' : '('.$plan->discount_type.')' ?>
+                            </td>
+                            <td class="text-center"><?= $plan->name; ?></td>
+                            <td class="text-center"><?= ngn($plan->amount) ?></td>
+                            <td>
+                                <?php if(!$id_set) : ?>
+                                    <button type="button"
+                                            data-id="<?= $plan->sid; ?>" data-name="<?= $plan->service_name . ' - ', $plan->discount_type; ?>" class="btn btn-outline-success btn-sm open-plan-modal" data-toggle="modal" data-target="#planModal">
+                                        See All
+                                    </button>
+                                <?php else : ?>
+                                    <button type="button"
+                                            data-id="<?= $plan->id; ?>" data-name="<?= $plan->name; ?>" data-amount="<?= $plan->amount;?>" class="btn btn-outline-success btn-sm open-plan-update" data-toggle="modal" data-target="#editModal">
+                                        Edit Plan
+                                    </button>
+                                    <button class="btn btn-danger btn-sm delete-plan" data-id="<?= $plan->id ; ?>">Delete</button>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <?php $x++; endforeach;?>
                     </tbody>
                 </table>
             </div>
@@ -233,6 +229,72 @@
             <div id="datatableInfo1" class="media-body"></div>
 
             <nav id="datatablePagination1" class="d-flex ml-auto" aria-label="Page Navigation"></nav>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="planModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title plan-name"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped" id="table">
+                        <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th class="text-center">Plan Name</th>
+                            <th class="text-center">Plan Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody id="plan-body">
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit This Plan</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form id="edit-plan">
+                        <div class="form-group">
+                            <label for="plan name">Plan name</label>
+                            <input class="form-control" type="text" name="name" id="plan_name" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plan name">Plan Amount</label>
+                            <input class="form-control number" type="text" name="amount" id="plan_value" value="" required>
+                        </div>
+                        <input type="hidden" name="plan_id" id="edit_plan_id" value="" />
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success update-plan">Update</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>

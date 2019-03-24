@@ -53,7 +53,7 @@
 
         <!-- Footer Copyrights -->
         <div class="col-md-4 text-center text-md-right">
-            <small class="d-block g-font-size-default">&copy; 2019 MARS-KONNECT.com. All Rights Reserved.</small>
+            <small class="d-block g-font-size-default">&copy; <?= date('Y')?> <?= lang('app_name'); ?>. All Rights Reserved.</small>
         </div>
         <!-- End Footer Copyrights -->
     </div>
@@ -119,7 +119,11 @@
 <script src="<?=base_url("assets/js/components/hs.file-attachement.js")?>"></script>
 
 <!-- JS Custom -->
-<script src="<?=base_url("assets/js/custom.js")?>"></script>
+<script>
+    let base_url = "<?= base_url(); ?>"
+</script>
+<script src="<?= base_url('assets/js/custom.js'); ?>"></script>
+<script src="<?= base_url('assets/js/functions.js'); ?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>

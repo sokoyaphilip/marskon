@@ -2,7 +2,7 @@
 <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
     <div class="g-pa-20 col-md-12">
         <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">All Users</h1>
-
+        <?php $this->load->view('msg_view'); ?>
         <div class="media-md align-items-center g-mb-30">
             <div class="d-flex g-mb-15 g-mb-0--md">
                 <h3 class="g-font-weight-400 g-font-size-16 g-color-black mb-0">Manage all users in the system</h3>
@@ -205,7 +205,7 @@
                                 <td><?= $user->phone; ?></td>
                                 <td><?= ngn($user->wallet); ?></td>
                                 <td><?= neatDate($user->last_login) . ' ' . neatTime($user->last_login); ?></td>
-                                <td><?= $user->status ; ?></td>
+                                <td><?= ucfirst($user->status) ; ?></td>
                                 <td class="text-center">
                                     <div class="g-pos-rel g-top-3 d-inline-block">
                                         <a id="dropDown1Invoker"

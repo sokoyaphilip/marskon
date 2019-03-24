@@ -129,10 +129,10 @@ class Admin extends CI_Controller {
             }else{
                 $this->session->set_flashdata('error_msg', 'There was an errror performing that action.');
             }
-            redirect( $_SERVER['HTTP_REFERER']);
+            redirect('admin/approval/');
         }else{
             $page_data['page'] = 'approval';
-            $page_data['fundings'] = $this->site->run_sql("SELECT t.* , u.name name, u.phone, u.email FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
+            $page_data['fundings'] = $this->site->run_sql("SELECT t.*, u.name name, u.phone, u.email FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
         WHERE t.status = 'pending' AND t.product_id = 6")->result();
             $page_data['airtime_to_cash_pin'] = $this->site->get_result('airtime_to_cash', 'id,tid,uid,incoming,outgoing,details,datetime,status,type', "(status = 'pending')");
             $page_data['title'] = "Funding Approval";
@@ -172,6 +172,19 @@ class Admin extends CI_Controller {
     }
 
 
+    public function confirm_payment(){
+        $tid = $this->input->get('tid', true);
+        if( $tid ){
+            $page_data['row'] = $this->site->run_sql("SELECT t.amount, t.id,t.user_id, s.bank_name, s.amount_paid, s.deposit_type, s.remark, s.date_paid FROM transactions t LEFT JOIN transaction_status s ON (s.tid = t.trans_id) 
+WHERE t.trans_id = {$tid}")->row();
+            $page_data['users'] = $this->site->get_result('users');
+            $page_data['title'] = "Confirm Payment";
+            $page_data['page'] = 'Confirm Payment';
+            $this->load->view('app/admin/confirm_payment', $page_data);
+        }
+    }
+
+
     /*
      * Users
      * */
@@ -185,6 +198,7 @@ class Admin extends CI_Controller {
     function user_action(){
         $action = $this->uri->segment(3);
         $user_id = $this->uri->segment(4);
+        die( $user_id);
         if( !$action || ! $user_id ){
             $this->session->set_flashdata('error_msg', 'Something is wrong somewhere...');
             redirect( $_SERVER['HTTP_REFERER']);
@@ -231,7 +245,7 @@ class Admin extends CI_Controller {
             $count = count( $explode_plans );
             // explode plans = array(1GB - 4000, 2GB - 5000 ...)
             // Lets get the discount for this service
-            $discount = $this->site->run_sql("SELECT discount FROM services WHERE id = {$sid}")->row()->discount;
+//            $discount = $this->site->run_sql("SELECT discount FROM services WHERE id = {$sid}")->row()->discount;
             for ($x = 0; $x < $count; $x++){
                 $explode = explode( '-',$explode_plans[$x] );
                 if( $explode ) { // double check that admin didn't add extra comma (,)
@@ -239,10 +253,11 @@ class Admin extends CI_Controller {
                     $res['name'] = trim(strtoupper($explode[0]));
                     $res['amount'] = null;
                     if( isset( $explode[1]) ) {
-                        $res['amount'] = $explode[1];
-                        if( $discount > 0 ) {
-                            $res['amount'] = trim((int)$explode[1]) - ( $discount / 100 * trim((int)$explode[1]) );
-                        }
+                        $res['amount'] = trim($explode[1]);
+                        // leave to when it will be processed
+//                        if( $discount > 0 ) {
+//                            $res['amount'] = trim((int)$explode[1]) - ( $discount / 100 * trim((int)$explode[1]) );
+//                        }
                     }
                     array_push( $plans_array, $res );
                 }
@@ -266,7 +281,8 @@ class Admin extends CI_Controller {
                 $page_data['id_set'] = true;
             }
             $page_data['page'] = 'plans';
-            $page_data['services'] = $this->site->get_result('services', 'id, title, discount_type');
+//            $page_data['services'] = $this->site->get_result('services', 'id, title, discount_type');
+            $page_data['services'] = $this->site->run_sql('SELECT s.id,s.title,s.discount_type, p.title product_name FROM services s LEFT JOIN products p ON (p.id = s.product_id)')->result();
             $page_data['plans'] = $this->site->run_sql($query)->result();
 //            var_dump( $page_data['plans']);
             $this->load->view('app/admin/manage_plans', $page_data);
