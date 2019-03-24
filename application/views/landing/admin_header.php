@@ -148,13 +148,13 @@
                             <span class="media-body align-self-center">Plans</span>
                         </a>
                     </li>
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'gift_card') echo 'has-active';?>">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'plans') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="<?= base_url('admin/gift_cards');?>">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-              <i class="fa fa-gift" style="font-size:22px;"></i>
-              </span>
-                            <span class="media-body align-self-center">Gift Card Request</span>
+                           href="<?= base_url('admin/api_variation/');?>">
+                              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-key"></i>
+                              </span>
+                            <span class="media-body align-self-center">API Variation</span>
                         </a>
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'e_coins') echo 'has-active';?>">

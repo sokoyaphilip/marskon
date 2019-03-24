@@ -65,3 +65,11 @@ ERROR - 2019-03-24 17:00:54 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2019-03-24 17:00:54 --> Severity: Notice --> Undefined property: stdClass::$product_name /home/phillip/www/marskonnet/application/views/app/admin/manage_plans.php 17
 ERROR - 2019-03-24 17:00:54 --> Severity: Notice --> Undefined property: stdClass::$product_name /home/phillip/www/marskonnet/application/views/app/admin/manage_plans.php 17
 ERROR - 2019-03-24 17:00:54 --> Severity: Notice --> Undefined property: stdClass::$product_name /home/phillip/www/marskonnet/application/views/app/admin/manage_plans.php 17
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388
+ERROR - 2019-03-24 18:16:09 --> Severity: Notice --> Undefined property: stdClass::$name /home/phillip/www/marskonnet/application/views/app/admin/dashboard.php 388

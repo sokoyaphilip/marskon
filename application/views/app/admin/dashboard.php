@@ -382,29 +382,17 @@
                     </thead>
 
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>13/12/09</td>
-                        <td>0907076732212</td>
-                        <td>
-                            <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
-                          E-coin
-                          </span>
-                            </div>
-                        </td>
-                        <td>$150 worth of bitcoin sale</td>
-                        <td>&#8358; 56,200.00</td>
-                        <td>
-                            <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightblue-v3 g-mr-8"></span>
-                          Completed
-                          </span>
-                            </div>
-                        </td>
-                    </tr>
+                    <?php foreach( $transactions as $transaction ): ?>
+                        <tr>
+                            <td><?= $transaction->trans_id; ?></td>
+                            <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
+                            <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
+                            <td><?= paymentMethod($transaction->payment_method); ?></td>
+                            <td><?= payment_id_replacer($transaction->description); ?></td>
+                            <td><?= ngn($transaction->amount)?></td>
+                            <td><?= statusLabel( $transaction->status);?></td>
+                        </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
