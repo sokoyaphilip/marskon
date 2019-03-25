@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/landing/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="114" column="98" selection-start-line="114" selection-start-column="98" selection-end-line="114" selection-end-column="98" />
+            <state relative-caret-position="130">
+              <caret line="68" column="153" selection-start-line="68" selection-start-column="153" selection-end-line="68" selection-end-column="153" />
             </state>
           </provider>
         </entry>
@@ -332,6 +331,17 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img-temp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -394,12 +404,12 @@
       <workItem from="1553257753910" duration="1922000" />
       <workItem from="1553260933222" duration="22865000" />
       <workItem from="1553338560511" duration="42057000" />
-      <workItem from="1553501652329" duration="2639000" />
+      <workItem from="1553501652329" duration="2892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165064000" />
+    <option name="totallyTimeSpent" value="165317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -806,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="114" column="98" selection-start-line="114" selection-start-column="98" selection-end-line="114" selection-end-column="98" />
+        <state relative-caret-position="130">
+          <caret line="68" column="153" selection-start-line="68" selection-start-column="153" selection-end-line="68" selection-end-column="153" />
         </state>
       </provider>
     </entry>
