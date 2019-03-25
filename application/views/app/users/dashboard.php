@@ -4,7 +4,7 @@
         flex-basis:unset !important;
     }
 </style>
-    <div class="g-pa-20">
+    <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
         <?php if( $user->membership_type == 'user' ) : ?>
             <?php $this->load->view('upgrade_plan')?>
         <?php endif; ?>
@@ -13,7 +13,7 @@
                 <div class="card g-brd-darkblue-v5 text-center g-pa-15 g-pa-25-30--md">
                     <header class="media g-mb-40">
                         <h3 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Buy Airtime</h3>
+                            <a href="<?= base_url('dashboard/airtime/'); ?>">Buy Airtime</a></h3>
                     </header>
 
                     <section class="row">
@@ -56,7 +56,7 @@
                 <div class="card g-brd-lightred-v3 text-center g-pa-15 g-pa-25-30--md">
                     <header class="media g-mb-40">
                         <h3 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            Buy Data</h3>
+                            <a href="<?= base_url('dashboard/data/'); ?>">Buy Data</a></h3>
                     </header>
 
                     <section class="row">
@@ -99,7 +99,7 @@
                 <div class="card g-brd-gray-light-v1">
                     <header class="media g-pa-15 g-pa-25-30-0--md g-mb-20">
                         <h3 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                            TV Subscription</h3>
+                            <a href="<?= base_url('dashboard/subscription/')?>"> TV Subscription</a></h3>
                     </header>
 
                     <div class="g-pa-15 g-pa-0-30-25--md">
@@ -125,55 +125,24 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-xs-6 g-mb-30">
-                <!-- Panel -->
-                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                    <div class="card-block g-pa-20">
-                        <header class="media g-mb-40">
-                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                                Electric Bills</h4>
-                        </header>
-
-                        <div class="d-flex align-items-center g-mb-25">
-                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Pay All Electric Distribution Service Charge Here, including IKEDC, EEDC, IBEDC, e.t.c.</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Panel -->
-            </div>
 
             <div class="col-md-3 col-xs-6 g-mb-30">
-                <!-- Panel -->
-                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                    <div class="card-block g-pa-20">
-                        <header class="media g-mb-40">
-                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                                Electric Bills</h4>
-                        </header>
+                    <!-- Panel -->
+                    <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
+                        <div class="card-block g-pa-20">
+                            <header class="media g-mb-40">
+                                <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
+                                    <a href="<?= base_url('dashboard/electricity/')?>">Electric Bills</a></h4>
+                            </header>
 
-                        <div class="d-flex align-items-center g-mb-25">
-                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Pay All Electric Distribution Service Charge Here, including IKEDC, EEDC, IBEDC, e.t.c.</span>
+                            <div class="d-flex align-items-center g-mb-25">
+                                <span class="g-font-weight-300 g-font-size-18 g-color-black">Pay All Electric Distribution Service Charge Here, including IKEDC, EEDC, IBEDC, e.t.c.</span>
+                            </div>
                         </div>
                     </div>
+                    <!-- End Panel -->
                 </div>
-                <!-- End Panel -->
-            </div>
 
-            <div class="col-md-3 col-xs-6 g-mb-30">
-                <!-- Panel -->
-                <div class="card g-brd-lightblue-v4 rounded" style="width:100%;">
-                    <div class="card-block g-pa-20">
-                        <header class="media g-mb-40">
-                            <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
-                                Electric Bills</h4>
-                        </header>
-                        <div class="d-flex align-items-center g-mb-25">
-                            <span class="g-font-weight-300 g-font-size-18 g-color-black">Pay All Electric Distribution Service Charge Here, including IKEDC, EEDC, IBEDC, e.t.c.</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Panel -->
-            </div>
         </div>
     </div>
 <?php $this->load->view("landing/user_footer"); ?>

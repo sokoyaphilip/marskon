@@ -2,19 +2,17 @@
     <section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
              data-options='{direction: "reverse", settings_mode_oneelement_max_offset: "150"}'>
         <div class="divimage dzsparallaxer--target w-100 g-bg-pos-bottom-center"
-             style="height: 120%; background-image: url(assets/img-temp/1920x1080/img25.jpg);"></div>
+             style="height: 120%; background-image: url(assets/img/marskonnect-cover);"></div>
 
         <div class="container g-py-200">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="g-color-black g-font-weight-300 g-font-size-40 g-line-height-1_2 mb-4">Get a quick data
-                        boost<br>with MARS-KONNECT.com
+                    <h3 class="g-color-gray-light-v11 g-font-weight-300 color-white g-font-size-40 g-line-height-1_2 mb-4">Taking extra <b>leap</b>
+                        <br>to with <b>konnect</b> you.
                     </h3>
-                    <span class="d-block g-color-black-opacity-0_8 g-font-size-16 mb-5">up to 90days usage</span>
-                    <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white" >Recharge Now</a>
+                    <span class="d-block g-color-aqua g-font-size-16 mb-5">up to 90days usage</span>
+                        <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white" href="<?= base_url('auth/create/'); ?>" >Konnect Now</a>
                     </span>
-
-                    </a>
                 </div>
             </div>
         </div>
