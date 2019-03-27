@@ -68,6 +68,7 @@ class Ajax extends CI_Controller {
                 'ip' => $_SERVER['REMOTE_ADDR'],
                 'date_registered' => get_now(),
                 'last_login' => get_now(),
+                'membership_type' => 'user',
                 'user_code' => $code
             );
 
@@ -1065,7 +1066,9 @@ class Ajax extends CI_Controller {
             'user_id'        => $uid,
             'status'        => 'pending'
         );
-        if( $this->site->insert_data('transactions', $insert_data)){
+        if( $this->site->insert_data('transactions', $insert_data)
+            && $this->site->update('users', array('membership_type' => 'pending'), "(id = {$uid})") ){
+            // Update the membership type to progress
             $response['status'] = 'success';
             $this->return_response( $response );
         }else{

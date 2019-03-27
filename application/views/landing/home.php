@@ -54,7 +54,7 @@
                                 <li>Create an <?= anchor('auth/create/', 'account'); ?> with us, if you don't already have.</li>
                                 <li>Click on the flash message asking you to upgrade your account on dashboard </li>
                                 <li>Pay N1000 to the account details. </li>
-                                <li>You'll be approved in few minutes and you can start enjoying reseller benefits, eg Resell Data, Airtime, TV cable subscription at the </li>
+                                <li>You'll be approved in few minutes and you can start enjoying reseller benefits, eg Resell Data, Airtime, TV subscription at affordable rate </li>
                             </ul>
                         </p>
                     </div>

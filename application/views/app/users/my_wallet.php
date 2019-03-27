@@ -56,9 +56,7 @@ $this->load->view('landing/user_header');
     </style>
     <div style="min-height: calc(92vh - 67px);">
         <div class="g-pa-20">
-            <?php if( $user->membership_type == 'user' ) : ?>
-                <?php $this->load->view('upgrade_plan')?>
-            <?php endif; ?>
+            <?php $this->load->view('upgrade_plan')?>
             <h3 class="h3">Wallet Balance: <span class="g-color-red"><?= ngn($user->wallet); ?></span></h3>
             <div class="col-xs-12 ">
                 <nav>

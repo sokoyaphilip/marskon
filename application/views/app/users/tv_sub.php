@@ -1,8 +1,6 @@
 <?php $this->load->view('landing/user_header'); ?>
     <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
-        <?php if( $user->membership_type == 'user' ) : ?>
-            <?php $this->load->view('upgrade_plan')?>
-        <?php endif; ?>
+        <?php $this->load->view('upgrade_plan')?>
         <div class="row">
             <div class="col-sm-4">
                 <div class="row">

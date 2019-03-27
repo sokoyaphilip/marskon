@@ -69,7 +69,9 @@ $this->load->view('landing/user_header');
                             <input type="date" name="date_paid" required class="form-control"  placeholder="Date you paid">
                         </div>
                     </div>
-
+                    <?php if($product_id) : ?>
+                        <input type="hidden" name="product_id" value="<?= $product_id; ?>" />
+                    <?php endif; ?>
 
                     <div class="col-md-12 g-mt-5 py-3">
                         <button type="submit" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Submit</button>

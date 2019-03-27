@@ -5,9 +5,7 @@
     }
 </style>
     <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
-        <?php if( $user->membership_type == 'user' ) : ?>
-            <?php $this->load->view('upgrade_plan')?>
-        <?php endif; ?>
+        <?php $this->load->view('upgrade_plan')?>
         <div class="row">
             <div class="col-md-3 col-xs-6 g-mb-30">
                 <div class="card g-brd-darkblue-v5 text-center g-pa-15 g-pa-25-30--md">

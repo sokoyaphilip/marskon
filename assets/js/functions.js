@@ -877,9 +877,9 @@ $(document).ready(function() {
             $.get( base_url + "ajax/upgrade_account/" )
                 .done(function (data) {
                     if(data['status'] === 'success' ){
-                        sweet_alert('Thanks', 'Your account will be upgraded once your payment has been verified.', 'success');
+                        sweet_alert('Thanks', 'Your account will be upgraded once your payment is verified.', 'success');
                     }else{
-                        sweet_alert('Error', 'There was an error upgrading your account.', 'Error');
+                        sweet_alert('Error', 'There was an error processing your request.', 'Error');
                     }
                     $('.swal-button--confirm').on('click', function () {
                         window.location = window.location.href;

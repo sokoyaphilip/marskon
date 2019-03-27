@@ -336,6 +336,9 @@ class Dashboard extends CI_Controller {
             $this->session->set_flashdata('error_msg', "The transaction does not exist.");
             redirect( 'dashboard/wallet/');
         }else{
+            if( $this->input->get('product_id') ) {
+                $page_data['product_id'] = cleanit($this->input->get('id'));
+            }
             $page_data['row'] = $row;
             $page_data['page'] = 'payment_made';
             $page_data['title'] = "Payment Made";
@@ -356,12 +359,16 @@ class Dashboard extends CI_Controller {
             );
 
             $tid = cleanit($_POST['tid']);
-            $check = $this->site->run_sql("SELECT id FROM transaction_status WHERE tid = {$tid}")->row();
+            $check = $this->site->run_sql("SELECT id, user_id FROM transaction_status WHERE tid = {$tid}")->row();
             if($check){
                 $this->session->set_flashdata('error_msg', "We already receive your message.");
                 redirect( $_SERVER['HTTP_REFERER']);
             }
             if( $this->site->insert_data('transaction_status', $data)){
+                if( $this->input->post('product_id') ){
+                    // UPdate the user to process
+                    $this->site->user('users', array('menbership_type' => 'process'), "(id = {$check->user_id})");
+                }
                 $amount = $this->input->post('amount_paid');
                 $array['message'] = 'A user just claimed to pay N'.$amount .' Go to dashboard to confirm.';
                 $this->callSMSAPI($array);
