@@ -2,13 +2,13 @@
     <section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
              data-options='{direction: "reverse", settings_mode_oneelement_max_offset: "150"}'>
         <div class="divimage dzsparallaxer--target w-100 g-bg-pos-bottom-center"
-             style="height: 120%; background-image: url(assets/img/marskonnect-cover);"></div>
+             style="height: 120%; background-image: url(assets/img/marskonnect_cover);"></div>
 
         <div class="container g-py-200">
             <div class="row">
                 <div class="col-md-6">
                     <h3 class="g-color-gray-light-v11 g-font-weight-300 color-white g-font-size-40 g-line-height-1_2 mb-4">Taking extra <b>leap</b>
-                        <br>to with <b>konnect</b> you.
+                        <br>to <b>konnect</b> you.
                     </h3>
                     <span class="d-block g-color-aqua g-font-size-16 mb-5">up to 90days usage</span>
                         <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white" href="<?= base_url('auth/create/'); ?>" >Konnect Now</a>
@@ -27,8 +27,7 @@
                   <i class="fa fa-fighter-jet"></i>
                 </span>
                         <h3 class="h5 g-color-gray-dark-v2 g-font-weight-600 text-uppercase mb-3">Automated</h3>
-                        <p class="mb-0">We strive to embrace and drive change in our industry which allows us to keep
-                            our clients relevant.</p>
+                        <p class="mb-0">marskonnect system is fully automated and fast with notification functionally and a feature suite for recharging bulk numbers at once irrespective of the network.</p>
                     </div>
                 </div>
 
@@ -38,8 +37,7 @@
                   <i class="fa fa-dollar"></i>
                 </span>
                         <h3 class="h5 g-color-gray-dark-v2 g-font-weight-600 text-uppercase mb-3">Affordable</h3>
-                        <p class="mb-0">We strive to embrace and drive change in our industry which allows us to keep
-                            our clients relevant.</p>
+                        <p class="mb-0">Marskonnect focuses in offering subsidised Internet subscription and airtime on all telecommunications network with marskonnect you are sure of saving on your data/airtime purchase.</p>
                     </div>
                     <!-- End Icon Blocks -->
                 </div>
@@ -50,9 +48,15 @@
               <span class="d-inline-block u-icon-v3 u-icon-size--xl g-bg-primary g-color-white rounded-circle g-mb-30">
                   <i class="fa fa-hacker-news"></i>
                 </span>
-                        <h3 class="h5 g-color-gray-dark-v2 g-font-weight-600 text-uppercase mb-3">Made For You</h3>
-                        <p class="mb-0">We strive to embrace and drive change in our industry which allows us to keep
-                            our clients relevant.</p>
+                        <h3 class="h5 g-color-gray-dark-v2 g-font-weight-600 text-uppercase mb-3">How to start reselling</h3>
+                        <p class="mb-0">To become a reseller and buy at way cheaper price,earn from our platform and enjoy other benefits follow these simple steps below to see detailed information about how to buy our different reseller plans.
+                            <ul>
+                                <li>Create an <?= anchor('auth/create/', 'account'); ?> with us, if you don't already have.</li>
+                                <li>Click on the flash message asking you to upgrade your account on dashboard </li>
+                                <li>Pay N1000 to the account details. </li>
+                                <li>You'll be approved in few minutes and you can start enjoying reseller benefits, eg Resell Data, Airtime, TV cable subscription at the </li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
