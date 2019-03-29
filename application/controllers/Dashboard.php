@@ -77,6 +77,173 @@ class Dashboard extends CI_Controller {
 
     }
 
+
+    // Airtime to cash
+    public function airtime_to_cash(){
+        $id = $this->session->userdata('logged_id');
+        $page_data['page'] = 'airtime2cash';
+        $page_data['title'] = "Airtime to Cash";
+        $page_data['user'] = $this->get_profile( $id );
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
+        $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
+        $this->load->view('app/users/airtime_to_cash', $page_data);
+    }
+
+    function airtime_process(){
+        $post_type = $this->input->post('post_type', true);
+        $network = $this->input->post('airtime_pin_network');
+        $user_id = $this->session->userdata('logged_id');
+        switch ($post_type) {
+            case 'pin_transfer':
+
+                $this->form_validation->set_rules('airtime_pin_network', 'Airtime Network','trim|required|xss_clean');
+                $this->form_validation->set_rules('pin', 'Pin Network','trim|required|xss_clean');
+                $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
+                $this->form_validation->set_rules('amount_earned', 'Amount Earned','trim|required|xss_clean');
+                if( $this->form_validation->run() == false ){
+                    $this->session->set_flashdata('error_msg', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+                $product_id = $this->input->post('product_id');
+                $amount = $this->input->post('amount');
+                $outgoing = $this->input->post('amount_earned');
+                $transaction_id = $this->site->generate_code('transactions', 'trans_id');
+                $how_to_receive = $this->input->post('how_to_receive');
+                $pin = trim($this->input->post('pin'));
+                // Mtn - Airtel : 16, Glo - 9mobile : 15,
+                $length = strlen( $pin );
+                switch ( $network ) {
+                    case 'glo':
+                    case '9mobile':
+                        if( $length != 15){
+                            $this->session->set_flashdata('error_msg', "Error: The " . strtoupper( $network) . " network pin is invalid");
+                            redirect( $_SERVER['HTTP_REFERER']);
+                        }
+                        break;
+                    case 'mtn':
+                    case 'airtime':
+                        if( $length != 16){
+                            $this->session->set_flashdata('error_msg', "Error: The " . strtoupper( $network) . " network pin is invalid");
+                            redirect( $_SERVER['HTTP_REFERER']);
+                        }
+                        break;
+                }
+
+                $description = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to gecharl.com";
+                $transaction_table = array(
+                    'product_id' => $product_id,
+                    'trans_id'      => $transaction_id,
+                    'user_id'       => $user_id,
+                    'amount'        => $amount,
+                    'payment_method' => 4,
+                    'description'   => $description,
+                    'date_initiated'    => get_now(),
+                    'status'            => 'pending'
+                );
+                try {
+                    $receiving_channel = $this->input->post('how_to_receive');
+                    $details = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to gecharl.com and to receive by {$receiving_channel}";
+                    $receiver = $this->input->post('receiver', true);
+                    if( $receiver ) $details .= " : {$receiver}";
+                    $this->db->trans_start();
+                    $tid = $this->site->insert_data('transactions',  $transaction_table);
+                    $airtime_to_cash_table = array(
+                        'tid' => $tid,
+                        'uid' => $user_id,
+                        'network' => $network,
+                        'incoming' => $amount,
+                        'outgoing' => $outgoing,
+                        'type' => $receiving_channel,
+                        'status' => 'pending',
+                        'details' => $details,
+                        'datetime'  => get_now()
+                    );
+                    $this->site->insert_data('airtime_to_cash', $airtime_to_cash_table);
+                    $this->db->trans_complete();
+                    if ($this->db->trans_status() === FALSE){
+                        $this->session->set_flashdata('error_msg', 'There was an error processing your request.');
+                        $this->db->trans_rollback();
+                    }else{
+                        // Send a message to the admin??
+                        $this->db->trans_commit();
+                        $this->session->set_flashdata('success_msg', 'Your request has been received and its under processed.');
+                    }
+
+                } catch (Exception $e) {
+
+                }
+                redirect( $_SERVER['HTTP_REFERER']);
+                break;
+
+            case 'airtime_transfer':
+                $this->form_validation->set_rules('airtime_pin_network', 'Airtime Network','trim|required|xss_clean');
+                $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
+                $this->form_validation->set_rules('sender', 'Number you are sending it from','trim|required|xss_clean');
+                if( $this->form_validation->run() == false ){
+                    $this->session->set_flashdata('error_msg', validation_errors());
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+                $product_id = $this->input->post('product_id');
+                $airtime_pin_network = $this->input->post('airtime_pin_network');
+                $amount = $this->input->post('amount');
+                if( $amount < 500 || $amount > 5000 ){
+                    $this->session->set_flashdata('error_msg', "You can only send airtime between N500 and N5000");
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+                $outgoing = $this->input->post('amount_earned');
+                $transaction_id = $this->site->generate_code('transactions', 'trans_id');
+                $description = ucwords($network) . " N" . $amount . ucwords( $airtime_pin_network ). " airtime transfer to gecharl.com";
+                $transaction_table = array(
+                    'product_id' => $product_id,
+                    'trans_id'      => $transaction_id,
+                    'user_id'       => $user_id,
+                    'amount'        => $amount,
+                    'payment_method' => 4,
+                    'description'   => $description,
+                    'date_initiated'    => get_now(),
+                    'status'            => 'pending'
+                );
+
+                try {
+                    $details = ucwords($network) . " N" . $amount . ucwords( $airtime_pin_network ). " network transfer to gecharl.com";
+                    $receiver = $this->input->post('receiver', true);
+                    if( $receiver ) $details .= " : {$receiver}";
+                    $this->db->trans_start();
+                    $tid = $this->site->insert_data('transactions',  $transaction_table);
+                    $airtime_to_cash_table = array(
+                        'tid' => $tid,
+                        'uid' => $user_id,
+                        'network' => $network,
+                        'incoming' => $amount,
+                        'outgoing' => $outgoing,
+                        'type' => 'wallet',
+                        'status' => 'pending',
+                        'details' => $details,
+                        'datetime'  => get_now()
+                    );
+                    $this->site->insert_data('airtime_to_cash', $airtime_to_cash_table);
+                    $this->db->trans_complete();
+                    if ($this->db->trans_status() === FALSE){
+                        $this->session->set_flashdata('error_msg', 'There was an error processing your request.');
+                        $this->db->trans_rollback();
+                    }else{
+                        // Send a message to the admin??
+                        $array['message'] = 'A user just sent '.$amount .' airtime to you via transfer, Go to dashboard to confirm.';
+                        $this->callSMSAPI($array);
+                        $this->db->trans_commit();
+                        $this->session->set_flashdata('success_msg', 'Your request has been received and its under processed.');
+                    }
+
+                } catch (Exception $e) {
+
+                }
+                redirect( $_SERVER['HTTP_REFERER']);
+                break;
+
+                break;
+        }
+    }
+
     // Tv subscription
     public function subscription(){
         $id = $this->session->userdata('logged_id');
@@ -215,106 +382,6 @@ class Dashboard extends CI_Controller {
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE (product_id = 6 or product_id = 7) AND user_id = {$id}")->result();
         $this->load->view('app/users/my_wallet', $page_data);
 
-    }
-
-    public function airtime_to_cash(){
-        $id = $this->session->userdata('logged_id');
-        $page_data['page'] = 'airtime2cash';
-        $page_data['title'] = "Airtime to Cash";
-        $page_data['user'] = $this->get_profile( $id );
-        $membership_type = $page_data['user']->membership_type;
-        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
-        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND s.discount_type = '{$membership_type}' ")->result();
-        $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
-        $this->load->view('app/users/airtime_to_cash', $page_data);
-    }
-
-    function airtime_process(){
-        $post_type = $this->input->post('post_type', true);
-        $network = $this->input->post('airtime_pin_network');
-        $user_id = $this->session->userdata('logged_id');
-        switch ($post_type) {
-            case 'pin_transfer':
-
-                $this->form_validation->set_rules('airtime_pin_network', 'Airtime Network','trim|required|xss_clean');
-                $this->form_validation->set_rules('pin', 'Pin Network','trim|required|xss_clean');
-                $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
-                $this->form_validation->set_rules('amount_earned', 'Amount EArned','trim|required|xss_clean');
-                if( $this->form_validation->run() == false ){
-                    $this->session->set_flashdata('error_msg', validation_errors());
-                    redirect($_SERVER['HTTP_REFERER']);
-                }
-                $product_id = $this->input->post('product_id');
-                $amount = $this->input->post('amount');
-                $outgoing = $this->input->post('amount_earned');
-                $transaction_id = $this->site->generate_code('transactions', 'trans_id');
-                $how_to_receive = $this->input->post('how_to_receive');
-                $pin = trim($this->input->post('pin'));
-                // Mtn - Airtel : 16, Glo - 9mobile : 15,
-                $length = strlen( $pin );
-                switch ( $network ) {
-                    case 'glo':
-                    case '9mobile':
-                        if( $length != 15){
-                            $this->session->set_flashdata('error_msg', "Error: The " . strtoupper( $network) . " network pin is invalid");
-                            redirect( $_SERVER['HTTP_REFERER']);
-                        }
-                        break;
-                    case 'mtn':
-                    case 'airtime':
-                        if( $length != 16){
-                            $this->session->set_flashdata('error_msg', "Error: The " . strtoupper( $network) . " network pin is invalid");
-                            redirect( $_SERVER['HTTP_REFERER']);
-                        }
-                        break;
-                }
-
-                $description = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to gecharl.com";
-                $transaction_table = array(
-                    'product_id' => $product_id,
-                    'trans_id'      => $transaction_id,
-                    'user_id'       => $user_id,
-                    'amount'        => $amount,
-                    'payment_method' => 4,
-                    'description'   => $description,
-                    'date_initiated'    => get_now(),
-                    'status'            => 'pending'
-                );
-                try {
-                    $receiving_channel = $this->input->post('how_to_receive');
-                    $details = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to gecharl.com and to receive by {$receiving_channel}";
-                    $receiver = $this->input->post('receiver', true);
-                    if( $receiver ) $details .= " : {$receiver}";
-                    $this->db->trans_start();
-                    $tid = $this->site->insert_data('transactions',  $transaction_table);
-                    $airtime_to_cash_table = array(
-                        'tid' => $tid,
-                        'uid' => $user_id,
-                        'network' => $network,
-                        'incoming' => $amount,
-                        'outgoing' => $outgoing,
-                        'type' => $receiving_channel,
-                        'status' => 'pending',
-                        'details' => $details,
-                        'datetime'  => get_now()
-                    );
-                    $this->site->insert_data('airtime_to_cash', $airtime_to_cash_table);
-                    $this->db->trans_complete();
-                    if ($this->db->trans_status() === FALSE){
-                        $this->session->set_flashdata('error_msg', 'There was an error processing your request.');
-                        $this->db->trans_rollback();
-                    }else{
-                        // Send a message to the admin??
-                        $this->db->trans_commit();
-                        $this->session->set_flashdata('success_msg', 'Your request has been received and its under processed.');
-                    }
-
-                } catch (Exception $e) {
-
-                }
-                redirect( $_SERVER['HTTP_REFERER']);
-                break;
-        }
     }
 
 

@@ -149,9 +149,19 @@
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('dashboard/subscription/')?>">
                           <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-                          <i class="fa fa-desktop"></i>
+                          <i class="fa fa-signal"></i>
                           </span>
                             <span class="media-body align-self-center">TV Subscription</span>
+                        </a>
+                    </li>
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'subscription') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?= base_url('dashboard/airtime_to_cash/')?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                          <i class="fa fa-desktop"></i>
+                          </span>
+                            <span class="media-body align-self-center">Airtime To Cash</span>
                         </a>
                     </li>
 
