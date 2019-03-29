@@ -118,17 +118,27 @@
                         </header>
                         <!-- End Article Header -->
 
+
+                        1GB - ₦ 920
+                        1.5GB - ₦ 1,100
+                        2.5GB - ₦ 1,840
+                        4GB - ₦ 2,760
+                        5.5GB - ₦ 3,680
+                        11.5 GB - ₦ 7,680
+                        15GB - ₦ 9,200
+                        27.5 G - ₦ 16,560
+
                         <!-- Article Content -->
                         <div class="g-px-20 g-py-40">
                             <ul class="list-unstyled g-mb-40">
-                                <li class="g-mb-20">1 GiB - &#8358; 950</li>
-                                <li class="g-mb-20">1.5 GiB - &#8358; 950</li>
-                                <li class="g-mb-20">2.5 GiB - &#8358; 1,000</li>
-                                <li class="g-mb-20">4 GiB - &#8358; 2,500</li>
-                                <li class="g-mb-20">5.5 GiB - &#8358; 550</li>
-                                <li class="g-mb-20">11.5 GiB - &#8358; 1000</li>
-                                <li class="g-mb-20">15 GiB - &#8358; 550</li>
-                                <li class="g-mb-20">27.5 GiB - &#8358; 1000</li>
+                                <li class="g-mb-20">1 GB - &#8358; 920</li>
+                                <li class="g-mb-20">1.5 GB - &#8358; 1,100</li>
+                                <li class="g-mb-20">2.5 GiB - &#8358; 1,840</li>
+                                <li class="g-mb-20">4 GB - &#8358; 2,760</li>
+                                <li class="g-mb-20">5.5 GB - &#8358; 3,680</li>
+                                <li class="g-mb-20">11.5 GiB - &#8358; 7,680</li>
+                                <li class="g-mb-20">15 GB - &#8358; 9,200</li>
+                                <li class="g-mb-20">27.5 GB - &#8358; 16.500</li>
                                 <li class="g-mb-20">.</li>
                                 <li class="g-mb-20">.</li>
                                 <li class="g-mb-20">.</li>
@@ -167,22 +177,14 @@
                             <h3 class="h4 text-uppercase g-color-white-opacity-0_7 g-letter-spacing-3 g-mb-20">MTN</h3>
                         </header>
                         <!-- End Article Header -->
-
                         <!-- Article Content -->
                         <div class="g-px-20 g-py-40">
                             <ul class="list-unstyled g-mb-40">
-                                <li class="g-mb-20">500 MiB - &#8358; 300</li>
-                                <li class="g-mb-20">1 GiB - &#8358; 550</li>
-                                <li class="g-mb-20">2 GiB - &#8358; 1,000</li>
-                                <li class="g-mb-20">5 GiB - &#8358; 2,500</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
+                                <li class="g-mb-20">250 MB - &#8358; 150</li>
+                                <li class="g-mb-20">500 MB- &#8358; 250</li>
+                                <li class="g-mb-20">1 GB - &#8358; 450</li>
+                                <li class="g-mb-20">2 GB - &#8358; 900</li>
+                                <li class="g-mb-20">5 GB - &#8358; 2250</li>
                             </ul>
                             <a class="btn text-uppercase g-rounded-50 g-font-size-12 g-font-weight-700 g-pa-15-30 g-mb-10"
                                href="#" style="background: #FFCA08;color: #fff;">Check Balance *461*2*3*2#</a>
@@ -217,22 +219,19 @@
                             <h3 class="h4 text-uppercase g-color-white-opacity-0_7 g-letter-spacing-3 g-mb-20">Glo</h3>
                         </header>
                         <!-- End Article Header -->
-
                         <!-- Article Content -->
                         <div class="g-px-20 g-py-40">
                             <ul class="list-unstyled g-mb-40">
-                                <li class="g-mb-20">Auto renewal - N30</li>
-                                <li class="g-mb-20">800 MiB/920 MiB - &#8358; 450</li>
-                                <li class="g-mb-20">1.6 GiB/1.84 GiB - &#8358; 850</li>
-                                <li class="g-mb-20">3.65 GiB/4.5 GiB - &#8358; 1,700</li>
-                                <li class="g-mb-20">5.75 GiB/7.2 GiB - &#8358; 2,150</li>
-                                <li class="g-mb-20">7 GiB/8.2 GiB - &#8358; 2,550</li>
-                                <li class="g-mb-20">10 GiB/12.5 GiB - &#8358; 3,400</li>
-                                <li class="g-mb-20">12.5 GiB/15.6 GiB - &#8358; 4,250</li>
-                                <li class="g-mb-20">20 GiB/25 GiB - &#8358; 6,800</li>
-                                <li class="g-mb-20">326 GiB/32.5 GiB - &#8358; 8,500</li>
-                                <li class="g-mb-20">42 GiB/52.5 GiB - &#8358; 12,750</li>
-                                <li class="g-mb-20">63 GiB/78.7 GiB - &#8358; 17,000</li>
+                                <li class="g-mb-20">900MB - &#8358; 410</li>
+                                <li class="g-mb-20">1.6 GB/1.8 GB - &#8358; 850</li>
+                                <li class="g-mb-20">3.65 GB/4.5 GB - &#8358; 1,700</li>
+                                <li class="g-mb-20">5.75 GB/7.2 GB - &#8358; 2,150</li>
+                                <li class="g-mb-20">7 GB/8.7 GB - &#8358; 2,550</li>
+                                <li class="g-mb-20">10 GB/12.5 GB - &#8358; 3,400</li>
+                                <li class="g-mb-20">12.5 GB/15.6 GB - &#8358; 4,250</li>
+                                <li class="g-mb-20">20 GB/25 GB - &#8358; 6,800</li>
+                                <li class="g-mb-20">26 GB/32.5 GB - &#8358; 8,500</li>
+                                <li class="g-mb-20">42 GB/52.5 GB - &#8358; 12,750</li>
                             </ul>
                             <a class="btn text-uppercase g-rounded-50 g-font-size-12 g-font-weight-700 g-pa-15-30 g-mb-10"
                                href="#" style="background: #45B649;color: #fff;">Check Balance *127*0#</a>
@@ -272,18 +271,16 @@
                         <!-- Article Content -->
                         <div class="g-px-20 g-py-40">
                             <ul class="list-unstyled g-mb-40">
-                                <li class="g-mb-20">1.5 GiB - &#8358; 980</li>
-                                <li class="g-mb-20">3.5 GiB - &#8358; 1,960</li>
-                                <li class="g-mb-20">5.5 GiB - &#8358; 2,450</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
-                                <li class="g-mb-20">.</li>
+                                <li class="g-mb-20">1.5 GB - &#8358; 850</li>
+                                <li class="g-mb-20">3.5 GB - &#8358; 1,800</li>
+                                <li class="g-mb-20">5.5 GB - &#8358; 2,125</li>
+                                <li class="g-mb-20">6.5 GB - &#8358; 2,550</li>
+                                <li class="g-mb-20">9.5 GB - &#8358; 3,400</li>
+                                <li class="g-mb-20">12 GB - &#8358; 4,250</li>
+                                <li class="g-mb-20">16 GB - &#8358; 7,000</li>
+                                <li class="g-mb-20">25 GB - &#8358; 8,500</li>
+                                <li class="g-mb-20">40 GB - &#8358; 12,750</li>
+                                <li class="g-mb-20">60 GB - &#8358; 17,000</li>
                             </ul>
                             <a class="btn text-uppercase g-rounded-50 g-font-size-12 g-font-weight-700 g-pa-15-30 g-mb-10"
                                href="#" style="background: #E20010;color: #fff;">CHECK DATA BALANCE *140#</a>
