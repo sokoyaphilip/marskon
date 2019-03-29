@@ -69,7 +69,7 @@
                 <div class="col-lg-6 align-self-center g-mb-100 g-mb-0--lg">
                     <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
                         <h2 class="h4 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">About
-                            MARS-KONNECT.com</h2>
+                            marskonnect.com</h2>
                     </header>
 
                     <p class="g-font-size-16 g-mb-30">A short description about Marskonnet goes here</p>

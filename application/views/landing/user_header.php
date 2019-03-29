@@ -78,7 +78,7 @@
                                 </a>
                             </li>
                             <li class="g-mb-10">
-                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard/wallet')?>">
+                                <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('dashboard')?>">
                                     <span class="d-flex align-self-center g-mr-12">
                                       <i class="fa fa-credit-card"></i>
                                     </span>
@@ -87,9 +87,9 @@
                             </li>
                             <li class="mb-0">
                                 <a class="media g-color-primary--hover g-py-5 g-px-20" href="<?= base_url('logout/');?>">
-                    <span class="d-flex align-self-center g-mr-12">
-          <i class="fa fa-sign-out"></i>
-        </span>
+                                    <span class="d-flex align-self-center g-mr-12">
+                                      <i class="fa fa-sign-out"></i>
+                                    </span>
                                     <span class="media-body align-self-center">Sign Out</span>
                                 </a>
                             </li>
