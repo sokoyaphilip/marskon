@@ -117,6 +117,7 @@
 <script src="<?=base_url("assets/js/components/hs.datatables.js")?>"></script>
 <script src="<?=base_url("assets/js/helpers/hs.file-attachments.js")?>"></script>
 <script src="<?=base_url("assets/js/components/hs.file-attachement.js")?>"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- JS Custom -->
 <script>
