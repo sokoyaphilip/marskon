@@ -435,7 +435,7 @@ class Dashboard extends CI_Controller {
                 if( $this->input->post('product_id') ){
                     // UPdate the user to process
                     $uid = $this->session->userdata('logged_id');
-                    $this->site->user('users', array('menbership_type' => 'process'), "(id = {$uid})");
+                    $this->site->user('users', array('membership_type' => 'process'), "(id = {$uid})");
                 }
                 $amount = $this->input->post('amount_paid');
                 $array['message'] = 'A user just claimed to pay N'.$amount .' Go to dashboard to confirm.';
