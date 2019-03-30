@@ -55,7 +55,7 @@
               </span>
                     </button>
                     <a href="<?= base_url(); ?>" class="navbar-brand d-flex">
-                        <img style="width: 40%;" src="<?= base_url('assets/img/logo/logo.png'); ?>" class="img-responsive"/>
+                        <img src="<?= base_url('assets/img/logo/logo.png'); ?>" class="img-responsive"/>
                     </a>
                     <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
                          id="navBar">
