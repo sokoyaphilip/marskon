@@ -426,7 +426,7 @@ class Dashboard extends CI_Controller {
             );
 
             $tid = cleanit($_POST['tid']);
-            $check = $this->site->run_sql("SELECT id, user_id FROM transaction_status WHERE tid = {$tid}")->row();
+            $check = $this->site->run_sql("SELECT id FROM transaction_status WHERE tid = {$tid}")->row();
             if($check){
                 $this->session->set_flashdata('error_msg', "We already receive your message.");
                 redirect( $_SERVER['HTTP_REFERER']);
@@ -434,7 +434,8 @@ class Dashboard extends CI_Controller {
             if( $this->site->insert_data('transaction_status', $data)){
                 if( $this->input->post('product_id') ){
                     // UPdate the user to process
-                    $this->site->user('users', array('menbership_type' => 'process'), "(id = {$check->user_id})");
+                    $uid = $this->session->userdata('logged_id');
+                    $this->site->user('users', array('menbership_type' => 'process'), "(id = {$uid})");
                 }
                 $amount = $this->input->post('amount_paid');
                 $array['message'] = 'A user just claimed to pay N'.$amount .' Go to dashboard to confirm.';
