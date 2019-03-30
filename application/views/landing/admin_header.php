@@ -29,7 +29,7 @@
             <div class="col-auto d-flex flex-nowrap u-header-logo-toggler g-py-12">
                 <a href="<?=base_url()?>"
                    class="navbar-brand d-flex align-self-center g-hidden-xs-down g-line-height-1 py-0 g-mt-5">
-                    <img style="width: 40% !important;" src="<?= base_url('assets/img/logo/logo.png'); ?>" class="img-responsive"/>
+                    <img style="width: 40% !important;" src="<?= base_url('assets/img/logo/logo.png'); ?>" class=""/>
                 </a>
                 <a class="js-side-nav u-header__nav-toggler d-flex align-self-center ml-auto" href="#"
                    data-hssm-class="u-side-nav--mini u-sidebar-navigation-v1--mini"
