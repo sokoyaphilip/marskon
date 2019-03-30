@@ -29,7 +29,7 @@
             <div class="col-auto d-flex flex-nowrap u-header-logo-toggler g-py-12">
                 <a href="<?=base_url()?>"
                    class="navbar-brand d-flex align-self-center g-hidden-xs-down g-line-height-1 py-0 g-mt-5">
-                    <img src="<?= base_url('assets/img/logo/logo-1.png');?>" style="width:100%"/>
+                    <img style="width: 50%;" src="<?= base_url('assets/img/marskonnect-logo.jpeg'); ?>" class="img-responsive"/>
                 </a>
                 <a class="js-side-nav u-header__nav-toggler d-flex align-self-center ml-auto" href="#"
                    data-hssm-class="u-side-nav--mini u-sidebar-navigation-v1--mini"

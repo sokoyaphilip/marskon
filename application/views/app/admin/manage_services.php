@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <label class="label" for="Discount">Discount should work for?</label>
                             <select class="form-control" name="discount_type" required>
-                                <option value="users" selected>All Buyer</option>
+                                <option value="user" selected>All Buyer</option>
                                 <option value="reseller"> Reseller </option>
                             </select>
                             <span class="text-danger">Leave as general, if no exception</span>
@@ -84,7 +84,7 @@
 
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="message">SEO (Search ENgine Optimization)</label> <span class="text-danger">The keywords you'll like the user to search for in getting this item</span>
+                            <label for="message">SEO (Search Engine Optimization)</label> <span class="text-danger">The keywords you'll like the user to search for in getting this item</span>
                             <textarea class="form-control text-area" rows="3" name="seo" placeholder="Search Engine Optimization"></textarea>
                         </div>
                     </div>

@@ -11,7 +11,7 @@
                         <br>to <b>konnect</b> you.
                     </h3>
                     <span class="d-block g-color-aqua g-font-size-16 mb-5">up to 90days usage</span>
-                        <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white" href="<?= base_url('auth/create/'); ?>" >Konnect Now</a>
+                        <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white" href="<?= base_url('auth/login/'); ?>" >Konnect Now</a>
                     </span>
                 </div>
             </div>
@@ -127,10 +127,10 @@
                                 <li class="g-mb-20">5.5 GB - &#8358; 3,800</li>
                                 <li class="g-mb-20">11.5 GB - &#8358; 7,600</li>
                                 <li class="g-mb-20">15 GB - &#8358; 9,500</li>
-                                <li class="g-mb-20">27.5 GB - &#8358; 17,500</li>
+                                <li class="g-mb-20">27.5 GB - &#8358; 17,100</li>
                             </ul>
                             <a class="btn text-uppercase g-rounded-50 g-font-size-12 g-font-weight-700 g-pa-15-30 g-mb-10"
-                               href="#" style="background:#006E53;color: #fff;">Check Balance *229*9#</a>
+                               href="#" style="background:#006E53;color: #fff;">Check Balance *228#</a>
                         </div>
                         <!-- End Article Content -->
                     </article>
@@ -169,7 +169,7 @@
                                 <li class="g-mb-20">500 MB- &#8358; 300</li>
                                 <li class="g-mb-20">1 GB - &#8358; 550</li>
                                 <li class="g-mb-20">2 GB - &#8358; 1000</li>
-                                <li class="g-mb-20">5 GB - &#8358; 2250</li>
+                                <li class="g-mb-20">5 GB - &#8358; 2500</li>
                             </ul>
                             <a class="btn text-uppercase g-rounded-50 g-font-size-12 g-font-weight-700 g-pa-15-30 g-mb-10"
                                href="#" style="background: #FFCA08;color: #fff;">Check Balance *461*2*3*2#</a>

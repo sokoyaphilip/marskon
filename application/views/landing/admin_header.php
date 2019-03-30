@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Site Administrator | MARS-KONNECT.com</title>
+    <title>Site Administrator | Marskonnect.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -29,7 +29,7 @@
             <div class="col-auto d-flex flex-nowrap u-header-logo-toggler g-py-12">
                 <a href="<?=base_url()?>"
                    class="navbar-brand d-flex align-self-center g-hidden-xs-down g-line-height-1 py-0 g-mt-5">
-                    <img src="<?=base_url("assets/img/logo/logo-1.png")?>" style="width:100%"/>
+                    <img style="width: 60%;" src="<?= base_url('assets/img/marskonnect-logo.jpeg'); ?>" class="img-responsive"/>
                 </a>
                 <a class="js-side-nav u-header__nav-toggler d-flex align-self-center ml-auto" href="#"
                    data-hssm-class="u-side-nav--mini u-sidebar-navigation-v1--mini"
@@ -52,7 +52,7 @@
                      src="<?=base_url("assets/img-temp/130x130/img1.jpg")?>" alt="Image description">
                 </span>
                             <span class="g-pos-rel g-top-2">
-        <span class="g-hidden-sm-down">MArs Administrator</span>
+        <span class="g-hidden-sm-down">Administrator</span>
                 <i class="fa fa-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                 </span>
                         </a>
@@ -103,13 +103,24 @@
                     class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item  <?php if($page == 'home') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="<?=base_url("admin/")?>">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-      <i class="fa fa-dashboard"></i>
-    </span>
-                            <span class="media-body align-self-center">Dashboard</span>
+                           href="<?=base_url()?>">
+                              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-dashboard"></i>
+                            </span>
+                            <span class="media-body align-self-center">Access Homepage</span>
                             <span class="d-flex align-self-center u-side-nav--control-icon">
-    </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item  <?php if($page == 'home') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?=base_url("admin/")?>">
+                              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-dashboard"></i>
+                            </span>
+                                <span class="media-body align-self-center">Dashboard</span>
+                                <span class="d-flex align-self-center u-side-nav--control-icon">
+                            </span>
                         </a>
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'users') echo 'has-active';?>">
@@ -124,10 +135,19 @@
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'approval') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?=base_url("admin/approval")?>">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-      <i class="fa fa-credit-card-alt"></i>
-    </span>
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-credit-card-alt"></i>
+                          </span>
                             <span class="media-body align-self-center">Wallet Funding</span>
+                        </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'member_upgrade') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?=base_url("admin/upgrade_membership_request/")?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-credit-card-alt"></i>
+                          </span>
+                            <span class="media-body align-self-center">Upgrade Member</span>
                         </a>
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'services') echo 'has-active';?>">

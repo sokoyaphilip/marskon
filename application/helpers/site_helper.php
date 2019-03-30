@@ -230,10 +230,12 @@ if (!function_exists('statusLabel')) {
                 break;
             case 'approved':
             case 'success':
+            case 'active':
                 return '<div class="alert alert-success">' . ucfirst( $status ). '</div>';
                 break;
             case 'returned':
             case 'cancelled':
+            case 'blocked':
                 return '<div class="alert alert-danger">' . ucfirst( $status ). '</div>';
                 break;
             default:

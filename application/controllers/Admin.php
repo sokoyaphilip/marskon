@@ -140,6 +140,38 @@ class Admin extends CI_Controller {
         }
     }
 
+    /*
+     * Upgrade membership
+     * */
+    public function upgrade_membership_request(){
+
+        if( $this->input->post() ){
+            $status = $this->input->post('action', true);
+            $id = $this->input->post('txn_id', true);
+            $user_id = $this->input->post('user_id', true);
+            if( $this->site->update('transactions', array('status' => $status ), array('id' => $id))){
+                if( $status == 'approved' ){
+                    // Update the user account
+                    $this->site->update('users', array('membership_type' => 'reseller'), array('id' => $user_id));
+                    $this->session->set_flashdata('success_msg', 'User has been upgraded to a Reseller Account.');
+                }else{
+                    $this->site->delete("(id = {$id})", 'transactions');
+                    $this->site->update('users', array('status' => 'block'), array('id' => $user_id));
+                    $this->session->set_flashdata('success_msg', 'User has been blocked and the transaction has been declined');
+                }
+            }else{
+                $this->session->set_flashdata('error_msg', 'There was an errror performing that action.');
+            }
+            redirect('admin/upgrade_membership_request/');
+        }else{
+            $page_data['page'] = 'member_upgrade';
+            $page_data['fundings'] = $this->site->run_sql("SELECT t.*, u.name name, u.phone, u.email FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
+        WHERE t.status = 'pending' AND t.product_id = 10")->result();
+            $page_data['title'] = "Funding Approval";
+            $this->load->view('app/admin/upgrade_membership_request', $page_data);
+        }
+    }
+
     function tocashprocess(){
 //        var_dump($_POST);
         $action = $this->input->post('action');
@@ -198,7 +230,6 @@ WHERE t.trans_id = {$tid}")->row();
     function user_action(){
         $action = $this->uri->segment(3);
         $user_id = $this->uri->segment(4);
-        die( $user_id);
         if( !$action || ! $user_id ){
             $this->session->set_flashdata('error_msg', 'Something is wrong somewhere...');
             redirect( $_SERVER['HTTP_REFERER']);

@@ -131,6 +131,11 @@
         // initialization of custom select
         // $('.js-select').selectpicker();
 
+        $('.select_action').on('change', function(){
+            window.location = $(this).val();
+        });
+
+
         // initialization of hamburger
         $.HSCore.helpers.HSHamburgers.init('.hamburger');
 

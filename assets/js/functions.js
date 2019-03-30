@@ -887,8 +887,9 @@ $(document).ready(function() {
                 });
         });
 
-
     });
+
+
 
     // Pin transfer
     // $('#pin_amount').on('change', function () {

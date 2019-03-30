@@ -205,44 +205,14 @@
                                 <td><?= $user->phone; ?></td>
                                 <td><?= ngn($user->wallet); ?></td>
                                 <td><?= neatDate($user->last_login) . ' ' . neatTime($user->last_login); ?></td>
-                                <td><?= ucfirst($user->status) ; ?></td>
+                                <td><?= statusLabel($user->status) ; ?></td>
                                 <td class="text-center">
-                                    <div class="g-pos-rel g-top-3 d-inline-block">
-                                        <a id="dropDown1Invoker"
-                                           class="u-link-v5 g-line-height-0 g-font-size-24 g-color-gray-light-v6 g-color-secondary--hover"
-                                           href="javascript:;" aria-controls="dropDown1" aria-haspopup="true"
-                                           aria-expanded="false" data-dropdown-event="click"
-                                           data-dropdown-target="#dropDown1">
-                                            <i class="fa fa-pencil-square"></i>
-                                        </a>
-                                        <div id="dropDown1"
-                                             class="u-shadow-v31 g-pos-abs g-right-0 g-z-index-2 g-bg-white u-dropdown--css-animation u-dropdown--hidden u-dropdown--reverse-y"
-                                             aria-labelledby="dropDown1Invoker">
-                                            <ul class="list-unstyled g-nowrap mb-0">
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="<?= base_url('admin/user_action/block/' . $user->id); ?>">
-                                                        <i class="fa fa-pencil g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Block
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="<?= base_url('admin/user_action/active/' . $user->id); ?>">
-                                                        <i class="fa fa-archive g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Unblock
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="d-flex align-items-center u-link-v5 g-bg-gray-light-v8--hover g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-px-25 g-py-14"
-                                                       href="<?= base_url('admin/user_action/delete/' . $user->id); ?>">
-                                                        <i class="fa fa-trash g-font-size-18 g-color-gray-light-v6 g-mr-10 g-mr-15--md"></i>
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <select name="action" class="form-control select_action">
+                                        <option>--Select An Action--</option>
+                                        <option value="<?= base_url('admin/user_action/active/' . $user->id); ?>">Make Active</option>
+                                        <option value="<?= base_url('admin/user_action/block/' . $user->id); ?>">Block User</option>
+                                        <option value="<?= base_url('admin/user_action/delete/' . $user->id); ?>">Delete User</option>
+                                    </select>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
