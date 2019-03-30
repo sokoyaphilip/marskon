@@ -582,10 +582,13 @@ $(document).ready(function() {
 
     // vaidate meter number
     $('#meter_number').on('blur', function () {
-        $('#processing').show();
+
+
         let meter_number = $(this).val();
-        let service = $('#plan').find(':selected').data('variation-name');
+
         if( meter_number !== '' && meter_number.length > 0 ){
+            $('#processing').show();
+            let service = $('#plan').find(':selected').data('variation-name');
             $.ajax({
                 url : base_url + 'ajax/verifyMeter/',
                 method: "POST",
