@@ -141,29 +141,30 @@ $this->load->view('landing/user_header');
                             <div class="row">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-6">
-                                    <div class="row g-mt-10">
-                                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Transfer Funds From Your Wallet
-                                            Complete The Form
-                                            Below</h4>
-                                        <div class="col-sm-12 g-mt-10">
-                                            <div class="form-group">
-                                                <label class="label" for="Amount">Amount</label>
-                                                <input type="text" class="form-control number" name="amount" id="transfer_amount" required placeholder="Enter Amount you want to send">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 g-mt-10">
-                                            <div class="form-group">
-                                                <div class="g-pos-rel">
-                                                    <label class="label" for="Payment method">Receiver Username</label>
-                                                    <input type="text" name="receiver" id="receiver" class="form-control" required placeholder="Receiver phone number">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 g-mt-5 py-3">
-                                            <button type="button" disabled class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Coming Soon...</button>
-                                            <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>
-                                        </div>
-                                    </div>
+                                    <div class="alert alert-info"><h4>Coming Soon</h4></div>
+<!--                                    <div class="row g-mt-10">-->
+<!--                                        <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">To Transfer Funds From Your Wallet-->
+<!--                                            Complete The Form-->
+<!--                                            Below</h4>-->
+<!--                                        <div class="col-sm-12 g-mt-10">-->
+<!--                                            <div class="form-group">-->
+<!--                                                <label class="label" for="Amount">Amount</label>-->
+<!--                                                <input type="text" class="form-control number" name="amount" id="transfer_amount" required placeholder="Enter Amount you want to send">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-sm-12 g-mt-10">-->
+<!--                                            <div class="form-group">-->
+<!--                                                <div class="g-pos-rel">-->
+<!--                                                    <label class="label" for="Payment method">Receiver Username</label>-->
+<!--                                                    <input type="text" name="receiver" id="receiver" class="form-control" required placeholder="Receiver phone number">-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-12 g-mt-5 py-3">-->
+<!--                                            <button type="button" disabled class="btn btn-md u-btn-primary g-width-160--md g-font-size-2">Coming Soon...</button>-->
+<!--                                            <button type="reset" class="btn btn-md u-btn-black g-width-160--md g-font-size-2">Reset</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </div>
