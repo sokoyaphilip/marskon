@@ -4,6 +4,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <h3 class="h3 text-center g-mb-20">Create Service</h3>
+            <?php $this->load->view('msg_view'); ?>
             <form method="POST" action="<?= base_url('admin/services/')?>">
                 <div class="row">
                     <div class="col-sm-6">
@@ -29,7 +30,7 @@
                             <label class="label" for="Discount">Service Discount</label>
                             <select class="form-control" name="discount" required>
                                 <option value="0" selected> 0% Discount </option>
-                                <?php for( $x = 1; $x <= 10;  $x++ ) : ?>
+                                <?php for( $x = 1; $x <= 20;  $x++ ) : ?>
                                     <option value="<?= $x;?>"><?= $x; ?>% Discount</option>
                                 <?php endfor; ?>
                             </select>
@@ -42,7 +43,7 @@
                         <div class="form-group">
                             <label class="label" for="Discount">Discount should work for?</label>
                             <select class="form-control" name="discount_type" required>
-                                <option value="user" selected>All Buyer</option>
+                                <option value="user" selected>Normal Buyer</option>
                                 <option value="reseller"> Reseller </option>
                             </select>
                             <span class="text-danger">Leave as general, if no exception</span>
