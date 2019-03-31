@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,24 +77,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="162" column="76" selection-start-line="162" selection-start-column="76" selection-end-line="162" selection-end-column="76" />
+            <state relative-caret-position="130">
+              <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
               <folding>
-                <element signature="n#approval#0;n#Admin#0;n#!!top" />
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
-              <caret line="218" column="55" selection-start-line="218" selection-start-column="55" selection-end-line="218" selection-end-column="55" />
+            <state relative-caret-position="167">
+              <caret line="204" column="138" selection-start-line="204" selection-start-column="138" selection-end-line="204" selection-end-column="138" />
             </state>
           </provider>
         </entry>
@@ -159,8 +157,8 @@
       <find>discount sh</find>
       <find>func</find>
       <find>all buy</find>
-      <find>approval</find>
       <find>approve</find>
+      <find>approval</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,7 +202,6 @@
         <option value="$PROJECT_DIR$/application/views/app/users/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/airtime_to_cash.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_users.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
@@ -220,6 +217,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
       </list>
     </option>
   </component>
@@ -425,12 +423,12 @@
       <workItem from="1553862211207" duration="602000" />
       <workItem from="1553889134758" duration="16639000" />
       <workItem from="1553978483111" duration="1843000" />
-      <workItem from="1554007634681" duration="34000" />
+      <workItem from="1554007634681" duration="605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202428000" />
+    <option name="totallyTimeSpent" value="202999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -811,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="218" column="55" selection-start-line="218" selection-start-column="55" selection-end-line="218" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_services.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -841,12 +832,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="162" column="76" selection-start-line="162" selection-start-column="76" selection-end-line="162" selection-end-column="76" />
+        <state relative-caret-position="130">
+          <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
           <folding>
-            <element signature="n#approval#0;n#Admin#0;n#!!top" />
             <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="204" column="138" selection-start-line="204" selection-start-column="138" selection-end-line="204" selection-end-column="138" />
         </state>
       </provider>
     </entry>

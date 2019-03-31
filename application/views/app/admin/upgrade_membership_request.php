@@ -202,7 +202,7 @@
                                         <?php
                                         $check = $this->site->run_sql("SELECT id FROM transaction_status WHERE tid = {$funding->trans_id}")->num_rows();
                                         if( $check > 0 ) : ?>
-                                            <span><a href="<?= base_url('admin/confirm_payment/?tid='. $funding->trans_id);?>">(Confirm Payment)</a></span>
+                                            <span><a href="<?= base_url('admin/confirm_payment/?tid='. $funding->trans_id. '&product_id=10');?>">(Confirm Payment)</a></span>
                                         <?php else : ?> (User has not uploaded proof)
                                         <?php endif;?>
                                     </td>
@@ -212,7 +212,7 @@
                                     <td><?= payment_id_replacer($funding->description); ?></td>
                                     <td><?= ngn($funding->amount)?></td>
                                     <td>
-                                        <form class="form-inline" method="post" action="<?= base_url('admin/approval')?>" id="<?= $funding->id?>">
+                                        <form class="form-inline" method="post" action="<?= base_url('admin/upgrade_membership_request')?>" id="<?= $funding->id?>">
                                             <div class="form-group mx-sm-3 mb-2">
                                                 <label for="action" class="sr-only">Action</label>
                                                 <select class="form-control-sm" name="action" required>
