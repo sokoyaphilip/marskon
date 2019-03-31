@@ -74,7 +74,7 @@
                                     <span class="d-flex align-self-center g-mr-12">
                                       <i class="fa fa-user"></i>
                                     </span>
-                                    <span class="media-body align-self-center">Fund My Wallet(<?= ngn($user->wallet); ?>)</span>
+                                    <span class="media-body align-self-center">Fund My Wallet</span>
                                 </a>
                             </li>
                             <li class="g-mb-10">
@@ -115,6 +115,9 @@
                             <span class="media-body align-self-center text-danger">Access Homepage</span>
                             <span class="d-flex align-self-center u-side-nav--control-icon"></span>
                         </a>
+                    </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item ">
+                        My Wallet  (<?= ngn($user->wallet); ?>)
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'home') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
