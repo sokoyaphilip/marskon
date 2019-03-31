@@ -71,7 +71,7 @@ $this->load->view('landing/user_header');
                         <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Below is the details of the account to transfer the e-coins to:</h4>
                         <div class="form-group">
                             <h3>Credit To: <br />
-                                Paxful: <span class="g-color-bluegray"><b>38rSZ7TcAAEbtkJDzmN3VxEapkZARRbsyy</b></span> Or<br />
+                                Paxful: <span class="g-color-bluegray"><br/><b>38rSZ7TcAAEbtkJDzmN3VxEapkZARRbsyy</b></span> Or<br />
                                 Blockchain: <span class="g-color-bluegray"><b>17ZPgjwtKqV8ND83bhR74cea7AogSn723f</b></span>
                             </h3>
                         </div>
