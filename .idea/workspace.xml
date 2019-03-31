@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/coin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/coin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
-    </list>
+    <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/users/coin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="87" selection-end-column="30" />
+            <state relative-caret-position="15">
+              <caret line="73" column="120" lean-forward="true" selection-start-line="73" selection-start-column="120" selection-end-line="73" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -444,12 +440,12 @@
       <workItem from="1553978483111" duration="1843000" />
       <workItem from="1554007634681" duration="2815000" />
       <workItem from="1554010552820" duration="1050000" />
-      <workItem from="1554021957146" duration="4092000" />
+      <workItem from="1554021957146" duration="4211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210351000" />
+    <option name="totallyTimeSpent" value="210470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -863,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/coin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="87" selection-end-column="30" />
+        <state relative-caret-position="15">
+          <caret line="73" column="120" lean-forward="true" selection-start-line="73" selection-start-column="120" selection-end-line="73" selection-end-column="120" />
         </state>
       </provider>
     </entry>
