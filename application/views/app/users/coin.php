@@ -70,19 +70,22 @@ $this->load->view('landing/user_header');
                     <div class="col-sm-12 g-mt-10">
                         <h4 class="h6 g-font-weight-600 g-color-black g-mb-20">Below is the details of the account to transfer the e-coins to:</h4>
                         <div class="form-group">
-                            <h3>Credit To: <span class="g-color-bluegray">ed1de241efwFSRe$wDer$ER</span></h3>
+                            <h3>Credit To: <br />
+                                Paxful: <span class="g-color-bluegray"><b>38rSZ7TcAAEbtkJDzmN3VxEapkZARRbsyy</b></span> Or<br />
+                                Blockchain: <span class="g-color-bluegray"><b>17ZPgjwtKqV8ND83bhR74cea7AogSn723f</b></span>
+                            </h3>
                         </div>
                     </div>
-                    <div class="col-sm-12 g-mt-10">
-                        <div class="form-group">
-                            <h3>Amount USD: <span class="g-color-red">$120</span></h3>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 g-mt-10">
-                        <div class="form-group">
-                            <h3>Amount Equivalent: <span class="g-color-red">&#8358;42,000</span></h3>
-                        </div>
-                    </div>
+<!--                    <div class="col-sm-12 g-mt-10">-->
+<!--                        <div class="form-group">-->
+<!--                            <h3>Amount USD: <span class="g-color-red">$120</span></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-12 g-mt-10">-->
+<!--                        <div class="form-group">-->
+<!--                            <h3>Amount Equivalent: <span class="g-color-red">&#8358;</span></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
