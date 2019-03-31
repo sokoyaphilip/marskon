@@ -160,7 +160,7 @@ class Admin extends CI_Controller {
                     $this->session->set_flashdata('success_msg', 'User has been blocked and the transaction has been declined');
                 }
             }else{
-                $this->session->set_flashdata('error_msg', 'There was an errror performing that action.');
+                $this->session->set_flashdata('error_msg', 'There was an error performing that action.');
             }
             redirect('admin/upgrade_membership_request/');
         }else{
