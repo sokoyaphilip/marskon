@@ -275,9 +275,26 @@ WHERE t.trans_id = {$tid}")->row();
      * */
 
     public function e_coins(){
-        $page_data['page'] = 'e_coins';
-        $page_data['users'] = $this->site->get_result('users');
-        $this->load->view('app/admin/e_coins', $page_data);
+
+        if( $this->input->get() ){
+            $id = cleanit($this->uri->segment(3));
+            $action = cleanit($this->uri->segment(4));
+            die( $id . ' ' . $action );
+            if( $this->site->update('transactions', array('status' => $action ), array('id' => $id)) ){
+                $this->session->set_flashdata('success_msg', "Request marked as  " . $action);
+            }else{
+                $this->session->set_flashdata('error_msg', "There was an error marking the request as  " . $action);
+            }
+            redirect($_SERVER['HTTP_REFERER']);
+        }else{
+            $page_data['page'] = 'e_coins';
+            $page_data['users'] = $this->site->get_result('users');
+            $page_data['transactions'] = $this->site->run_sql("SELECT u.name, u.phone, u.bank_name,u.account_name,u.account_number, t.id, t.trans_id, t.amount, t.description, t.date_initiated, t.status, b.wallet, b.wallet_address, b.pop FROM transactions t
+        LEFT JOIN bitcoin b ON (b.tid = t.id) 
+        LEFT JOIN users u ON (t.user_id = u.id)
+        WHERE t.status = 'pending' AND product_id = 9 ORDER BY t.id DESC")->result();
+            $this->load->view('app/admin/e_coins', $page_data);
+        }
     }
     /*
      * Plans

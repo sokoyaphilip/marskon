@@ -103,7 +103,7 @@
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">User</div>
+                                    <div class="d-flex align-self-center">POP</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -121,7 +121,7 @@
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Type</div>
+                                    <div class="d-flex align-self-center">User Detail</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -139,7 +139,25 @@
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Description</div>
+                                    <div class="d-flex align-self-center">Account Details</div>
+
+                                    <div class="d-flex align-self-center ml-auto">
+                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                          </span>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="media">
+                                    <div class="d-flex align-self-center">Wallet</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -175,7 +193,7 @@
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Image(proof of transaction)</div>
+                                    <div class="d-flex align-self-center">Description</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -213,30 +231,33 @@
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>13/12/09</td>
-                            <td>0907076732212</td>
-                            <td>
-                                <div class="d-inline-block">
-                          <span class="d-flex align-items-center justify-content-center u-tags-v1 g-brd-around g-bg-gray-light-v8 g-bg-gray-light-v8 g-font-size-default g-color-gray-dark-v6 g-rounded-50 g-py-4 g-px-15">
-                          <span class="u-badge-v2--md g-pos-stc g-transform-origin--top-left g-bg-lightred-v3 g-mr-8"></span>
-                          E-coin
-                          </span>
-                                </div>
-                            </td>
-                            <td>$150 worth of bitcoin sale</td>
-                            <td>&#8358; 56,200.00</td>
-                            <td>
-                                <img src="ole.jpg" alt="ecoin proof" class="img-responsive" />
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-info">Approve</button>
-                                    <button class="btn btn-danger">Decline</button>
-                                </div>
-                            </td>
-                        </tr>
+                            <?php foreach( $transactions as $transaction ) : ?>
+                                <tr>
+                                    <td><?= $transaction->trans_id; ?></td>
+                                    <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
+                                    <td>
+                                        <a target="_blank" href="<?= base_url('pop/' . $transaction->pop); ?>">
+                                            <img src="<?= base_url('pop/' . $transaction->pop); ?>" width="90">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <?= $transaction->name . ' / ' . $transaction->phone?> :
+
+                                    </td>
+                                    <td>
+                                        <?= $transaction->account_name .'/'.$transaction->account_number.'/'. $transaction->bank_name; ?>
+                                    </td>
+                                    <td><?= $transaction->amount; ?></td>
+                                    <td><?= $transaction->wallet ;?></td>
+                                    <td><?= payment_id_replacer($transaction->description); ?></td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-info" href="<?= base_url('admin/coin_process/' . $transaction->id .'/success/')?>">Approve</a>
+                                            <a class="btn btn-danger" href="<?= base_url('admin/coin_process/' . $transaction->id .'/declined/')?>">Approve</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach;?>
                         </tbody>
                     </table>
                 </div>
