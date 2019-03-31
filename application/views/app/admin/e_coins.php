@@ -157,24 +157,6 @@
                             </th>
                             <th>
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Amount</div>
-
-                                    <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="media">
                                     <div class="d-flex align-self-center">Description</div>
 
                                     <div class="d-flex align-self-center ml-auto">
@@ -229,7 +211,6 @@
                                     <td>
                                         <?= $transaction->account_name .'/'.$transaction->account_number.'/'. $transaction->bank_name; ?>
                                     </td>
-                                    <td><?= $transaction->amount; ?></td>
                                     <td><?= payment_id_replacer($transaction->description); ?></td>
                                     <td>
                                         <div class="btn-group">
