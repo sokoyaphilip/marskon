@@ -162,7 +162,7 @@
     });
 </script>
 <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
-<script src="<?= base_url('assets/js/functions.js'); ?>"></script>
+<script src="<?= $this->user->auto_version('assets/js/functions.js'); ?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>
