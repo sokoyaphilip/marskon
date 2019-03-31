@@ -71,7 +71,7 @@ class Dashboard extends CI_Controller {
         $page_data['product_id'] = 2;
         $membership_type = $page_data['user']->membership_type;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
-        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND s.discount_type = '{$membership_type}' ")->result();
+        LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND (s.discount_type = '{$membership_type}') ")->result();
         $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id}")->result();
         $this->load->view('app/users/buy_airtime', $page_data);
 

@@ -251,6 +251,8 @@ WHERE t.trans_id = {$tid}")->row();
         if( $action == 'delete' ){
             $this->site->delete("(user_id = {$user_id})", 'transactions');
             $this->site->delete("(id = {$user_id})", 'users');
+        }elseif( $action == 'block'){
+            $this->site->update('users', array('status' => $action, 'membership_type' => 'user'), "(id = {$user_id})");
         }else{
             $this->site->update('users', array('status' => $action), "(id = {$user_id})");
         }
