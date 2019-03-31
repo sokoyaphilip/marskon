@@ -390,7 +390,7 @@ class Dashboard extends CI_Controller {
         $id = $this->session->userdata('logged_id');
         $page_data['page'] = 'profile';
         $page_data['title'] = "Profile Setting";
-        $page_data['user'] = $this->site->run_sql("SELECT name, membership_type,phone, email,user_code,wallet, account_name, account_type, bank_name FROM users WHERE id = {$id}")->row();
+        $page_data['user'] = $this->site->run_sql("SELECT name, membership_type,phone, email,user_code,wallet, account_name,account_number account_type, bank_name FROM users WHERE id = {$id}")->row();
         $this->load->view('app/users/profile', $page_data);
     }
 
@@ -457,6 +457,7 @@ class Dashboard extends CI_Controller {
                 $this->form_validation->set_rules('name', 'Full name','trim|required|xss_clean|min_length[3]|max_length[50]');
                 $this->form_validation->set_rules('account_name', 'Account name','trim|required|xss_clean|max_length[50]');
                 $this->form_validation->set_rules('account_type', 'Account type','trim|required|xss_clean');
+                $this->form_validation->set_rules('account_number', 'Account Number','trim|required|xss_clean');
                 $this->form_validation->set_rules('bank_name', 'Bank name','trim|required|xss_clean');
                 if( $this->form_validation->run() == false ){
                     $this->session->set_flashdata('error_msg', validation_errors());
@@ -471,6 +472,7 @@ class Dashboard extends CI_Controller {
                         'name' => cleanit($_POST['name']),
                         'account_name' => cleanit($_POST['account_name']),
                         'account_type' => cleanit($_POST['account_type']),
+                        'account_number' => cleanit($_POST['account_number']),
                         'bank_name' => cleanit($_POST['bank_name']),
                     );
 

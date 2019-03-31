@@ -116,7 +116,7 @@ $this->load->view('landing/user_header');
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for="bank_name">Bank Name</label>
                                                 <select name="bank_name" class="form-control">
@@ -127,6 +127,13 @@ $this->load->view('landing/user_header');
                                                     <?php endforeach;
                                                     ?>
                                                 </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="account_type">Account Number</label>
+                                                <input type="text" name="account_number" placeholder="Your Account number" required value="<?= $user->account_number?>">
                                             </div>
                                         </div>
 
