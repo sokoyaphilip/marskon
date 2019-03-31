@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="281" column="39" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
+            <state relative-caret-position="130">
+              <caret line="276" column="27" selection-start-line="276" selection-start-column="20" selection-end-line="276" selection-end-column="27" />
               <folding>
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
               </folding>
@@ -66,8 +66,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="156" column="33" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
+            <state relative-caret-position="122">
+              <caret line="216" column="101" selection-start-line="216" selection-start-column="101" selection-end-line="216" selection-end-column="101" />
+              <caret line="217" column="103" selection-start-line="217" selection-start-column="103" selection-end-line="217" selection-end-column="103" />
               <folding>
                 <element signature="e#5219#6230#0#HTML" />
                 <element signature="e#6259#7267#0#HTML" />
@@ -182,8 +183,8 @@
       <find>access</find>
       <find>credit</find>
       <find>approva</find>
-      <find>e_c</find>
       <find>profile</find>
+      <find>e_c</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -450,12 +451,12 @@
       <workItem from="1553978483111" duration="1843000" />
       <workItem from="1554007634681" duration="2815000" />
       <workItem from="1554010552820" duration="1050000" />
-      <workItem from="1554021957146" duration="8805000" />
+      <workItem from="1554021957146" duration="8901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215064000" />
+    <option name="totallyTimeSpent" value="215160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -832,16 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="281" column="39" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
-          <folding>
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -871,10 +862,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="276" column="27" selection-start-line="276" selection-start-column="20" selection-end-line="276" selection-end-column="27" />
+          <folding>
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="156" column="33" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
+        <state relative-caret-position="122">
+          <caret line="216" column="101" selection-start-line="216" selection-start-column="101" selection-end-line="216" selection-end-column="101" />
+          <caret line="217" column="103" selection-start-line="217" selection-start-column="103" selection-end-line="217" selection-end-column="103" />
           <folding>
             <element signature="e#5219#6230#0#HTML" />
             <element signature="e#6259#7267#0#HTML" />

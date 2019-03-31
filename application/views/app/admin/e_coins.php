@@ -214,8 +214,8 @@
                                     <td><?= payment_id_replacer($transaction->description); ?></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a class="btn btn-info" href="<?= base_url('admin/coin_process/' . $transaction->id .'/success/')?>">Approve</a>
-                                            <a class="btn btn-danger" href="<?= base_url('admin/coin_process/' . $transaction->id .'/declined/')?>">Approve</a>
+                                            <a class="btn btn-info" href="<?= base_url('admin/e_coins/' . $transaction->id .'/success/')?>">Approve</a>
+                                            <a class="btn btn-danger" href="<?= base_url('admin/e_coins/' . $transaction->id .'/declined/')?>">Approve</a>
                                         </div>
                                     </td>
                                 </tr>
