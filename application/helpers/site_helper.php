@@ -340,18 +340,18 @@ function data_plan_code( $network , $plan, $number){
             switch ($plan) {
                 // 250MB - 150, 500MB - 250, 1GB -450,2GB -900, 5GB-2250
                 case '5GB':
-                    return "SMEE {$number} 5000 8025";
+                    return "SMEE {$number} 5000 5550";
                     break;
                 case '2GB':
-                    return "SMED {$number} 2000 8025";
+                    return "SMED {$number} 2000 5550";
                     break;
                 case '1GB':
-                    return "SMEC {$number} 1000 8025";
+                    return "SMEC {$number} 1000 5550";
                     break;
                 case "500MB":
-                    return "SMEB {$number} 500 8025";
+                    return "SMEB {$number} 500 5550";
                 case "250MB":
-                    return "SMEA {$number} 250 8025";
+                    return "SMEA {$number} 250 5550";
                 default :
                     return false;
                     break;
@@ -397,6 +397,7 @@ function data_plan_code( $network , $plan, $number){
                 case '25MB':
                     return " * 127*570*{$number} #";
                     break;
+;
                 case "1.84GB":
                     return " * 127*53*{$number} #";
                     break;
@@ -434,9 +435,52 @@ function data_plan_code( $network , $plan, $number){
                     return false;
                     break;
             }
-
+            break;
         case "airtel":
-            return false;
+            switch ( $plan ){
+                case '1.5GB':
+                    return "";
+                    break;
+                case '25MB':
+                    return " * 127*570*{$number} #";
+                    break;
+                case "1.84GB":
+                    return " * 127*53*{$number} #";
+                    break;
+                case "4.5GB":
+                    return " * 127*55*{$number} #";
+                    break;
+                case "7.2GB":
+                    return " * 127*58*{$number} #";
+                    break;
+                case "8.75GB":
+                    return " * 127*54*{$number} #";
+                    break;
+                case "12.5GB":
+                    return " * 127*59*{$number} #";
+                    break;
+                case "15.6GB":
+                    return " * 127*2*{$number} # ";
+                    break;
+                case "25GB":
+                    return " * 127*1*{$number} #";
+                    break;
+                case "32.5GB":
+                    return " * 127*11*{$number} #";
+                    break;
+                case "52.5GB":
+                    return " * 127*12*{$number} #";
+                    break;
+                case "62.5GB":
+                    return " * 127*13*{$number} #";
+                    break;
+                case "78.75GB":
+                    return " * 127*33*{$number} #";
+                    break;
+                default:
+                    return false;
+                    break;
+            }
             break;
         default:
             return false;
