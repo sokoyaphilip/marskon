@@ -277,10 +277,9 @@ WHERE t.trans_id = {$tid}")->row();
     public function e_coins(){
 
         if( $this->input->get() ){
-            $y = cleanit($this->uri->segment(2));
-            $id = cleanit($this->uri->segment(3));
-            $action = cleanit($this->uri->segment(4));
-            die( $id . ' ' . $action );
+
+            $id = cleanit($this->input->get('id'));
+            $action = cleanit($this->input->get('action'));
             if( $this->site->update('transactions', array('status' => $action ), array('id' => $id)) ){
                 $this->session->set_flashdata('success_msg', "Request marked as  " . $action);
             }else{

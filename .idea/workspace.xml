@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/admin/e_coins.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/e_coins.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="290" column="43" lean-forward="true" selection-start-line="290" selection-start-column="43" selection-end-line="290" selection-end-column="43" />
+            <state relative-caret-position="70">
+              <caret line="281" column="59" selection-start-line="281" selection-start-column="59" selection-end-line="281" selection-end-column="59" />
               <folding>
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
               </folding>
@@ -63,12 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
-              <caret line="216" column="101" selection-start-line="216" selection-start-column="101" selection-end-line="216" selection-end-column="101" />
-              <caret line="217" column="103" selection-start-line="217" selection-start-column="103" selection-end-line="217" selection-end-column="103" />
+              <caret line="217" column="105" selection-start-line="217" selection-start-column="105" selection-end-line="217" selection-end-column="105" />
               <folding>
                 <element signature="e#5219#6230#0#HTML" />
                 <element signature="e#6259#7267#0#HTML" />
@@ -130,7 +130,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -154,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>airtime</find>
       <find>mem</find>
       <find>login</find>
       <find>lo</find>
@@ -182,8 +181,9 @@
       <find>credit</find>
       <find>approva</find>
       <find>profile</find>
-      <find>e_c</find>
       <find>file</find>
+      <find>uploa</find>
+      <find>e_c</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -239,10 +239,10 @@
         <option value="$PROJECT_DIR$/application/views/landing/user_header.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/coin.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/profile.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/e_coins.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/e_coins.php" />
       </list>
     </option>
   </component>
@@ -450,12 +450,12 @@
       <workItem from="1553978483111" duration="1843000" />
       <workItem from="1554007634681" duration="2815000" />
       <workItem from="1554010552820" duration="1050000" />
-      <workItem from="1554021957146" duration="9236000" />
+      <workItem from="1554021957146" duration="9596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215495000" />
+    <option name="totallyTimeSpent" value="215855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -842,34 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="216" column="101" selection-start-line="216" selection-start-column="101" selection-end-line="216" selection-end-column="101" />
-          <caret line="217" column="103" selection-start-line="217" selection-start-column="103" selection-end-line="217" selection-end-column="103" />
-          <folding>
-            <element signature="e#5219#6230#0#HTML" />
-            <element signature="e#6259#7267#0#HTML" />
-            <element signature="e#7296#8297#0#HTML" />
-            <element signature="e#8326#9329#0#HTML" />
-            <element signature="e#9362#10370#0#HTML" />
-            <element signature="e#9356#10364#0#HTML" />
-            <element signature="e#12478#13490#0#HTML" />
-            <element signature="e#12765#13064#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="290" column="43" lean-forward="true" selection-start-line="290" selection-start-column="43" selection-end-line="290" selection-end-column="43" />
-          <folding>
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -884,6 +856,33 @@
             <element signature="n#electricity#0;n#Dashboard#0;n#!!top" />
             <element signature="n#redeem_cards#0;n#Dashboard#0;n#!!top" />
             <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="281" column="59" selection-start-line="281" selection-start-column="59" selection-end-line="281" selection-end-column="59" />
+          <folding>
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="217" column="105" selection-start-line="217" selection-start-column="105" selection-end-line="217" selection-end-column="105" />
+          <folding>
+            <element signature="e#5219#6230#0#HTML" />
+            <element signature="e#6259#7267#0#HTML" />
+            <element signature="e#7296#8297#0#HTML" />
+            <element signature="e#8326#9329#0#HTML" />
+            <element signature="e#9362#10370#0#HTML" />
+            <element signature="e#9356#10364#0#HTML" />
+            <element signature="e#12478#13490#0#HTML" />
+            <element signature="e#12765#13064#0#HTML" />
           </folding>
         </state>
       </provider>
