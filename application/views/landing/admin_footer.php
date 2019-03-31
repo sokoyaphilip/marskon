@@ -237,12 +237,11 @@
                         }
                     });
                 }else{
-                    swal("Oops! We're still good :) ");
+                    swal("Keep calm! We're still good :) ");
                 }
             });
         }
     });
 </script>
 </body>
-
 </html>
