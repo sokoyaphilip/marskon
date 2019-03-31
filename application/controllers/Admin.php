@@ -277,6 +277,7 @@ WHERE t.trans_id = {$tid}")->row();
     public function e_coins(){
 
         if( $this->input->get() ){
+            $y = cleanit($this->uri->segment(2));
             $id = cleanit($this->uri->segment(3));
             $action = cleanit($this->uri->segment(4));
             die( $id . ' ' . $action );

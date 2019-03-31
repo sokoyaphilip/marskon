@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/e_coins.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/e_coins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="276" column="27" selection-start-line="276" selection-start-column="20" selection-end-line="276" selection-end-column="27" />
+            <state relative-caret-position="40">
+              <caret line="279" column="46" selection-start-line="279" selection-start-column="46" selection-end-line="279" selection-end-column="46" />
               <folding>
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
               </folding>
@@ -63,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
@@ -239,11 +239,11 @@
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/views/landing/user_header.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/coin.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/profile.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/e_coins.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
       </list>
     </option>
   </component>
@@ -451,12 +451,12 @@
       <workItem from="1553978483111" duration="1843000" />
       <workItem from="1554007634681" duration="2815000" />
       <workItem from="1554010552820" duration="1050000" />
-      <workItem from="1554021957146" duration="8901000" />
+      <workItem from="1554021957146" duration="8987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215160000" />
+    <option name="totallyTimeSpent" value="215246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -862,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="276" column="27" selection-start-line="276" selection-start-column="20" selection-end-line="276" selection-end-column="27" />
-          <folding>
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/e_coins.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -886,6 +876,16 @@
             <element signature="e#9356#10364#0#HTML" />
             <element signature="e#12478#13490#0#HTML" />
             <element signature="e#12765#13064#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="279" column="46" selection-start-line="279" selection-start-column="46" selection-end-line="279" selection-end-column="46" />
+          <folding>
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
           </folding>
         </state>
       </provider>
