@@ -66,7 +66,7 @@
                                     <span class="d-flex align-self-center g-mr-12">
                                     <i class="fa fa-user"></i>
                                 </span>
-                                    <span class="media-body align-self-center"><?= ucwords($user->membership_type) . ' Account(' . $user->user_code .')' ; ?></span>
+                                    <small class="media-body align-self-center"><?= ucwords($user->membership_type) . '(' . $user->user_code .')' ; ?></small>
                                 </a>
                             </li>
                             <li class="g-mb-10">

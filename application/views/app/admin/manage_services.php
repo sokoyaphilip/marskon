@@ -301,3 +301,6 @@
     </div>
 </div>
 <?php $this->load->view('landing/admin_footer'); ?>
+<script>
+
+</script>

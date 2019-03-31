@@ -123,6 +123,44 @@
 <script>
     let base_url = "<?= base_url(); ?>"
 </script>
+<script>
+    $(document).ready(function(){
+        $('.table tbody').on('click', 'tr > td:last-child .delete-service', function (){
+            let id = $(this).data('id');
+            let _this = $(this);
+            swal({
+                title :'Are you sure?',
+                text : 'Every associated plans will also be deleted with this plan!',
+                icon: 'warning',
+                buttons : true,
+                dangerMode: true,
+            }).then((willDelete) => {
+                if (willDelete) {
+                    $.ajax({
+                        url : base_url + 'ajax/delete_service/',
+                        method: 'POST',
+                        cache: false,
+                        data : {'service_id' : id },
+                        success : function(response){
+                            if( response.status === 'success' ){
+                                sweet_alert('Success', 'Service and associated deleted successfully.', 'success')
+                                $(_this).parents("tr").remove();
+                            }else{
+                                sweet_alert('Error!', response.message, response.status );
+                            }
+
+                        },
+                        error : function (response) {
+                            console.log(response);
+                        }
+                    });
+                }else{
+                    swal("Oops! We're still good :) ");
+                }
+            });
+        }
+    });
+</script>
 <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
 <script src="<?= base_url('assets/js/functions.js'); ?>"></script>
 
