@@ -122,12 +122,26 @@ class Admin extends CI_Controller {
             $user_id = $this->input->post('user_id', true);
             if( $this->site->update('transactions', array('status' => $status ), array('id' => $id))){
                 // Update the balance
-                if( $status =='approved'){
+                $product = cleanit($_GET['product_id']);
+
+                if( $product && !empty($product) ){
+                    // Approve for membership users
+                    if( $status == 'approved' ){
+                        // Update the user account
+                        $this->site->update('users', array('membership_type' => 'reseller'), array('id' => $user_id));
+                        $this->session->set_flashdata('success_msg', 'User has been upgraded to a Reseller Account.');
+                    }else{
+                        $this->site->delete("(id = {$id})", 'transactions');
+                        $this->site->update('users', array('status' => 'block'), array('id' => $user_id));
+                        $this->session->set_flashdata('success_msg', 'User has been blocked and the transaction has been declined');
+                    }
+                }else{
                     $this->site->set_field('users', 'wallet', "wallet+{$amount}", "id={$user_id}");
                 }
+
                 $this->session->set_flashdata('success_msg', 'Action success');
             }else{
-                $this->session->set_flashdata('error_msg', 'There was an errror performing that action.');
+                $this->session->set_flashdata('error_msg', 'There was an error performing that action.');
             }
             redirect('admin/approval/');
         }else{

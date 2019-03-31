@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/english/english_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/english_lang.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,22 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7980">
-              <caret line="590" column="78" selection-start-line="590" selection-start-column="78" selection-end-line="590" selection-end-column="78" />
-              <folding>
-                <element signature="e#14#593#0" />
-                <element signature="e#2205#3947#0" />
-                <element signature="n#!!block;n#format_currency#0" />
-                <element signature="n#!!block;n#sweet_alert#0" />
-                <element signature="n#!!block;n#addCommas#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
+            <state relative-caret-position="40">
+              <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
               <folding>
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
               </folding>
@@ -89,11 +74,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
               <caret line="204" column="138" selection-start-line="204" selection-start-column="138" selection-end-line="204" selection-end-column="138" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/language/english/english_lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="209" selection-start-line="15" selection-start-column="209" selection-end-line="15" selection-end-column="209" />
             </state>
           </provider>
         </entry>
@@ -129,7 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sign</find>
       <find>upgra</find>
       <find>update</find>
       <find>upgrad</find>
@@ -159,6 +152,7 @@
       <find>all buy</find>
       <find>approve</find>
       <find>approval</find>
+      <find>gtb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,7 +179,6 @@
         <option value="$PROJECT_DIR$/application/controllers/Page.php" />
         <option value="$PROJECT_DIR$/application/views/landing/contact.php" />
         <option value="$PROJECT_DIR$/application/views/landing/create.php" />
-        <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/config/development/constants.php" />
         <option value="$PROJECT_DIR$/application/config/production/constants.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/confirm_payment.php" />
@@ -216,8 +209,9 @@
         <option value="$PROJECT_DIR$/application/views/landing/user_header.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
+        <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
       </list>
     </option>
   </component>
@@ -423,12 +417,12 @@
       <workItem from="1553862211207" duration="602000" />
       <workItem from="1553889134758" duration="16639000" />
       <workItem from="1553978483111" duration="1843000" />
-      <workItem from="1554007634681" duration="605000" />
+      <workItem from="1554007634681" duration="961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202999000" />
+    <option name="totallyTimeSpent" value="203355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -534,13 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="130" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/english_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -830,20 +817,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="115" column="28" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="28" />
-          <folding>
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="204" column="138" selection-start-line="204" selection-start-column="138" selection-end-line="204" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/english_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="209" selection-start-line="15" selection-start-column="209" selection-end-line="15" selection-end-column="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
+          <folding>
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
