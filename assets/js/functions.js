@@ -623,7 +623,7 @@ $(document).ready(function() {
             _this.removeAttr('disabled');
         }
         if( receiver == '' || gercharl_user_number( receiver ) ){
-            sweet_alert('Error!', 'Please enter the receiver number and must be Gecharl.com user.', 'error' );
+            sweet_alert('Error!', 'Please enter the receiver number and must be Marskonnect.com user.', 'error' );
             _this.removeAttr('disabled');
         }
         // Generate Transaction ID , message coming as Transaction ID
@@ -636,7 +636,7 @@ $(document).ready(function() {
                     console.log(payment_method);
                     if( payment_method == '1' ){ // Payment via Bank Transfer
                         sweet_alert('Info',
-                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}. <b>Ogechi Charles-Mbaeto</b><br />GTB: 0216290799 or Fidelity: 6070020271 or Keystone: 6021461466`,
+                            `Please pay to any of our account details, and use the transaction ID as reference ${response.message}. <b></b><br />`,
                             'info', false);
                     }else{ // 3
                         // @TODO: Payment via Pay stack
@@ -874,7 +874,7 @@ $(document).ready(function() {
     $('.upgrade').on('click', function(e){
         e.preventDefault();
         sweet_alert('Info',
-            `Please pay to any of our account details, and use the transaction ID as reference <b>Business Account Details</b><br />GTB: 828282828.`,
+            `Please pay to any of our account details, and use the transaction ID as reference <b>Business Account Details - IKEDINOBI STEPHEN C.</b><br />GTB: 0435282885 or First bank :3127180068 or Access bank:0048525565 or Uba bank  :2122638127 or Zenith bank:2116208648`,
             'info', false);
         $('.swal-button--confirm').on('click', function () {
             $.get( base_url + "ajax/upgrade_account/" )

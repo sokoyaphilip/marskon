@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/english_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/english_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/functions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +15,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="119" selection-start-line="119" selection-end-line="119" selection-end-column="75" />
+            <state relative-caret-position="145">
+              <caret line="875" column="27" selection-start-line="875" selection-start-column="27" selection-end-line="875" selection-end-column="27" />
+              <folding>
+                <element signature="e#14#593#0" />
+                <element signature="e#2205#3947#0" />
+                <element signature="e#22872#24754#0" />
+                <element signature="n#!!block;n#format_currency#0" />
+                <element signature="n#!!block;n#sweet_alert#0" />
+                <element signature="n#!!block;n#addCommas#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
@@ -123,7 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>upgra</find>
       <find>update</find>
       <find>upgrad</find>
       <find>payment_m</find>
@@ -151,8 +157,9 @@
       <find>func</find>
       <find>all buy</find>
       <find>approve</find>
-      <find>approval</find>
       <find>gtb</find>
+      <find>approval</find>
+      <find>828</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,7 +207,6 @@
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/views/landing/home.php" />
         <option value="$PROJECT_DIR$/application/views/landing/header.php" />
-        <option value="$PROJECT_DIR$/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/application/views/landing/user_footer.php" />
         <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/my_wallet.php" />
@@ -212,6 +218,7 @@
         <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
         <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/assets/js/functions.js" />
       </list>
     </option>
   </component>
@@ -417,12 +424,12 @@
       <workItem from="1553862211207" duration="602000" />
       <workItem from="1553889134758" duration="16639000" />
       <workItem from="1553978483111" duration="1843000" />
-      <workItem from="1554007634681" duration="961000" />
+      <workItem from="1554007634681" duration="1245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203355000" />
+    <option name="totallyTimeSpent" value="203639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -744,20 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7980">
-          <caret line="590" column="78" selection-start-line="590" selection-start-column="78" selection-end-line="590" selection-end-column="78" />
-          <folding>
-            <element signature="e#14#593#0" />
-            <element signature="e#2205#3947#0" />
-            <element signature="n#!!block;n#format_currency#0" />
-            <element signature="n#!!block;n#sweet_alert#0" />
-            <element signature="n#!!block;n#addCommas#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
@@ -837,6 +830,21 @@
           <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
           <folding>
             <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="875" column="27" selection-start-line="875" selection-start-column="27" selection-end-line="875" selection-end-column="27" />
+          <folding>
+            <element signature="e#14#593#0" />
+            <element signature="e#2205#3947#0" />
+            <element signature="e#22872#24754#0" />
+            <element signature="n#!!block;n#format_currency#0" />
+            <element signature="n#!!block;n#sweet_alert#0" />
+            <element signature="n#!!block;n#addCommas#0" />
           </folding>
         </state>
       </provider>
