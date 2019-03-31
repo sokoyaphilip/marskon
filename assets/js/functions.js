@@ -183,9 +183,9 @@ $(document).ready(function() {
                     }else{ // 3
                         let charge = 0;
                         if( amount < 2500 ){
-                            charge = (1.5 / 100 ) * amount;
+                            charge = (1.55 / 100 ) * amount;
                         }else if( amount >=  2500 ){
-                            charge = ((1.5 / 100) * amount ) + 100;
+                            charge = ((1.55 / 100) * amount ) + 100;
                         }
                         amount = (parseInt(amount) + parseInt(charge)) ;
                         let data = {'amount' : amount * 100, 'ref' : response.message};
