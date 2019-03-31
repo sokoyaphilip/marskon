@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/landing/admin_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/admin_footer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,11 +119,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="164" column="42" selection-start-line="164" selection-start-column="42" selection-end-line="164" selection-end-column="42" />
+            <state relative-caret-position="242">
+              <caret line="208" column="22" selection-start-line="208" selection-start-column="22" selection-end-line="208" selection-end-column="22" />
               <folding>
-                <element signature="e#6541#6757#0#HTML" />
-                <element signature="e#6810#7619#0#HTML" />
+                <element signature="e#9801#10041#0#HTML" />
+                <element signature="e#10098#10979#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -428,12 +427,12 @@
       <workItem from="1553862211207" duration="602000" />
       <workItem from="1553889134758" duration="16639000" />
       <workItem from="1553978483111" duration="1843000" />
-      <workItem from="1554007634681" duration="2476000" />
+      <workItem from="1554007634681" duration="2679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204870000" />
+    <option name="totallyTimeSpent" value="205073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -844,11 +843,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="164" column="42" selection-start-line="164" selection-start-column="42" selection-end-line="164" selection-end-column="42" />
+        <state relative-caret-position="242">
+          <caret line="208" column="22" selection-start-line="208" selection-start-column="22" selection-end-line="208" selection-end-column="22" />
           <folding>
-            <element signature="e#6541#6757#0#HTML" />
-            <element signature="e#6810#7619#0#HTML" />
+            <element signature="e#9801#10041#0#HTML" />
+            <element signature="e#10098#10979#0#HTML" />
           </folding>
         </state>
       </provider>
