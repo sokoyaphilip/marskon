@@ -307,11 +307,11 @@ class Dashboard extends CI_Controller {
                 $config = array(
                     'upload_path' => "./pop/",
                     'allowed_types' => "gif|jpg|png|jpeg",
-                    'overwrite' => TRUE,
+                    'overwrite' => FALSE,
                     'max_size' => "2048000",
                     'max_height' => "768",
                     'max_width' => "1024",
-                    'encrypt'   => true
+                    'encrypt'   => TRUE
                 );
                 $this->load->library('upload', $config);
                 if( $this->upload->do_upload('pop') ){
