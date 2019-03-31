@@ -206,7 +206,6 @@
 </script>
 <script>
     $(document).ready(function(){
-        alert('Here');
         $('.table tbody').on('click', 'tr > td:last-child .delete-service', function (){
             let id = $(this).data('id');
             let _this = $(this);
@@ -240,7 +239,7 @@
                     swal("Keep calm! We're still good :) ");
                 }
             });
-        }
+        });
     });
 </script>
 </body>
