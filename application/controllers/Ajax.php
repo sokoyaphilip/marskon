@@ -288,8 +288,7 @@ class Ajax extends CI_Controller {
                     'payment_method' => 2,
                     'date_initiated'    => get_now(),
                     'user_id'        => $user_id,
-                    'status'        => 'success',
-                    'membership_type' => 'user'
+                    'status'        => 'success'
                 );
                 $error = false; $ret = 'ORDER_COMPLETED';
                 foreach( $valid_numbers as $number ){
