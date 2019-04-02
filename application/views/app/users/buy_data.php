@@ -40,6 +40,19 @@ $this->load->view('landing/user_header');
                               placeholder="Enter Phone Number Here, Separate Numbers wth (,) for multiple recharge."></textarea>
                         </div>
 
+                        <?php if($user->membership_type =="reseller") : ?>
+                            <div class="alert alert-danger">
+                                <p>if 9mobile sme,kindly dial *229*9# on the number you want to order for and type the phone number see here</p>
+                            </div>
+                            <div class="col-md-12 g-mt-10">
+                                <div class="form-group">
+                                    <input type="text" name="sponsor" id="sponsor" class="number form-control">
+                                </div>
+                            </div>
+                        <?php endif ;?>
+
+
+
                         <div class="col-md-12 g-mt-5 py-3">
                             <button type="button" class="btn btn-md u-btn-primary g-width-160--md g-font-size-2 data-purchase" data-wallet="<?= $user->wallet;?>">Buy Data</button>
                         </div>

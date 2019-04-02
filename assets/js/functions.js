@@ -224,6 +224,7 @@ $(document).ready(function() {
         let recipents = $('#recipents').val();
         let network_id = $('#network').val();
         let plan_id = $('#network_plan').val();
+        let sponsor = $('#sponsor').val();
         let wallet = _btn.data('wallet');
 
         if( network_id === '') {
@@ -255,7 +256,8 @@ $(document).ready(function() {
                 'plan_id' : plan_id,
                 'recipents' : recipents,
                 'network_id' : network_id,
-                'wallet'   : wallet
+                'wallet'   : wallet,
+                'sponsor' : sponsor
             },
             success : function(response){
                 if( response.status === 'success' ){

@@ -233,6 +233,7 @@ class Ajax extends CI_Controller {
         $network_id = $this->input->post('network_id', true);
         $wallet = $this->input->post('wallet');
         $user_id = $this->session->userdata('user_id');
+        $sponsor = $this->input->post('sponsor');
 
         // check for number validity
         $message = $description_number =  $invalid_numbers = '';
@@ -279,6 +280,7 @@ class Ajax extends CI_Controller {
             }else{
                 $user_id = $this->session->userdata('logged_id');
                 $description = ucfirst( $network_row->network_name) . " data purchase for {$count} recipent ({$message})";
+                if( $sponsor ) $description .= " with sponsor number : " . $sponsor;
                 $transaction_id = $this->site->generate_code('transactions', 'trans_id');
                 $insert_data = array(
                     'amount'        => $total_amount,
@@ -287,42 +289,51 @@ class Ajax extends CI_Controller {
                     'trans_id'      => $transaction_id,
                     'payment_method' => 2,
                     'date_initiated'    => get_now(),
-                    'user_id'        => $user_id,
-                    'status'        => 'success'
+                    'user_id'        => $user_id
                 );
-                $error = false; $ret = 'ORDER_COMPLETED';
-                foreach( $valid_numbers as $number ){
-                    // fire the API
+                $user = $this->get_profile( $this->session->userdata('logged_id'));
 
-                    $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
-                    if( $ret !== false ){
-                        $sms_array = array( '08130316830' => $ret );
-                        $this->load->library('AfricaSMS', $sms_array);
-                        $this->africasms->sendsms();
+                $insert_data['status'] = ( $user->membership_type == "reseller" ) ? 'pending' : 'success';
+                $membership_type = ( $user->membership_type == "reseller" ) ? 'reseller' : 'user';
+                $error = false; $ret = 'ORDER_COMPLETED';
+
+                if( $membership_type == 'user' ){
+                    foreach( $valid_numbers as $number ){
+                        // fire the API
+
+                        $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number, $membership_type);
+                        if( $ret !== false ){
+                            $sms_array = array( '08130316830' => $ret );
+                            $this->load->library('AfricaSMS', $sms_array);
+                            $this->africasms->sendsms();
 //                        $array['message'] = $ret;
 //                        $this->callSMSAPI($array);
+                        }else{
+                            $error = true;
+                        }
+                    }
+                    if( $error ){
+                        $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks";
+                        $this->return_response( $response );
+                    }
+                    if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
+                        $this->site->insert_data('transactions', $insert_data);
+                        $response['status'] = 'success';
+                        $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed. <br />";
+                        if( $invalid_numbers != '' ){
+                            $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_row->network_name} number";
+                        }
+                        $response['message'] .= "<br />Your transaction ID: <b>{$transaction_id}</b><br/> Process more!";
+                        $this->return_response($response);
                     }else{
-                        $error = true;
+                        $response['message'] = "There was an error processing your order.";
+                        $this->return_response($response);
                     }
-                }
-
-                if( $error ){
-                    $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks";
-                    $this->return_response( $response );
-                }
-
-                if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
-                    $this->site->insert_data('transactions', $insert_data);
-                    $response['status'] = 'success';
-                    $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed. <br />";
-                    if( $invalid_numbers != '' ){
-                        $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_row->network_name} number";
-                    }
-                    $response['message'] .= "<br />Your transaction ID: <b>{$transaction_id}</b><br/> Process more!";
-                    $this->return_response($response);
                 }else{
-                    $response['message'] = "There was an error processing your order.";
-                    $this->return_response($response);
+                    $sms_array = array('message' => "A new data plan ({$plan_detail->name}) has just been initiated from {$user->name}.");
+                    $this->callAirtimeAPI($sms_array);
+                    $response['status'] = 'success';
+                    $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed, and you would be credited in less than 15Min <br />";
                 }
             }
         }else{
@@ -889,7 +900,7 @@ class Ajax extends CI_Controller {
                 'UserID' => CK_USER_ID,
                 'APIKey' => CK_KEY,
                 'Sender' => 'MarsData',
-                'Recipient' => '08070994845',
+                'Recipient' => '08130316830',
                 'Message' => $data['message']
 //                08151148607
             )
@@ -1076,6 +1087,9 @@ class Ajax extends CI_Controller {
         }else{
             $this->return_response( $response );
         }
+    }
+    function get_profile($id){
+        return $this->site->run_sql("SELECT phone, email, membership_type, name, user_code, wallet, account_type FROM users where id = {$id}")->row();
     }
 
     /* General FUnction
