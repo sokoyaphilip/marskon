@@ -33,7 +33,7 @@ class Ajax extends CI_Controller {
                 $response['message'] = 'Sorry! Incorrect login username or password';
                 $this->return_response( $response );
             }elseif ($user->status == "block"){
-                $response['message'] = 'Sorry! YOur account has been deactivated. Contact support for assistance.';
+                $response['message'] = 'Sorry! Your account has been deactivated. Contact support for assistance.';
                 $this->return_response( $response );
             }else{
                 $session_data = array('logged_in' => true, 'logged_id' => $user->id,

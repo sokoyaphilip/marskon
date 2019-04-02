@@ -20,7 +20,7 @@
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i
                                                     class="icon-finance-128 u-line-icon-pro"></i></span>
                                     </div>
-                                    <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
+                                    <input autocapitalize="off" autocomplete="off" class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
                                            type="text" name="name" id="signup-name" placeholder="Full name">
                                 </div>
                             </div>

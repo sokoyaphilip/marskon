@@ -103,7 +103,7 @@
                 <i class="fa fa-map-marker"></i>
               </span>
                         </div>
-                        <p class="mb-0">795 Street Address <br> Nigeria.</p>
+                        <p class="mb-0"><?= lang('address');?>.</p>
                     </div>
                     <div class="d-flex g-mb-20">
                         <div class="g-mr-10">
@@ -111,7 +111,7 @@
                 <i class="fa fa-phone"></i>
               </span>
                         </div>
-                        <p class="mb-0">080 1111 2222 333 <br> 080 1111 2222 444</p>
+                        <p class="mb-0"><?= lang('contact_no');?></p>
                     </div>
                     <div class="d-flex g-mb-20">
                         <div class="g-mr-10">

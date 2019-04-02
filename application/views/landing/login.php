@@ -20,7 +20,7 @@
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-white g-color-white"><i
                                                     class="icon-finance-067 u-line-icon-pro"></i></span>
                                     </div>
-                                    <input class="form-control g-color-black g-brd-left-none g-brd-white g-bg-transparent g-color-white g-placeholder-white g-pl-0 g-pr-15 g-py-13"
+                                    <input autocapitalize="off" autocomplete="off" class="form-control g-color-black g-brd-left-none g-brd-white g-bg-transparent g-color-white g-placeholder-white g-pl-0 g-pr-15 g-py-13"
                                            type="text" id="login-username" placeholder="Phone number or Email">
                                 </div>
                             </div>

@@ -311,7 +311,7 @@ class Dashboard extends CI_Controller {
                     'max_size' => "2048000",
                     'max_height' => "768",
                     'max_width' => "1024",
-                    'encrypt'   => TRUE
+                    'encrypt_name'   => TRUE
                 );
                 $this->load->library('upload', $config);
                 if( $this->upload->do_upload('pop') ){
