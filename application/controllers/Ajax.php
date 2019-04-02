@@ -297,7 +297,7 @@ class Ajax extends CI_Controller {
                 $membership_type = ( $user->membership_type == "reseller" ) ? 'reseller' : 'user';
                 $error = false; $ret = 'ORDER_COMPLETED';
 
-                if( $membership_type == 'user' ){
+                if( $membership_type == 'user' && $network_row->network_name !== '9mobile' ){
                     foreach( $valid_numbers as $number ){
                         // fire the API
 
