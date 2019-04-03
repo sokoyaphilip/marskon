@@ -213,6 +213,7 @@ $(document).ready(function() {
         }
     });
 
+
     // Data Purchase
     $('.data-purchase').on('click', function (e) {
         e.preventDefault();
@@ -676,6 +677,14 @@ $(document).ready(function() {
         // $('#smart_card_number').val('');
         let discount = $(this).data('discount');
         if( discount === undefined) discount = $(this).find(':selected').data('discount');
+
+        // Lets also use it for the SME data plan
+        if( service_id === 19 ){
+            $('#sme-data').css({'display' :'block'});
+        }else{
+            $('#sme-data').css({'display' :'none'});
+        }
+
         //
         $('.discount-notif').html('You will be receiving '+ discount +'% discount for this transaction.');
 
