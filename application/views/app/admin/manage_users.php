@@ -203,7 +203,16 @@
                                 </td>
                                 <td><?= $user->email;?></td>
                                 <td><?= $user->phone; ?></td>
-                                <td><?= ngn($user->wallet); ?></td>
+                                <td>&#8358;
+                                    <form action="<?= base_url('admin/update_wallet/'); ?>" method="post" id="<?= $user->id;?>">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control number" name="wallet" value="<?= $user->wallet;?>" >
+                                        </div>
+                                        <input type="hidden" name="user" value="<?= $user->name; ?>">
+                                        <input type="hidden" name="user_id" value="<?= $user->id; ?>">
+                                        <button type="button" data-wid="<?= $user->id; ?>" class="btn btn-sm btn-danger update-wallet">Update Wallet</button>
+                                    </form>
+                                </td>
                                 <td><?= neatDate($user->last_login) . ' ' . neatTime($user->last_login); ?></td>
                                 <td><?= statusLabel($user->status) ; ?></td>
                                 <td class="text-center">
