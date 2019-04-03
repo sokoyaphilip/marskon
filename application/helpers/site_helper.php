@@ -359,71 +359,33 @@ function data_plan_code( $network , $plan, $number, $is_reseller = false){
 
         case "9mobile":
         case "etisalat":
-            switch ( $is_reseller){
-                case true:
-                    switch ( $plan ) {
-                        case "1GB":
-                            return "*229*2*7*{$number}#";
-                            break;
-                        case "1.5GB":
-                            return "*229*2*25*{$number}#";
-                            break;
-                        case "2.5GB":
-                            return "*229*2*8*{$number}#";
-                            break;
-                        case "4GB":
-                            return "*229*2*35*{$number}#";
-                            break;
-                        case "5.5GB":
-                            return "*229*2*36*{$number}#";
-                            break;
-                        case "11.5GB":
-                            return "*229*2*5*{$number}#";
-                            break;
-                        case "15GB":
-                            return "*229*4*1*{$number}#";
-                            break;
-                        case "27.5GB":
-                            return "*229*4*3*{$number}#";
-                            break;
-                        default:
-                            return false;
-                            break;
-                    }
+            switch ( $plan ){
+                case '1GB':
+                    return " *229*2*7*{$number}#";
                     break;
-                case false:
-                    switch ( $plan ) {
-                        case "1GB":
-                            return "*229*9*0000*1000*{$number}*3#";
-                            break;
-                        case "1.5GB":
-                            return "*229*9*0000*1500*{$number}*3# ";
-                            break;
-                        case "2GB":
-                            return "*229*9*0000*2000*{$number}*3#";
-                            break;
-                        case "3GB":
-                            return "*229*9*0000*3000*{$number}*3#";
-                            break;
-                        case "4GB":
-                            return "*229*9*0000*4000*{$number}*3#";
-                            break;
-                        case "5GB":
-                            return "*229*9*0000*5000*{$number}*3#";
-                            break;
-                        case "10GB":
-                            return "*229*9*0000*10000*{$number}*3#";
-                            break;
-                        case "15GB":
-                            return "*229*9*0000*15000*{$number}*3#";
-                            break;
-                        case "20GB":
-                            return "**229*9*0000*20000*{$number}*3#";
-                            break;
-                        default:
-                            return false;
-                            break;
-                    }
+                case '1.5GB':
+                    return " *229*2*25*{$number}#";
+                    break;
+                case '2.5GB':
+                    return " *229*2*8*{$number}#";
+                    break;
+                case '4GB':
+                    return " *229*2*35*{$number}#";
+                    break;
+                case '6.5GB':
+                    return " *229*2*36*{$number}#";
+                    break;
+                case '11.5GB':
+                    return " *229*2*5*{$number}#";
+                    break;
+                case '15GB':
+                    return " *229*2*5*{$number}#";
+                    break;
+                case '27.5GB':
+                    return " *229*2*5*{$number}#";
+                    break;
+                default:
+                    return false;
                     break;
             }
             break;
@@ -483,7 +445,7 @@ function data_plan_code( $network , $plan, $number, $is_reseller = false){
                     return "*141*5*2*1*4*1*{$number}*4123#";
                     break;
                 case '5.5GB':
-                    return "*141*5*2*1*3*1*{$number}*4123#.";
+                    return "*141*5*2*1*3*1*{$number}*4123#";
                     break;
                 default:
                     return false;

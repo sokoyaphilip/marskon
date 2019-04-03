@@ -294,10 +294,9 @@ class Ajax extends CI_Controller {
                 $user = $this->get_profile( $this->session->userdata('logged_id'));
 
                 $insert_data['status'] = ( $user->membership_type == "reseller" ) ? 'pending' : 'success';
-                $membership_type = ( $user->membership_type == "reseller" ) ? 'reseller' : 'user';
                 $error = false; $ret = 'ORDER_COMPLETED';
 
-                if( $membership_type == 'reseller' && $network_row->network_name == '9mobile' ){
+                if( $network_id == 19 ){
                     $sms_array = array('message' => "A new data plan ({$plan_detail->name}) has just been initiated from {$user->name}.");
                     $this->callSMSAPI($sms_array);
                     $response['status'] = 'success';
@@ -307,7 +306,7 @@ class Ajax extends CI_Controller {
                     foreach( $valid_numbers as $number ){
                         // fire the API
 
-                        $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number, $membership_type);
+                        $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
                         if( $ret !== false ){
                             $sms_array = array( '08130316830' => $ret );
                             $this->load->library('AfricaSMS', $sms_array);

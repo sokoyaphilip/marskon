@@ -46,6 +46,7 @@ $this->load->view('landing/user_header');
                                     <p>if 9mobile sme,kindly dial *229*9# on the number you want to order for and type the phone number see here</p>
                                 </div>
                                 <div class="form-group">
+                                    <label for="sponsor">Enter Sponsor Number</label>
                                     <input type="text" name="sponsor" id="sponsor" class="number form-control">
                                 </div>
                             </div>
