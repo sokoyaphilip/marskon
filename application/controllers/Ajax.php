@@ -297,7 +297,13 @@ class Ajax extends CI_Controller {
                 $membership_type = ( $user->membership_type == "reseller" ) ? 'reseller' : 'user';
                 $error = false; $ret = 'ORDER_COMPLETED';
 
-                if( $membership_type == 'user' && $network_row->network_name !== '9mobile' ){
+                if( $membership_type == 'reseller' && $network_row->network_name == '9mobile' ){
+                    $sms_array = array('message' => "A new data plan ({$plan_detail->name}) has just been initiated from {$user->name}.");
+                    $this->callSMSAPI($sms_array);
+                    $response['status'] = 'success';
+                    $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed, and you would be credited in less than 15Min <br />";
+                }else{
+
                     foreach( $valid_numbers as $number ){
                         // fire the API
 
@@ -329,11 +335,7 @@ class Ajax extends CI_Controller {
                         $response['message'] = "There was an error processing your order.";
                         $this->return_response($response);
                     }
-                }else{
-                    $sms_array = array('message' => "A new data plan ({$plan_detail->name}) has just been initiated from {$user->name}.");
-                    $this->callAirtimeAPI($sms_array);
-                    $response['status'] = 'success';
-                    $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed, and you would be credited in less than 15Min <br />";
+
                 }
             }
         }else{
@@ -458,130 +460,6 @@ class Ajax extends CI_Controller {
 
     }
 
-    public function quick_airtime(){
-        $response = array('status' => 'error');
-        // LETS PROCESS
-
-        $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
-        $this->form_validation->set_rules('recipents', 'Recipents NUmber','trim|required|xss_clean');
-        if(  $this->form_validation->run() == FALSE ){
-            $response['message'] = validation_errors();
-            $this->return_response( $response );
-        }
-
-        $product_id = $this->input->post('product_id', true);
-        $amount = $this->input->post('amount', true);
-        $recipents = $this->input->post('recipents', true);
-        $network_name = $this->input->post('network_name', true);
-//        $wallet = $this->session->userdata('wallet');
-        $payment = $this->input->post('payment');
-        $discount = $this->input->post('discount');
-
-        if( empty( $recipents) ){
-            $response['message'] = "Error: receiver number can not be empty.";
-            $this->return_response( $response );
-        }
-
-        if( $amount < 100 ){
-            $response['message'] = "Error: amount can not be less than N100.";
-            $this->return_response( $response );
-        }
-        if( $amount > 5000 ){
-            $response['message'] = "Error: amount can not be less than N100.";
-            $this->return_response( $response );
-        }
-
-
-        // check number validity
-        $message = $description_number =  $invalid_numbers = '';
-        $valid_numbers = array();
-        $numbers = explode(',', $recipents );
-        foreach( $numbers as $key => $msisdn ){
-            $msisdn = preg_replace('/\D/', '', $msisdn);
-            $strlen = strlen( $msisdn );
-            switch ($strlen) {
-                case 11:
-                    $local_prefix = substr($msisdn, 0 , 4);
-                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_name])){
-                        array_push($valid_numbers, $msisdn);
-                        $message .= $msisdn. ',';
-                    }else{
-                        $invalid_numbers .= $msisdn;
-                    }
-                    break;
-                case 13:
-                    $local_prefix = substr($msisdn, 0 , 6);
-                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_name])){
-                        array_push($valid_numbers, $msisdn);
-                        $message .= $msisdn. ',';
-                    }else{
-                        $invalid_numbers .= $msisdn;
-                    }
-                    break;
-                default:
-                    $invalid_numbers .= $msisdn;
-                    break;
-
-            }
-        }
-        $count = count($valid_numbers);
-        if( $count ){
-            $total_amount = $count * $amount;
-            if( $discount > 1 ){
-                $total_amount = $total_amount - ( $discount/100 * $total_amount );
-            }
-
-//            if( $payment == 2 && $total_amount > $wallet ){
-//                $response['message'] = "You don't have enough fund to process this, please fund your wallet first.";
-//                $this->return_response($response);
-//            }
-            $description = ucfirst( $network_name) . " ({$amount}) airtime purchase for {$message} recipent";
-            $transaction_id = $this->site->generate_code('transactions', 'trans_id');
-            $insert_data = array(
-                'amount'        => $total_amount,
-                'product_id'    => $product_id,
-                'description'   => $description,
-                'trans_id'      => $transaction_id,
-                'payment_method' => $payment,
-                'date_initiated'    => get_now(),
-                'status'        => 'pending'
-            );
-
-            // Call Payment Channel
-
-            // Success from payment channel -> Call the API
-//            if( $payment == 2 ) {
-//                foreach( $valid_numbers as $number ){
-//                    $data = array(
-//                        'url'       => "https://www.nellobytesystems.com/APIBuyCableTV.asp",
-//                        'network'   => $network_name,
-//                        'amount'    => $amount,
-//                        'number'    => $number
-//                    );
-//                    $return = $this->callAirtimeAPI( $data );
-//                    if( $return['status'] == "ORDER_RECEIVED" || $return['status'] == "ORDER_COMPLETED" ){
-//                        $insert_data['orderid'] = $return['orderid'];
-//                        $insert_data['status'] = 'success';
-//                        $insert_data['payment_status'] = $return['status'];
-//                    }else{
-//                        $insert_data['status'] = 'pending';
-//                        $insert_data['orderid'] = $return['orderid'];
-//                        $insert_data['payment_status'] = $return['status'];
-//                    }
-//                }
-//            }
-            // else call the payment channel
-            $this->site->insert_data('transactions', $insert_data);
-            $response['status'] = 'success';
-            $response['message'] = $transaction_id;
-            $response['amount'] = $total_amount;
-            $this->return_response($response);
-        }else{
-            $response['message'] = "We couldn't process your order because the number(s) {$invalid_numbers} is/are not ". ucfirst($network_name). " numbers ";
-            $this->return_response($response);
-        }
-    }
-
 
     // TV cable
     public function tv_cable(){
@@ -612,6 +490,12 @@ class Ajax extends CI_Controller {
 
         // verify...
         $plan_detail = $this->site->run_sql("SELECT name, amount FROM plans WHERE id = {$plan_id}")->row();
+
+        if( $plan_detail->amount > $wallet ){
+            $response['message'] = "Oops! Sorry you don't have sufficient fund in your wallet to process the order, please fund your wallet first.";
+            $this->return_response( $response );
+        }
+
         $variation_detail = $this->site->run_sql("SELECT variation_name, variation_amount, api_source FROM api_variation WHERE plan_id = {$plan_id}")->row();
         $description = ucwords( $network_name) . " subscription plan for {$plan_detail->name} at N{$plan_detail->amount}.";
         $transaction_id = $this->site->generate_code('transactions', 'trans_id');
@@ -688,11 +572,6 @@ class Ajax extends CI_Controller {
         }
 
 
-        if( $plan_detail->amount > $wallet ){
-            $response['message'] = "Oops! Sorry you don't have sufficient fund in your wallet to process the order, please fund your wallet first.";
-            $this->return_response( $response );
-        }
-
     }
 
     // Electricity bills
@@ -724,6 +603,11 @@ class Ajax extends CI_Controller {
 
         // verify...
         $plan_detail = $this->site->run_sql("SELECT name FROM plans WHERE id = {$plan_id}")->row();
+
+        if( $plan_detail->amount > $wallet ){
+            $response['message'] = "Oops! Sorry you don't have sufficient fund in your wallet to process the order.";
+            $this->return_response( $response );
+        }
 
         $variation_detail = $this->site->run_sql("SELECT variation_name, api_source FROM api_variation WHERE plan_id = {$plan_id} LIMIT 1")->row();
 
@@ -806,11 +690,6 @@ class Ajax extends CI_Controller {
             $this->return_response( $response );
         }
 
-
-        if( $plan_detail->amount > $wallet ){
-            $response['message'] = "Oops! Sorry you don't have sufficient fund in your wallet to process the order.";
-            $this->return_response( $response );
-        }
 
     }
 

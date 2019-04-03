@@ -150,6 +150,17 @@
                             <span class="media-body align-self-center">Upgrade Member</span>
                         </a>
                     </li>
+
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'sme_request') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?=base_url("admin/sme_request/")?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-credit-card-alt"></i>
+                          </span>
+                            <span class="media-body align-self-center">SME Request</span>
+                        </a>
+                    </li>
+
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'services') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?=base_url("admin/services")?>">

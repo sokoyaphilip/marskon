@@ -186,6 +186,36 @@ class Admin extends CI_Controller {
         }
     }
 
+
+    public function sme_request(){
+        if( $this->input->post() ){
+            $status = $this->input->post('action', true);
+            $id = $this->input->post('txn_id', true);
+            $user_id = $this->input->post('user_id', true);
+            $wallet = $this->input->post('wallet', true);
+            $amount = $this->input->post('amount', true);
+            if( $wallet < $amount ){
+                $this->site->update('transactions', array('status' => 'fail' ), array('id' => $id));
+                $this->session->set_flashdata('error_msg', "The user is having low balance, so the request is uncompleted.");
+            }else{
+                $this->site->update('transactions', array('status' => $status ), array('id' => $id));
+                if( $status == "success" ){
+                    $this->site->set_field('users', 'wallet', "wallet-{$amount}", "id={$user_id}");
+                    $this->session->set_flashdata('success_msg', 'The transaction has been completed, and money has been deducted from the user.');
+                }else{
+                    $this->session->set_flashdata('success_msg', 'The transaction has been marked has declined.');
+                }
+            }
+            redirect('admin/sme_request/');
+        }else{
+            $page_data['page'] = 'sme_request';
+            $page_data['requests'] = $this->site->run_sql("SELECT t.*, u.phone, u.email, u.wallet FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
+        WHERE t.status = 'pending' AND t.product_id = 1 AND u.membership_type = 'reseller'")->result();
+            $page_data['title'] = "9mobile SME data request";
+            $this->load->view('app/admin/sme_request', $page_data);
+        }
+    }
+
     function tocashprocess(){
 //        var_dump($_POST);
         $action = $this->input->post('action');
