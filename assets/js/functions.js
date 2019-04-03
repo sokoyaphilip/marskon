@@ -679,6 +679,7 @@ $(document).ready(function() {
         if( discount === undefined) discount = $(this).find(':selected').data('discount');
 
         // Lets also use it for the SME data plan
+        service_id = parseInt(service_id);
         if( service_id === 19 ){
             $('#sme-data').css({'display' :'block'});
         }else{
