@@ -391,45 +391,38 @@ function data_plan_code( $network , $plan, $number, $is_reseller = false){
             break;
         case "glo":
             switch ( $plan ){
-                case '25MB':
-                    return " * 127*32*{$number} #";
+                case '800MB/920MB':
+                    return " *127*32*{$number}#";
                     break;
-                case '920MB':
-                    return " * 127*57*{$number} #";
+                case '1.6GB/1.84GB':
+                    return " *127*57*{$number}#";
                     break;
-;
-                case "1.84GB":
-                    return " * 127*53*{$number} #";
+                case "3.65GB/4.5GB":
+                    return " *127*53*{$number}#";
                     break;
-                case "4.5GB":
-                    return " * 127*55*{$number} #";
+                case "5.75GB/7.2GB":
+                    return " *127*55*{$number}#";
                     break;
-                case "7.2GB":
-                    return " * 127*58*{$number} #";
+                case "7GB/8.2GB":
+                    return " *127*58*{$number}#";
                     break;
-                case "8.75GB":
-                    return " * 127*54*{$number} #";
+                case "10GB/12.5GB":
+                    return " *127*54*{$number}#";
                     break;
-                case "12.5GB":
-                    return " * 127*59*{$number} #";
+                case "12.5GB/15.6GB":
+                    return " *127*59*{$number}#";
                     break;
-                case "15.6GB":
-                    return " * 127*2*{$number} # ";
+                case "20GB/25GB":
+                    return " *127*2*{$number}#";
                     break;
-                case "25GB":
-                    return " * 127*1*{$number} #";
+                case "26GB/32.5GB":
+                    return " *127*1*{$number}#";
                     break;
-                case "32.5GB":
-                    return " * 127*11*{$number} #";
+                case "42GB/52.5GB":
+                    return " *127*11*{$number}#";
                     break;
-                case "52.5GB":
-                    return " * 127*12*{$number} #";
-                    break;
-                case "62.5GB":
-                    return " * 127*13*{$number} #";
-                    break;
-                case "78.75GB":
-                    return " * 127*33*{$number} #";
+                case "63GB/78.7GB":
+                    return " *127*12*{$number}#";
                     break;
                 default:
                     return false;
