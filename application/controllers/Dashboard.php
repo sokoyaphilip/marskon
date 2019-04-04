@@ -365,10 +365,6 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'cards';
         $page_data['title'] = 'Pay your electricity bill';
         $page_data['user'] = $this->get_profile($id);
-        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name FROM products p 
-        LEFT JOIN services s ON (p.id = s.product_id) 
-        JOIN plans pl ON (pl.sid = s.id)
-        WHERE p.slug ='electricity-bill' ")->result();
         $this->load->view('app/users/redeem_card', $page_data);
     }
 

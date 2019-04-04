@@ -17,7 +17,7 @@ $this->load->view('landing/user_header');
                             <i class="icon-check g-font-size-25"></i>
                           </span>
                     <span class="media-body align-self-center">
-                            <strong>Welcome!</strong> We'll like to transact with you, please reach out to us via WhatsApp on >>> .
+                            <strong>Welcome!</strong> We'll like to transact with you, please reach out to us via WhatsApp on >>> .<a target="_blank" href="https://wa.me/2348130410092">https://wa.me/2348130410092</a>
                           </span>
                 </div>
             </div>
