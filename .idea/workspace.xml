@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/production/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +17,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+            <state relative-caret-position="102">
+              <caret line="197" column="100" lean-forward="true" selection-start-line="197" selection-start-column="100" selection-end-line="197" selection-end-column="100" />
+              <folding>
+                <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
+                <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+                <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
+                <element signature="n#user_action#0;n#Admin#0;n#!!top" />
+                <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
+                <element signature="n#e_coins#0;n#Admin#0;n#!!top" />
+                <element signature="n#plans#0;n#Admin#0;n#!!top" />
+                <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,17 +38,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/sme_request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2985">
+            <state relative-caret-position="392">
               <caret line="199" column="81" selection-start-line="199" selection-start-column="81" selection-end-line="199" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="310" column="61" selection-start-line="310" selection-start-column="61" selection-end-line="310" selection-end-column="61" />
+            <state relative-caret-position="220">
+              <caret line="301" column="63" selection-start-line="301" selection-start-column="63" selection-end-line="301" selection-end-column="63" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
                 <element signature="n#signup#0;n#Ajax#0;n#!!top" />
@@ -55,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+            <state relative-caret-position="147">
+              <caret line="91" column="67" selection-start-line="91" selection-start-column="67" selection-end-line="91" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -225,9 +235,9 @@
         <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/application/views/app/users/buy_data.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/config/production/constants.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
       </list>
     </option>
   </component>
@@ -443,12 +453,12 @@
       <workItem from="1554276253513" duration="3572000" />
       <workItem from="1554295424145" duration="7468000" />
       <workItem from="1554326079707" duration="594000" />
-      <workItem from="1554386081912" duration="27000" />
+      <workItem from="1554386081912" duration="1723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250638000" />
+    <option name="totallyTimeSpent" value="252334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -775,34 +785,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="197" column="24" selection-start-line="197" selection-start-column="24" selection-end-line="197" selection-end-column="24" />
-          <folding>
-            <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
-            <element signature="n#user_action#0;n#Admin#0;n#!!top" />
-            <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
-            <element signature="n#e_coins#0;n#Admin#0;n#!!top" />
-            <element signature="n#plans#0;n#Admin#0;n#!!top" />
-            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
           <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/sme_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="199" column="81" selection-start-line="199" selection-start-column="81" selection-end-line="199" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -865,10 +851,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="91" column="67" selection-start-line="91" selection-start-column="67" selection-end-line="91" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/sme_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="199" column="81" selection-start-line="199" selection-start-column="81" selection-end-line="199" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="197" column="100" lean-forward="true" selection-start-line="197" selection-start-column="100" selection-end-line="197" selection-end-column="100" />
+          <folding>
+            <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
+            <element signature="n#user_action#0;n#Admin#0;n#!!top" />
+            <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
+            <element signature="n#e_coins#0;n#Admin#0;n#!!top" />
+            <element signature="n#plans#0;n#Admin#0;n#!!top" />
+            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="310" column="61" selection-start-line="310" selection-start-column="61" selection-end-line="310" selection-end-column="61" />
+        <state relative-caret-position="220">
+          <caret line="301" column="63" selection-start-line="301" selection-start-column="63" selection-end-line="301" selection-end-column="63" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
             <element signature="n#signup#0;n#Ajax#0;n#!!top" />
@@ -881,13 +898,6 @@
             <element signature="n#verify_iuc_number#0;n#Ajax#0;n#!!top" />
             <element signature="n#_submitGet#0;n#Ajax#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
         </state>
       </provider>
     </entry>

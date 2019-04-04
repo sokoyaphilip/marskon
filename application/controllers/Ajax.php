@@ -297,10 +297,13 @@ class Ajax extends CI_Controller {
                 $error = false; $ret = 'ORDER_COMPLETED';
 
                 if( $network_id == 19 ){
-                    $sms_array = array('message' => "A new data plan ({$plan_detail->name}) has just been initiated from {$user->name}.");
+                    $insert_data['status'] = 'pending';
+                    $this->site->insert_data('transactions', $insert_data);
+                    $sms_array = array('message' => "A new SME data plan ({$plan_detail->name}) has just been initiated from {$user->name}");
                     $this->callSMSAPI($sms_array);
                     $response['status'] = 'success';
                     $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed, and you would be credited in less than 15Min <br />";
+                    $this->return_response( $response );
                 }else{
 
                     foreach( $valid_numbers as $number ){
@@ -322,6 +325,7 @@ class Ajax extends CI_Controller {
                         $this->return_response( $response );
                     }
                     if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
+                        $insert_data['status'] = 'success';
                         $this->site->insert_data('transactions', $insert_data);
                         $response['status'] = 'success';
                         $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed. <br />";
