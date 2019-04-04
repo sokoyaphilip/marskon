@@ -318,7 +318,7 @@ class Ajax extends CI_Controller {
                                 $error = true ;
                             }
                         }else{
-                            $error = false;
+                            $error = true;
                         }
                     }
                     if( $error ){
