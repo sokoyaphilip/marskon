@@ -308,20 +308,17 @@ class Ajax extends CI_Controller {
                     foreach( $valid_numbers as $number ){
                         // fire the API
                         $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
-                        if( $ret !== false ){
-                            if( $network_row->network_name == "mtn" ){
-                                $sms_array = array( '08130316830' => $ret );
-                                $this->load->library('AfricaSMS', $sms_array);
-                                $this->africasms->sendsms();
-                            }else{
-                                $sms_array = array('message' => "A new $network_row->network_name - ({$plan_detail->name}) has just been initiated " . $ret);
-                                $this->callSMSAPI($sms_array);
-                            }
 
-//                        $array['message'] = $ret;
-//                        $this->callSMSAPI($array);
+                        if( !$ret ){
+                            $url = "http://api.ebulksms.com:8080/sendsms.json";
+                            $username = "marskonnect1@gmail.com"; $apikey = "f5c53d79bbb868d93d2b89b1ddb796d5138d4bdb";
+                            $flash = 0; $sendername = "Marskonnect"; $messagetext = $ret; $recipients = "08070994845";
+                            $sms_response = $this->useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients);
+                            if( $sms_response == false ){
+                                $error = true ;
+                            }
                         }else{
-                            $error = true;
+                            $error = false;
                         }
                     }
                     if( $error ){
@@ -976,6 +973,47 @@ class Ajax extends CI_Controller {
     }
     function get_profile($id){
         return $this->site->run_sql("SELECT phone, email, membership_type, name, user_code, wallet, account_type FROM users where id = {$id}")->row();
+    }
+
+
+    function useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients) {
+        $gsm = array();
+        $country_code = '234';
+        $arr_recipient = explode(',', $recipients);
+        foreach ($arr_recipient as $recipient) {
+            $mobilenumber = trim($recipient);
+            if (substr($mobilenumber, 0, 1) == '0'){
+                $mobilenumber = $country_code . substr($mobilenumber, 1);
+            }
+            elseif (substr($mobilenumber, 0, 1) == '+'){
+                $mobilenumber = substr($mobilenumber, 1);
+            }
+            $generated_id = uniqid('int_', false);
+            $generated_id = substr($generated_id, 0, 30);
+            $gsm['gsm'][] = array('msidn' => $mobilenumber, 'msgid' => $generated_id);
+        }
+        $message = array(
+            'sender' => $sendername,
+            'messagetext' => $messagetext,
+            'flash' => "{$flash}",
+        );
+
+        $request = array('SMS' => array(
+            'auth' => array(
+                'username' => $username,
+                'apikey' => $apikey
+            ),
+            'message' => $message,
+            'recipients' => $gsm
+        ));
+        $json_data = json_encode($request);
+        if ($json_data) {
+            $response = doPostRequest($url, $json_data, array('Content-Type: application/json'));
+            $result = json_decode($response);
+            return $result->response->status;
+        } else {
+            return false;
+        }
     }
 
     /* General FUnction
