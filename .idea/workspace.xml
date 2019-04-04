@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/helpers/site_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/site_helper.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,17 +43,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="318" column="107" selection-start-line="318" selection-start-column="107" selection-end-line="318" selection-end-column="107" />
+            <state relative-caret-position="97">
+              <caret line="226" column="36" selection-start-line="226" selection-start-column="36" selection-end-line="226" selection-end-column="36" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
                 <element signature="n#signup#0;n#Ajax#0;n#!!top" />
                 <element signature="n#delete_plan#0;n#Ajax#0;n#!!top" />
                 <element signature="n#fetch_plans#0;n#Ajax#0;n#!!top" />
                 <element signature="n#fund_wallet#0;n#Ajax#0;n#!!top" />
+                <element signature="n#data_purchase#0;n#Ajax#0;n#!!top" />
                 <element signature="e#9343#10475#0#PHP" />
                 <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
                 <element signature="n#tv_cable#0;n#Ajax#0;n#!!top" />
@@ -78,15 +79,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="429" column="13" selection-start-line="429" selection-start-column="13" selection-end-line="429" selection-end-column="13" />
+            <state relative-caret-position="232">
+              <caret line="417" column="26" lean-forward="true" selection-start-line="417" selection-start-column="26" selection-end-line="417" selection-end-column="26" />
               <folding>
                 <element signature="e#9409#10121#0#PHP" />
                 <element signature="e#10155#11184#0#PHP" />
-                <element signature="e#11217#12759#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -157,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>approva</find>
       <find>profile</find>
       <find>file</find>
       <find>e_c</find>
@@ -187,6 +186,7 @@
       <find>car</find>
       <find>data_pu</find>
       <find>smsapi</find>
+      <find>glo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -244,8 +244,8 @@
         <option value="$PROJECT_DIR$/application/config/production/constants.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/redeem_card.php" />
-        <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
+        <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
       </list>
     </option>
   </component>
@@ -461,12 +461,12 @@
       <workItem from="1554276253513" duration="3572000" />
       <workItem from="1554295424145" duration="7468000" />
       <workItem from="1554326079707" duration="594000" />
-      <workItem from="1554386081912" duration="8748000" />
+      <workItem from="1554386081912" duration="9987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259359000" />
+    <option name="totallyTimeSpent" value="260598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -882,28 +882,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="429" column="13" selection-start-line="429" selection-start-column="13" selection-end-line="429" selection-end-column="13" />
-          <folding>
-            <element signature="e#9409#10121#0#PHP" />
-            <element signature="e#10155#11184#0#PHP" />
-            <element signature="e#11217#12759#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="318" column="107" selection-start-line="318" selection-start-column="107" selection-end-line="318" selection-end-column="107" />
+        <state relative-caret-position="97">
+          <caret line="226" column="36" selection-start-line="226" selection-start-column="36" selection-end-line="226" selection-end-column="36" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
             <element signature="n#signup#0;n#Ajax#0;n#!!top" />
             <element signature="n#delete_plan#0;n#Ajax#0;n#!!top" />
             <element signature="n#fetch_plans#0;n#Ajax#0;n#!!top" />
             <element signature="n#fund_wallet#0;n#Ajax#0;n#!!top" />
+            <element signature="n#data_purchase#0;n#Ajax#0;n#!!top" />
             <element signature="e#9343#10475#0#PHP" />
             <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
             <element signature="n#tv_cable#0;n#Ajax#0;n#!!top" />
@@ -914,6 +903,17 @@
             <element signature="n#verifyPaystack#0;n#Ajax#0;n#!!top" />
             <element signature="n#upgrade_account#0;n#Ajax#0;n#!!top" />
             <element signature="n#doPostRequest#0;n#Ajax#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="417" column="26" lean-forward="true" selection-start-line="417" selection-start-column="26" selection-end-line="417" selection-end-column="26" />
+          <folding>
+            <element signature="e#9409#10121#0#PHP" />
+            <element signature="e#10155#11184#0#PHP" />
           </folding>
         </state>
       </provider>

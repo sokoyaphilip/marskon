@@ -391,38 +391,44 @@ function data_plan_code( $network , $plan, $number, $is_reseller = false){
             break;
         case "glo":
             switch ( $plan ){
-                case '800MB/920MB':
+                case '25MB':
                     return " *127*32*{$number}#";
                     break;
-                case '1.6GB/1.84GB':
+                case '800MB/920MB':
                     return " *127*57*{$number}#";
                     break;
-                case "3.65GB/4.5GB":
+                case '1.6GB/1.84GB':
                     return " *127*53*{$number}#";
                     break;
-                case "5.75GB/7.2GB":
+                case "3.65GB/4.5GB":
                     return " *127*55*{$number}#";
                     break;
-                case "7GB/8.2GB":
+                case "5.75GB/7.2GB":
                     return " *127*58*{$number}#";
                     break;
-                case "10GB/12.5GB":
+                case "7GB/8.2GB":
                     return " *127*54*{$number}#";
                     break;
-                case "12.5GB/15.6GB":
+                case "10GB/12.5GB":
                     return " *127*59*{$number}#";
                     break;
-                case "20GB/25GB":
+                case "12.5GB/15.6GB":
                     return " *127*2*{$number}#";
                     break;
-                case "26GB/32.5GB":
+                case "20GB/25GB":
                     return " *127*1*{$number}#";
                     break;
-                case "42GB/52.5GB":
+                case "26GB/32.5GB":
                     return " *127*11*{$number}#";
                     break;
-                case "63GB/78.7GB":
+                case "42GB/52.5GB":
                     return " *127*12*{$number}#";
+                    break;
+                case "62.5GB":
+                    return " *127*13*{$number}#";
+                    break;
+                case "63GB/78.7GB":
+                    return " *127*33*{$number}#";
                     break;
                 default:
                     return false;
