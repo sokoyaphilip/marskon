@@ -299,8 +299,12 @@ class Ajax extends CI_Controller {
                 if( $network_id == 19 ){
                     $insert_data['status'] = 'pending';
                     $this->site->insert_data('transactions', $insert_data);
-                    $sms_array = array('message' => "A new SME data plan ({$plan_detail->name}) has just been initiated from {$user->name}");
-                    $this->callSMSAPI($sms_array);
+                    $smsmessage = "A new SME data plan ({$plan_detail->name}) has just been initiated from {$user->name}";
+                    $url = "http://api.ebulksms.com:8080/sendsms.json";
+                    $username = "marskonnect1@gmail.com"; $apikey = "f5c53d79bbb868d93d2b89b1ddb796d5138d4bdb";
+                    $flash = 0; $sendername = "Marskonnect"; $messagetext = $smsmessage; $recipients = "08130316830";
+                    $this->useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients);
+
                     $response['status'] = 'success';
                     $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed, and you would be credited in less than 15Min <br />";
                     $this->return_response( $response );

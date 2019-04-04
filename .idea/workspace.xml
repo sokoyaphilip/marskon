@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="314" column="116" selection-start-line="314" selection-start-column="116" selection-end-line="314" selection-end-column="116" />
+            <state relative-caret-position="127">
+              <caret line="300" column="75" lean-forward="true" selection-start-line="300" selection-start-column="75" selection-end-line="300" selection-end-column="75" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
                 <element signature="n#signup#0;n#Ajax#0;n#!!top" />
@@ -157,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>credit</find>
       <find>approva</find>
       <find>profile</find>
       <find>file</find>
@@ -187,6 +186,7 @@
       <find>data_pl</find>
       <find>car</find>
       <find>data_pu</find>
+      <find>smsapi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -461,12 +461,12 @@
       <workItem from="1554276253513" duration="3572000" />
       <workItem from="1554295424145" duration="7468000" />
       <workItem from="1554326079707" duration="594000" />
-      <workItem from="1554386081912" duration="8367000" />
+      <workItem from="1554386081912" duration="8563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258978000" />
+    <option name="totallyTimeSpent" value="259174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -896,8 +896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="314" column="116" selection-start-line="314" selection-start-column="116" selection-end-line="314" selection-end-column="116" />
+        <state relative-caret-position="127">
+          <caret line="300" column="75" lean-forward="true" selection-start-line="300" selection-start-column="75" selection-end-line="300" selection-end-column="75" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
             <element signature="n#signup#0;n#Ajax#0;n#!!top" />
