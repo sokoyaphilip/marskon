@@ -316,7 +316,8 @@ class Ajax extends CI_Controller {
                         if( $ret != false ){
                             $url = "http://api.ebulksms.com:8080/sendsms.json";
                             $username = "marskonnect1@gmail.com"; $apikey = "f5c53d79bbb868d93d2b89b1ddb796d5138d4bdb";
-                            $flash = 0; $sendername = "Marskonnect"; $messagetext = $ret; $recipients = "08130316830";
+                            $flash = 0; $sendername = ($network_row->network_name == 'mtn') ? 'MarsData' : "Marskonnect";
+                            $messagetext = $ret; $recipients = "08130316830";
                             $sms_response = $this->useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients);
                             if( $sms_response == false ){
                                 $error = true ;
