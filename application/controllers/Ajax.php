@@ -305,10 +305,8 @@ class Ajax extends CI_Controller {
                     $response['message'] = "Thanks for using " .lang('app_name').  ". Your {$plan_detail->name} data plan order for {$message} has been processed, and you would be credited in less than 15Min <br />";
                     $this->return_response( $response );
                 }else{
-
                     foreach( $valid_numbers as $number ){
                         // fire the API
-
                         $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
                         if( $ret !== false ){
                             if( $network_row->network_name == "mtn" ){
