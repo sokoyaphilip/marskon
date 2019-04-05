@@ -58,7 +58,7 @@ class Dashboard extends CI_Controller {
         $page_data['product_id'] = 1;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' AND s.discount_type = '{$membership_type}'")->result();
-        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 1 AND user_id = {$id}")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 1 AND user_id = {$id} ORDER BY id DESC")->result();
         $this->load->view('app/users/buy_data', $page_data);
     }
 
@@ -72,7 +72,7 @@ class Dashboard extends CI_Controller {
         $membership_type = $page_data['user']->membership_type;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND (s.discount_type = '{$membership_type}') ")->result();
-        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id}")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id} ORDER BY id DESC")->result();
         $this->load->view('app/users/buy_airtime', $page_data);
 
     }
@@ -309,7 +309,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'Buy and Sell Bitcoin, Paxful coin';
         $page_data['user'] = $this->get_profile($id);
         $page_data['transactions'] = $this->site->run_sql("SELECT t.id, t.trans_id, t.amount, t.description, t.date_initiated, t.status, b.wallet, b.wallet_address, b.pop FROM transactions t
-        LEFT JOIN bitcoin b ON (b.tid = t.id) WHERE t.product_id = 9 AND t.user_id = {$id}")->result();
+        LEFT JOIN bitcoin b ON (b.tid = t.id) WHERE t.product_id = 9 AND t.user_id = {$id} ORDER BY t.id DESC")->result();
         $this->load->view('app/users/coin', $page_data);
     }
 
@@ -400,7 +400,7 @@ class Dashboard extends CI_Controller {
         $page_data['title'] = 'My Wallet';
         $page_data['user'] = $this->get_profile( $id );
         $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
-        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE (product_id = 6 or product_id = 7) AND user_id = {$id}")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE (product_id = 6 or product_id = 7) AND user_id = {$id} ORDER BY id DESC")->result();
         $this->load->view('app/users/my_wallet', $page_data);
 
     }

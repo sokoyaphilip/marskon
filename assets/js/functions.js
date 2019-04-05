@@ -154,6 +154,7 @@ $(document).ready(function() {
         let amount = $('#pay_amount').val();
         let product_id = $('#product_id').val();
         let bank = $('#bank').val();
+        amount = parseInt(amount)
 
         if( amount < 500 || amount > 100000){
             sweet_alert('error', 'Amount field can not be empty, less than N500 and above N100,000', 'error');

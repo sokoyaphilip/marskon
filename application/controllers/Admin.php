@@ -147,7 +147,7 @@ class Admin extends CI_Controller {
         }else{
             $page_data['page'] = 'approval';
             $page_data['fundings'] = $this->site->run_sql("SELECT t.*, u.name name, u.phone, u.email FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
-        WHERE t.status = 'pending' AND t.product_id = 6")->result();
+        WHERE t.status = 'pending' AND t.product_id = 6 ORDER BY t.id DESC")->result();
             $page_data['airtime_to_cash_pin'] = $this->site->get_result('airtime_to_cash', 'id,tid,uid,incoming,outgoing,details,datetime,status,type', "(status = 'pending')");
             $page_data['title'] = "Funding Approval";
             $this->load->view('app/admin/wallet_funding', $page_data);
@@ -210,7 +210,7 @@ class Admin extends CI_Controller {
         }else{
             $page_data['page'] = 'sme_request';
             $page_data['requests'] = $this->site->run_sql("SELECT t.*, u.phone, u.email, u.wallet FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
-        WHERE t.status = 'pending' AND t.product_id = 1 AND u.membership_type = 'reseller'")->result();
+        WHERE t.status = 'pending' AND t.product_id = 1 AND u.membership_type = 'reseller' ORDER BY t.id DESC")->result();
             $page_data['title'] = "9mobile SME data request";
             $this->load->view('app/admin/sme_request', $page_data);
         }
