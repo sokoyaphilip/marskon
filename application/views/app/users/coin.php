@@ -78,7 +78,7 @@ $this->load->view('landing/user_header');
                     </div>
                     <div class="col-sm-12 g-mt-10">
                         <div class="form-group">
-                            <h3>Current Buying Rate: <span class="g-color-red">$350</span></h3>
+                            <h3>Current Buying Rate: <span class="g-color-red">350</span></h3>
                         </div>
                     </div>
                     <div class="col-sm-12 g-mt-10">
