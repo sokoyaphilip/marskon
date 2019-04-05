@@ -626,7 +626,6 @@ $(document).ready(function() {
         if( amount != '' ){
             $('.current_rate').html("&#8358;" + (amount * rate));
         }
-        console.log( amount + ' and ' + rate);
     });
 
 

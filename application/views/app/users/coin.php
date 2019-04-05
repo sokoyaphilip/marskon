@@ -83,7 +83,7 @@ $this->load->view('landing/user_header');
                     </div>
                     <div class="col-sm-12 g-mt-10">
                         <div class="form-group">
-                            <h3>Amount Equivalent: <span class="g-color-red current_rate" data-rate="350"></span></h3>
+                            <h3>Amount Equivalent: <span class="g-color-red current_rate" data-rate="350">&#8358;1</span></h3>
                         </div>
                     </div>
                 </div>
