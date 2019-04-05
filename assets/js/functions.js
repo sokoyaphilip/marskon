@@ -592,7 +592,6 @@ $(document).ready(function() {
     // vaidate meter number
     $('#meter_number').on('blur', function () {
 
-
         let meter_number = $(this).val();
 
         if( meter_number !== '' && meter_number.length > 0 ){
@@ -618,6 +617,19 @@ $(document).ready(function() {
             });
         }
     });
+
+    $('.btc_amount').on('blur', function(){
+        let amount = $(this).val();
+        let rate = $('.current_rate').data('rate');
+        amount = parseInt(amount);
+        rate = parseInt(rate);
+        if( amount != '' ){
+            $('.current_rate').html("&#8358;" + (amount * rate));
+        }
+        console.log( amount + ' and ' + rate);
+    });
+
+
 
     $('.transfer-now').on('click', function (e) {
         e.preventDefault();

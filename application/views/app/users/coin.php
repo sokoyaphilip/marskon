@@ -55,7 +55,7 @@ $this->load->view('landing/user_header');
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="wallet address">Amount</label>
-                                <input type="text" name="amount" id="amount" class="form-control number" required placeholder="Amount sent in dollar($)">
+                                <input type="text" name="amount" id="amount" class="form-control number btc_amount" required placeholder="Amount sent in dollar($)">
                             </div>
                         </div>
                         <div class="col-md-12 g-mt-5 py-3">
@@ -76,16 +76,16 @@ $this->load->view('landing/user_header');
                             </h3>
                         </div>
                     </div>
-<!--                    <div class="col-sm-12 g-mt-10">-->
-<!--                        <div class="form-group">-->
-<!--                            <h3>Amount USD: <span class="g-color-red">$120</span></h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-sm-12 g-mt-10">-->
-<!--                        <div class="form-group">-->
-<!--                            <h3>Amount Equivalent: <span class="g-color-red">&#8358;</span></h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="col-sm-12 g-mt-10">
+                        <div class="form-group">
+                            <h3>Current Buying Rate: <span class="g-color-red">$350</span></h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 g-mt-10">
+                        <div class="form-group">
+                            <h3>Amount Equivalent: <span class="g-color-red current_rate" data-rate="350"></span></h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
