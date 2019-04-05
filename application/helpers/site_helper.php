@@ -372,6 +372,9 @@ function data_plan_code( $network , $plan, $number, $is_reseller = false){
                 case '4GB':
                     return " *229*2*35*{$number}#";
                     break;
+                case '5.5GB':
+                    return " *229*2*36*{$number}#";
+                    break;
                 case '6.5GB':
                     return " *229*2*36*{$number}#";
                     break;
@@ -379,10 +382,10 @@ function data_plan_code( $network , $plan, $number, $is_reseller = false){
                     return " *229*2*5*{$number}#";
                     break;
                 case '15GB':
-                    return " *229*2*5*{$number}#";
+                    return " *229*2*4*1*{$number}#";
                     break;
                 case '27.5GB':
-                    return " *229*2*5*{$number}#";
+                    return " *229*4*3*{$number}#";
                     break;
                 default:
                     return false;
