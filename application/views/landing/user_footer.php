@@ -20,6 +20,9 @@
                 <li class="list-inline-item">
                     <a class="g-color-gray-dark-v6 g-color-secondary--hover" href="#">Contact Us</a>
                 </li>
+                <li class="list-inline-item">
+                    <a class="g-color-gray-dark-v6 g-color-secondary--hover" href="tel:08169254598">Made with <i class="fa fa-heart"></i></a>
+                </li>
             </ul>
         </div>
         <!-- End Footer Nav -->
@@ -55,6 +58,7 @@
         <div class="col-md-4 text-center text-md-right">
             <small class="d-block g-font-size-default">&copy; <?= date('Y'); ?> <?= lang('app_name'); ?> All Rights Reserved.</small>
         </div>
+
         <!-- End Footer Copyrights -->
     </div>
 </footer>
@@ -189,7 +193,9 @@
             ]
         });
 
-        $.HSCore.components.HSDatatables.init('.js-datatable');
+        $.HSCore.components.HSDatatables.init('.js-datatable',{
+            "order": [[ 0, "desc" ]]
+        });
         // initialization of HSDropdown component
         $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {dropdownHideOnScroll: false});
         $.HSCore.helpers.HSFileAttachments.init();

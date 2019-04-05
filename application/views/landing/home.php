@@ -11,7 +11,13 @@
                         <br>to <b>konnect</b> you.
                     </h3>
                     <span class="d-block g-color-aqua g-font-size-16 mb-5">up to 90days usage</span>
-                        <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white" href="<?= base_url('auth/login/'); ?>" >Konnect Now</a>
+                        <a class="btn btn-primary js-fancybox u-link-v5 g-rounded-100 btn-lg g-color-white"
+                           <?php if($this->session->userdata('logged_in')) : ?>
+                                href="<?= base_url('dashboard/'); ?>" >Konnect Now
+                            <?php else : ?>
+                                href="<?= base_url('auth/login/'); ?>" >Konnect Now
+                            <?php endif; ?>
+                        </a>
                     </span>
                 </div>
             </div>

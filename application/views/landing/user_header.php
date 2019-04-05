@@ -47,12 +47,12 @@
                            data-dropdown-duration="300"
                            data-dropdown-animation-in="fadeIn" data-dropdown-animation-out="fadeOut">
                 <span class="g-pos-rel">
-        <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-secondary g-mr-5"></span>
+                <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-secondary g-mr-5"></span>
                 <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
                      src="<?= base_url('assets/img-temp/130x130/img1.jpg');?>" alt="Image description">
                 </span>
-                            <span class="g-pos-rel g-top-2">
-        <span class="g-hidden-sm-down"><?= ucwords($user->name); ?></span>
+                 <span class="g-pos-rel g-top-2">
+                    <span class="g-hidden-sm-down"><?= ucwords($user->name); ?></span>
                 <i class="fa fa-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                 </span>
                         </a>
@@ -155,33 +155,33 @@
                         </a>
                     </li>
 
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'subscription') echo 'has-active';?>">
-                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="<?= base_url('dashboard/subscription/')?>">
-                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-                          <i class="fa fa-desktop"></i>
-                          </span>
-                            <span class="media-body align-self-center">TV Subscription</span>
-                        </a>
-                    </li>
+<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item --><?php //if($page == 'subscription') echo 'has-active';?><!--">-->
+<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
+<!--                           href="--><?//= base_url('dashboard/subscription/')?><!--">-->
+<!--                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
+<!--                          <i class="fa fa-desktop"></i>-->
+<!--                          </span>-->
+<!--                            <span class="media-body align-self-center">TV Subscription</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!---->
+<!--                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item --><?php //if($page == 'electricity') echo 'has-active';?><!--">-->
+<!--                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"-->
+<!--                           href="--><?//= base_url('dashboard/electricity/')?><!--">-->
+<!--                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">-->
+<!--                          <i class="fa fa-bolt" style="font-size:28px;"></i>-->
+<!--                          </span>-->
+<!--                            <span class="media-body align-self-center">Electric Bills</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
 
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'subscription') echo 'has-active';?>">
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'airtime') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('dashboard/airtime_to_cash/')?>">
                           <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
                           <i class="fa fa-money"></i>
                           </span>
                             <span class="media-body align-self-center">Airtime To Cash</span>
-                        </a>
-                    </li>
-
-                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'electricity') echo 'has-active';?>">
-                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
-                           href="<?= base_url('dashboard/electricity/')?>">
-                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-                          <i class="fa fa-bolt" style="font-size:28px;"></i>
-                          </span>
-                            <span class="media-body align-self-center">Electric Bills</span>
                         </a>
                     </li>
 

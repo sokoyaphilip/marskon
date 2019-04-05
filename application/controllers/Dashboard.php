@@ -81,6 +81,13 @@ class Dashboard extends CI_Controller {
     // Airtime to cash
     public function airtime_to_cash(){
         $id = $this->session->userdata('logged_id');
+        if( isset($_GET['proceed']) && $_GET['proceed'] == true && $this->session->userdata('atc_message') ){
+            //Send SMS
+            $array['message'] = $this->session->userdata('atc_message');
+            $this->callSMSAPI($array);
+            $this->session->unset_userdata('atc_message');
+        }
+        $page_data['row'] ='';
         $page_data['page'] = 'airtime2cash';
         $page_data['title'] = "Airtime to Cash";
         $page_data['user'] = $this->get_profile( $id );
@@ -192,7 +199,7 @@ class Dashboard extends CI_Controller {
                 }
                 $outgoing = $this->input->post('amount_earned');
                 $transaction_id = $this->site->generate_code('transactions', 'trans_id');
-                $description = ucwords($network) . " N" . $amount . ucwords( $airtime_pin_network ). " airtime transfer to gecharl.com";
+                $description = ucwords($network) . " N" . $amount . ucwords( $airtime_pin_network ). " airtime transfer to marskonnect.com";
                 $transaction_table = array(
                     'product_id' => $product_id,
                     'trans_id'      => $transaction_id,
@@ -206,6 +213,7 @@ class Dashboard extends CI_Controller {
 
                 try {
                     $details = ucwords($network) . " N" . $amount . ucwords( $airtime_pin_network ). " network transfer to gecharl.com";
+                    $details .= $this->switch_network_details( $network ,$amount);
                     $receiver = $this->input->post('receiver', true);
                     if( $receiver ) $details .= " : {$receiver}";
                     $this->db->trans_start();
@@ -221,17 +229,17 @@ class Dashboard extends CI_Controller {
                         'details' => $details,
                         'datetime'  => get_now()
                     );
-                    $this->site->insert_data('airtime_to_cash', $airtime_to_cash_table);
+                    $aid = $this->site->insert_data('airtime_to_cash', $airtime_to_cash_table);
                     $this->db->trans_complete();
                     if ($this->db->trans_status() === FALSE){
                         $this->session->set_flashdata('error_msg', 'There was an error processing your request.');
                         $this->db->trans_rollback();
                     }else{
                         // Send a message to the admin??
-                        $array['message'] = 'A user just sent '.$amount .' airtime to you via transfer, Go to dashboard to confirm.';
-                        $this->callSMSAPI($array);
                         $this->db->trans_commit();
-                        $this->session->set_flashdata('success_msg', 'Your request has been received and its under processed.');
+                        $this->session->set_userdata('atc_message', "A user just sent ' . $network .'('.$amount .') airtime to you via transfer, Go to dashboard to confirm.");
+                        redirect('dashboard/preview/?a=' . $aid );
+                        $this->session->set_flashdata('success_msg', 'Your request has been received and its under process.');
                     }
 
                 } catch (Exception $e) {
@@ -241,6 +249,23 @@ class Dashboard extends CI_Controller {
                 break;
 
                 break;
+        }
+    }
+
+    public function preview(){
+        $id = cleanit($this->input->get('a', true));
+        if( !$id ) redirect( $_SERVER['HTTP_REFERER']);
+        $row = $this->site->run_sql("SELECT * FROM airtime_to_cash WHERE id = {$id} ")->row();
+        if( !$row ){
+            $this->session->set_flashdata('error_msg', "Looks like you are looking for something else :( ");
+            redirect($_SERVER['HTTP_REFERER']);
+        }else{
+            $id = $this->session->userdata('logged_id');
+            $page_data['page'] = 'airtime2cash';
+            $page_data['title'] = "Airtime to Cash";
+            $page_data['user'] = $this->get_profile( $id );
+            $page_data['row'] = $row;
+            $this->load->view('app/users/airtime_to_cash', $page_data);
         }
     }
 

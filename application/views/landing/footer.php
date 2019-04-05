@@ -60,7 +60,8 @@
                     <h2 class="u-heading-v2__title h6 text-uppercase mb-0">About Us</h2>
                 </div>
 
-                <p>About Marskonnet content here.........</p>
+                <p>We sell mobile data of all networks. Convert your airtime to cash💵. Buy/sell of crypto currency 💱. Load Amazon,iTunes n others gift cards.
+                    Renew cable subscription. Pay NEPA bill. Pm us now and enjoy convenience - <a href="tel:08130410092">08130410092</a></p>
             </div>
             <div class="col-md-4 g-mb-40 g-mb-0--lg">
                 <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
@@ -148,9 +149,6 @@
                             <span>|</span>
                         </li>
                         <li class="list-inline-item">
-                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Terms of Use</a>
-                        </li>
-                        <li class="list-inline-item">
                             <span>|</span>
                         </li>
                         <li class="list-inline-item">
@@ -162,6 +160,10 @@
                         <li class="list-inline-item">
                             <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Support</a>
                         </li>
+                        <li class="list-inline-item">
+                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="tel:08169254598">Made with <i class="fa fa-heart"></i></a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
