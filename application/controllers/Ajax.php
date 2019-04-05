@@ -197,6 +197,10 @@ class Ajax extends CI_Controller {
                 $charge = (1.55 / 100 ) * $amount + 100;
             }
         }
+        if( $payment_method == 1 && $amount < 5000 ){
+            $response['message'] = 'You can only fund N5000 above with bank transfer.';
+            $this->return_response( $response);
+        }
         $insert_data = array(
             'amount'        => $amount,
             'charge'        => $charge,
