@@ -164,6 +164,12 @@ $(document).ready(function() {
         if( payment_method === '' ){
             sweet_alert('Error!', 'Please select a payment method.', 'error' );
             _this.removeAttr('disabled');
+            return false;
+        }
+        if ( payment_method === 1 && amount < 5000 ){
+            sweet_alert('Error!', 'You can only transfer N5000 above with bank transfer.', 'error' );
+            _this.removeAttr('disabled');
+            return false;
         }
         // Generate Transaction ID , message coming as Transaction ID
         $.ajax({
