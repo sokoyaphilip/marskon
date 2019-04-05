@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/users/my_wallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/my_wallet.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
+            <state relative-caret-position="142">
+              <caret line="205" column="39" lean-forward="true" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="39" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
                 <element signature="n#signup#0;n#Ajax#0;n#!!top" />
@@ -59,11 +59,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/landing/footer.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/app/users/my_wallet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="162" column="24" selection-start-line="162" selection-start-column="24" selection-end-line="164" selection-end-column="29" />
+            <state relative-caret-position="195">
+              <caret line="385" column="64" selection-start-line="385" selection-start-column="64" selection-end-line="385" selection-end-column="64" />
+              <folding>
+                <element signature="e#15318#15340#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,7 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>callSMS</find>
       <find>data_p</find>
       <find>_sum</find>
       <find>set_f</find>
@@ -187,6 +189,7 @@
       <find>blur</find>
       <find>btc</find>
       <find>pay-no</find>
+      <find>fund_wallet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,7 +219,6 @@
         <option value="$PROJECT_DIR$/application/views/app/users/tv_sub.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/payment_made.php" />
         <option value="$PROJECT_DIR$/application/views/landing/header.php" />
-        <option value="$PROJECT_DIR$/application/views/app/users/my_wallet.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
         <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_services.php" />
@@ -246,6 +248,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
+        <option value="$PROJECT_DIR$/application/views/app/users/my_wallet.php" />
       </list>
     </option>
   </component>
@@ -462,12 +465,12 @@
       <workItem from="1554295424145" duration="7468000" />
       <workItem from="1554326079707" duration="594000" />
       <workItem from="1554386081912" duration="12362000" />
-      <workItem from="1554449206545" duration="9130000" />
+      <workItem from="1554449206545" duration="9419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272103000" />
+    <option name="totallyTimeSpent" value="272392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -741,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/users/my_wallet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="129" column="128" selection-start-line="129" selection-start-column="128" selection-end-line="129" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -886,8 +882,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
+        <state relative-caret-position="142">
+          <caret line="205" column="39" lean-forward="true" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="39" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
             <element signature="n#signup#0;n#Ajax#0;n#!!top" />
@@ -904,6 +900,16 @@
             <element signature="n#upgrade_account#0;n#Ajax#0;n#!!top" />
             <element signature="n#useJSON#0;n#Ajax#0;n#!!top" />
             <element signature="n#doPostRequest#0;n#Ajax#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/users/my_wallet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="385" column="64" selection-start-line="385" selection-start-column="64" selection-end-line="385" selection-end-column="64" />
+          <folding>
+            <element signature="e#15318#15340#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

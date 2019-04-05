@@ -243,6 +243,23 @@ $this->load->view('landing/user_header');
                             <tr>
                                 <th>
                                     <div class="media">
+                                        <div class="d-flex align-self-center" style="display: none;">ID</div>
+                                        <div class="d-flex align-self-center ml-auto">
+                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-up"></i>
+                                            </a>
+                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                                               href="javascript:;">
+                                              <i class="fa fa-angle-down"></i>
+                                            </a>
+                                          </span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="media">
                                         <div class="d-flex align-self-center">Transaction ID</div>
                                         <div class="d-flex align-self-center ml-auto">
                                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -366,6 +383,7 @@ $this->load->view('landing/user_header');
                             <tbody>
                                 <?php foreach( $transactions as $transaction ) :?>
                                     <tr>
+                                        <td style="display: none;"><?= $trasaction->id; ?></td>
                                         <td>
                                             <?= $transaction->trans_id; ?>
                                             <?php if( $transaction->payment_method == 1 && $transaction->status == 'pending') : ?>
