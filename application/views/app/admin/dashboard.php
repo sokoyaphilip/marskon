@@ -292,7 +292,7 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Transaction ID</div>
+                                <div class="d-flex align-self-center">User ID</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -404,7 +404,7 @@
                     <tbody>
                     <?php foreach( $transactions as $transaction ): ?>
                         <tr>
-                            <td style="display: none;"><?= $transaction->id; ?></td>
+
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
