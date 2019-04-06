@@ -180,7 +180,7 @@ class Admin extends CI_Controller {
         }else{
             $page_data['page'] = 'member_upgrade';
             $page_data['fundings'] = $this->site->run_sql("SELECT t.*, u.name name, u.phone, u.email FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
-        WHERE t.status = 'pending' AND t.product_id = 10")->result();
+        WHERE t.status = 'pending' AND t.product_id = 10 ORDER BY t.id DESC")->result();
             $page_data['title'] = "Funding Approval";
             $this->load->view('app/admin/upgrade_membership_request', $page_data);
         }

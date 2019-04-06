@@ -241,9 +241,9 @@ $this->load->view('landing/user_header');
                                data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                             <thead>
                             <tr>
-                                <th>
+                                <th style="display: none;">
                                     <div class="media">
-                                        <div class="d-flex align-self-center" style="display: none;">ID</div>
+                                        <div class="d-flex align-self-center" >ID</div>
                                         <div class="d-flex align-self-center ml-auto">
                                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
                                             <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
