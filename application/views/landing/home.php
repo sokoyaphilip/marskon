@@ -15,7 +15,7 @@
                            <?php if($this->session->userdata('logged_in')) : ?>
                                 href="<?= base_url('dashboard/'); ?>" >Konnect Now
                             <?php else : ?>
-                                href="<?= base_url('auth/login/'); ?>" >Konnect Now
+                                href="<?= base_url('auth/'); ?>" >Konnect Now
                             <?php endif; ?>
                         </a>
                     </span>
