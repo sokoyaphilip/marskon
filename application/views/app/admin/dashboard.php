@@ -252,6 +252,24 @@
                        data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                     <thead>
                     <tr>
+                        <th style="display: none;">
+                            <div class="media">
+                                <div class="d-flex align-self-center">Transaction ID</div>
+
+                                <div class="d-flex align-self-center ml-auto">
+                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                          </span>
+                                </div>
+                            </div>
+                        </th>
                         <th>
                             <div class="media">
                                 <div class="d-flex align-self-center">Transaction ID</div>
@@ -384,6 +402,7 @@
                     <tbody>
                     <?php foreach( $transactions as $transaction ): ?>
                         <tr>
+                            <td style="display: none;"><?= $transaction->id; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
