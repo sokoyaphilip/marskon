@@ -15,3 +15,4 @@ ERROR - 2019-04-06 10:17:54 --> Severity: Notice --> Trying to get property 'id'
 ERROR - 2019-04-06 10:17:54 --> Severity: Notice --> Undefined variable: trasaction /home/phillip/www/marskonnet/application/views/app/users/my_wallet.php 386
 ERROR - 2019-04-06 10:17:54 --> Severity: Notice --> Trying to get property 'id' of non-object /home/phillip/www/marskonnet/application/views/app/users/my_wallet.php 386
 ERROR - 2019-04-06 10:18:40 --> Severity: Notice --> Undefined index: product_id /home/phillip/www/marskonnet/application/controllers/Admin.php 125
+ERROR - 2019-04-06 19:44:43 --> Severity: Notice --> Undefined property: stdClass::$account_number /home/phillip/www/marskonnet/application/views/app/users/profile.php 136
