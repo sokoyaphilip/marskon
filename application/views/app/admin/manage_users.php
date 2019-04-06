@@ -210,7 +210,7 @@
                                         </div>
                                         <input type="hidden" name="user" value="<?= $user->name; ?>">
                                         <input type="hidden" name="user_id" value="<?= $user->id; ?>">
-                                        <button type="button" data-wid="<?= $user->id; ?>" class="btn btn-sm btn-danger update-wallet">Update Wallet</button>
+                                        <button type="submit" data-wid="<?= $user->id; ?>" class="btn btn-sm btn-danger update-wallet">Update Wallet</button>
                                     </form>
                                 </td>
                                 <td><?= neatDate($user->last_login) . ' ' . neatTime($user->last_login); ?></td>

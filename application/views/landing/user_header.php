@@ -122,7 +122,7 @@
                             <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
                                 <i class="fa fa-money"></i>
                             </span>
-                            <span class="media-body align-self-center">Current Balance (<?= ngn($user->wallet); ?>)</span>
+                            <span class="media-body align-self-center">Reseller Balance (<?= ngn($user->wallet); ?>)</span>
                             <span class="d-flex align-self-center u-side-nav--control-icon"></span>
                         </a>
                     </li>

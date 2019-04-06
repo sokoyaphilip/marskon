@@ -136,7 +136,16 @@ class Admin extends CI_Controller {
                         $this->session->set_flashdata('success_msg', 'User has been blocked and the transaction has been declined');
                     }
                 }else{
-                    $this->site->set_field('users', 'wallet', "wallet+{$amount}", "id={$user_id}");
+                    if( $status == 'approved' ){
+                        // Update the user account
+                        $this->site->set_field('users', 'wallet', "wallet+{$amount}", "id={$user_id}");
+                        $this->session->set_flashdata('success_msg', 'Action successful.');
+                    }else{
+                        $this->site->delete("(id = {$id})", 'transactions');
+                        $this->site->update('users', array('status' => 'block'), array('id' => $user_id));
+                        $this->session->set_flashdata('success_msg', 'User has been blocked and the transaction has been declined');
+                    }
+
                 }
 
                 $this->session->set_flashdata('success_msg', 'Action success');
