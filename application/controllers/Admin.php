@@ -148,7 +148,6 @@ class Admin extends CI_Controller {
 
                 }
 
-                $this->session->set_flashdata('success_msg', 'Action success');
             }else{
                 $this->session->set_flashdata('error_msg', 'There was an error performing that action.');
             }
