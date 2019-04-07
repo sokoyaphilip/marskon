@@ -185,6 +185,7 @@ class Ajax extends CI_Controller {
         $amount = $this->input->post('amount', true);
         $product_id = $this->input->post('product_id', true);
         $transaction_id = $this->site->generate_code('transactions', 'trans_id');
+        $payment_method = (int)$payment_method;
         $description = "Wallet funding via {{$payment_method}}";
 
         if( $this->input->post('bank') ) $description .= ' To ' . $this->input->post('bank');
