@@ -65,6 +65,7 @@ class Ajax extends CI_Controller {
             $code = $this->user->generate_user_code();
             $data = array(
                 'email' => $this->input->post('signup_email', true),
+                'name' => $this->input->post('signup_name', true),
                 'phone' => $this->input->post('signup_phone', true),
                 'salt' => $salt,
                 'password' => shaPassword($this->input->post('password'), $salt),
@@ -284,7 +285,7 @@ class Ajax extends CI_Controller {
                 $this->return_response($response);
             }else{
                 $user_id = $this->session->userdata('logged_id');
-                $description = ucfirst( $network_row->network_name) . " data purchase for {$count} recipent ({$message})";
+                $description = ucfirst( $network_row->network_name) . " {$plan_detail->name} data purchase for {$count} recipent ({$message})";
                 if( $sponsor ) $description .= " with sponsor number : " . $sponsor;
                 $transaction_id = $this->site->generate_code('transactions', 'trans_id');
                 $insert_data = array(

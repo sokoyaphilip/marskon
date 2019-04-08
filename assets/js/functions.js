@@ -68,6 +68,7 @@ $(document).ready(function() {
         e.preventDefault();
         let _btn = $(this);
         let signup_email = $('#signup-email').val();
+        let signup_name = $('#signup-name').val();
         let signup_phone = $('#signup-phone').val();
         let password = $('#signup-password').val();
         let confirm_password = $('#confirm-password').val();
@@ -90,7 +91,7 @@ $(document).ready(function() {
         $.ajax({
             url: base_url + 'ajax/signup/',
             method: 'POST',
-            data: {'signup_email': signup_email, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
+            data: {'signup_email': signup_email, 'signup_name': signup_name, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
             success: function (response) {
                 if (response.status === 'success') {
 
