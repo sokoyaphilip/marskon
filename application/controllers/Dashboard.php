@@ -424,9 +424,11 @@ class Dashboard extends CI_Controller {
             $this->session->set_flashdata('error_msg', "The transaction does not exist.");
             redirect( 'dashboard/wallet/');
         }else{
+            $page_data['product_id'] = '';
             if( $this->input->get('product_id') ) {
                 $page_data['product_id'] = cleanit($this->input->get('id'));
             }
+
             $page_data['row'] = $row;
             $page_data['page'] = 'payment_made';
             $page_data['title'] = "Payment Made";
@@ -453,7 +455,8 @@ class Dashboard extends CI_Controller {
                 redirect( $_SERVER['HTTP_REFERER']);
             }
             if( $this->site->insert_data('transaction_status', $data)){
-                if( $this->input->post('product_id') ){
+                $product_id = $this->input->post('product_id');
+                if( !isset( $product_id ) && !empty( $product_id) ){
                     // UPdate the user to process
                     $uid = $this->session->userdata('logged_id');
                     $this->site->user('users', array('membership_type' => 'process'), "(id = {$uid})");
