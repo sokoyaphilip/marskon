@@ -325,7 +325,7 @@ WHERE t.trans_id = {$tid}")->row();
 
 //        die( $action . ' and ' . $user_id);
         if( $action == 'delete' ){
-//            $this->site->delete("(user_id = '{$user_id}')", 'transactions');
+            die('You are here');
             $this->site->delete(array('user_id' => $user_id), 'transactions');
             $this->site->delete(array('id' => $user_id), 'users');
         }elseif( $action == 'block'){
