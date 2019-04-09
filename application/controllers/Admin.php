@@ -322,6 +322,8 @@ WHERE t.trans_id = {$tid}")->row();
             $this->session->set_flashdata('error_msg', 'Something is wrong somewhere...');
             redirect( $_SERVER['HTTP_REFERER']);
         }
+
+        die( $action . ' and ' . $user_id);
         if( $action == 'delete' ){
             $this->site->delete("(user_id = '{$user_id}')", 'transactions');
             $this->site->delete("(id = '{$user_id}')", 'users');
