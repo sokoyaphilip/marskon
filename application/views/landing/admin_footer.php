@@ -187,7 +187,9 @@
             ]
         });
 
-        $.HSCore.components.HSDatatables.init('.js-datatable');
+        $.HSCore.components.HSDatatables.init('.js-datatable',{
+            "order": [[ 0, "asc" ]]
+        });
         // initialization of HSDropdown component
         $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {dropdownHideOnScroll: false});
         $.HSCore.helpers.HSFileAttachments.init();
