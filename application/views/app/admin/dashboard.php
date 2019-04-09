@@ -253,25 +253,6 @@
                     <thead>
                     <tr>
                         
-                        <th style="display: none;">
-                            <div class="media">
-                                <div class="d-flex align-self-center">id</div>
-
-                                <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                </div>
-                            </div>
-                        </th>
-
                         <th>
                             <div class="media">
                                 <div class="d-flex align-self-center">Date & Time</div>
@@ -421,8 +402,15 @@
 
         <div class="media align-items-center g-mb-45">
             <div id="datatableInfo1" class="media-body"></div>
-
             <nav id="datatablePagination1" class="d-flex ml-auto" aria-label="Page Navigation"></nav>
+        </div>
+
+        <div class="g-mb-40">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
