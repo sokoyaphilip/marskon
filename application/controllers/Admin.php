@@ -323,10 +323,11 @@ WHERE t.trans_id = {$tid}")->row();
             redirect( $_SERVER['HTTP_REFERER']);
         }
 
-        die( $action . ' and ' . $user_id);
+//        die( $action . ' and ' . $user_id);
         if( $action == 'delete' ){
-            $this->site->delete("(user_id = '{$user_id}')", 'transactions');
-            $this->site->delete("(id = '{$user_id}')", 'users');
+//            $this->site->delete("(user_id = '{$user_id}')", 'transactions');
+            $this->site->delete(array('user_id' => $user_id), 'transactions');
+            $this->site->delete(array('id' => $user_id), 'users');
         }elseif( $action == 'block'){
             $this->site->update('users', array('status' => $action, 'membership_type' => 'user'), "(id = {$user_id})");
         }else{
