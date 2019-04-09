@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
         $page_data['page'] = 'home';
         $page_data['products'] = $this->site->get_result('products');
 
-        $query = "SELECT t.*, u.phone, u.name FROM transactions t LEFT JOIN users u ON(u.id = t.user_id) ORDER BY t.id DESC";
+        $query = "SELECT t.*, u.phone, u.name FROM transactions t LEFT JOIN users u ON(u.id = t.user_id) ORDER BY id DESC";
         $start = $end = $transaction ='';
         if( $this->input->post() ){
             // start empty
