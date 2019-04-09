@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
         $page_data['page'] = 'home';
         $page_data['products'] = $this->site->get_result('products');
 
-        $query = "SELECT t.*, u.phone, u.name FROM transactions t LEFT JOIN users u ON(u.id = t.user_id) ORDER BY id DESC";
+        $query = "SELECT t.*, u.phone, u.name FROM transactions t LEFT JOIN users u ON(u.id = t.user_id) ORDER BY id DESC LIMIT 50";
         $start = $end = $transaction ='';
         if( $this->input->post() ){
             // start empty
@@ -323,8 +323,8 @@ WHERE t.trans_id = {$tid}")->row();
             redirect( $_SERVER['HTTP_REFERER']);
         }
         if( $action == 'delete' ){
-            $this->site->delete("(user_id = {$user_id})", 'transactions');
-            $this->site->delete("(id = {$user_id})", 'users');
+            $this->site->delete("(user_id = '{$user_id}')", 'transactions');
+            $this->site->delete("(id = '{$user_id}')", 'users');
         }elseif( $action == 'block'){
             $this->site->update('users', array('status' => $action, 'membership_type' => 'user'), "(id = {$user_id})");
         }else{
