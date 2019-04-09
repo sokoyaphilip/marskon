@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
         $page_data['page'] = 'home';
         $page_data['products'] = $this->site->get_result('products');
 
-        $query = "SELECT t.*, u.phone, u.name FROM transactions t LEFT JOIN users u ON(u.id = t.user_id) ORDER BY id DESC";
+        $query = "SELECT t.*, u.phone, u.name FROM transactions t LEFT JOIN users u ON(u.id = t.user_id) ORDER BY id ASC";
         $start = $end = $transaction ='';
         if( $this->input->post() ){
             // start empty
@@ -68,20 +68,20 @@ class Admin extends CI_Controller {
         $page_data['year'] = array_sum(array_column($year, 'amt'));
 
 
-        $page = isset($_GET['page']) ? xss_clean($_GET['page']) : 0;
-        if ($page > 1) $page -= 1;
-        $count = $this->site->run_sql( $query )->num_rows();
-        $this->load->library('pagination');
-        $this->config->load('pagination');
-        $config = $this->config->item('pagination');
-        $config['base_url'] = current_url();
-        $config['total_rows'] = $count;
-        $config['per_page'] = 30;
-        $config["num_links"] = 5;
-        $this->pagination->initialize($config);
-        $array['limit'] = $config['per_page'];
-        $array['offset'] = $page * 30;
-        $query .= " LIMIT " . $array['offset'] . ",". $array['limit'];
+//        $page = isset($_GET['page']) ? xss_clean($_GET['page']) : 0;
+//        if ($page > 1) $page -= 1;
+//        $count = $this->site->run_sql( $query )->num_rows();
+//        $this->load->library('pagination');
+//        $this->config->load('pagination');
+//        $config = $this->config->item('pagination');
+//        $config['base_url'] = current_url();
+//        $config['total_rows'] = $count;
+//        $config['per_page'] = 30;
+//        $config["num_links"] = 5;
+//        $this->pagination->initialize($config);
+//        $array['limit'] = $config['per_page'];
+//        $array['offset'] = $page * 30;
+//        $query .= " LIMIT " . $array['offset'] . ",". $array['limit'];
         $page_data['transactions'] = $this->site->run_sql( $query )->result();
 		$this->load->view('app/admin/dashboard', $page_data);
 	}

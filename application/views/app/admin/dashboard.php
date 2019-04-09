@@ -427,7 +427,7 @@
         <div class="g-mb-40">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <?= $pagination ?>
+<!--                    --><?//= $pagination ?>
                 </div>
             </div>
         </div>

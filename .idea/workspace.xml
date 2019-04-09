@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
               <folding>
                 <element signature="e#639#1644#0#PHP" />
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="410" column="36" selection-start-line="410" selection-start-column="36" selection-end-line="410" selection-end-column="36" />
+            <state relative-caret-position="323">
+              <caret line="430" column="22" lean-forward="true" selection-start-line="430" selection-start-column="22" selection-end-line="430" selection-end-column="22" />
               <folding>
                 <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
@@ -52,6 +52,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="189" column="39" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/pagination.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
@@ -59,15 +68,6 @@
               <folding>
                 <element signature="n#style#0;n#ul#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/landing/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="82" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -157,7 +157,6 @@
       <find>js-datatable</find>
       <find>konne</find>
       <find>AIR</find>
-      <find>datatable</find>
       <find>suppo</find>
       <find>user</find>
       <find>fund w</find>
@@ -179,6 +178,7 @@
       <find>sign</find>
       <find>payment_made</find>
       <find>payment_made_proce</find>
+      <find>datatable</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -467,12 +467,12 @@
       <workItem from="1554640711027" duration="7216000" />
       <workItem from="1554734209190" duration="599000" />
       <workItem from="1554737917460" duration="599000" />
-      <workItem from="1554783805499" duration="3370000" />
+      <workItem from="1554783805499" duration="3527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296079000" />
+    <option name="totallyTimeSpent" value="296236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -755,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3630">
-          <caret line="242" column="15" selection-start-line="242" selection-start-column="15" selection-end-line="242" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -867,21 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-          <folding>
-            <element signature="e#639#1644#0#PHP" />
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
-            <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
-            <element signature="n#plans#0;n#Admin#0;n#!!top" />
-            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/pagination.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -899,10 +877,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="189" column="39" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
+          <folding>
+            <element signature="e#639#1644#0#PHP" />
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
+            <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
+            <element signature="n#plans#0;n#Admin#0;n#!!top" />
+            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="410" column="36" selection-start-line="410" selection-start-column="36" selection-end-line="410" selection-end-column="36" />
+        <state relative-caret-position="323">
+          <caret line="430" column="22" lean-forward="true" selection-start-line="430" selection-start-column="22" selection-end-line="430" selection-end-column="22" />
           <folding>
             <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
