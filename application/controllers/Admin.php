@@ -70,8 +70,9 @@ class Admin extends CI_Controller {
 
         $page = isset($_GET['page']) ? xss_clean($_GET['page']) : 0;
         if ($page > 1) $page -= 1;
-
         $count = $this->site->run_sql( $query )->num_rows();
+        echo $count;
+        exit;
         $this->load->library('pagination');
         $this->config->load('pagination');
         $config = $this->config->item('pagination');
