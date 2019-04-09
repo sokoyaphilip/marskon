@@ -325,9 +325,14 @@ WHERE t.trans_id = {$tid}")->row();
 
 //        die( $action . ' and ' . $user_id);
         if( $action == 'delete' ){
-            die('You are here');
-            $this->site->delete(array('user_id' => $user_id), 'transactions');
-            $this->site->delete(array('id' => $user_id), 'users');
+//            die('You are here');
+            try {
+                $this->site->delete(array('user_id' => $user_id), 'transactions');
+                $this->site->delete(array('id' => $user_id), 'users');
+            } catch (Exception $e) {
+                $this->session->set_flashdata('error_msg', $e);
+            }
+
         }elseif( $action == 'block'){
             $this->site->update('users', array('status' => $action, 'membership_type' => 'user'), "(id = {$user_id})");
         }else{
