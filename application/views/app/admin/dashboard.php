@@ -240,7 +240,7 @@
                        data-dt-info="#datatableInfo1" data-dt-search="#datatableSearch1"
                        data-dt-entries="#datatableEntries1" data-dt-is-show-paging="true"
                        data-dt-pagination="datatablePagination1"
-                       data-dt-page-length="25" data-dt-is-responsive="true"
+                       data-dt-page-length="5" data-dt-is-responsive="false"
                        data-dt-pagination-classes="list-inline text-right mb-0"
                        data-dt-pagination-items-classes="list-inline-item g-hidden-sm-down"
                        data-dt-pagination-links-classes="u-pagination-v1__item u-pagination-v1-2 g-bg-secondary--active g-color-white--active g-brd-gray-light-v7 g-brd-secondary--hover g-brd-secondary--active g-rounded-4 g-py-8 g-px-15"
@@ -253,9 +253,9 @@
                     <thead>
                     <tr>
 
-                        <th>
+                        <th style="display: none;">
                             <div class="media">
-                                <div class="d-flex align-self-center">ID</div>
+                                <div class="d-flex align-self-center">id</div>
 
                                 <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -271,6 +271,7 @@
                                 </div>
                             </div>
                         </th>
+
                         <th>
                             <div class="media">
                                 <div class="d-flex align-self-center">Date & Time</div>
@@ -403,13 +404,13 @@
                     <tbody>
                     <?php foreach( $transactions as $transaction ): ?>
                         <tr>
-                            <td><?=$transaction->id; ?></td>
+
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
                             <td><?= paymentMethod($transaction->payment_method); ?></td>
                             <td><?= payment_id_replacer($transaction->description); ?></td>
-                            <td><?= ngn($transaction->amount)  ?> </td>
+                            <td><?= ngn($transaction->amount)?></td>
                             <td><?= statusLabel( $transaction->status);?></td>
                         </tr>
                     <?php endforeach; ?>
@@ -422,14 +423,6 @@
             <div id="datatableInfo1" class="media-body"></div>
 
             <nav id="datatablePagination1" class="d-flex ml-auto" aria-label="Page Navigation"></nav>
-        </div>
-
-        <div class="g-mb-40">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-<!--                    --><?//= $pagination ?>
-                </div>
-            </div>
         </div>
     </div>
 </div>
