@@ -405,6 +405,14 @@
 
             <nav id="datatablePagination1" class="d-flex ml-auto" aria-label="Page Navigation"></nav>
         </div>
+
+        <div class="g-mb-40">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <?= $pagination ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?php $this->load->view('landing/admin_footer'); ?>

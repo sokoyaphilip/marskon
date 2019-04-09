@@ -77,11 +77,11 @@ class Admin extends CI_Controller {
         $config = $this->config->item('pagination');
         $config['base_url'] = current_url();
         $config['total_rows'] = $count;
-        $config['per_page'] = 50;
+        $config['per_page'] = 30;
         $config["num_links"] = 5;
         $this->pagination->initialize($config);
         $array['limit'] = $config['per_page'];
-        $array['offset'] = $page * 50;
+        $array['offset'] = $page * 30;
         $query .= " LIMIT " . $array['offset'] . ",". $array['limit'];
         $page_data['transactions'] = $this->site->run_sql( $query )->result();
 		$this->load->view('app/admin/dashboard', $page_data);
