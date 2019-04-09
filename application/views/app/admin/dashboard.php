@@ -252,6 +252,7 @@
                        data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                     <thead>
                     <tr>
+                        <th style="display: none;">Id</th>
 
                         <th>
                             <div class="media">
