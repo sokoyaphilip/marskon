@@ -254,7 +254,7 @@
                     <tr>
 
                         <th style="display: none;">
-                            <div class="media">
+                            <div class="media" style="display: none;">
                                 <div class="d-flex align-self-center">ID</div>
 
                                 <div class="d-flex align-self-center ml-auto">
