@@ -346,24 +346,6 @@
                         </th>
                         <th>
                             <div class="media">
-                                <div class="d-flex align-self-center">Amount</div>
-
-                                <div class="d-flex align-self-center ml-auto">
-                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                               href="javascript:;">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </span>
-                                </div>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="media">
                                 <div class="d-flex align-self-center g-nowrap">Status</div>
 
                                 <div class="d-flex align-self-center ml-auto">
@@ -391,8 +373,7 @@
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
                             <td><?= paymentMethod($transaction->payment_method); ?></td>
-                            <td><?= payment_id_replacer($transaction->description); ?></td>
-                            <td><?= ngn($transaction->amount)?></td>
+                            <td><?= ngn($transaction->amount) . '-'. payment_id_replacer($transaction->description); ?></td>
                             <td><?= statusLabel( $transaction->status);?></td>
                         </tr>
                     <?php endforeach; ?>
