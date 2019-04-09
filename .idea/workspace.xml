@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,17 +36,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="375" column="124" selection-start-line="375" selection-start-column="124" selection-end-line="375" selection-end-column="124" />
+            <state relative-caret-position="158">
+              <caret line="410" column="36" selection-start-line="410" selection-start-column="36" selection-end-line="410" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
                 <element signature="n#th#7;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="2319">
               <caret line="213" column="121" selection-start-line="213" selection-start-column="121" selection-end-line="213" selection-end-column="121" />
             </state>
           </provider>
@@ -467,12 +467,12 @@
       <workItem from="1554640711027" duration="7216000" />
       <workItem from="1554734209190" duration="599000" />
       <workItem from="1554737917460" duration="599000" />
-      <workItem from="1554783805499" duration="3199000" />
+      <workItem from="1554783805499" duration="3370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295908000" />
+    <option name="totallyTimeSpent" value="296079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -867,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="213" column="121" selection-start-line="213" selection-start-column="121" selection-end-line="213" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -899,19 +892,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/wallet_funding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2319">
+          <caret line="213" column="121" selection-start-line="213" selection-start-column="121" selection-end-line="213" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="375" column="124" selection-start-line="375" selection-start-column="124" selection-end-line="375" selection-end-column="124" />
+        <state relative-caret-position="158">
+          <caret line="410" column="36" selection-start-line="410" selection-start-column="36" selection-end-line="410" selection-end-column="36" />
           <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#th#7;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

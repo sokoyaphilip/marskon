@@ -240,7 +240,7 @@
                        data-dt-info="#datatableInfo1" data-dt-search="#datatableSearch1"
                        data-dt-entries="#datatableEntries1" data-dt-is-show-paging="true"
                        data-dt-pagination="datatablePagination1"
-                       data-dt-page-length="5" data-dt-is-responsive="false"
+                       data-dt-page-length="25" data-dt-is-responsive="true"
                        data-dt-pagination-classes="list-inline text-right mb-0"
                        data-dt-pagination-items-classes="list-inline-item g-hidden-sm-down"
                        data-dt-pagination-links-classes="u-pagination-v1__item u-pagination-v1-2 g-bg-secondary--active g-color-white--active g-brd-gray-light-v7 g-brd-secondary--hover g-brd-secondary--active g-rounded-4 g-py-8 g-px-15"
@@ -252,8 +252,25 @@
                        data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                     <thead>
                     <tr>
-                        <th style="display: none;">Id</th>
 
+                        <th>
+                            <div class="media">
+                                <div class="d-flex align-self-center">ID</div>
+
+                                <div class="d-flex align-self-center ml-auto">
+                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                          </span>
+                                </div>
+                            </div>
+                        </th>
                         <th>
                             <div class="media">
                                 <div class="d-flex align-self-center">Date & Time</div>
@@ -346,6 +363,24 @@
                         </th>
                         <th>
                             <div class="media">
+                                <div class="d-flex align-self-center">Amount</div>
+
+                                <div class="d-flex align-self-center ml-auto">
+                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
+                               href="javascript:;">
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                          </span>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="media">
                                 <div class="d-flex align-self-center g-nowrap">Status</div>
 
                                 <div class="d-flex align-self-center ml-auto">
@@ -368,12 +403,13 @@
                     <tbody>
                     <?php foreach( $transactions as $transaction ): ?>
                         <tr>
-                            <td style="display: none;"><?=$transaction->id; ?></td>
+                            <td><?=$transaction->id; ?></td>
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
                             <td><?= paymentMethod($transaction->payment_method); ?></td>
-                            <td><?= ngn($transaction->amount) . '-'. payment_id_replacer($transaction->description); ?></td>
+                            <td><?= payment_id_replacer($transaction->description); ?></td>
+                            <td><?= ngn($transaction->amount)  ?> </td>
                             <td><?= statusLabel( $transaction->status);?></td>
                         </tr>
                     <?php endforeach; ?>
