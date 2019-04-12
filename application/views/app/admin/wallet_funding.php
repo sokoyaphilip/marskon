@@ -404,7 +404,7 @@
                         <?php foreach( $airtime_to_cash_pin as $cash ): ?>
                             <tr>
                                 <td><?= neatDate($cash->datetime) . ' ' . neatTime($cash->datetime)?></td>
-                                <td><?= $cash->details; ?></td>
+                                <td><?= $cash->description; ?></td>
                                 <td><?= ngn($cash->incoming)?></td>
                                 <td><?= ngn($cash->outgoing)?></td>
                                 <td>
