@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/development/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/development/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/production/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/constants.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/helpers/site_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/site_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/libraries/AfricaSMS.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/AfricaSMS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/users/buy_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/buy_data.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4470">
-              <caret line="337" column="14" selection-start-line="337" selection-start-column="14" selection-end-line="337" selection-end-column="14" />
+            <state relative-caret-position="-555">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="14" />
               <folding>
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
                 <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
@@ -31,6 +33,15 @@
                 <element signature="n#plans#0;n#Admin#0;n#!!top" />
                 <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="236" column="39" selection-start-line="236" selection-start-column="39" selection-end-line="236" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -48,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -73,20 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/libraries/AfricaSMS.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="15" column="87" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Site_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="91" column="17" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="17" />
+              <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -112,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
-              <caret line="426" column="42" selection-start-line="426" selection-start-column="42" selection-end-line="426" selection-end-column="42" />
+            <state relative-caret-position="157">
+              <caret line="544" column="60" selection-start-line="544" selection-start-column="60" selection-end-line="544" selection-end-column="60" />
               <folding>
                 <element signature="n#index#0;n#Dashboard#0;n#!!top" />
                 <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
@@ -126,12 +128,28 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>glo</find>
-      <find>smsapi</find>
       <find>pay-now</find>
       <find>js-datatable</find>
       <find>konne</find>
@@ -160,6 +178,8 @@
       <find>datatable</find>
       <find>dele</find>
       <find>user_actio</find>
+      <find>buy_da</find>
+      <find>africa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,7 +196,6 @@
         <option value="$PROJECT_DIR$/application/config/production/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/Page.php" />
         <option value="$PROJECT_DIR$/application/views/landing/contact.php" />
-        <option value="$PROJECT_DIR$/application/config/development/constants.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/confirm_payment.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_plans.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/api_variation.php" />
@@ -191,12 +210,10 @@
         <option value="$PROJECT_DIR$/application/views/landing/login.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/sme_request.php" />
         <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
-        <option value="$PROJECT_DIR$/application/config/production/constants.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/redeem_card.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/airtime_to_cash.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/dashboard.php" />
-        <option value="$PROJECT_DIR$/application/views/app/users/buy_data.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/coin.php" />
         <option value="$PROJECT_DIR$/application/controllers/Test.php" />
         <option value="$PROJECT_DIR$/application/views/landing/home.php" />
@@ -208,17 +225,20 @@
         <option value="$PROJECT_DIR$/application/views/landing/footer.php" />
         <option value="$PROJECT_DIR$/application/views/landing/create.php" />
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/payment_made.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/wallet_funding.php" />
         <option value="$PROJECT_DIR$/application/config/pagination.php" />
         <option value="$PROJECT_DIR$/application/views/landing/admin_footer.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/dashboard.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/libraries/AfricaSMS.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/app/users/buy_data.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/config/production/constants.php" />
+        <option value="$PROJECT_DIR$/application/config/development/constants.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
       </list>
     </option>
   </component>
@@ -451,12 +471,12 @@
       <workItem from="1554783805499" duration="7761000" />
       <workItem from="1554814543259" duration="598000" />
       <workItem from="1554839837579" duration="1038000" />
-      <workItem from="1555016217936" duration="1349000" />
+      <workItem from="1555016217936" duration="2828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303455000" />
+    <option name="totallyTimeSpent" value="304934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -572,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="106" column="27" lean-forward="true" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/user_agents.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -624,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="67" selection-start-line="91" selection-start-column="67" selection-end-line="91" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/development/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -663,13 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="623">
           <caret line="104" column="79" selection-start-line="104" selection-start-column="79" selection-end-line="104" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3540">
-          <caret line="236" column="58" selection-start-line="236" selection-start-column="58" selection-end-line="236" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -799,20 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4470">
-          <caret line="337" column="14" selection-start-line="337" selection-start-column="14" selection-end-line="337" selection-end-column="14" />
-          <folding>
-            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
-            <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
-            <element signature="n#plans#0;n#Admin#0;n#!!top" />
-            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Site_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1290">
@@ -834,21 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="426" column="42" selection-start-line="426" selection-start-column="42" selection-end-line="426" selection-end-column="42" />
-          <folding>
-            <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#subscription#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#electricity#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -856,6 +826,63 @@
           <folding>
             <element signature="e#8103#8762#0#PHP" />
             <element signature="e#9409#10121#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/AfricaSMS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-555">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
+            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
+            <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
+            <element signature="n#plans#0;n#Admin#0;n#!!top" />
+            <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="236" column="39" selection-start-line="236" selection-start-column="39" selection-end-line="236" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="544" column="60" selection-start-line="544" selection-start-column="60" selection-end-line="544" selection-end-column="60" />
+          <folding>
+            <element signature="n#index#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#subscription#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#electricity#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -880,13 +907,6 @@
             <element signature="n#useJSON#0;n#Ajax#0;n#!!top" />
             <element signature="n#doPostRequest#0;n#Ajax#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/AfricaSMS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="87" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
         </state>
       </provider>
     </entry>

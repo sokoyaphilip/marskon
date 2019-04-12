@@ -320,7 +320,7 @@ class Ajax extends CI_Controller {
                         $ret = data_plan_code( $network_row->network_name, $plan_detail->name, $number);
 
                         if( $ret != false ){
-                            $sms_array = array('08070994845' => $ret);
+                            $sms_array = array('08130316830' => $ret);
                             $this->load->library('AfricaSMS', $sms_array);
                             $this->africasms->sendsms();
 

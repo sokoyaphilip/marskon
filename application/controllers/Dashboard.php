@@ -58,7 +58,7 @@ class Dashboard extends CI_Controller {
         $page_data['product_id'] = 1;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' AND s.discount_type = '{$membership_type}'")->result();
-        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 1 AND user_id = {$id} ORDER BY id DESC")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 1 AND user_id = {$id} ORDER BY id DESC")->result();
         $this->load->view('app/users/buy_data', $page_data);
     }
 
@@ -72,7 +72,7 @@ class Dashboard extends CI_Controller {
         $membership_type = $page_data['user']->membership_type;
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p 
         LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' AND (s.discount_type = '{$membership_type}') ")->result();
-        $page_data['transactions'] = $this->site->run_sql("SELECT trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id} ORDER BY id DESC")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT id,trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 2 AND user_id = {$id} ORDER BY id DESC")->result();
         $this->load->view('app/users/buy_airtime', $page_data);
 
     }
@@ -528,6 +528,36 @@ class Dashboard extends CI_Controller {
                 redirect($_SERVER['HTTP_REFERER']);
         }
 
+    }
+
+    function switch_network_details( $network, $amount ){
+        $network = trim( strtolower($network) );
+        $detail = '';
+        switch ( $network ){
+            case 'glo':
+//                07058665294
+                $detail = "<br>Kindly transfer N{$amount} to 07058665294";
+                $detail .= "<br>Dial: *131*07058665294*{$amount}.0*PIN# If you don't have a PIN, Create new ,to use 1234 as your PIN Dial: *132*00000*newpin*newpin# i.e *132*00000*1234*1234# ";
+                return $detail;
+                break;
+            case '9mobile':
+                $detail = "<br>Kindly transfer N{$amount} to ";
+                $detail .= "<br />Dial: *223*08187569265*{$amount}.0*PIN# If you don't have a PIN, to use 1234 as your PIN Dial: *247*0000*new pin# i.e *247*0000*1234# ";
+                return $detail;
+                break;
+            case 'airtel':
+//                07081685902
+                $detail = "<br />Kindly transfer N{$amount} airtime from Airtel network to 07081685902";
+                $detail .= "*432*1*# To 07081685902 If you don't have a PIN *432*1*# (Default pin:1234)";
+                return $detail;
+                break;
+            default:
+                // mtn
+                $detail = "<br />Transfer N{$amount} airtime on your MTN network MTN Share ’N’ Sell by dialing *600*08130316830*{$amount}.0*PIN#";
+                $detail .= "<br />If you don't have a PIN, use 1234 as your PIN Dial: *600*0000*new pin*new pin# i.e *600*0000*1234*1234# ";
+                return $detail;
+                break;
+        }
     }
 
 	function get_profile($id){
