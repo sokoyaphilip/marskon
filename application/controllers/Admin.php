@@ -325,7 +325,6 @@ WHERE t.trans_id = {$tid}")->row();
 
 //        die( $action . ' and ' . $user_id);
         if( $action == 'delete' ){
-//            die('You are here');
             try {
                 $this->site->delete(array('user_id' => $user_id), 'transactions');
                 $this->site->delete(array('id' => $user_id), 'users');
@@ -334,9 +333,11 @@ WHERE t.trans_id = {$tid}")->row();
             }
 
         }elseif( $action == 'block'){
-            $this->site->update('users', array('status' => $action, 'membership_type' => 'user'), "(id = {$user_id})");
+            if(!$this->site->update('users', array('status' => $action, 'membership_type' => 'user'), "(id = {$user_id})"))
+                $this->session->set_flashdata('error_msg', 'There was an error performing the block action');
         }else{
-            $this->site->update('users', array('status' => $action), "(id = {$user_id})");
+            if(!$this->site->update('users', array('status' => $action), "(id = {$user_id})"))
+                $this->session->set_flashdata('error_msg', 'There was an error performing the update action');
         }
         $this->session->set_flashdata('success_msg', "Action successful");
         redirect( $_SERVER['HTTP_REFERER']);

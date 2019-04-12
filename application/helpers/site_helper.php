@@ -258,7 +258,7 @@ if(!function_exists('paymentMethod')){
                 return '<b>Payment Via Paystack</b>';
                 break;
             case 4:
-                return '<b>Gecharl Payment</b>';
+                return '<b>Marskonnect Payment</b>';
                 break;
         }
     }

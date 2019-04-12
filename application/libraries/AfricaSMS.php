@@ -10,11 +10,10 @@ class AfricaSMS {
 
     public function sendsms(){
         // Set your app credentials
-        // $username   = "onitshamarket";
-        // $apikey     = "d69b04b7fd1cf8b156a2fc04139b37dbef25c8acc990718aae7d3ed11db2d141";
-        $username   = "artisan";
-//        $apikey     = "9ac256570d664969766b527a7635f13f84bad5633c1b34757be00bef961bf308";
-        $apikey     = "4c614bc247ca9df530a1e60e9762306ba22ff2bdf3c6861c13d1a16fef9805e9";
+//        $username   = "artisan";
+        $username   = "marskonnect";
+//        $apikey     = "4c614bc247ca9df530a1e60e9762306ba22ff2bdf3c6861c13d1a16fef9805e9";
+        $apikey     = "8bf6c201ca6bd50d117e6c0cb72dedfdb6253a15fb6063c7361f0226e99cd6fa";
         $AT         = new AfricasTalking($username, $apikey);
         $sms        = $AT->sms();
         if( is_array($this->recipents) && !empty($this->recipents)){
