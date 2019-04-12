@@ -137,7 +137,7 @@ class Dashboard extends CI_Controller {
                         break;
                 }
 
-                $description = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to gecharl.com";
+                $description = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to markonnect.com";
                 $transaction_table = array(
                     'product_id' => $product_id,
                     'trans_id'      => $transaction_id,
@@ -150,7 +150,7 @@ class Dashboard extends CI_Controller {
                 );
                 try {
                     $receiving_channel = $this->input->post('how_to_receive');
-                    $details = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to gecharl.com and to receive by {$receiving_channel}";
+                    $details = ucwords($network) . " N" . $amount . " pin transfer ( {$pin} ) to markonnect.com and to receive by {$receiving_channel}";
                     $receiver = $this->input->post('receiver', true);
                     if( $receiver ) $details .= " : {$receiver}";
                     $this->db->trans_start();
@@ -213,7 +213,7 @@ class Dashboard extends CI_Controller {
                 );
 
                 try {
-                    $details = ucwords($network) . " N" . $amount . ucwords( $airtime_pin_network ). " network transfer to gecharl.com";
+                    $details = "N" . $amount . ucwords( $airtime_pin_network ). " network transfer to markonnect.com";
                     $details .= $this->switch_network_details( $network ,$amount);
                     $receiver = $this->input->post('receiver', true);
                     if( $receiver ) $details .= " : {$receiver}";

@@ -1,3 +1,8 @@
+<?php
+$this->db->where('product_id', 6);
+$this->db->where('status', 'pending');
+$wallet_count = $this->db->get('transactions')->num_rows();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,7 +143,7 @@
                           <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
                               <i class="fa fa-credit-card-alt"></i>
                           </span>
-                            <span class="media-body align-self-center">Wallet Funding</span>
+                            <span class="media-body align-self-center">Wallet Funding  <?= ($wallet_count > 0 ) ? '( <small class="text-right text-danger font-weight-bold">'.$wallet_count.'</small> )' : '';?></span>
                         </a>
                     </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'member_upgrade') echo 'has-active';?>">

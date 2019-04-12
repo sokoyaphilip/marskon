@@ -1,6 +1,7 @@
 <?php
 $this->load->view('landing/user_header');
 ?>
+
     <style>
         nav > .nav.nav-tabs {
 
