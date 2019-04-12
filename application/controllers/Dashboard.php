@@ -86,6 +86,7 @@ class Dashboard extends CI_Controller {
             $array['message'] = $this->session->userdata('atc_message');
             $this->callSMSAPI($array);
             $this->session->unset_userdata('atc_message');
+            $this->session->set_flashdata('success_msg',"Thank you! YOur request has been received and will be processed.");
         }
         $page_data['row'] ='';
         $page_data['page'] = 'airtime2cash';

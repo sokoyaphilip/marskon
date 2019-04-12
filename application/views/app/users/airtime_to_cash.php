@@ -79,7 +79,7 @@ $this->load->view('landing/user_header');
                         <b>Date Initiated</b> : <?= neatDate($row->datetime) . ' ' . neatTime($row->datetime); ?>
                     </p>
 
-                    <a class="btn btn-cta btn-cta-primary btn-sm col-sm-4" href="<?= base_url('dashboard/airtime_to_cash/?proceed=true')?>" >Proceed</a>
+                    <a class="btn btn btn-md u-btn-primary g-width-160--md g-font-size-2" href="<?= base_url('dashboard/airtime_to_cash/?proceed=true')?>" >Proceed</a>
                 <?php else :?>
                     <div class="col-md-6">
                         <form id="pin_transfer" action="<?= base_url('dashboard/airtime_process');?>" method="post">
