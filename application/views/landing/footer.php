@@ -161,7 +161,7 @@
                             <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Support</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="tel:08169254598">Made with <i class="fa fa-heart"></i></a>
+                            Developed By <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" title="PhilTech Solutions" href="https://www.facebook.com/philtechsolutions/">PhilTech SOlutions</a>
                         </li>
 
                     </ul>

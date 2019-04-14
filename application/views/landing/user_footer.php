@@ -21,7 +21,7 @@
                     <a class="g-color-gray-dark-v6 g-color-secondary--hover" href="#">Contact Us</a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="g-color-gray-dark-v6 g-color-secondary--hover" href="tel:08169254598">Made with <i class="fa fa-heart"></i></a>
+                    Developed By <a class="g-color-gray-dark-v6 g-color-secondary--hover" target="_blank" title="PhilTech Solutions" href="https://www.facebook.com/philtechsolutions/">PhilTech SOlutions</a>
                 </li>
             </ul>
         </div>
