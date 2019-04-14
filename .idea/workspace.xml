@@ -34,20 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/landing/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="163" column="28" selection-start-line="163" selection-start-column="28" selection-end-line="163" selection-end-column="215" />
+            <state relative-caret-position="427">
+              <caret line="160" column="204" selection-start-line="160" selection-start-column="204" selection-end-line="160" selection-end-column="204" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="23" column="183" lean-forward="true" selection-start-line="23" selection-start-column="106" selection-end-line="23" selection-end-column="183" />
+            <state relative-caret-position="345">
+              <caret line="23" column="195" selection-start-line="23" selection-start-column="195" selection-end-line="23" selection-end-column="195" />
             </state>
           </provider>
         </entry>
@@ -204,8 +204,8 @@
         <option value="$PROJECT_DIR$/application/config/hooks.php" />
         <option value="$PROJECT_DIR$/application/config/production/config.php" />
         <option value="$PROJECT_DIR$/application/hooks/ssl.php" />
-        <option value="$PROJECT_DIR$/application/views/landing/footer.php" />
         <option value="$PROJECT_DIR$/application/views/landing/user_footer.php" />
+        <option value="$PROJECT_DIR$/application/views/landing/footer.php" />
       </list>
     </option>
   </component>
@@ -440,12 +440,12 @@
       <workItem from="1554839837579" duration="1038000" />
       <workItem from="1555016217936" duration="5762000" />
       <workItem from="1555093912847" duration="1924000" />
-      <workItem from="1555237164922" duration="1972000" />
+      <workItem from="1555237164922" duration="3807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311764000" />
+    <option name="totallyTimeSpent" value="313599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -860,17 +860,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/footer.php">
+    <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="163" column="28" selection-start-line="163" selection-start-column="28" selection-end-line="163" selection-end-column="215" />
+        <state relative-caret-position="345">
+          <caret line="23" column="195" selection-start-line="23" selection-start-column="195" selection-end-line="23" selection-end-column="195" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/user_footer.php">
+    <entry file="file://$PROJECT_DIR$/application/views/landing/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="23" column="183" lean-forward="true" selection-start-line="23" selection-start-column="106" selection-end-line="23" selection-end-column="183" />
+        <state relative-caret-position="427">
+          <caret line="160" column="204" selection-start-line="160" selection-start-column="204" selection-end-line="160" selection-end-column="204" />
         </state>
       </provider>
     </entry>

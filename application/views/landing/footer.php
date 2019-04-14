@@ -149,9 +149,6 @@
                             <span>|</span>
                         </li>
                         <li class="list-inline-item">
-                            <span>|</span>
-                        </li>
-                        <li class="list-inline-item">
                             <a class="g-color-white-opacity-0_8 g-color-white--hover" href="<?= base_url('page/contact/'); ?>">Contact</a>
                         </li>
                         <li class="list-inline-item">
@@ -161,7 +158,7 @@
                             <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#">Support</a>
                         </li>
                         <li class="list-inline-item">
-                            Developed By <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" title="PhilTech Solutions" href="https://www.facebook.com/philtechsolutions/">PhilTech SOlutions</a>
+                            Developed By <a class="g-color-white-opacity-0_8 g-color-white--hover" target="_blank" title="PhilTech Solutions" href="https://www.facebook.com/philtechsolutions/">PhilTech Solutions</a>
                         </li>
 
                     </ul>

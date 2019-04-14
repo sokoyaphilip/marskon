@@ -21,7 +21,7 @@
                     <a class="g-color-gray-dark-v6 g-color-secondary--hover" href="#">Contact Us</a>
                 </li>
                 <li class="list-inline-item">
-                    Developed By <a class="g-color-gray-dark-v6 g-color-secondary--hover" target="_blank" title="PhilTech Solutions" href="https://www.facebook.com/philtechsolutions/">PhilTech SOlutions</a>
+                    Developed By <a class="g-color-gray-dark-v6 g-color-secondary--hover" target="_blank" title="PhilTech Solutions" href="https://www.facebook.com/philtechsolutions/">PhilTech Solutions</a>
                 </li>
             </ul>
         </div>
