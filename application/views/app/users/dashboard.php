@@ -252,7 +252,7 @@
                         <tr>
                             <th style="display: none;">
                                 <div class="media">
-                                    <div class="d-flex align-self-center">Transaction ID</div>
+                                    <div class="d-flex align-self-center">ID</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
