@@ -123,7 +123,7 @@ $this->load->view('landing/user_header');
                                data-dt-pagination-prev-link-classes="u-pagination-v1__item u-pagination-v1-2 g-brd-gray-light-v7 g-brd-secondary--hover g-rounded-4 g-py-8 g-px-12"
                                data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                             <thead>
-                            <tr style="">
+                            <tr style="display: none;">
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">ID</div>
