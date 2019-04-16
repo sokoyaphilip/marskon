@@ -67,7 +67,6 @@ class Admin extends CI_Controller {
         AND (status = 'success' OR status = 'approved' )")->result_array();
         $page_data['year'] = array_sum(array_column($year, 'amt'));
 
-
 //        $page = isset($_GET['page']) ? xss_clean($_GET['page']) : 0;
 //        if ($page > 1) $page -= 1;
 //        $count = $this->site->run_sql( $query )->num_rows();
@@ -299,6 +298,12 @@ WHERE t.trans_id = {$tid}")->row();
     public function users(){
         $page_data['page'] = 'users';
         $page_data['users'] = $this->site->get_result('users');
+        $this->load->view('app/admin/manage_users', $page_data);
+    }
+
+    public function statistics(){
+        $page_data['page'] = 'statistics';
+        $page_data['users_money'] = $this->site->run_sql("SELECT SUM(wallet) amt FROM users")->row()->amt;
         $this->load->view('app/admin/manage_users', $page_data);
     }
 
