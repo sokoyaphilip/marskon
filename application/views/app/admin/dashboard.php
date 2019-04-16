@@ -253,7 +253,7 @@
                     <thead>
                     <tr>
 
-                        <th style="display: none;">
+                        <th style="">
                             <div class="media">
                                 <div class="d-flex align-self-center">id</div>
 

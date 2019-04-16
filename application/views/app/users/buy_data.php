@@ -123,7 +123,7 @@ $this->load->view('landing/user_header');
                                data-dt-pagination-prev-link-classes="u-pagination-v1__item u-pagination-v1-2 g-brd-gray-light-v7 g-brd-secondary--hover g-rounded-4 g-py-8 g-px-12"
                                data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                             <thead>
-                            <tr style="display: none;">
+                            <tr>
                                 <th>
                                     <div class="media">
                                         <div class="d-flex align-self-center">ID</div>
@@ -139,24 +139,6 @@ $this->load->view('landing/user_header');
                               <i class="fa fa-angle-down"></i>
                             </a>
                           </span>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th style="display: none; ">
-                                    <div class="media" style="display: none;">
-                                        <div class="d-flex align-self-center">ID</div>
-
-                                        <div class="d-flex align-self-center ml-auto">
-                                            <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
-                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                                               href="javascript:;">
-                                              <i class="fa fa-angle-up"></i>
-                                            </a>
-                                            <a class="g-color-gray-light-v6 g-color-secondary--hover g-text-underline--none--hover"
-                                               href="javascript:;">
-                                              <i class="fa fa-angle-down"></i>
-                                            </a>
-                                          </span>
                                         </div>
                                     </div>
                                 </th>
@@ -252,7 +234,7 @@ $this->load->view('landing/user_header');
                             <tbody>
                             <?php foreach( $transactions as $transaction ) :?>
                                 <tr>
-                                    <td style="display: none;"><?= $transaction->id; ?></td>
+                                    <td><?= $transaction->id; ?></td>
                                     <td><?= $transaction->trans_id; ?></td>
                                     <td><?= neatDate($transaction->date_initiated) . ' ' . neatTime($transaction->date_initiated); ?></td>
                                     <td><?= payment_id_replacer($transaction->description); ?></td>
