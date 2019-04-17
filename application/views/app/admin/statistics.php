@@ -19,7 +19,9 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black"></span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black">
+                            <b><?= ngn( $users_money)?></b>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -35,7 +37,9 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black"></span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black">
+                            <b><?= ngn( $success); ?></b>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -51,7 +55,9 @@
                     </header>
 
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black"></span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black">
+                            <b><?= ngn( $fail )?></b>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -65,9 +71,10 @@
                         <h4 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">
                             Clubkonnect Balance</h4>
                     </header>
-
                     <div class="d-flex align-items-center g-mb-25">
-                        <span class="g-font-weight-300 g-font-size-18 g-color-black"></span>
+                        <span class="g-font-weight-300 g-font-size-18 g-color-black">
+                            <b>Coming Soon.</b>
+                        </span>
                     </div>
                 </div>
             </div>

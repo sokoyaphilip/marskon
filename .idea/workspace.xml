@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/app/users/buy_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/users/buy_data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/app/admin/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/app/admin/statistics.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +17,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_plans.php">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="117" selection-start-line="24" selection-start-column="117" selection-end-line="24" selection-end-column="127" />
+            <state relative-caret-position="318">
+              <caret line="505" column="42" selection-start-line="505" selection-start-column="42" selection-end-line="505" selection-end-column="42" />
+              <folding>
+                <element signature="n#login#0;n#Ajax#0;n#!!top" />
+                <element signature="n#signup#0;n#Ajax#0;n#!!top" />
+                <element signature="n#delete_plan#0;n#Ajax#0;n#!!top" />
+                <element signature="n#fetch_plans#0;n#Ajax#0;n#!!top" />
+                <element signature="n#fund_wallet#0;n#Ajax#0;n#!!top" />
+                <element signature="n#data_purchase#0;n#Ajax#0;n#!!top" />
+                <element signature="e#9658#10790#0#PHP" />
+                <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
+                <element signature="n#electricity_bill#0;n#Ajax#0;n#!!top" />
+                <element signature="n#verify_iuc_number#0;n#Ajax#0;n#!!top" />
+                <element signature="n#_submitGet#0;n#Ajax#0;n#!!top" />
+                <element signature="n#verifyMeter#0;n#Ajax#0;n#!!top" />
+                <element signature="n#upgrade_account#0;n#Ajax#0;n#!!top" />
+                <element signature="n#useJSON#0;n#Ajax#0;n#!!top" />
+                <element signature="n#doPostRequest#0;n#Ajax#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/landing/admin_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
+            <state relative-caret-position="3270">
               <caret line="218" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="218" selection-end-column="28" />
             </state>
           </provider>
@@ -71,17 +80,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="3825">
               <caret line="255" column="35" selection-start-line="255" selection-start-column="35" selection-end-line="255" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/app/admin/statistics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+            <state relative-caret-position="360">
+              <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -89,15 +98,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="290" column="5" lean-forward="true" selection-start-line="290" selection-start-column="5" selection-end-line="290" selection-end-column="5" />
+            <state relative-caret-position="217">
+              <caret line="307" column="24" selection-start-line="307" selection-start-column="24" selection-end-line="307" selection-end-column="24" />
               <folding>
                 <element signature="n#index#0;n#Admin#0;n#!!top" />
                 <element signature="n#approval#0;n#Admin#0;n#!!top" />
                 <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
                 <element signature="n#sme_request#0;n#Admin#0;n#!!top" />
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-                <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
                 <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
                 <element signature="n#plans#0;n#Admin#0;n#!!top" />
                 <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
@@ -128,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>amount</find>
       <find>350</find>
       <find>blur</find>
       <find>btc</find>
@@ -158,6 +165,7 @@
       <find>hooks</find>
       <find>made</find>
       <find>bitc</find>
+      <find>stati</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -213,10 +221,10 @@
         <option value="$PROJECT_DIR$/application/views/landing/footer.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/coin.php" />
         <option value="$PROJECT_DIR$/application/views/landing/admin_header.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/statistics.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/buy_data.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/statistics.php" />
       </list>
     </option>
   </component>
@@ -269,6 +277,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,43 +357,6 @@
               <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="img-temp" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -447,18 +455,19 @@
       <workItem from="1555093912847" duration="1924000" />
       <workItem from="1555237164922" duration="4431000" />
       <workItem from="1555356928122" duration="1617000" />
-      <workItem from="1555398171859" duration="3885000" />
+      <workItem from="1555398171859" duration="4574000" />
+      <workItem from="1555486404292" duration="3156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319725000" />
+    <option name="totallyTimeSpent" value="323570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24066924" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24388674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -484,13 +493,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/app/users/electric_bill.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/tv_sub.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -711,29 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="317" column="57" selection-start-line="317" selection-start-column="57" selection-end-line="317" selection-end-column="57" />
-          <folding>
-            <element signature="n#login#0;n#Ajax#0;n#!!top" />
-            <element signature="n#signup#0;n#Ajax#0;n#!!top" />
-            <element signature="n#delete_plan#0;n#Ajax#0;n#!!top" />
-            <element signature="n#fetch_plans#0;n#Ajax#0;n#!!top" />
-            <element signature="n#fund_wallet#0;n#Ajax#0;n#!!top" />
-            <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
-            <element signature="n#tv_cable#0;n#Ajax#0;n#!!top" />
-            <element signature="n#electricity_bill#0;n#Ajax#0;n#!!top" />
-            <element signature="n#verify_iuc_number#0;n#Ajax#0;n#!!top" />
-            <element signature="n#_submitGet#0;n#Ajax#0;n#!!top" />
-            <element signature="n#verifyMeter#0;n#Ajax#0;n#!!top" />
-            <element signature="n#upgrade_account#0;n#Ajax#0;n#!!top" />
-            <element signature="n#useJSON#0;n#Ajax#0;n#!!top" />
-            <element signature="n#doPostRequest#0;n#Ajax#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_airtime.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3540">
@@ -797,6 +776,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="145" column="29" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_plans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="117" selection-start-line="24" selection-start-column="117" selection-end-line="24" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3270">
+          <caret line="218" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="218" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3720">
@@ -818,6 +818,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3825">
+          <caret line="255" column="35" selection-start-line="255" selection-start-column="35" selection-end-line="255" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
@@ -832,38 +839,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/manage_plans.php">
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/api_variation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="117" selection-start-line="24" selection-start-column="117" selection-end-line="24" selection-end-column="127" />
-        </state>
+        <state relative-caret-position="-810" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/admin_header.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="218" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="218" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/statistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        <state relative-caret-position="318">
+          <caret line="505" column="42" selection-start-line="505" selection-start-column="42" selection-end-line="505" selection-end-column="42" />
+          <folding>
+            <element signature="n#login#0;n#Ajax#0;n#!!top" />
+            <element signature="n#signup#0;n#Ajax#0;n#!!top" />
+            <element signature="n#delete_plan#0;n#Ajax#0;n#!!top" />
+            <element signature="n#fetch_plans#0;n#Ajax#0;n#!!top" />
+            <element signature="n#fund_wallet#0;n#Ajax#0;n#!!top" />
+            <element signature="n#data_purchase#0;n#Ajax#0;n#!!top" />
+            <element signature="e#9658#10790#0#PHP" />
+            <element signature="n#buy_airtime#0;n#Ajax#0;n#!!top" />
+            <element signature="n#electricity_bill#0;n#Ajax#0;n#!!top" />
+            <element signature="n#verify_iuc_number#0;n#Ajax#0;n#!!top" />
+            <element signature="n#_submitGet#0;n#Ajax#0;n#!!top" />
+            <element signature="n#verifyMeter#0;n#Ajax#0;n#!!top" />
+            <element signature="n#upgrade_account#0;n#Ajax#0;n#!!top" />
+            <element signature="n#useJSON#0;n#Ajax#0;n#!!top" />
+            <element signature="n#doPostRequest#0;n#Ajax#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="290" column="5" lean-forward="true" selection-start-line="290" selection-start-column="5" selection-end-line="290" selection-end-column="5" />
+        <state relative-caret-position="217">
+          <caret line="307" column="24" selection-start-line="307" selection-start-column="24" selection-end-line="307" selection-end-column="24" />
           <folding>
             <element signature="n#index#0;n#Admin#0;n#!!top" />
             <element signature="n#approval#0;n#Admin#0;n#!!top" />
             <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
             <element signature="n#sme_request#0;n#Admin#0;n#!!top" />
             <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
-            <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
             <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
             <element signature="n#plans#0;n#Admin#0;n#!!top" />
             <element signature="n#api_variation#0;n#Admin#0;n#!!top" />
@@ -871,17 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/dashboard.php">
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/statistics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="255" column="35" selection-start-line="255" selection-start-column="35" selection-end-line="255" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/users/buy_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+        <state relative-caret-position="360">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -304,7 +304,9 @@ WHERE t.trans_id = {$tid}")->row();
     public function statistics(){
         $page_data['page'] = 'statistics';
         $page_data['users_money'] = $this->site->run_sql("SELECT SUM(wallet) amt FROM users")->row()->amt;
-        $this->load->view('app/admin/manage_users', $page_data);
+        $page_data['success'] = $this->site->run_sql("SELECT SUM(amount) amt FROM transactions WHERE status = 'approved' OR status = 'success'")->row()->amt;
+        $page_data['fail'] = $this->site->run_sql("SELECT SUM(amount) amt FROM transactions WHERE status = 'declined' OR status = 'fail'")->row()->amt;
+        $this->load->view('app/admin/statistics', $page_data);
     }
 
     // UPdate users wallet...
