@@ -237,7 +237,6 @@ class Ajax extends CI_Controller {
         $plan_id = $this->input->post('plan_id', true);
         $recipents = $this->input->post('recipents', true);
         $network_id = $this->input->post('network_id', true);
-        $wallet = $this->input->post('wallet');
         $user_id = $this->session->userdata('user_id');
         $sponsor = $this->input->post('sponsor');
 
@@ -280,9 +279,10 @@ class Ajax extends CI_Controller {
         $plan_detail = $this->site->run_sql("SELECT name, amount FROM plans WHERE id = {$plan_id}")->row();
         if( $count ){
             $total_amount = $count * $plan_detail->amount;
-            if( $total_amount > $wallet ){
-                $response['message'] = "You don't have enough money in your wallet for the transaction.";
-                $this->return_response($response);
+            $user = $this->get_profile( $this->session->userdata('logged_id'));
+            if( $user->wallet < 1 || $total_amount > $user->wallet){
+                $response['message'] = "Please fund your wallet first.";
+                $this->return_response( $response );
             }else{
                 $user_id = $this->session->userdata('logged_id');
                 $description = ucfirst( $network_row->network_name) . " {$plan_detail->name} data purchase for {$count} recipent ({$message})";
@@ -298,6 +298,10 @@ class Ajax extends CI_Controller {
                     'user_id'        => $user_id
                 );
                 $user = $this->get_profile( $this->session->userdata('logged_id'));
+                if( $user->wallet < 1 || $total_amount > $user->wallet){
+                    $response['message'] = "Please fund your wallet first.";
+                    $this->return_response( $response );
+                }
 
                 $insert_data['status'] = ( $user->membership_type == "reseller" ) ? 'pending' : 'success';
                 $error = false; $ret = 'ORDER_COMPLETED';
@@ -514,10 +518,8 @@ class Ajax extends CI_Controller {
         // verify...
         $plan_detail = $this->site->run_sql("SELECT name, amount FROM plans WHERE id = {$plan_id}")->row();
 
-        if( $plan_detail->amount > $wallet ){
-            $response['message'] = "Oops! Sorry you don't have sufficient fund in your wallet to process the order, please fund your wallet first.";
-            $this->return_response( $response );
-        }
+        $user = $this->get_profile( $this->session->userdata('logged_id'));
+
 
         $variation_detail = $this->site->run_sql("SELECT variation_name, variation_amount, api_source FROM api_variation WHERE plan_id = {$plan_id}")->row();
         $description = ucwords( $network_name) . " subscription plan for {$plan_detail->name} at N{$plan_detail->amount}.";
@@ -533,6 +535,11 @@ class Ajax extends CI_Controller {
             'user_id'        => $user_id,
             'status'        => 'pending'
         );
+
+        if( $user->wallet < 1 || $plan_detail->amount > $user->wallet){
+            $response['message'] = "Please fund your wallet first.";
+            $this->return_response( $response );
+        }
 
         if( $variation_detail ){
             switch ( $variation_detail->api_source) {
@@ -627,10 +634,8 @@ class Ajax extends CI_Controller {
         // verify...
         $plan_detail = $this->site->run_sql("SELECT name FROM plans WHERE id = {$plan_id}")->row();
 
-        if( $plan_detail->amount > $wallet ){
-            $response['message'] = "Oops! Sorry you don't have sufficient fund in your wallet to process the order.";
-            $this->return_response( $response );
-        }
+        $user = $this->get_profile( $this->session->userdata('logged_id'));
+
 
         $variation_detail = $this->site->run_sql("SELECT variation_name, api_source FROM api_variation WHERE plan_id = {$plan_id} LIMIT 1")->row();
 
@@ -651,6 +656,11 @@ class Ajax extends CI_Controller {
             'user_id'        => $user_id,
             'status'        => 'pending'
         );
+
+        if( $user->wallet < 1 || $amount > $user->wallet){
+            $response['message'] = "Please fund your wallet first.";
+            $this->return_response( $response );
+        }
 
         if( $variation_detail ){
             switch ( $variation_detail->api_source) {
