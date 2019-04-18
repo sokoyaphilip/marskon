@@ -250,9 +250,9 @@
                            data-dt-pagination-prev-link-markup='<span class="g-line-height-1 g-valign-middle" aria-hidden="true"><i class="fa fa-angle-left"></i></span><span class="sr-only">Prev</span>'>
                         <thead>
                         <tr>
-                            <th style="display: none;">
+                            <th style="">
                                 <div class="media">
-                                    <div class="d-flex align-self-center">ID</div>
+                                    <div class="d-flex align-self-center">S/N</div>
 
                                     <div class="d-flex align-self-center ml-auto">
                             <span class="d-inline-block g-width-10 g-line-height-1 g-font-size-10">
@@ -382,7 +382,7 @@
                         <tbody>
                         <?php foreach( $transactions as $transaction ): ?>
                             <tr>
-                                <td style="display: none;"><?= $transaction->id; ?></td>
+                                <td style=""><?= $transaction->id; ?></td>
                                 <td><?= $transaction->trans_id; ?></td>
                                 <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                                 <td><?= paymentMethod($transaction->payment_method); ?></td>

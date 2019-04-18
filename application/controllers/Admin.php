@@ -271,10 +271,13 @@ class Admin extends CI_Controller {
                 $this->db->trans_commit();
                 $this->session->set_flashdata('success_msg', 'Request successful.');
             }
-            redirect( $_SERVER['HTTP_REFERER']);
 
+        }else{
+            $this->site->update('transactions', array('status' => 'decline'), "( id = {$txid})");
+            $this->session->set_flashdata('success_msg', 'Transaction declined.');
         }
 
+        redirect( $_SERVER['HTTP_REFERER']);
     }
 
 
