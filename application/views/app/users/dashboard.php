@@ -410,7 +410,9 @@
 
 <script>
     $(document).ready( function () {
-        $('.table').DataTable();
+        $('.table').DataTable({
+            "order": [[ 0, "desc" ]]
+        });
 
         $('.datepicker').pickadate()
     } );
