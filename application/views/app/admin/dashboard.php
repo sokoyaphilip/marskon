@@ -253,7 +253,7 @@
                     <thead>
                     <tr>
 
-                        <th style="display:none;">
+                        <th>
                             <div class="media">
                                 <div class="d-flex align-self-center">id</div>
 
@@ -402,9 +402,9 @@
                     </thead>
 
                     <tbody>
-                    <?php foreach( $transactions as $transaction ): ?>
+                    <?php $x =1; foreach( $transactions as $transaction ): ?>
                         <tr>
-                            <td style=""></td>
+                            <td style=""><?= $x;?></td>
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
@@ -413,7 +413,7 @@
                             <td><?= ngn($transaction->amount)?></td>
                             <td><?= statusLabel( $transaction->status);?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php $x++; endforeach; ?>
                     </tbody>
                 </table>
             </div>
