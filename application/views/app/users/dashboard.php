@@ -234,7 +234,7 @@
 
             <div class="g-mb-40">
                 <div class="table-responsive">
-                    <table class="js-datatable table u-table--v3 u-editable-table--v1 g-color-black"
+                    <table class="table u-table--v3 u-editable-table--v1 g-color-black"
                            data-dt-info="#datatableInfo1" data-dt-search="#datatableSearch1"
                            data-dt-entries="#datatableEntries1" data-dt-is-show-paging="true"
                            data-dt-pagination="datatablePagination1"
