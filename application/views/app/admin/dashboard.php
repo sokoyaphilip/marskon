@@ -404,7 +404,7 @@
                     <tbody>
                     <?php foreach( $transactions as $transaction ): ?>
                         <tr>
-                            <td style="display: none;"></td>
+                            <td style=""></td>
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
                             <td><?= $transaction->trans_id; ?></td>
