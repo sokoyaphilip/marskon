@@ -225,7 +225,7 @@ $this->load->view('landing/user_header');
 
                 <div class="g-mb-40">
                     <div class="table-responsive">
-                        <table class="js-datatable table u-table--v3 u-editable-table--v1 g-color-black"
+                        <table class="table u-table--v3 u-editable-table--v1 g-color-black"
                                data-dt-info="#datatableInfo1" data-dt-search="#datatableSearch1"
                                data-dt-entries="#datatableEntries1" data-dt-is-show-paging="true"
                                data-dt-pagination="datatablePagination1"
@@ -412,3 +412,14 @@ $this->load->view('landing/user_header');
         </div>
     </div>
 <?php $this->load->view("landing/user_footer"); ?>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready( function () {
+        $('.table').DataTable({
+            "order": [[ 0, "desc" ]]
+        });
+
+        $('.datepicker').pickadate()
+    } );
+</script>
