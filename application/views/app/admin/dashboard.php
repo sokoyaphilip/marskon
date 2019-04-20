@@ -407,7 +407,7 @@
                             <td style=""><?= $x;?></td>
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
                             <td><?= $transaction->name . '('.$transaction->phone.')'; ?></td>
-                            <td><?= $transaction->trans_id; ?></td>
+                            <td><a href="<?= base_url('admin/commit/?trans_id='.$transaction->trans_id)?>"><?= $transaction->trans_id; ?></a></td>
                             <td><?= paymentMethod($transaction->payment_method); ?></td>
                             <td><?= payment_id_replacer($transaction->description); ?></td>
                             <td><?= ngn($transaction->amount)?></td>

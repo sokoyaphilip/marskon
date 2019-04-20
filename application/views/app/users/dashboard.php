@@ -8,6 +8,41 @@
 </style>
     <div class="g-pa-20" style="min-height: calc(92vh - 67px);">
         <?php $this->load->view('upgrade_plan')?>
+
+<!--            Notification-->
+
+            <div class="row">
+                <?php if($notifications) : $x =1; foreach( $notifications as $notification ) :?>
+                    <div class="col-lg-6">
+                    <!-- Border Alert -->
+                    <div class="alert fade show g-brd-around g-brd-red rounded-0" role="alert">
+                        <button type="button" class="close u-alert-close--light g-ml-10 g-mt-1" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+
+                        <div class="media">
+                            <div class="media-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="m-0"><strong>#<?= $x; ?> Notification</strong>
+                                    </p>
+                                    <span class="align-self-center small text-nowrap">
+                                        <?php
+                                            echo date('Y/m/d h:i:s', strtotime( $notification->date_posted));
+                                        ?>
+                                    </span>
+                                </div>
+                                <p class="m-0 g-font-size-14"><?= $notification->message; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Border Alert -->
+                </div>
+                <?php $x++; endforeach; endif; ?>
+            </div>
+
+
+        <!--            Notfication ends here-->
+
         <div class="row">
             <div class="col-md-3 col-xs-6 g-mb-30">
                 <div class="card g-brd-darkblue-v5 text-center g-pa-15 g-pa-25-30--md">

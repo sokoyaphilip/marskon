@@ -776,7 +776,7 @@ $(document).ready(function() {
         let _this = $(this);
         swal({
             title :'Are you sure?',
-            text : 'You are about deleting this plan.',
+            text : 'You are about deleting this.',
             icon: 'warning',
             buttons : true,
             dangerMode: true,
@@ -790,7 +790,45 @@ $(document).ready(function() {
                     data : {'plan_id' : id },
                     success : function(response){
                         if( response.status === 'success' ){
-                            sweet_alert('Success', 'Plan deleted successfully.', 'success')
+                            sweet_alert('Success', 'Plan deleted successfully.', 'success');
+                            $(_this).parents("tr").remove();
+                        }else{
+
+                            sweet_alert('Error!', response.message, response.status );
+                        }
+
+                    },
+                    error : function (response) {
+                        console.log(response);
+                    }
+                });
+            }else{
+                swal("Oops! We're still good :) ");
+            }
+        });
+    });
+
+
+    $('.table tbody').on('click', 'tr > td:last-child .delete-notification', function (){
+        let id = $(this).data('id');
+        let _this = $(this);
+        swal({
+            title :'Are you sure?',
+            text : 'You are about deleting this.',
+            icon: 'warning',
+            buttons : true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+
+                $.ajax({
+                    url : base_url + 'ajax/delete_notification/',
+                    method: 'POST',
+                    cache: false,
+                    data : {'id' : id },
+                    success : function(response){
+                        if( response.status === 'success' ){
+                            sweet_alert('Success', 'Notification deleted successfully.', 'success');
                             $(_this).parents("tr").remove();
                         }else{
 

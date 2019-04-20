@@ -294,6 +294,66 @@ WHERE t.trans_id = {$tid}")->row();
     }
 
 
+    public function notification(){
+        $page_data['page'] = 'notification';
+        $page_data['title'] = "Notification Board";
+        $page_data['notifications'] = $this->site->run_sql("SELECT * from notifications ORDER BY id DESC")->result();
+
+        $this->form_validation->set_rules('message', 'Message','trim|required|xss_clean');
+        if( $this->form_validation->run() == FALSE ){
+            $this->load->view('app/admin/notification', $page_data);
+            return;
+        }
+        $data = array(
+            'message' => $this->input->post('message', true)
+        );
+        if( $this->site->insert_data('notifications', $data)){
+            $this->session->set_flashdata('success_msg', "Notification has been been added.");
+        }else{
+            $this->session->set_flashdata('error_msg', "There was an error adding the message");
+        }
+        redirect('admin/notification');
+    }
+
+
+    public function commit(){
+        $trans_id = cleanit( $_GET['trans_id']);
+        if( $trans_id ){
+            $page_data['row'] = $this->site->run_sql("SELECT t.*, p.title product_name, u.name user_name  FROM transactions t LEFT JOIN products p ON (p.id = t.product_id) 
+LEFT JOIN users u ON (u.id = t.user_id) WHERE trans_id = '{$trans_id}'")->row();
+            if( !$page_data['row'] ){
+                $this->session->set_flashdata('error_msg', "The transaction does not exists");
+                redirect(base_url('admin'));
+            }else{
+                $page_data['page'] = 'approval';
+                $page_data['title'] = "Approval";
+                $this->load->view('app/admin/commit', $page_data);
+            }
+        }
+    }
+
+    function commit_process(){
+        $action = $this->input->post('action');
+        $amount = $this->input->post('amount');
+        $trans_id = $this->input->post('trans_id');
+        $user_id = $this->input->post('user_id');
+        if( $action == 'refund' ){
+            $this->site->set_field('users', 'wallet', "wallet+{$amount}", "id={$user_id}");
+            $this->site->update('transactions', array('status' => 'refunded'), array('trans_id' => $trans_id));
+            $this->session->set_flashdata('success_msg', "The amount has been refunded.");
+        }elseif( $action == 'decline' ){
+            $this->site->update('users', array('status' => 'declined'), array('trans_id' => $trans_id));
+            $this->session->set_flashdata('success_msg', "The transaction has been declined.");
+        }elseif( $action == 'success'){
+            $this->site->update('transactions', array('status' => 'success'), array('trans_id' => $trans_id));
+            $this->session->set_flashdata('success_msg', "The transaction has been marked as success.");
+        }elseif( $action == 'fail'){
+            $this->site->update('transactions', array('status' => 'fail'), array('trans_id' => $trans_id));
+            $this->session->set_flashdata('success_msg', "The transaction has been marked as failed.");
+        }
+        redirect( 'admin/commit/?trans_id=' .$trans_id);
+    }
+
     /*
      * Users
      * */
@@ -353,6 +413,8 @@ WHERE t.trans_id = {$tid}")->row();
         $this->session->set_flashdata('success_msg', "Action successful");
         redirect( $_SERVER['HTTP_REFERER']);
     }
+
+
 
     /*
      * Gift Cards

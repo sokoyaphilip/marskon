@@ -40,6 +40,7 @@
                             <label class="label" for="Starting From">API Source</label>
                             <select name="api_source" class="form-control" required>
                                 <option value="" selected>--Select--</option>
+                                <option value="ringo">ringo</option>
                                 <option value="vtpass">Vtpass.com</option>
                                 <option value="clubkonnect">Clubconnect.com</option>
                             </select>

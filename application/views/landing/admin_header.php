@@ -211,6 +211,15 @@ $wallet_count = $this->db->get('transactions')->num_rows();
                             <span class="media-body align-self-center">Statistics</span>
                         </a>
                     </li>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'notification') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?=base_url("admin/notification/")?>">
+                          <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+                              <i class="fa fa-credit-card-alt"></i>
+                          </span>
+                            <span class="media-body align-self-center">Notifications</span>
+                        </a>
+                    </li>
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
                            href="<?= base_url('logout/');?>">

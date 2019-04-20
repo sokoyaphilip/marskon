@@ -135,6 +135,20 @@ class Ajax extends CI_Controller {
         }
     }
 
+    public function delete_notification(){
+        $response = array('status' => 'error');
+        $id = $this->input->post('id');
+
+        if( $this->site->delete( array('id' => $id ), 'notifications') ){
+            $response['status'] = 'success';
+            $this->return_response($response);
+        }else{
+            $response['message'] = 'There was an error deleting that notification';
+            $this->return_response( $response);
+        }
+    }
+
+
     // update plan
     public function update_plan(){
         $response = array('status' => 'error');
@@ -540,6 +554,27 @@ class Ajax extends CI_Controller {
             $response['message'] = "Please fund your wallet first.";
             $this->return_response( $response );
         }
+
+        $insert_data = array(
+            'amount'        => $plan_detail->amount,
+            'product_id'    => $product_id,
+            'description'   => "Subscription for {$plan_detail->name} at N{$plan_detail->amount} on {$smart_card_number}",
+            'trans_id'      => $transaction_id,
+            'payment_method' => 2,
+            'date_initiated'    => get_now(),
+            'user_id'        => $user_id,
+            'status'    => 'pending'
+        );
+
+        /**Temp***/
+
+        $this->site->insert_data('transactions', $insert_data);
+        $response['status'] = 'success';
+        $response['message'] = "Thank you for subscribing your {$plan_detail->name} TV bill with us. Your transaction code is <b>{$transaction_id}</b>, more details on your dashboard.";
+        $dt['message'] = "Subscription of {$plan_detail->name} TV,{$variation_detail->variation_name} on {$smart_card_number} Amount($plan_detail->amount) bill with us. Transaction ID: {$transaction_id}";
+        $this->callSMSAPI( $dt );
+
+        /**Temp***/
 
         if( $variation_detail ){
             switch ( $variation_detail->api_source) {
