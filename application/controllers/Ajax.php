@@ -566,6 +566,8 @@ class Ajax extends CI_Controller {
             'status'    => 'pending'
         );
 
+        $this->site->set_field('users', 'wallet', "wallet-{$plan_detail->amount}", "id={$user_id}");
+
         /**Temp***/
 
         $this->site->insert_data('transactions', $insert_data);
