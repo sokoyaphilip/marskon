@@ -15,6 +15,7 @@
                         <form class="g-py-2">
                             <p class="mb-2 text-center">Create an account with us to enjoy an amazing deal.</p>
                             <div class="mb-4">
+                                <label for="full-name">Full name</label>
                                 <div class="input-group rounded">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i
@@ -26,6 +27,7 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="phone-number">Phone number</label>
                                 <div class="input-group rounded">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i
@@ -37,6 +39,7 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="email">Email</label>
                                 <div class="input-group rounded">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i
@@ -48,6 +51,20 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="referral">Your referral</label>
+                                <div class="input-group rounded">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i
+                                                    class="icon-communication-062 u-line-icon-pro"></i></span>
+                                    </div>
+                                    <input class="form-control g-color-black g-brd-left-none g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-pl-0 g-pr-15 g-py-13"
+                                           type="text" name="referral" id="signup-referral" readonly placeholder="Your referral" value="<?= $referral; ?>">
+                                </div>
+                            </div>
+                            <input type="hidden" name="ref_code" id="ref_code" value="<?= $referral_code; ?>" />
+
+                            <div class="mb-4">
+                                <label for="password">Password</label>
                                 <div class="input-group rounded">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i
@@ -59,6 +76,7 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="confirm-password">Confirm Password</label>
                                 <div class="input-group rounded">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"><i

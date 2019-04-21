@@ -254,6 +254,17 @@ class Dashboard extends CI_Controller {
         }
     }
 
+
+    // Referral
+    public function referral(){
+        $id = $this->session->userdata('logged_id');
+        $page_data['page'] = 'referral';
+        $page_data['title'] = 'Manage your referral.';
+        $page_data['user'] = $this->get_profile($id);
+        $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated, status FROM transactions WHERE product_id = 11 AND user_id = {$id} ORDER BY id DESC")->result();
+        $this->load->view('app/users/referral', $page_data);
+    }
+
     public function preview(){
         $id = cleanit($this->input->get('a', true));
         if( !$id ) redirect( $_SERVER['HTTP_REFERER']);

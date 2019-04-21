@@ -60,6 +60,11 @@ class Ajax extends CI_Controller {
             $response['message'] = validation_errors();
             $this->return_response( $response );
         }else{
+            $referral = $this->input->post('ref_code');
+            $code = $this->input->post('ref_code');
+            if( !$this->site->get_result('users', 'id', array('user_code' => $code , 'membership_type' => 'reseller'))){
+                $referral = '67382';
+            }
 
             $salt = salt(50);
             $code = $this->user->generate_user_code();
@@ -71,6 +76,7 @@ class Ajax extends CI_Controller {
                 'password' => shaPassword($this->input->post('password'), $salt),
                 'ip' => $_SERVER['REMOTE_ADDR'],
                 'date_registered' => get_now(),
+                'referral' => $referral,
                 'last_login' => get_now(),
                 'membership_type' => 'user',
                 'user_code' => $code
@@ -575,7 +581,7 @@ class Ajax extends CI_Controller {
         $response['message'] = "Thank you for subscribing your {$plan_detail->name} TV bill with us. Your transaction code is <b>{$transaction_id}</b>, more details on your dashboard.";
         $dt['message'] = "Subscription of {$plan_detail->name} TV,{$variation_detail->variation_name} on {$smart_card_number} Amount($plan_detail->amount) bill with us. Transaction ID: {$transaction_id}";
         $this->callSMSAPI( $dt );
-
+        $this->return_response( $response );
         /**Temp***/
 
         if( $variation_detail ){

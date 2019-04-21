@@ -37,7 +37,16 @@ class Auth extends CI_Controller {
         if( $this->session->userdata('logged_in')){
             $page_data['user'] = $this->get_profile($this->session->userdata('logged_id'));
         }
-        $page_data['services'] = $this->site->run_sql("SELECT id,title,network_name, discount FROM services WHERE product_id = '2'")->result();
+        $ref = cleanit($this->input->get('ref', true));
+        $page_data['referral'] = "Marskonnect";
+        $page_data['referral_code'] = "67382";
+        if( $ref ){
+            $row = $this->site->run_sql("SELECT name FROM users WHERE user_code = '{$ref}'")->row();
+            if( $row ){
+                $page_data['referral'] = $row->name;
+                $page_data['referral_code'] = $ref;
+            }
+        }
         $this->load->view('landing/create', $page_data);
     }
 

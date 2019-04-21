@@ -53,7 +53,7 @@ $(document).ready(function() {
             },
             statusCode: {
                 303 : function(){
-                    alert("Page Not FOund");
+                    alert("Page Not Found");
                 }
             }
         });
@@ -70,6 +70,7 @@ $(document).ready(function() {
         let signup_email = $('#signup-email').val();
         let signup_name = $('#signup-name').val();
         let signup_phone = $('#signup-phone').val();
+        let ref_code = $('#ref_code').val();
         let password = $('#signup-password').val();
         let confirm_password = $('#confirm-password').val();
         if( signup_email === '' ){
@@ -91,7 +92,7 @@ $(document).ready(function() {
         $.ajax({
             url: base_url + 'ajax/signup/',
             method: 'POST',
-            data: {'signup_email': signup_email, 'signup_name': signup_name, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
+            data: {'signup_email': signup_email, 'ref_code': ref_code, 'signup_name': signup_name, 'signup_phone': signup_phone, 'password': password, 'confirm_password' : confirm_password},
             success: function (response) {
                 if (response.status === 'success') {
 

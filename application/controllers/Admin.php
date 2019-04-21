@@ -144,12 +144,28 @@ class Admin extends CI_Controller {
             if( $this->site->update('transactions', array('status' => $status ), array('id' => $id))){
                 // Update the balance
                 $product = cleanit($_GET['product_id']);
-
                 if( $product && !empty($product) ){
                     // Approve for membership users
                     if( $status == 'approved' ){
                         // Update the user account
                         $this->site->update('users', array('membership_type' => 'reseller'), array('id' => $user_id));
+                        // Get the user upline.
+                        $ref_code = $this->site->get_row('users', 'referral, name', array('id' => $user_id));
+                        $ref_user_id = $this->site->get_row('users', 'id', array('user_code' => $ref_code->referral ));
+                        $transaction_id = $this->site->generate_code('transactions', 'trans_id');
+                        $insert_data = array(
+                            'amount'        => 1000,
+                            'charge'        => 0,
+                            'product_id'    => 11,
+                            'description'   => "N1,000 Credited to your account for referral bonus earned on {$ref_code->name} transaction.",
+                            'trans_id'      => $transaction_id,
+                            'payment_method' => 4,
+                            'date_initiated'    => get_now(),
+                            'user_id'        => $ref_user_id->id,
+                            'status'        => 'success'
+                        );
+                        $this->site->insert_data('transactions', $insert_data);
+                        $this->site->set_field('users', 'wallet', "wallet+1000", "user_code={$ref_code->referral}");
                         $this->session->set_flashdata('success_msg', 'User has been upgraded to a Reseller Account.');
                     }else{
                         $this->site->delete("(id = {$id})", 'transactions');
@@ -158,6 +174,7 @@ class Admin extends CI_Controller {
                     }
                 }else{
                     if( $status == 'approved' ){
+
                         // Update the user account
                         $this->site->set_field('users', 'wallet', "wallet+{$amount}", "id={$user_id}");
                         $this->session->set_flashdata('success_msg', 'Action successful.');

@@ -214,6 +214,17 @@
                             <span class="media-body align-self-center">My Wallet</span>
                         </a>
                     </li>
+                    <?php if($user->membership_type == 'reseller') :?>
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'referral') echo 'has-active';?>">
+                        <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
+                           href="<?= base_url('dashboard/referral/'); ?>">
+                            <span class="d-flex align-self-center g-font-size-18 g-mr-18">
+                              <i class="fa fa-user-secret"></i>
+                            </span>
+                            <span class="media-body align-self-center">Referral</span>
+                        </a>
+                    </li>
+                    <?php endif;?>
 
                     <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item <?php if($page == 'profile') echo 'has-active';?>">
                         <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12"
