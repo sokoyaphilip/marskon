@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0da90e-b2e3-407a-a577-c0dac9bf3f3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/app/users/referral.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/user_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/user_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2019-04-21.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2019-04-21.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Site_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Site_model.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,14 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="150" column="118" selection-start-line="150" selection-start-column="118" selection-end-line="150" selection-end-column="118" />
+            <state relative-caret-position="443">
+              <caret line="166" column="116" selection-start-line="166" selection-start-column="116" selection-end-line="166" selection-end-column="116" />
               <folding>
                 <element signature="n#index#0;n#Admin#0;n#!!top" />
-                <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
                 <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
                 <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
                 <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
@@ -41,28 +36,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/confirm_payment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="260" column="45" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="264" column="45" selection-start-line="264" selection-start-column="45" selection-end-line="264" selection-end-column="45" />
-              <folding>
-                <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#subscription#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#electricity#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
-              </folding>
-            </state>
+            <state relative-caret-position="-502" />
           </provider>
         </entry>
       </file>
@@ -78,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="435">
               <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
@@ -98,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/Site_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="62" />
+            <state relative-caret-position="473">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -129,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
               <folding>
                 <element signature="e#14#593#0" />
                 <element signature="n#!!block;n#format_currency#0" />
@@ -143,8 +119,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="44" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="337">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="214" column="134" selection-start-line="214" selection-start-column="108" selection-end-line="214" selection-end-column="134" />
+              <folding>
+                <element signature="e#5048#5070#0#HTML" expanded="true" />
+                <element signature="e#12522#12544#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,9 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>payment_made</find>
-      <find>payment_made_proce</find>
-      <find>datatable</find>
       <find>dele</find>
       <find>user_actio</find>
       <find>buy_da</find>
@@ -181,8 +167,11 @@
       <find>wallet ba</find>
       <find>row</find>
       <find>create</find>
-      <find>approval</find>
       <find>paymen</find>
+      <find>select a</find>
+      <find>approved</find>
+      <find>upgrade_</find>
+      <find>approval</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/app/users/electric_bill.php" />
         <option value="$PROJECT_DIR$/application/views/upgrade_plan.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/tv_sub.php" />
         <option value="$PROJECT_DIR$/application/views/landing/header.php" />
@@ -204,7 +192,6 @@
         <option value="$PROJECT_DIR$/application/views/app/users/redeem_card.php" />
         <option value="$PROJECT_DIR$/application/controllers/Test.php" />
         <option value="$PROJECT_DIR$/application/views/landing/home.php" />
-        <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
         <option value="$PROJECT_DIR$/application/views/app/admin/manage_users.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/payment_made.php" />
         <option value="$PROJECT_DIR$/application/config/pagination.php" />
@@ -237,11 +224,13 @@
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/app/users/referral.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Auth.php" />
         <option value="$PROJECT_DIR$/application/views/landing/create.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
+        <option value="$PROJECT_DIR$/application/controllers/Auth.php" />
+        <option value="$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/models/Site_model.php" />
       </list>
     </option>
   </component>
@@ -295,43 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -381,6 +333,43 @@
               <item name="marskonnet" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="img-temp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="marskonnet" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="application" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="users" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -485,18 +474,19 @@
       <workItem from="1555560829393" duration="3595000" />
       <workItem from="1555642819494" duration="9983000" />
       <workItem from="1555817928983" duration="4872000" />
-      <workItem from="1555860466269" duration="1697000" />
+      <workItem from="1555860466269" duration="2441000" />
+      <workItem from="1555865580075" duration="1681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346453000" />
+    <option name="totallyTimeSpent" value="348878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17374517" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17567568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -522,13 +512,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/app/users/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="135" column="164" selection-start-line="135" selection-start-column="164" selection-end-line="135" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -568,13 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -825,6 +801,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="260" column="45" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="264" column="45" selection-start-line="264" selection-start-column="45" selection-end-line="264" selection-end-column="45" />
+          <folding>
+            <element signature="n#index#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#subscription#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#electricity#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/user_header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3240">
@@ -832,50 +830,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Site_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/app/users/referral.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="211" selection-start-line="65" selection-start-column="211" selection-end-line="65" selection-end-column="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="69" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-          <folding>
-            <element signature="e#14#593#0" />
-            <element signature="n#!!block;n#format_currency#0" />
-            <element signature="n#!!block;n#sweet_alert#0" />
-            <element signature="n#!!block;n#addCommas#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="435">
           <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
@@ -894,40 +851,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+    <entry file="file://$PROJECT_DIR$/application/views/app/users/referral.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="264" column="45" selection-start-line="264" selection-start-column="45" selection-end-line="264" selection-end-column="45" />
+        <state relative-caret-position="975">
+          <caret line="65" column="211" selection-start-line="65" selection-start-column="211" selection-end-line="65" selection-end-column="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="69" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
           <folding>
-            <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#airtime_process#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#subscription#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#electricity#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#coin_process#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
+            <element signature="e#14#593#0" />
+            <element signature="n#!!block;n#format_currency#0" />
+            <element signature="n#!!block;n#sweet_alert#0" />
+            <element signature="n#!!block;n#addCommas#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="260" column="45" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="45" />
+        <state relative-caret-position="337">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/upgrade_membership_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="214" column="134" selection-start-line="214" selection-start-column="108" selection-end-line="214" selection-end-column="134" />
+          <folding>
+            <element signature="e#5048#5070#0#HTML" expanded="true" />
+            <element signature="e#12522#12544#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/app/admin/confirm_payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-502" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="150" column="118" selection-start-line="150" selection-start-column="118" selection-end-line="150" selection-end-column="118" />
+        <state relative-caret-position="443">
+          <caret line="166" column="116" selection-start-line="166" selection-start-column="116" selection-end-line="166" selection-end-column="116" />
           <folding>
             <element signature="n#index#0;n#Admin#0;n#!!top" />
-            <element signature="n#upgrade_membership_request#0;n#Admin#0;n#!!top" />
             <element signature="n#tocashprocess#0;n#Admin#0;n#!!top" />
             <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
             <element signature="n#gift_cards#0;n#Admin#0;n#!!top" />
             <element signature="n#plans#0;n#Admin#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Site_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>

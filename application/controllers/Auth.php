@@ -40,12 +40,14 @@ class Auth extends CI_Controller {
         $ref = cleanit($this->input->get('ref', true));
         $page_data['referral'] = "Marskonnect";
         $page_data['referral_code'] = "67382";
+
         if( $ref ){
-            $row = $this->site->run_sql("SELECT name FROM users WHERE user_code = '{$ref}'")->row();
+            $row = $this->site->run_sql("SELECT name,phone FROM users WHERE user_code = '{$ref}'")->row();
             if( $row ){
-                $page_data['referral'] = $row->name;
+                $page_data['referral'] = ($row->name == NULL) ? $row->phone : $row->name;
                 $page_data['referral_code'] = $ref;
             }
+
         }
         $this->load->view('landing/create', $page_data);
     }

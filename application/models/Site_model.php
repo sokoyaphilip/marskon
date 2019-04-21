@@ -42,6 +42,16 @@ class Site_model extends CI_Model
         return $this->db->get( $table )->result();
     }
 
+    function get_row($table = "users", $select = "", $condition = "" ){
+        if( $select != '' ){
+            $this->db->select($select);
+        }
+        if( $condition != '' ){
+            $this->db->where( $condition );
+        }
+        return $this->db->get( $table )->row();
+    }
+
 
     /**
      * @param array $data
